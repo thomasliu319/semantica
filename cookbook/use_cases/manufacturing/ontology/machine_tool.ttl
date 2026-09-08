@@ -1,0 +1,319 @@
+@prefix mt: <https://company.local/ontology/machine-tool/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mt: a owl:Ontology ;
+    rdfs:label "MachineToolOntology" ;
+    rdfs:comment "ISA-95-aligned machine-tool shop ontology for a company-side Semantica overlay." ;
+    owl:versionInfo "1.0" .
+
+# --- Classes ---
+
+mt:NamedEntity a owl:Class ;
+    rdfs:label "NamedEntity" ;
+    rdfs:comment "Anything with a display name in the shop model." .
+
+mt:Site a owl:Class ;
+    rdfs:label "Site" ;
+    rdfs:comment "工厂 / 厂区" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:WorkCenter a owl:Class ;
+    rdfs:label "WorkCenter" ;
+    rdfs:comment "工段 / 工作中心 (ISA-95 work center)" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:PhysicalAsset a owl:Class ;
+    rdfs:label "PhysicalAsset" ;
+    rdfs:comment "Physical production asset." ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:MachineTool a owl:Class ;
+    rdfs:label "MachineTool" ;
+    rdfs:comment "机床" ;
+    rdfs:subClassOf mt:PhysicalAsset .
+
+mt:CNCMill a owl:Class ;
+    rdfs:label "CNCMill" ;
+    rdfs:comment "数控铣床 / 加工中心" ;
+    rdfs:subClassOf mt:MachineTool .
+
+mt:CNCLathe a owl:Class ;
+    rdfs:label "CNCLathe" ;
+    rdfs:comment "数控车床" ;
+    rdfs:subClassOf mt:MachineTool .
+
+mt:Grinder a owl:Class ;
+    rdfs:label "Grinder" ;
+    rdfs:comment "磨床" ;
+    rdfs:subClassOf mt:MachineTool .
+
+mt:CuttingTool a owl:Class ;
+    rdfs:label "CuttingTool" ;
+    rdfs:comment "刀具" ;
+    rdfs:subClassOf mt:PhysicalAsset .
+
+mt:Fixture a owl:Class ;
+    rdfs:label "Fixture" ;
+    rdfs:comment "夹具" ;
+    rdfs:subClassOf mt:PhysicalAsset .
+
+mt:Material a owl:Class ;
+    rdfs:label "Material" ;
+    rdfs:comment "原材料" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:Workpiece a owl:Class ;
+    rdfs:label "Workpiece" ;
+    rdfs:comment "工件" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:PartDrawing a owl:Class ;
+    rdfs:label "PartDrawing" ;
+    rdfs:comment "零件图 / 图号" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:ProcessPlan a owl:Class ;
+    rdfs:label "ProcessPlan" ;
+    rdfs:comment "工艺路线" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:Operation a owl:Class ;
+    rdfs:label "Operation" ;
+    rdfs:comment "工序" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:NCProgram a owl:Class ;
+    rdfs:label "NCProgram" ;
+    rdfs:comment "数控程序" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:WorkOrder a owl:Class ;
+    rdfs:label "WorkOrder" ;
+    rdfs:comment "工单" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:Operator a owl:Class ;
+    rdfs:label "Operator" ;
+    rdfs:comment "操作工" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:OperationExecution a owl:Class ;
+    rdfs:label "OperationExecution" ;
+    rdfs:comment "工序执行记录 (associative class: work order x machine x operator x tool x time)" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:Inspection a owl:Class ;
+    rdfs:label "Inspection" ;
+    rdfs:comment "质检" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+mt:Measurement a owl:Class ;
+    rdfs:label "Measurement" ;
+    rdfs:comment "实测尺寸" ;
+    rdfs:subClassOf mt:NamedEntity .
+
+# --- Datatype properties ---
+
+mt:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain mt:NamedEntity ;
+    rdfs:range xsd:string .
+
+mt:assetCode a owl:DatatypeProperty ;
+    rdfs:label "assetCode" ;
+    rdfs:domain mt:MachineTool ;
+    rdfs:range xsd:string .
+
+mt:workCenterCode a owl:DatatypeProperty ;
+    rdfs:label "workCenterCode" ;
+    rdfs:domain mt:WorkCenter ;
+    rdfs:range xsd:string .
+
+mt:machineType a owl:DatatypeProperty ;
+    rdfs:label "machineType" ;
+    rdfs:domain mt:MachineTool ;
+    rdfs:range xsd:string .
+
+mt:toolId a owl:DatatypeProperty ;
+    rdfs:label "toolId" ;
+    rdfs:domain mt:CuttingTool ;
+    rdfs:range xsd:string .
+
+mt:toolLifeRemaining a owl:DatatypeProperty ;
+    rdfs:label "toolLifeRemaining" ;
+    rdfs:domain mt:CuttingTool ;
+    rdfs:range xsd:decimal .
+
+mt:fixtureId a owl:DatatypeProperty ;
+    rdfs:label "fixtureId" ;
+    rdfs:domain mt:Fixture ;
+    rdfs:range xsd:string .
+
+mt:drawingNo a owl:DatatypeProperty ;
+    rdfs:label "drawingNo" ;
+    rdfs:domain mt:PartDrawing ;
+    rdfs:range xsd:string .
+
+mt:workpieceNo a owl:DatatypeProperty ;
+    rdfs:label "workpieceNo" ;
+    rdfs:domain mt:Workpiece ;
+    rdfs:range xsd:string .
+
+mt:planNo a owl:DatatypeProperty ;
+    rdfs:label "planNo" ;
+    rdfs:domain mt:ProcessPlan ;
+    rdfs:range xsd:string .
+
+mt:operationNo a owl:DatatypeProperty ;
+    rdfs:label "operationNo" ;
+    rdfs:domain mt:Operation ;
+    rdfs:range xsd:string .
+
+mt:sequenceNo a owl:DatatypeProperty ;
+    rdfs:label "sequenceNo" ;
+    rdfs:domain mt:Operation ;
+    rdfs:range xsd:integer .
+
+mt:ncProgramPath a owl:DatatypeProperty ;
+    rdfs:label "ncProgramPath" ;
+    rdfs:domain mt:Operation ;
+    rdfs:range xsd:string .
+
+mt:programPath a owl:DatatypeProperty ;
+    rdfs:label "programPath" ;
+    rdfs:domain mt:NCProgram ;
+    rdfs:range xsd:string .
+
+mt:workOrderNo a owl:DatatypeProperty ;
+    rdfs:label "workOrderNo" ;
+    rdfs:domain mt:WorkOrder ;
+    rdfs:range xsd:string .
+
+mt:startedAt a owl:DatatypeProperty ;
+    rdfs:label "startedAt" ;
+    rdfs:domain mt:OperationExecution ;
+    rdfs:range xsd:dateTime .
+
+mt:endedAt a owl:DatatypeProperty ;
+    rdfs:label "endedAt" ;
+    rdfs:domain mt:OperationExecution ;
+    rdfs:range xsd:dateTime .
+
+mt:result a owl:DatatypeProperty ;
+    rdfs:label "result" ;
+    rdfs:domain mt:Inspection ;
+    rdfs:range xsd:string .
+
+mt:dimension a owl:DatatypeProperty ;
+    rdfs:label "dimension" ;
+    rdfs:domain mt:Measurement ;
+    rdfs:range xsd:string .
+
+mt:measuredValue a owl:DatatypeProperty ;
+    rdfs:label "measuredValue" ;
+    rdfs:domain mt:Measurement ;
+    rdfs:range xsd:decimal .
+
+mt:specMin a owl:DatatypeProperty ;
+    rdfs:label "specMin" ;
+    rdfs:domain mt:Measurement ;
+    rdfs:range xsd:decimal .
+
+mt:specMax a owl:DatatypeProperty ;
+    rdfs:label "specMax" ;
+    rdfs:domain mt:Measurement ;
+    rdfs:range xsd:decimal .
+
+# --- Object properties ---
+
+mt:locatedIn a owl:ObjectProperty ;
+    rdfs:label "locatedIn" ;
+    rdfs:domain mt:WorkCenter ;
+    rdfs:range mt:Site .
+
+mt:installedAt a owl:ObjectProperty ;
+    rdfs:label "installedAt" ;
+    rdfs:domain mt:MachineTool ;
+    rdfs:range mt:WorkCenter .
+
+mt:madeFrom a owl:ObjectProperty ;
+    rdfs:label "madeFrom" ;
+    rdfs:domain mt:Workpiece ;
+    rdfs:range mt:Material .
+
+mt:hasDrawing a owl:ObjectProperty ;
+    rdfs:label "hasDrawing" ;
+    rdfs:domain mt:Workpiece ;
+    rdfs:range mt:PartDrawing .
+
+mt:plansDrawing a owl:ObjectProperty ;
+    rdfs:label "plansDrawing" ;
+    rdfs:domain mt:ProcessPlan ;
+    rdfs:range mt:PartDrawing .
+
+mt:partOfPlan a owl:ObjectProperty ;
+    rdfs:label "partOfPlan" ;
+    rdfs:domain mt:Operation ;
+    rdfs:range mt:ProcessPlan .
+
+mt:usesTool a owl:ObjectProperty ;
+    rdfs:label "usesTool" ;
+    rdfs:domain mt:Operation ;
+    rdfs:range mt:CuttingTool .
+
+mt:usesFixture a owl:ObjectProperty ;
+    rdfs:label "usesFixture" ;
+    rdfs:domain mt:Operation ;
+    rdfs:range mt:Fixture .
+
+mt:hasNCProgram a owl:ObjectProperty ;
+    rdfs:label "hasNCProgram" ;
+    rdfs:domain mt:Operation ;
+    rdfs:range mt:NCProgram .
+
+mt:plannedBy a owl:ObjectProperty ;
+    rdfs:label "plannedBy" ;
+    rdfs:domain mt:WorkOrder ;
+    rdfs:range mt:ProcessPlan .
+
+mt:produces a owl:ObjectProperty ;
+    rdfs:label "produces" ;
+    rdfs:domain mt:WorkOrder ;
+    rdfs:range mt:Workpiece .
+
+mt:belongsToWorkOrder a owl:ObjectProperty ;
+    rdfs:label "belongsToWorkOrder" ;
+    rdfs:domain mt:OperationExecution ;
+    rdfs:range mt:WorkOrder .
+
+mt:executes a owl:ObjectProperty ;
+    rdfs:label "executes" ;
+    rdfs:domain mt:OperationExecution ;
+    rdfs:range mt:Operation .
+
+mt:executedOn a owl:ObjectProperty ;
+    rdfs:label "executedOn" ;
+    rdfs:domain mt:OperationExecution ;
+    rdfs:range mt:MachineTool .
+
+mt:performedBy a owl:ObjectProperty ;
+    rdfs:label "performedBy" ;
+    rdfs:domain mt:OperationExecution ;
+    rdfs:range mt:Operator .
+
+mt:usedTool a owl:ObjectProperty ;
+    rdfs:label "usedTool" ;
+    rdfs:domain mt:OperationExecution ;
+    rdfs:range mt:CuttingTool .
+
+mt:inspects a owl:ObjectProperty ;
+    rdfs:label "inspects" ;
+    rdfs:domain mt:Inspection ;
+    rdfs:range mt:Workpiece .
+
+mt:hasMeasurement a owl:ObjectProperty ;
+    rdfs:label "hasMeasurement" ;
+    rdfs:domain mt:Inspection ;
+    rdfs:range mt:Measurement .

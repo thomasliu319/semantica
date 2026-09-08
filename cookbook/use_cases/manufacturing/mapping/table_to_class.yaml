@@ -1,0 +1,154 @@
+tables:
+  site:
+    class: Site
+    id_field: id
+    name_field: name
+    rdf_types:
+      - Site
+    attributes:
+      name: {property: name, datatype: string}
+  work_center:
+    class: WorkCenter
+    id_field: id
+    name_field: name
+    rdf_types:
+      - WorkCenter
+    attributes:
+      name: {property: name, datatype: string}
+      code: {property: workCenterCode, datatype: string}
+  machine_tool:
+    class: MachineTool
+    id_field: id
+    name_field: name
+    type_field: machine_type
+    type_map:
+      mill: CNCMill
+      lathe: CNCLathe
+      grinder: Grinder
+    rdf_types:
+      - MachineTool
+    business_key: assetCode
+    attributes:
+      name: {property: name, datatype: string}
+      asset_code: {property: assetCode, datatype: string}
+      machine_type: {property: machineType, datatype: string}
+  cutting_tool:
+    class: CuttingTool
+    id_field: id
+    name_field: name
+    rdf_types:
+      - CuttingTool
+    business_key: toolId
+    attributes:
+      name: {property: name, datatype: string}
+      tool_id: {property: toolId, datatype: string}
+      tool_life_remaining: {property: toolLifeRemaining, datatype: decimal}
+  fixture:
+    class: Fixture
+    id_field: id
+    name_field: name
+    rdf_types:
+      - Fixture
+    business_key: fixtureId
+    attributes:
+      name: {property: name, datatype: string}
+      fixture_id: {property: fixtureId, datatype: string}
+  material:
+    class: Material
+    id_field: id
+    name_field: name
+    rdf_types:
+      - Material
+    attributes:
+      name: {property: name, datatype: string}
+  part_drawing:
+    class: PartDrawing
+    id_field: id
+    name_field: name
+    rdf_types:
+      - PartDrawing
+    business_key: drawingNo
+    attributes:
+      name: {property: name, datatype: string}
+      drawing_no: {property: drawingNo, datatype: string}
+  workpiece:
+    class: Workpiece
+    id_field: id
+    name_field: name
+    rdf_types:
+      - Workpiece
+    business_key: workpieceNo
+    attributes:
+      name: {property: name, datatype: string}
+      workpiece_no: {property: workpieceNo, datatype: string}
+  process_plan:
+    class: ProcessPlan
+    id_field: id
+    name_field: name
+    rdf_types:
+      - ProcessPlan
+    business_key: planNo
+    attributes:
+      name: {property: name, datatype: string}
+      plan_no: {property: planNo, datatype: string}
+  process_operation:
+    class: Operation
+    id_field: id
+    name_field: name
+    rdf_types:
+      - Operation
+    nc_program_field: nc_program
+    attributes:
+      name: {property: name, datatype: string}
+      operation_no: {property: operationNo, datatype: string}
+      sequence_no: {property: sequenceNo, datatype: integer}
+      nc_program: {property: ncProgramPath, datatype: string}
+  work_order:
+    class: WorkOrder
+    id_field: id
+    name_field: name
+    rdf_types:
+      - WorkOrder
+    business_key: workOrderNo
+    attributes:
+      name: {property: name, datatype: string}
+      work_order_no: {property: workOrderNo, datatype: string}
+  operator:
+    class: Operator
+    id_field: id
+    name_field: name
+    rdf_types:
+      - Operator
+    attributes:
+      name: {property: name, datatype: string}
+  operation_execution:
+    class: OperationExecution
+    id_field: id
+    name_field: name
+    rdf_types:
+      - OperationExecution
+    attributes:
+      name: {property: name, datatype: string}
+      started_at: {property: startedAt, datatype: datetime}
+      ended_at: {property: endedAt, datatype: datetime}
+  inspection:
+    class: Inspection
+    id_field: id
+    name_field: name
+    rdf_types:
+      - Inspection
+    attributes:
+      name: {property: name, datatype: string}
+      result: {property: result, datatype: string}
+  measurement:
+    class: Measurement
+    id_field: id
+    name_field: name
+    rdf_types:
+      - Measurement
+    attributes:
+      name: {property: name, datatype: string}
+      dimension: {property: dimension, datatype: string}
+      measured_value: {property: measuredValue, datatype: decimal}
+      spec_min: {property: specMin, datatype: decimal}
+      spec_max: {property: specMax, datatype: decimal}

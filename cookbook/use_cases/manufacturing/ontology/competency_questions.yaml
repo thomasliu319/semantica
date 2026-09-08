@@ -1,0 +1,44 @@
+questions:
+  - id: cq-execution
+    question: "Which MachineTool CuttingTool and Operator executed a given WorkOrder OperationExecution?"
+    category: execution
+    priority: 1
+    trace_to:
+      - WorkOrder
+      - MachineTool
+      - CuttingTool
+      - Operator
+      - OperationExecution
+      - executedOn
+      - performedBy
+      - usedTool
+  - id: cq-process
+    question: "What ProcessPlan and Operation sequence apply to a PartDrawing?"
+    category: process
+    priority: 1
+    trace_to:
+      - ProcessPlan
+      - Operation
+      - PartDrawing
+      - sequenceNo
+      - partOfPlan
+      - plansDrawing
+  - id: cq-tool-life
+    question: "Which Operation is affected when a CuttingTool has insufficient toolLifeRemaining?"
+    category: tooling
+    priority: 1
+    trace_to:
+      - Operation
+      - CuttingTool
+      - usesTool
+      - toolLifeRemaining
+  - id: cq-quality
+    question: "Did the latest Inspection of a Workpiece pass Measurement?"
+    category: quality
+    priority: 1
+    trace_to:
+      - Inspection
+      - Workpiece
+      - Measurement
+      - inspects
+      - result

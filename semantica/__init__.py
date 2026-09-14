@@ -19,6 +19,15 @@ import importlib
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 
+# Auto-load environment variables from a local .env file (optional dependency).
+# Covers both library usage and the CLI (which imports this package first).
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:
+    pass
+
 # Core imports
 # from .core import Config, ConfigManager, LifecycleManager, PluginRegistry, Semantica
 

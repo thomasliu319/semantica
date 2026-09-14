@@ -1,0 +1,70 @@
+relations:
+  - table: work_center
+    column: site_id
+    target_table: site
+    property: locatedIn
+  - table: machine_tool
+    column: work_center_id
+    target_table: work_center
+    property: installedAt
+  - table: workpiece
+    column: material_id
+    target_table: material
+    property: madeFrom
+  - table: workpiece
+    column: drawing_id
+    target_table: part_drawing
+    property: hasDrawing
+  - table: process_plan
+    column: drawing_id
+    target_table: part_drawing
+    property: plansDrawing
+  - table: process_operation
+    column: plan_id
+    target_table: process_plan
+    property: partOfPlan
+  - table: process_operation
+    column: tool_id
+    target_table: cutting_tool
+    property: usesTool
+  - table: process_operation
+    column: fixture_id
+    target_table: fixture
+    property: usesFixture
+  - table: work_order
+    column: plan_id
+    target_table: process_plan
+    property: plannedBy
+  - table: work_order
+    column: workpiece_id
+    target_table: workpiece
+    property: produces
+  - table: operation_execution
+    column: work_order_id
+    target_table: work_order
+    property: belongsToWorkOrder
+  - table: operation_execution
+    column: operation_id
+    target_table: process_operation
+    property: executes
+  - table: operation_execution
+    column: machine_id
+    target_table: machine_tool
+    property: executedOn
+  - table: operation_execution
+    column: operator_id
+    target_table: operator
+    property: performedBy
+  - table: operation_execution
+    column: tool_id
+    target_table: cutting_tool
+    property: usedTool
+  - table: inspection
+    column: workpiece_id
+    target_table: workpiece
+    property: inspects
+  - table: measurement
+    column: inspection_id
+    target_table: inspection
+    property: hasMeasurement
+    invert: true

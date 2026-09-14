@@ -1,0 +1,120 @@
+@prefix mt: <https://company.local/ontology/machine-tool/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mt:MachineToolShape a sh:NodeShape ;
+    sh:targetClass mt:MachineTool ;
+    sh:property [
+        sh:path mt:assetCode ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "MachineTool must have exactly one assetCode." ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path mt:installedAt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class mt:WorkCenter ;
+        sh:message "MachineTool must be installedAt exactly one WorkCenter." ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "assetCode must be unique among MachineTool instances." ;
+        sh:select """
+            PREFIX mt: <https://company.local/ontology/machine-tool/>
+            SELECT $this ?code
+            WHERE {
+                $this mt:assetCode ?code .
+                ?other a mt:MachineTool ;
+                       mt:assetCode ?code .
+                FILTER (?other != $this)
+            }
+        """ ;
+    ] .
+
+mt:CuttingToolShape a sh:NodeShape ;
+    sh:targetClass mt:CuttingTool ;
+    sh:property [
+        sh:path mt:toolId ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path mt:toolLifeRemaining ;
+        sh:minCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:message "CuttingTool toolLifeRemaining must be a non-negative decimal." ;
+        sh:severity sh:Violation ;
+    ] .
+
+mt:WorkOrderShape a sh:NodeShape ;
+    sh:targetClass mt:WorkOrder ;
+    sh:property [
+        sh:path mt:workOrderNo ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path mt:plannedBy ;
+        sh:minCount 1 ;
+        sh:class mt:ProcessPlan ;
+        sh:message "WorkOrder must be plannedBy a ProcessPlan." ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path mt:produces ;
+        sh:minCount 1 ;
+        sh:class mt:Workpiece ;
+        sh:message "WorkOrder must produce a Workpiece." ;
+        sh:severity sh:Violation ;
+    ] .
+
+mt:OperationShape a sh:NodeShape ;
+    sh:targetClass mt:Operation ;
+    sh:property [
+        sh:path mt:sequenceNo ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path mt:partOfPlan ;
+        sh:minCount 1 ;
+        sh:class mt:ProcessPlan ;
+        sh:message "Operation must belong to a ProcessPlan." ;
+        sh:severity sh:Violation ;
+    ] .
+
+mt:OperationExecutionShape a sh:NodeShape ;
+    sh:targetClass mt:OperationExecution ;
+    sh:property [
+        sh:path mt:startedAt ;
+        sh:minCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path mt:endedAt ;
+        sh:minCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "OperationExecution endedAt must not be before startedAt." ;
+        sh:select """
+            PREFIX mt: <https://company.local/ontology/machine-tool/>
+            SELECT $this
+            WHERE {
+                $this mt:startedAt ?started ;
+                      mt:endedAt ?ended .
+                FILTER (?ended < ?started)
+            }
+        """ ;
+    ] .

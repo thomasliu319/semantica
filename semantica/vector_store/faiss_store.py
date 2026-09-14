@@ -343,7 +343,9 @@ class FAISSIndex:
         was originally saved.
         """
         if not FAISS_AVAILABLE:
-            raise ProcessingError("FAISS not available")
+            raise ProcessingError(
+                "FAISS not available. Install with: pip install 'semantica[vectorstore-faiss]' (or 'semantica[gpu]' for CUDA)"
+            )
 
         path = Path(path)
         index = faiss.read_index(str(path))
@@ -482,7 +484,7 @@ class FAISSIndexBuilder:
         """
         if not FAISS_AVAILABLE:
             raise ProcessingError(
-                "FAISS is not available. Install it with: pip install faiss-cpu or faiss-gpu"
+                "FAISS is not available. Install it with: pip install 'semantica[vectorstore-faiss]' (or 'semantica[gpu]' for CUDA)"
             )
 
         # Create index based on type
@@ -512,9 +514,9 @@ class FAISSIndexBuilder:
         return FAISSIndex(index, self.dimension, index_type)
 
     def train_index(self, index: FAISSIndex, training_vectors: np.ndarray):
-        """Train index on sample vectors."""
-        if not isinstance(index.index, faiss.IndexIVFFlat):
-            return  # Only IVF indices need training
+        """Train IVF and PQ indexes on sample vectors."""
+        if not isinstance(index.index, (faiss.IndexIVFFlat, faiss.IndexPQ)):
+            return
 
         index.index.train(training_vectors.astype(np.float32))
 
@@ -554,7 +556,7 @@ class FAISSStore:
         # Check FAISS availability
         if not FAISS_AVAILABLE:
             self.logger.warning(
-                "FAISS not available. Install with: pip install faiss-cpu or faiss-gpu"
+                "FAISS not available. Install with: pip install 'semantica[vectorstore-faiss]' (or 'semantica[gpu]' for CUDA)"
             )
 
     def create_index(
@@ -753,7 +755,9 @@ class FAISSStore:
             FAISSIndex instance
         """
         if not FAISS_AVAILABLE:
-            raise ProcessingError("FAISS not available")
+            raise ProcessingError(
+                "FAISS not available. Install with: pip install 'semantica[vectorstore-faiss]' (or 'semantica[gpu]' for CUDA)"
+            )
 
         path = Path(path)
         if path.exists() and not _metadata_path(path).exists():

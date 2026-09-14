@@ -465,7 +465,7 @@ def _show_startup(cli_ctx: CLIContext) -> None:
         return
     cfg = cli_ctx.config.to_dict()
     graph_store = (
-        cli_ctx.store_backend or cfg.get("graph_db", {}).get("backend", "memory")
+        cli_ctx.store_backend or cfg.get("graph_db", {}).get("backend", "neo4j")
     )
     vector_store = (
         cli_ctx.vector_store_backend
@@ -851,9 +851,7 @@ def doctor(cli_ctx: CLIContext, local_json: bool, deep_embeddings: bool) -> None
         # Graph store reachability
         def _graph() -> str:
             cfg = cli_ctx.config.to_dict()
-            backend = cli_ctx.store_backend or cfg.get("graph_db", {}).get("backend", "memory")
-            if backend == "memory":
-                return "memory (always available)"
+            backend = cli_ctx.store_backend or cfg.get("graph_db", {}).get("backend", "neo4j")
             gs = _get_graph_store(cli_ctx)
             gs.ping() if hasattr(gs, "ping") else gs.connect()
             return f"{backend} reachable"
@@ -880,10 +878,18 @@ def doctor(cli_ctx: CLIContext, local_json: bool, deep_embeddings: bool) -> None
         def _embedding_backend(method: str) -> str:
             if method == "sentence_transformers":
                 import sentence_transformers  # noqa: F401
-                note = f"importable ({importlib.metadata.version('sentence-transformers')})"
+                try:
+                    ver = importlib.metadata.version("sentence-transformers")
+                except Exception:
+                    ver = getattr(sentence_transformers, "__version__", "installed")
+                note = f"importable ({ver})"
             else:
                 import fastembed  # noqa: F401
-                note = f"importable ({importlib.metadata.version('fastembed')})"
+                try:
+                    ver = importlib.metadata.version("fastembed")
+                except Exception:
+                    ver = getattr(fastembed, "__version__", "installed")
+                note = f"importable ({ver})"
             if not deep:
                 return note
             try:
@@ -904,12 +910,12 @@ def doctor(cli_ctx: CLIContext, local_json: bool, deep_embeddings: bool) -> None
         checks.append(_check(
             "Embeddings (sentence-transformers)",
             lambda: _embedding_backend("sentence_transformers"),
-            hint="pip install sentence-transformers",
+            hint="pip install 'semantica[embeddings-local]'",
         ))
         checks.append(_check(
             "Embeddings (fastembed)",
             lambda: _embedding_backend("fastembed"),
-            hint="pip install fastembed",
+            hint="pip install 'semantica[embeddings-local]'",
         ))
 
         # LLM provider keys

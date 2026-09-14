@@ -1658,7 +1658,12 @@ class TestStore:
         result = runner.invoke(cli_module.main, ["store", "migrate",
                                       "--from", "faiss", "--to", "qdrant"])
         assert result.exit_code != 0
-        assert "faiss, pgvector, sqlite" in result.output
+        # Rich may wrap the error message across lines; check for each backend
+        # name individually rather than the exact comma-joined string.
+        output = result.output
+        assert "faiss" in output
+        assert "pgvector" in output
+        assert "sqlite" in output
 
     def _fake_migrate_store_module(self, source_items, stored, dest_configs=None):
         class _FakeBackendStore:
@@ -2331,7 +2336,7 @@ class TestDoctorEmbeddings:
         checks = self._doctor_checks(runner)
         st = checks["Embeddings (sentence-transformers)"]
         assert st["status"] == "fail"
-        assert st["hint"] == "pip install sentence-transformers"
+        assert st["hint"] == "pip install 'semantica[embeddings-local]'"
 
     def test_deep_probe_detects_fallback_active(self, runner, monkeypatch):
         self._with_fake_st(monkeypatch)

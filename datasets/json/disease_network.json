@@ -1,0 +1,420 @@
+{
+  "graph_id": "a3287c0c-781f-471c-8e6f-83ae7ab4e93d",
+  "nodes": [
+    {
+      "id": "Type 2 Diabetes",
+      "type": "Disease",
+      "properties": {
+        "icd10_code": "E11",
+        "prevalence": "High",
+        "content": "Type 2 Diabetes"
+      }
+    },
+    {
+      "id": "Hypertension",
+      "type": "Disease",
+      "properties": {
+        "content": "Hypertension"
+      }
+    },
+    {
+      "id": "Cardiovascular Disease",
+      "type": "Disease",
+      "properties": {
+        "content": "Cardiovascular Disease"
+      }
+    },
+    {
+      "id": "Obesity",
+      "type": "Disease",
+      "properties": {
+        "content": "Obesity"
+      }
+    },
+    {
+      "id": "Increased thirst",
+      "type": "Symptom",
+      "properties": {
+        "content": "Increased thirst"
+      }
+    },
+    {
+      "id": "Frequent urination",
+      "type": "Symptom",
+      "properties": {
+        "content": "Frequent urination"
+      }
+    },
+    {
+      "id": "Fatigue",
+      "type": "Symptom",
+      "properties": {
+        "content": "Fatigue"
+      }
+    },
+    {
+      "id": "Metformin",
+      "type": "Treatment",
+      "properties": {
+        "content": "Metformin"
+      }
+    },
+    {
+      "id": "Insulin",
+      "type": "Treatment",
+      "properties": {
+        "content": "Insulin"
+      }
+    },
+    {
+      "id": "Lifestyle changes",
+      "type": "Treatment",
+      "properties": {
+        "content": "Lifestyle changes"
+      }
+    },
+    {
+      "id": "Kidney Disease",
+      "type": "Disease",
+      "properties": {
+        "content": "Kidney Disease"
+      }
+    },
+    {
+      "id": "High blood pressure",
+      "type": "Symptom",
+      "properties": {
+        "content": "High blood pressure"
+      }
+    },
+    {
+      "id": "Headaches",
+      "type": "Symptom",
+      "properties": {
+        "content": "Headaches"
+      }
+    },
+    {
+      "id": "Dizziness",
+      "type": "Symptom",
+      "properties": {
+        "content": "Dizziness"
+      }
+    },
+    {
+      "id": "ACE inhibitors",
+      "type": "Treatment",
+      "properties": {
+        "content": "ACE inhibitors"
+      }
+    },
+    {
+      "id": "Beta blockers",
+      "type": "Treatment",
+      "properties": {
+        "content": "Beta blockers"
+      }
+    },
+    {
+      "id": "Chest pain",
+      "type": "Symptom",
+      "properties": {
+        "content": "Chest pain"
+      }
+    },
+    {
+      "id": "Shortness of breath",
+      "type": "Symptom",
+      "properties": {
+        "content": "Shortness of breath"
+      }
+    },
+    {
+      "id": "Statins",
+      "type": "Treatment",
+      "properties": {
+        "content": "Statins"
+      }
+    },
+    {
+      "id": "Weight gain",
+      "type": "Symptom",
+      "properties": {
+        "content": "Weight gain"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c35b98c9-dfdb-5c8b-bc42-0e95231d7365",
+      "familyId": "c35b98c9-dfdb-5c8b-bc42-0e95231d7365",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Hypertension",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a55fcae3-d0df-5473-b01a-d8b28877f9ad",
+      "familyId": "a55fcae3-d0df-5473-b01a-d8b28877f9ad",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Cardiovascular Disease",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "cd7c5dfd-70b8-5365-9224-8cbff0955e40",
+      "familyId": "cd7c5dfd-70b8-5365-9224-8cbff0955e40",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Obesity",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1bd5191e-772d-553e-a334-c3c7a5f795b8",
+      "familyId": "1bd5191e-772d-553e-a334-c3c7a5f795b8",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Increased thirst",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f77bbf00-7506-514c-8bc8-065061f7a892",
+      "familyId": "f77bbf00-7506-514c-8bc8-065061f7a892",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Frequent urination",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "97d54d8b-0058-5101-81f2-c4644058cae4",
+      "familyId": "97d54d8b-0058-5101-81f2-c4644058cae4",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Fatigue",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ccdfecc5-9c27-53f9-8f0d-b00fed70907a",
+      "familyId": "ccdfecc5-9c27-53f9-8f0d-b00fed70907a",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Metformin",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9b3d407c-65e0-5c58-b1d1-6a56560b485a",
+      "familyId": "9b3d407c-65e0-5c58-b1d1-6a56560b485a",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Insulin",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b843ff19-2512-54cb-b844-f8b278e3eaa1",
+      "familyId": "b843ff19-2512-54cb-b844-f8b278e3eaa1",
+      "source_id": "Type 2 Diabetes",
+      "target_id": "Lifestyle changes",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8f2b8e04-eacb-50e9-9381-9312d23ad5cc",
+      "familyId": "8f2b8e04-eacb-50e9-9381-9312d23ad5cc",
+      "source_id": "Hypertension",
+      "target_id": "Type 2 Diabetes",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "32cf17f7-3ec5-502d-9536-f3d55543010e",
+      "familyId": "32cf17f7-3ec5-502d-9536-f3d55543010e",
+      "source_id": "Hypertension",
+      "target_id": "Cardiovascular Disease",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5990dcd1-2668-5f51-ba35-2b3b5aef1aae",
+      "familyId": "5990dcd1-2668-5f51-ba35-2b3b5aef1aae",
+      "source_id": "Hypertension",
+      "target_id": "Kidney Disease",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2851471a-fa86-5b3b-b24c-32a25414b046",
+      "familyId": "2851471a-fa86-5b3b-b24c-32a25414b046",
+      "source_id": "Hypertension",
+      "target_id": "High blood pressure",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "94b9fc0f-c2c3-5dbd-b2c2-3923324157c2",
+      "familyId": "94b9fc0f-c2c3-5dbd-b2c2-3923324157c2",
+      "source_id": "Hypertension",
+      "target_id": "Headaches",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "74695c79-676f-524e-961b-ea4b8801e8c8",
+      "familyId": "74695c79-676f-524e-961b-ea4b8801e8c8",
+      "source_id": "Hypertension",
+      "target_id": "Dizziness",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "76881c9c-80c4-5e32-b595-30a8737d0eb0",
+      "familyId": "76881c9c-80c4-5e32-b595-30a8737d0eb0",
+      "source_id": "Hypertension",
+      "target_id": "ACE inhibitors",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b6de3a60-7f61-5989-90d4-405dd0a92d4f",
+      "familyId": "b6de3a60-7f61-5989-90d4-405dd0a92d4f",
+      "source_id": "Hypertension",
+      "target_id": "Beta blockers",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "05f33d9d-bd2e-5ae7-b11c-348897b7adca",
+      "familyId": "05f33d9d-bd2e-5ae7-b11c-348897b7adca",
+      "source_id": "Hypertension",
+      "target_id": "Lifestyle changes",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fcf27f3e-126c-5897-a2a2-84be2ddda91b",
+      "familyId": "fcf27f3e-126c-5897-a2a2-84be2ddda91b",
+      "source_id": "Cardiovascular Disease",
+      "target_id": "Type 2 Diabetes",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c85e62bd-e08a-5c72-b073-88d256a500ab",
+      "familyId": "c85e62bd-e08a-5c72-b073-88d256a500ab",
+      "source_id": "Cardiovascular Disease",
+      "target_id": "Hypertension",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d5098031-8fe4-5df2-8864-c6136df2c35a",
+      "familyId": "d5098031-8fe4-5df2-8864-c6136df2c35a",
+      "source_id": "Cardiovascular Disease",
+      "target_id": "Obesity",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "147dae07-6712-55a7-aa9c-7157df764b10",
+      "familyId": "147dae07-6712-55a7-aa9c-7157df764b10",
+      "source_id": "Cardiovascular Disease",
+      "target_id": "Chest pain",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "de4532b2-5689-526c-8e29-56702a3e0111",
+      "familyId": "de4532b2-5689-526c-8e29-56702a3e0111",
+      "source_id": "Cardiovascular Disease",
+      "target_id": "Shortness of breath",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c8d665e8-ff56-51f3-b977-3b0983a72cb5",
+      "familyId": "c8d665e8-ff56-51f3-b977-3b0983a72cb5",
+      "source_id": "Cardiovascular Disease",
+      "target_id": "Statins",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6ed9e69f-bf52-50e7-8b4f-5bbd7c5fa606",
+      "familyId": "6ed9e69f-bf52-50e7-8b4f-5bbd7c5fa606",
+      "source_id": "Cardiovascular Disease",
+      "target_id": "Lifestyle changes",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "38dca786-7b56-526e-bf50-baa97f048157",
+      "familyId": "38dca786-7b56-526e-bf50-baa97f048157",
+      "source_id": "Obesity",
+      "target_id": "Type 2 Diabetes",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "22dd8b64-c3e7-5e6d-b221-4287b628c939",
+      "familyId": "22dd8b64-c3e7-5e6d-b221-4287b628c939",
+      "source_id": "Obesity",
+      "target_id": "Hypertension",
+      "type": "related_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "63fee2cf-fdb3-5be7-aa03-615bd08a487e",
+      "familyId": "63fee2cf-fdb3-5be7-aa03-615bd08a487e",
+      "source_id": "Obesity",
+      "target_id": "Weight gain",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b59f8f20-54cc-5a79-9590-3db3ae6b5f55",
+      "familyId": "b59f8f20-54cc-5a79-9590-3db3ae6b5f55",
+      "source_id": "Obesity",
+      "target_id": "Fatigue",
+      "type": "has_symptom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "55f104c0-c7b8-57a4-91fe-8c5cf0ef9256",
+      "familyId": "55f104c0-c7b8-57a4-91fe-8c5cf0ef9256",
+      "source_id": "Obesity",
+      "target_id": "Lifestyle changes",
+      "type": "treated_with",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

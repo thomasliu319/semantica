@@ -1,0 +1,228 @@
+{
+  "graph_id": "ab335f5a-40d0-4099-b227-cf500a619176",
+  "nodes": [
+    {
+      "id": "alice",
+      "type": "Person",
+      "properties": {
+        "role": "Engineer",
+        "content": "Alice Chen",
+        "valid_from": "2020-01-15"
+      }
+    },
+    {
+      "id": "bob",
+      "type": "Person",
+      "properties": {
+        "role": "CTO",
+        "content": "Bob Jones",
+        "valid_from": "2020-03-01"
+      }
+    },
+    {
+      "id": "chen",
+      "type": "Person",
+      "properties": {
+        "role": "Researcher",
+        "content": "Dr Chen",
+        "valid_from": "2021-06-01"
+      }
+    },
+    {
+      "id": "lab_alpha",
+      "type": "Organization",
+      "properties": {
+        "budget": "High",
+        "content": "Lab Alpha",
+        "valid_from": "2020-01-01"
+      }
+    },
+    {
+      "id": "tech_corp",
+      "type": "Organization",
+      "properties": {
+        "founded": "2010",
+        "content": "Tech Corp"
+      }
+    },
+    {
+      "id": "startup_beta",
+      "type": "SpinOff",
+      "properties": {
+        "valuation": "5M",
+        "content": "Startup Beta",
+        "valid_from": "2023-01-01"
+      }
+    },
+    {
+      "id": "sf",
+      "type": "Location",
+      "properties": {
+        "country": "USA",
+        "content": "San Francisco"
+      }
+    },
+    {
+      "id": "paper_x",
+      "type": "Publication",
+      "properties": {
+        "citations": 50,
+        "content": "Paper X",
+        "valid_from": "2020-11-20"
+      }
+    },
+    {
+      "id": "paper_y",
+      "type": "Publication",
+      "properties": {
+        "citations": 25,
+        "content": "Paper Y",
+        "valid_from": "2022-03-15"
+      }
+    },
+    {
+      "id": "grant_a",
+      "type": "Funding",
+      "properties": {
+        "amount": 1000000,
+        "content": "Grant A",
+        "valid_from": "2021-01-01",
+        "valid_until": "2022-12-31"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "9b484b62-5a63-5d5f-a1bb-c234166169d6",
+      "familyId": "9b484b62-5a63-5d5f-a1bb-c234166169d6",
+      "source_id": "alice",
+      "target_id": "lab_alpha",
+      "type": "WORKS_AT",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2020-01-15"
+    },
+    {
+      "id": "4cf47c48-a1dd-5537-9688-7b6988d0d6b9",
+      "familyId": "4cf47c48-a1dd-5537-9688-7b6988d0d6b9",
+      "source_id": "bob",
+      "target_id": "lab_alpha",
+      "type": "WORKS_AT",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2020-03-01"
+    },
+    {
+      "id": "4dfa35d4-ebda-56cb-a2fd-99fbf0804f59",
+      "familyId": "4dfa35d4-ebda-56cb-a2fd-99fbf0804f59",
+      "source_id": "chen",
+      "target_id": "lab_alpha",
+      "type": "WORKS_AT",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2021-06-01"
+    },
+    {
+      "id": "18d0987e-d8a7-5002-9b08-59d23ff25c83",
+      "familyId": "18d0987e-d8a7-5002-9b08-59d23ff25c83",
+      "source_id": "alice",
+      "target_id": "bob",
+      "type": "KNOWS",
+      "weight": 1.0,
+      "properties": {
+        "since": "2020"
+      }
+    },
+    {
+      "id": "502422a3-6385-5374-8424-61e0e30c3841",
+      "familyId": "502422a3-6385-5374-8424-61e0e30c3841",
+      "source_id": "alice",
+      "target_id": "tech_corp",
+      "type": "WORKS_FOR",
+      "weight": 1.0,
+      "properties": {
+        "role": "Engineer"
+      }
+    },
+    {
+      "id": "672a3940-a9e1-533c-a095-0ee2fd353da8",
+      "familyId": "672a3940-a9e1-533c-a095-0ee2fd353da8",
+      "source_id": "tech_corp",
+      "target_id": "sf",
+      "type": "LOCATED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "78f532dc-b977-506b-8347-2ed583574538",
+      "familyId": "78f532dc-b977-506b-8347-2ed583574538",
+      "source_id": "alice",
+      "target_id": "paper_x",
+      "type": "AUTHORED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2020-11-20"
+    },
+    {
+      "id": "3a54fe60-23f9-5e0f-a866-72da2975f5a9",
+      "familyId": "3a54fe60-23f9-5e0f-a866-72da2975f5a9",
+      "source_id": "bob",
+      "target_id": "paper_x",
+      "type": "AUTHORED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2020-11-20"
+    },
+    {
+      "id": "17e07bd9-861f-507f-8910-bb1ab34f9ca4",
+      "familyId": "17e07bd9-861f-507f-8910-bb1ab34f9ca4",
+      "source_id": "chen",
+      "target_id": "paper_y",
+      "type": "AUTHORED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2022-03-15"
+    },
+    {
+      "id": "6c6180c2-567d-5921-9fef-4d7ad7d398dc",
+      "familyId": "6c6180c2-567d-5921-9fef-4d7ad7d398dc",
+      "source_id": "alice",
+      "target_id": "paper_y",
+      "type": "AUTHORED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2022-03-15"
+    },
+    {
+      "id": "62ad6429-d0a8-5b30-b563-b56d8f70ae7a",
+      "familyId": "62ad6429-d0a8-5b30-b563-b56d8f70ae7a",
+      "source_id": "lab_alpha",
+      "target_id": "grant_a",
+      "type": "RECEIVED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2021-01-01"
+    },
+    {
+      "id": "acc5b9db-a4d7-5aa4-b846-d3a451dd0954",
+      "familyId": "acc5b9db-a4d7-5aa4-b846-d3a451dd0954",
+      "source_id": "lab_alpha",
+      "target_id": "startup_beta",
+      "type": "SPUN_OFF",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2023-01-01"
+    },
+    {
+      "id": "0ab424f3-fbfc-58be-865b-031f28b4d0ac",
+      "familyId": "0ab424f3-fbfc-58be-865b-031f28b4d0ac",
+      "source_id": "bob",
+      "target_id": "startup_beta",
+      "type": "CTO",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2023-02-01"
+    }
+  ],
+  "links": []
+}

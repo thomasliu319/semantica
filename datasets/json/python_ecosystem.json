@@ -1,0 +1,225 @@
+{
+  "graph_id": "5baf0728-b848-47fa-b52e-5efb2544430d",
+  "nodes": [
+    {
+      "id": "python",
+      "type": "ProgrammingLanguage",
+      "properties": {
+        "content": "Python"
+      }
+    },
+    {
+      "id": "cpython",
+      "type": "Interpreter",
+      "properties": {
+        "content": "CPython"
+      }
+    },
+    {
+      "id": "psf",
+      "type": "Organization",
+      "properties": {
+        "content": "Python Software Foundation"
+      }
+    },
+    {
+      "id": "docs",
+      "type": "Documentation",
+      "properties": {
+        "content": "Python Documentation"
+      }
+    },
+    {
+      "id": "packaging",
+      "type": "Documentation",
+      "properties": {
+        "content": "Python Packaging User Guide"
+      }
+    },
+    {
+      "id": "py313",
+      "type": "SoftwareVersion",
+      "properties": {
+        "content": "Python 3.13"
+      }
+    },
+    {
+      "id": "asyncio",
+      "type": "StdlibModule",
+      "properties": {
+        "content": "asyncio"
+      }
+    },
+    {
+      "id": "typing",
+      "type": "StdlibModule",
+      "properties": {
+        "content": "typing"
+      }
+    },
+    {
+      "id": "pep703",
+      "type": "PEP",
+      "properties": {
+        "content": "PEP 703"
+      }
+    },
+    {
+      "id": "pypi",
+      "type": "PackageRegistry",
+      "properties": {
+        "content": "PyPI"
+      }
+    },
+    {
+      "id": "pandas",
+      "type": "Library",
+      "properties": {
+        "content": "pandas"
+      }
+    },
+    {
+      "id": "numpy",
+      "type": "Library",
+      "properties": {
+        "content": "numpy"
+      }
+    },
+    {
+      "id": "fastapi",
+      "type": "Library",
+      "properties": {
+        "content": "fastapi"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "d1ea39b0-457e-5898-bbaf-30391804ba3d",
+      "familyId": "d1ea39b0-457e-5898-bbaf-30391804ba3d",
+      "source_id": "cpython",
+      "target_id": "python",
+      "type": "implements",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c8303658-6f4a-5e92-b9c0-023b261cf7e3",
+      "familyId": "c8303658-6f4a-5e92-b9c0-023b261cf7e3",
+      "source_id": "psf",
+      "target_id": "python",
+      "type": "governs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4da68612-e8af-5ac0-8efd-b6cf5aab5520",
+      "familyId": "4da68612-e8af-5ac0-8efd-b6cf5aab5520",
+      "source_id": "docs",
+      "target_id": "python",
+      "type": "documents",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "336f690e-5c30-570c-b5bd-7ae93cdde1c1",
+      "familyId": "336f690e-5c30-570c-b5bd-7ae93cdde1c1",
+      "source_id": "packaging",
+      "target_id": "python",
+      "type": "documents",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "29b8a45a-854e-50d1-a73e-b368cccfe8a9",
+      "familyId": "29b8a45a-854e-50d1-a73e-b368cccfe8a9",
+      "source_id": "py313",
+      "target_id": "python",
+      "type": "version_of",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ac6434fb-3187-5526-8010-c6d6d8fd59d9",
+      "familyId": "ac6434fb-3187-5526-8010-c6d6d8fd59d9",
+      "source_id": "asyncio",
+      "target_id": "python",
+      "type": "module_of",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ddf18f10-c61f-5602-8854-b823c66428db",
+      "familyId": "ddf18f10-c61f-5602-8854-b823c66428db",
+      "source_id": "typing",
+      "target_id": "python",
+      "type": "module_of",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4e96e924-e8a7-5cac-8abe-99acb0c7e114",
+      "familyId": "4e96e924-e8a7-5cac-8abe-99acb0c7e114",
+      "source_id": "pep703",
+      "target_id": "python",
+      "type": "proposes_for",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b77fb7d4-0d9d-5d98-b46d-484c38133c7c",
+      "familyId": "b77fb7d4-0d9d-5d98-b46d-484c38133c7c",
+      "source_id": "pandas",
+      "target_id": "pypi",
+      "type": "published_on",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "59dc5fa0-ed05-54fb-beb9-839566149547",
+      "familyId": "59dc5fa0-ed05-54fb-beb9-839566149547",
+      "source_id": "numpy",
+      "target_id": "pypi",
+      "type": "published_on",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b8a31c8c-dd69-548a-a990-03dd9e3ce04c",
+      "familyId": "b8a31c8c-dd69-548a-a990-03dd9e3ce04c",
+      "source_id": "fastapi",
+      "target_id": "pypi",
+      "type": "published_on",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3322ac0c-72f0-5c8c-8374-77dd120d411c",
+      "familyId": "3322ac0c-72f0-5c8c-8374-77dd120d411c",
+      "source_id": "pandas",
+      "target_id": "numpy",
+      "type": "depends_on",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ff31f2b4-248a-5c33-ac68-9d0a7d175f4d",
+      "familyId": "ff31f2b4-248a-5c33-ac68-9d0a7d175f4d",
+      "source_id": "pandas",
+      "target_id": "python",
+      "type": "written_in",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0fc353fd-f841-520c-8ffa-8ca60f017830",
+      "familyId": "0fc353fd-f841-520c-8ffa-8ca60f017830",
+      "source_id": "fastapi",
+      "target_id": "python",
+      "type": "written_in",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,124 @@
+{
+  "graph_id": "4ed52f7c-fdb1-436f-aa4a-513500e6285e",
+  "nodes": [
+    {
+      "id": "acme",
+      "type": "Company",
+      "properties": {
+        "founded": "2010",
+        "content": "Acme Corp"
+      }
+    },
+    {
+      "id": "eng",
+      "type": "Department",
+      "properties": {
+        "content": "Engineering"
+      }
+    },
+    {
+      "id": "sales",
+      "type": "Department",
+      "properties": {
+        "content": "Sales"
+      }
+    },
+    {
+      "id": "alice",
+      "type": "Person",
+      "properties": {
+        "role": "VP Engineering",
+        "content": "Alice Chen"
+      }
+    },
+    {
+      "id": "bob",
+      "type": "Person",
+      "properties": {
+        "role": "Engineer",
+        "content": "Bob Jones"
+      }
+    },
+    {
+      "id": "carol",
+      "type": "Person",
+      "properties": {
+        "role": "Account Lead",
+        "content": "Carol Diaz"
+      }
+    },
+    {
+      "id": "project_x",
+      "type": "Project",
+      "properties": {
+        "content": "Project X"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "938df6d6-ae58-5610-976b-bea484597869",
+      "familyId": "938df6d6-ae58-5610-976b-bea484597869",
+      "source_id": "eng",
+      "target_id": "acme",
+      "type": "partOf",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "afa3cf01-7730-5dc8-b9af-868def6fca3b",
+      "familyId": "afa3cf01-7730-5dc8-b9af-868def6fca3b",
+      "source_id": "sales",
+      "target_id": "acme",
+      "type": "partOf",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e7e16d11-31ee-51aa-997e-33d965558035",
+      "familyId": "e7e16d11-31ee-51aa-997e-33d965558035",
+      "source_id": "alice",
+      "target_id": "eng",
+      "type": "leads",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "686aa10e-4fd0-5b0b-ac24-8889b1348988",
+      "familyId": "686aa10e-4fd0-5b0b-ac24-8889b1348988",
+      "source_id": "bob",
+      "target_id": "alice",
+      "type": "reports_to",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "844230ac-87be-5775-b1b9-e65b0523d4e3",
+      "familyId": "844230ac-87be-5775-b1b9-e65b0523d4e3",
+      "source_id": "carol",
+      "target_id": "sales",
+      "type": "works_for",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3e7eea4b-5e9f-578c-88de-2b7f17c244ba",
+      "familyId": "3e7eea4b-5e9f-578c-88de-2b7f17c244ba",
+      "source_id": "alice",
+      "target_id": "project_x",
+      "type": "manages",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0674f662-4ceb-5721-bfac-2cf00f5b34a8",
+      "familyId": "0674f662-4ceb-5721-bfac-2cf00f5b34a8",
+      "source_id": "bob",
+      "target_id": "project_x",
+      "type": "works_on",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

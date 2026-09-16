@@ -1,0 +1,81 @@
+{
+  "graph_id": "5eafd631-8736-45c9-b47b-a0de8e62b85f",
+  "nodes": [
+    {
+      "id": "apple",
+      "type": "Organization",
+      "properties": {
+        "founded": "1976",
+        "content": "Apple Inc."
+      }
+    },
+    {
+      "id": "steve_jobs",
+      "type": "Person",
+      "properties": {
+        "content": "Steve Jobs"
+      }
+    },
+    {
+      "id": "tim_cook",
+      "type": "Person",
+      "properties": {
+        "content": "Tim Cook"
+      }
+    },
+    {
+      "id": "cupertino",
+      "type": "Location",
+      "properties": {
+        "content": "Cupertino"
+      }
+    },
+    {
+      "id": "california",
+      "type": "Location",
+      "properties": {
+        "content": "California"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "5f21ad75-db64-5eb4-a4c1-cfe78a57a668",
+      "familyId": "5f21ad75-db64-5eb4-a4c1-cfe78a57a668",
+      "source_id": "steve_jobs",
+      "target_id": "apple",
+      "type": "FOUNDED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "1976-04-01"
+    },
+    {
+      "id": "ff83769e-8ffd-5959-8eff-985ac85b6a68",
+      "familyId": "ff83769e-8ffd-5959-8eff-985ac85b6a68",
+      "source_id": "tim_cook",
+      "target_id": "apple",
+      "type": "CEO_OF",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a8fe6226-f950-5d02-9029-68ad83ebee32",
+      "familyId": "a8fe6226-f950-5d02-9029-68ad83ebee32",
+      "source_id": "apple",
+      "target_id": "cupertino",
+      "type": "HEADQUARTERED_IN",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ed5eb32e-f1b3-535b-8f79-f2342de39186",
+      "familyId": "ed5eb32e-f1b3-535b-8f79-f2342de39186",
+      "source_id": "cupertino",
+      "target_id": "california",
+      "type": "LOCATED_IN",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

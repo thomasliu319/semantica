@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "file": "alice_bob_acme.json",
+      "title": "Explorer baseline: Alice, Bob, Acme, New York",
+      "source": "examples/explorer_deterministic_rendering_example.py",
+      "tags": [
+        "explorer",
+        "small",
+        "org"
+      ],
+      "node_count": 4,
+      "edge_count": 3,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/alice_bob_acme.json"
+    },
+    {
+      "file": "apple_inc.json",
+      "title": "Apple Inc. first knowledge graph",
+      "source": "cookbook/introduction/08_Your_First_Knowledge_Graph.ipynb + sample_document.txt",
+      "tags": [
+        "cookbook",
+        "org"
+      ],
+      "node_count": 5,
+      "edge_count": 4,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/apple_inc.json"
+    },
+    {
+      "file": "tech_corp.json",
+      "title": "Tech Corp visualization sample",
+      "source": "cookbook/introduction/16_Visualization.ipynb + cookbook/advanced/03_Complete_Visualization_Suite.ipynb",
+      "tags": [
+        "cookbook",
+        "visualization"
+      ],
+      "node_count": 4,
+      "edge_count": 3,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/tech_corp.json"
+    },
+    {
+      "file": "lab_alpha.json",
+      "title": "Lab Alpha research network with timeline",
+      "source": "cookbook/advanced/03_Complete_Visualization_Suite.ipynb temporal section",
+      "tags": [
+        "cookbook",
+        "temporal",
+        "explorer"
+      ],
+      "node_count": 10,
+      "edge_count": 13,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/lab_alpha.json"
+    },
+    {
+      "file": "startup_investment.json",
+      "title": "Startup investment graph (dangling edge removed)",
+      "source": "cookbook/advanced/02_Advanced_Graph_Analytics.ipynb",
+      "tags": [
+        "cookbook",
+        "temporal",
+        "analytics"
+      ],
+      "node_count": 5,
+      "edge_count": 4,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/startup_investment.json"
+    },
+    {
+      "file": "company_aliases.json",
+      "title": "Company name aliases for entity resolution demos",
+      "source": "cookbook/introduction/18_Deduplication.ipynb",
+      "tags": [
+        "cookbook",
+        "dedup"
+      ],
+      "node_count": 8,
+      "edge_count": 5,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/company_aliases.json"
+    },
+    {
+      "file": "disease_network.json",
+      "title": "Disease–symptom–treatment network",
+      "source": "tests/cookbook/test_disease_network_analysis.py",
+      "tags": [
+        "healthcare",
+        "cookbook"
+      ],
+      "node_count": 20,
+      "edge_count": 30,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/disease_network.json"
+    },
+    {
+      "file": "python_ecosystem.json",
+      "title": "Python language / docs / PyPI libraries",
+      "source": "cookbook/advanced/06_Multi_Source_Data_Integration.ipynb",
+      "tags": [
+        "cookbook",
+        "software"
+      ],
+      "node_count": 13,
+      "edge_count": 14,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/python_ecosystem.json"
+    },
+    {
+      "file": "programming_stack.json",
+      "title": "Explorer API sample: languages, decisions, temporal event",
+      "source": "tests/explorer/test_explorer_api.py",
+      "tags": [
+        "explorer",
+        "decisions",
+        "temporal"
+      ],
+      "node_count": 8,
+      "edge_count": 4,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/programming_stack.json"
+    },
+    {
+      "file": "manufacturing_shopfloor.json",
+      "title": "Machine-tool shop floor: site, work orders, inspection",
+      "source": "cookbook/use_cases/manufacturing/sample/seed.sql",
+      "tags": [
+        "manufacturing",
+        "temporal"
+      ],
+      "node_count": 19,
+      "edge_count": 21,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/manufacturing_shopfloor.json"
+    },
+    {
+      "file": "device_iot_model.json",
+      "title": "200-equip master + MES telemetry/alarm/program join model",
+      "source": "datasets/json/source/equip_master_200.json + MES/PdM OpenAPI docs",
+      "tags": [
+        "manufacturing",
+        "iot",
+        "telemetry"
+      ],
+      "node_count": 218,
+      "edge_count": 421,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/device_iot_model.json"
+    },
+    {
+      "file": "corporate_org.json",
+      "title": "Corporate org chart aligned to the cookbook ontology",
+      "source": "cookbook/introduction/corporate_ontology.ttl",
+      "tags": [
+        "ontology",
+        "org"
+      ],
+      "node_count": 7,
+      "edge_count": 7,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/corporate_org.json"
+    }
+  ]
+}

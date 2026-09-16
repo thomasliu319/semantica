@@ -1,0 +1,90 @@
+{
+  "graph_id": "798c5258-3bf4-4946-8dcf-8df8cf2c693a",
+  "nodes": [
+    {
+      "id": "startup_1",
+      "type": "Startup",
+      "properties": {
+        "revenue": 1000000,
+        "founded": "2021-01-01",
+        "content": "TechFlow AI"
+      }
+    },
+    {
+      "id": "startup_2",
+      "type": "Startup",
+      "properties": {
+        "revenue": 500000,
+        "founded": "2020-05-15",
+        "content": "GreenEnergy Co"
+      }
+    },
+    {
+      "id": "investor_1",
+      "type": "Investor",
+      "properties": {
+        "content": "Venture Capital X"
+      }
+    },
+    {
+      "id": "founder_1",
+      "type": "Person",
+      "properties": {
+        "content": "Alice Chen"
+      }
+    },
+    {
+      "id": "founder_2",
+      "type": "Person",
+      "properties": {
+        "content": "Bob Smith"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "7c0cc88e-5f9f-5021-b549-879bf548a73a",
+      "familyId": "7c0cc88e-5f9f-5021-b549-879bf548a73a",
+      "source_id": "founder_1",
+      "target_id": "startup_1",
+      "type": "FOUNDED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2021-01-01"
+    },
+    {
+      "id": "619d2f1b-f762-589a-a997-822b1c34c75b",
+      "familyId": "619d2f1b-f762-589a-a997-822b1c34c75b",
+      "source_id": "investor_1",
+      "target_id": "startup_1",
+      "type": "INVESTED_IN",
+      "weight": 1.0,
+      "properties": {
+        "amount": 5000000
+      },
+      "valid_from": "2023-06-01"
+    },
+    {
+      "id": "870956ff-15f4-50c2-af7e-c08b815cb33c",
+      "familyId": "870956ff-15f4-50c2-af7e-c08b815cb33c",
+      "source_id": "founder_1",
+      "target_id": "startup_2",
+      "type": "ADVISED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2020-01-01",
+      "valid_until": "2021-01-01"
+    },
+    {
+      "id": "78d49d6b-7e26-52e2-885d-4207156fc5b3",
+      "familyId": "78d49d6b-7e26-52e2-885d-4207156fc5b3",
+      "source_id": "founder_2",
+      "target_id": "startup_2",
+      "type": "FOUNDED",
+      "weight": 1.0,
+      "properties": {},
+      "valid_from": "2020-05-15"
+    }
+  ],
+  "links": []
+}

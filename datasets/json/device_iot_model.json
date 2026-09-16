@@ -1,0 +1,6423 @@
+{
+  "graph_id": "bf98ae79-4a66-4590-9f35-ae1f5544e248",
+  "nodes": [
+    {
+      "id": "list:equip_master_200",
+      "type": "Dataset",
+      "properties": {
+        "source_file": "200个设备信息(1).xls",
+        "content": "200台设备主数据"
+      }
+    },
+    {
+      "id": "openapi:iot",
+      "type": "OpenAPI",
+      "properties": {
+        "base_url": "https://iotdev.szccm.com:9991",
+        "content": "IoT OpenAPI"
+      }
+    },
+    {
+      "id": "type:T-V856S",
+      "type": "EquipType",
+      "properties": {
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "content": "T-V856S"
+      }
+    },
+    {
+      "id": "type:T-600",
+      "type": "EquipType",
+      "properties": {
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "content": "T-600"
+      }
+    },
+    {
+      "id": "customer:century",
+      "type": "Customer",
+      "properties": {
+        "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831",
+        "content": "创世纪"
+      }
+    },
+    {
+      "id": "customer:meirisheng",
+      "type": "Customer",
+      "properties": {
+        "CustomerId": "f94ed18b-ccca-4e2b-ba5a-0121d86c2ffd",
+        "AreaName": "华南区",
+        "content": "东莞市美日升五金科技有限公司"
+      }
+    },
+    {
+      "id": "customer:baoteng",
+      "type": "Customer",
+      "properties": {
+        "CustomerId": "4178c64a-9313-4b46-b7f0-d78d4da181f5",
+        "content": "东莞宝腾润滑技术有限公司"
+      }
+    },
+    {
+      "id": "equip:152600398",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600398",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600398"
+      }
+    },
+    {
+      "id": "equip:172603375",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603375",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603375"
+      }
+    },
+    {
+      "id": "equip:172603370",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603370",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603370"
+      }
+    },
+    {
+      "id": "equip:162601072",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601072",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601072"
+      }
+    },
+    {
+      "id": "equip:152600402",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600402",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600402"
+      }
+    },
+    {
+      "id": "equip:162600834",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162600834",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162600834"
+      }
+    },
+    {
+      "id": "equip:172600494",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172600494",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172600494"
+      }
+    },
+    {
+      "id": "equip:172600735",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172600735",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172600735"
+      }
+    },
+    {
+      "id": "equip:172600736",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172600736",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172600736"
+      }
+    },
+    {
+      "id": "equip:162600893",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162600893",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162600893"
+      }
+    },
+    {
+      "id": "equip:152600415",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600415",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600415"
+      }
+    },
+    {
+      "id": "equip:152600469",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600469",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600469"
+      }
+    },
+    {
+      "id": "equip:152600471",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600471",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600471"
+      }
+    },
+    {
+      "id": "equip:152600472",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600472",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600472"
+      }
+    },
+    {
+      "id": "equip:152600478",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600478",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600478"
+      }
+    },
+    {
+      "id": "equip:152600349",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600349",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600349"
+      }
+    },
+    {
+      "id": "equip:172603556",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603556",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603556"
+      }
+    },
+    {
+      "id": "equip:172602805",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172602805",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172602805"
+      }
+    },
+    {
+      "id": "equip:152600492",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600492",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600492"
+      }
+    },
+    {
+      "id": "equip:152600494",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600494",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600494"
+      }
+    },
+    {
+      "id": "equip:152600495",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600495",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600495"
+      }
+    },
+    {
+      "id": "equip:152600496",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600496",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600496"
+      }
+    },
+    {
+      "id": "equip:152600455",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600455",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600455"
+      }
+    },
+    {
+      "id": "equip:152600456",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600456",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600456"
+      }
+    },
+    {
+      "id": "equip:152600482",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600482",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600482"
+      }
+    },
+    {
+      "id": "equip:172603418",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603418",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603418"
+      }
+    },
+    {
+      "id": "equip:162601589",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601589",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601589"
+      }
+    },
+    {
+      "id": "equip:172603549",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603549",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603549"
+      }
+    },
+    {
+      "id": "equip:152600377",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600377",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600377"
+      }
+    },
+    {
+      "id": "equip:162601588",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601588",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601588"
+      }
+    },
+    {
+      "id": "equip:162601718",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601718",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601718"
+      }
+    },
+    {
+      "id": "equip:162601862",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601862",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601862"
+      }
+    },
+    {
+      "id": "equip:162601863",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601863",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601863"
+      }
+    },
+    {
+      "id": "equip:162601864",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601864",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601864"
+      }
+    },
+    {
+      "id": "equip:172515661",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172515661",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172515661"
+      }
+    },
+    {
+      "id": "equip:172600523",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172600523",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172600523"
+      }
+    },
+    {
+      "id": "equip:172600524",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172600524",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172600524"
+      }
+    },
+    {
+      "id": "equip:152600457",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600457",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600457"
+      }
+    },
+    {
+      "id": "equip:152600458",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600458",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600458"
+      }
+    },
+    {
+      "id": "equip:152600459",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600459",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600459"
+      }
+    },
+    {
+      "id": "equip:152600436",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600436",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600436"
+      }
+    },
+    {
+      "id": "equip:172603368",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603368",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603368"
+      }
+    },
+    {
+      "id": "equip:152600374",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600374",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600374"
+      }
+    },
+    {
+      "id": "equip:152600386",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600386",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600386"
+      }
+    },
+    {
+      "id": "equip:152600387",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600387",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600387"
+      }
+    },
+    {
+      "id": "equip:172603512",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603512",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "EquipCode": "172603512_sk",
+        "content": "172603512"
+      }
+    },
+    {
+      "id": "equip:172603680",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603680",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603680"
+      }
+    },
+    {
+      "id": "equip:172603383",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603383",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603383"
+      }
+    },
+    {
+      "id": "equip:172603543",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603543",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603543"
+      }
+    },
+    {
+      "id": "equip:172603006",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603006",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603006"
+      }
+    },
+    {
+      "id": "equip:162601068",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601068",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601068"
+      }
+    },
+    {
+      "id": "equip:172603369",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603369",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603369"
+      }
+    },
+    {
+      "id": "equip:172603554",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603554",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603554"
+      }
+    },
+    {
+      "id": "equip:172603528",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603528",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603528"
+      }
+    },
+    {
+      "id": "equip:152600416",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600416",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600416"
+      }
+    },
+    {
+      "id": "equip:152600488",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600488",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600488"
+      }
+    },
+    {
+      "id": "equip:162601584",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601584",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601584"
+      }
+    },
+    {
+      "id": "equip:162601586",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601586",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601586"
+      }
+    },
+    {
+      "id": "equip:162601587",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601587",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601587"
+      }
+    },
+    {
+      "id": "equip:162601710",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601710",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601710"
+      }
+    },
+    {
+      "id": "equip:162601711",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601711",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601711"
+      }
+    },
+    {
+      "id": "equip:162601712",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601712",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601712"
+      }
+    },
+    {
+      "id": "equip:162601713",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601713",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601713"
+      }
+    },
+    {
+      "id": "equip:162601714",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601714",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601714"
+      }
+    },
+    {
+      "id": "equip:162601715",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601715",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601715"
+      }
+    },
+    {
+      "id": "equip:162601717",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601717",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601717"
+      }
+    },
+    {
+      "id": "equip:162601861",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601861",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601861"
+      }
+    },
+    {
+      "id": "equip:172603505",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603505",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603505"
+      }
+    },
+    {
+      "id": "equip:172603509",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603509",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603509"
+      }
+    },
+    {
+      "id": "equip:172603674",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603674",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603674"
+      }
+    },
+    {
+      "id": "equip:172603518",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603518",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603518"
+      }
+    },
+    {
+      "id": "equip:172603386",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603386",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603386"
+      }
+    },
+    {
+      "id": "equip:172603416",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603416",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603416"
+      }
+    },
+    {
+      "id": "equip:172603420",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603420",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603420"
+      }
+    },
+    {
+      "id": "equip:152600493",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600493",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600493"
+      }
+    },
+    {
+      "id": "equip:152600483",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600483",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600483"
+      }
+    },
+    {
+      "id": "equip:152600484",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600484",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600484"
+      }
+    },
+    {
+      "id": "equip:162601321",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601321",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601321"
+      }
+    },
+    {
+      "id": "equip:162601719",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601719",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601719"
+      }
+    },
+    {
+      "id": "equip:162601859",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601859",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601859"
+      }
+    },
+    {
+      "id": "equip:162601865",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601865",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601865"
+      }
+    },
+    {
+      "id": "equip:162601866",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601866",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601866"
+      }
+    },
+    {
+      "id": "equip:162601867",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601867",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601867"
+      }
+    },
+    {
+      "id": "equip:162601868",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "162601868",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "162601868"
+      }
+    },
+    {
+      "id": "equip:172602605",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172602605",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172602605"
+      }
+    },
+    {
+      "id": "equip:152600438",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600438",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600438"
+      }
+    },
+    {
+      "id": "equip:172603682",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603682",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603682"
+      }
+    },
+    {
+      "id": "equip:152600408",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600408",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600408"
+      }
+    },
+    {
+      "id": "equip:152600409",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600409",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600409"
+      }
+    },
+    {
+      "id": "equip:152600410",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600410",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600410"
+      }
+    },
+    {
+      "id": "equip:152600412",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600412",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600412"
+      }
+    },
+    {
+      "id": "equip:152600419",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600419",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600419"
+      }
+    },
+    {
+      "id": "equip:152600432",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600432",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600432"
+      }
+    },
+    {
+      "id": "equip:172603546",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603546",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603546"
+      }
+    },
+    {
+      "id": "equip:152600473",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600473",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600473"
+      }
+    },
+    {
+      "id": "equip:172603544",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603544",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172603544"
+      }
+    },
+    {
+      "id": "equip:152600359",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600359",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600359"
+      }
+    },
+    {
+      "id": "equip:152600384",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600384",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600384"
+      }
+    },
+    {
+      "id": "equip:152600391",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600391",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600391"
+      }
+    },
+    {
+      "id": "equip:152600465",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "152600465",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "152600465"
+      }
+    },
+    {
+      "id": "equip:172605548",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605548",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605548"
+      }
+    },
+    {
+      "id": "equip:172605558",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605558",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605558"
+      }
+    },
+    {
+      "id": "equip:172605559",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605559",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605559"
+      }
+    },
+    {
+      "id": "equip:172605597",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605597",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605597"
+      }
+    },
+    {
+      "id": "equip:172605598",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605598",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605598"
+      }
+    },
+    {
+      "id": "equip:172605600",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605600",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605600"
+      }
+    },
+    {
+      "id": "equip:172605603",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605603",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605603"
+      }
+    },
+    {
+      "id": "equip:172605604",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605604",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605604"
+      }
+    },
+    {
+      "id": "equip:172605605",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605605",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605605"
+      }
+    },
+    {
+      "id": "equip:172605608",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172605608",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172605608"
+      }
+    },
+    {
+      "id": "equip:172609342",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609342",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609342"
+      }
+    },
+    {
+      "id": "equip:172609343",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609343",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609343"
+      }
+    },
+    {
+      "id": "equip:172609347",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609347",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609347"
+      }
+    },
+    {
+      "id": "equip:172609356",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609356",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609356"
+      }
+    },
+    {
+      "id": "equip:172609357",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609357",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609357"
+      }
+    },
+    {
+      "id": "equip:172609379",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609379",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609379"
+      }
+    },
+    {
+      "id": "equip:172609382",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609382",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609382"
+      }
+    },
+    {
+      "id": "equip:172609383",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609383",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609383"
+      }
+    },
+    {
+      "id": "equip:172609384",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609384",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609384"
+      }
+    },
+    {
+      "id": "equip:172609386",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609386",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609386"
+      }
+    },
+    {
+      "id": "equip:172609387",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609387",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609387"
+      }
+    },
+    {
+      "id": "equip:172609580",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609580",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609580"
+      }
+    },
+    {
+      "id": "equip:172609581",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609581",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609581"
+      }
+    },
+    {
+      "id": "equip:172609583",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609583",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609583"
+      }
+    },
+    {
+      "id": "equip:172609586",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609586",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609586"
+      }
+    },
+    {
+      "id": "equip:172609633",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609633",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609633"
+      }
+    },
+    {
+      "id": "equip:172609669",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609669",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609669"
+      }
+    },
+    {
+      "id": "equip:172609676",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609676",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609676"
+      }
+    },
+    {
+      "id": "equip:172609704",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609704",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609704"
+      }
+    },
+    {
+      "id": "equip:172609950",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609950",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609950"
+      }
+    },
+    {
+      "id": "equip:172609966",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172609966",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172609966"
+      }
+    },
+    {
+      "id": "equip:172611538",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172611538",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "172611538"
+      }
+    },
+    {
+      "id": "equip:182603876",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182603876",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182603876"
+      }
+    },
+    {
+      "id": "equip:182605169",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605169",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605169"
+      }
+    },
+    {
+      "id": "equip:182605513",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605513",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605513"
+      }
+    },
+    {
+      "id": "equip:182605660",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605660",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605660"
+      }
+    },
+    {
+      "id": "equip:182605666",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605666",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605666"
+      }
+    },
+    {
+      "id": "equip:182605670",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605670",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605670"
+      }
+    },
+    {
+      "id": "equip:182605858",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605858",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605858"
+      }
+    },
+    {
+      "id": "equip:182605863",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605863",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605863"
+      }
+    },
+    {
+      "id": "equip:182605866",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605866",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605866"
+      }
+    },
+    {
+      "id": "equip:182605870",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605870",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605870"
+      }
+    },
+    {
+      "id": "equip:182605873",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605873",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605873"
+      }
+    },
+    {
+      "id": "equip:182605874",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605874",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605874"
+      }
+    },
+    {
+      "id": "equip:182605876",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605876",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605876"
+      }
+    },
+    {
+      "id": "equip:182605877",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605877",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605877"
+      }
+    },
+    {
+      "id": "equip:182605899",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605899",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605899"
+      }
+    },
+    {
+      "id": "equip:182605926",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182605926",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182605926"
+      }
+    },
+    {
+      "id": "equip:182606048",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606048",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606048"
+      }
+    },
+    {
+      "id": "equip:182606054",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606054",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606054"
+      }
+    },
+    {
+      "id": "equip:182606055",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606055",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606055"
+      }
+    },
+    {
+      "id": "equip:182606056",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606056",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606056"
+      }
+    },
+    {
+      "id": "equip:182606074",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606074",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606074"
+      }
+    },
+    {
+      "id": "equip:182606079",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606079",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606079"
+      }
+    },
+    {
+      "id": "equip:182606087",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606087",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606087"
+      }
+    },
+    {
+      "id": "equip:182606091",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606091",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606091"
+      }
+    },
+    {
+      "id": "equip:182606093",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606093",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606093"
+      }
+    },
+    {
+      "id": "equip:182606094",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606094",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606094"
+      }
+    },
+    {
+      "id": "equip:182606097",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606097",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606097"
+      }
+    },
+    {
+      "id": "equip:182606116",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606116",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606116"
+      }
+    },
+    {
+      "id": "equip:182606139",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606139",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606139"
+      }
+    },
+    {
+      "id": "equip:182606144",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606144",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606144"
+      }
+    },
+    {
+      "id": "equip:182606146",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606146",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606146"
+      }
+    },
+    {
+      "id": "equip:182606151",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606151",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606151"
+      }
+    },
+    {
+      "id": "equip:182606157",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606157",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606157"
+      }
+    },
+    {
+      "id": "equip:182606161",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606161",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606161"
+      }
+    },
+    {
+      "id": "equip:182606168",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606168",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606168"
+      }
+    },
+    {
+      "id": "equip:182606173",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606173",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606173"
+      }
+    },
+    {
+      "id": "equip:182606188",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606188",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606188"
+      }
+    },
+    {
+      "id": "equip:182606189",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606189",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606189"
+      }
+    },
+    {
+      "id": "equip:182606200",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606200",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606200"
+      }
+    },
+    {
+      "id": "equip:182606315",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606315",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606315"
+      }
+    },
+    {
+      "id": "equip:182606317",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606317",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606317"
+      }
+    },
+    {
+      "id": "equip:182606321",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606321",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606321"
+      }
+    },
+    {
+      "id": "equip:182606322",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182606322",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182606322"
+      }
+    },
+    {
+      "id": "equip:182607026",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607026",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607026"
+      }
+    },
+    {
+      "id": "equip:182607027",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607027",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607027"
+      }
+    },
+    {
+      "id": "equip:182607028",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607028",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607028"
+      }
+    },
+    {
+      "id": "equip:182607029",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607029",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607029"
+      }
+    },
+    {
+      "id": "equip:182607030",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607030",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607030"
+      }
+    },
+    {
+      "id": "equip:182607032",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607032",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607032"
+      }
+    },
+    {
+      "id": "equip:182607035",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607035",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607035"
+      }
+    },
+    {
+      "id": "equip:182607036",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607036",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607036"
+      }
+    },
+    {
+      "id": "equip:182607037",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607037",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607037"
+      }
+    },
+    {
+      "id": "equip:182607040",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607040",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607040"
+      }
+    },
+    {
+      "id": "equip:182607041",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607041",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607041"
+      }
+    },
+    {
+      "id": "equip:182607042",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607042",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607042"
+      }
+    },
+    {
+      "id": "equip:182607043",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607043",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607043"
+      }
+    },
+    {
+      "id": "equip:182607044",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607044",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607044"
+      }
+    },
+    {
+      "id": "equip:182607046",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607046",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607046"
+      }
+    },
+    {
+      "id": "equip:182607047",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607047",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607047"
+      }
+    },
+    {
+      "id": "equip:182607048",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607048",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607048"
+      }
+    },
+    {
+      "id": "equip:182607049",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607049",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607049"
+      }
+    },
+    {
+      "id": "equip:182607050",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607050",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607050"
+      }
+    },
+    {
+      "id": "equip:182607315",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607315",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607315"
+      }
+    },
+    {
+      "id": "equip:182607334",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607334",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607334"
+      }
+    },
+    {
+      "id": "equip:182607335",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607335",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607335"
+      }
+    },
+    {
+      "id": "equip:182607336",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607336",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607336"
+      }
+    },
+    {
+      "id": "equip:182607337",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607337",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607337"
+      }
+    },
+    {
+      "id": "equip:182607338",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "182607338",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": true,
+        "source": "excel_master",
+        "content": "182607338"
+      }
+    },
+    {
+      "id": "telemetry:52893a81",
+      "type": "TelemetrySnapshot",
+      "properties": {
+        "EquipCode": "172603512_sk",
+        "XAC": "470.084",
+        "XLoad": "3",
+        "YAC": "-393.615",
+        "YLoad": "12",
+        "ZAC": "-518.239",
+        "ZLoad": "41",
+        "MainArbor": "S1",
+        "Speed": "6495",
+        "SpeedRate": "100",
+        "Load": "0",
+        "Feed": "1949.991",
+        "FeedRate": "130",
+        "KnifePosition": "20",
+        "ProgramCode": "O275-72-DJK",
+        "LineNo": "8601",
+        "api": "GetEquipSpindleWithFeedData",
+        "content": "172603512 主轴进给快照"
+      }
+    },
+    {
+      "id": "equip:172603337",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172603337",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "EquipCode": "172603337_sk",
+        "EquipName": "",
+        "in_excel": false,
+        "source": "mes_doc_sample",
+        "content": "172603337"
+      }
+    },
+    {
+      "id": "gw:DAQ043068219",
+      "type": "Gateway",
+      "properties": {
+        "GwCode": "DAQ043068219",
+        "GateId": "3bb410fe-c04c-45f3-9582-1d4fa4f50444",
+        "Ip": "192.168.1.83",
+        "SIMNo": "898604A1192670001994",
+        "content": "DAQ043068219"
+      }
+    },
+    {
+      "id": "equip:62500730",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "62500730",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "EquipCode": "62500730",
+        "EquipName": "02",
+        "in_excel": false,
+        "source": "mes_doc_sample",
+        "content": "62500730"
+      }
+    },
+    {
+      "id": "runstatus:62500730:2026-05-09",
+      "type": "RunStatusDaily",
+      "properties": {
+        "currentDate": "2026-05-09",
+        "TotalTime": "7小时30分钟11秒",
+        "RunTime": "1小时37分钟40秒",
+        "RunTimeRate": "21.69%",
+        "StandbyTime": "5小时52分钟31秒",
+        "StandbyTimeRate": "78.31%",
+        "StopTime": "0秒",
+        "BreakDownTime": "0秒",
+        "api": "GetEquipRunStatusList",
+        "content": "62500730 日运行状态",
+        "valid_from": "2026-05-09T00:00:00",
+        "valid_until": "2026-05-09T23:59:59"
+      }
+    },
+    {
+      "id": "equip:172604773",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "172604773",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "EquipCode": "172604773_sk",
+        "EquipName": "",
+        "in_excel": false,
+        "source": "mes_doc_sample",
+        "content": "172604773"
+      }
+    },
+    {
+      "id": "alarm:514affa9",
+      "type": "AlarmEvent",
+      "properties": {
+        "AbnoCode": "O0005",
+        "AbnoTypeName": "油位过低",
+        "AbnoContent": "2005.ATC维修模式",
+        "IsShutdown": 1,
+        "ProcessStatus": "已解决",
+        "DurationDetail": "29分钟3秒",
+        "api": "GetEquipAbnorPageList",
+        "content": "油位过低 O0005",
+        "valid_from": "2026-05-09T15:21:02"
+      }
+    },
+    {
+      "id": "equip:dgbt13",
+      "type": "Equip",
+      "properties": {
+        "OutFactoryCode": "",
+        "EquipCode": "dgbt13",
+        "EquipName": "13",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": false,
+        "source": "mes_doc_sample",
+        "content": "dgbt13"
+      }
+    },
+    {
+      "id": "program:e82008f3",
+      "type": "ProgramCycle",
+      "properties": {
+        "ProgramCode": "BFA-7",
+        "Output": 1,
+        "OutputSumSecond": 1079,
+        "AvgOutPutTime": "17分钟59秒",
+        "api": "GetEquipProgramPageList",
+        "content": "BFA-7",
+        "valid_from": "2026-05-01T03:31:12",
+        "valid_until": "2026-05-01T03:31:27"
+      }
+    },
+    {
+      "id": "progress:456ee5f1",
+      "type": "ProductionProgressDaily",
+      "properties": {
+        "ProgramCode": "BFA-05.",
+        "Output": 32,
+        "PlanOutput": 294,
+        "OutputSumSecond": 22382,
+        "ProcessingTimeSum": "6小时21分钟41秒",
+        "api": "GetEquipProductionProgressPageList",
+        "content": "BFA-05. 日进度",
+        "valid_from": "2026-05-09T00:00:00",
+        "valid_until": "2026-05-09T23:59:59"
+      }
+    },
+    {
+      "id": "equip:dgbt11",
+      "type": "Equip",
+      "properties": {
+        "EquipCode": "dgbt11",
+        "EquipName": "11",
+        "EquipTypeCode": "T-600",
+        "EquipTypeName": "钻攻机",
+        "in_excel": false,
+        "source": "mes_doc_sample",
+        "content": "dgbt11"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "b516e6f5-9caa-5c26-8fbf-9dd33f218367",
+      "familyId": "b516e6f5-9caa-5c26-8fbf-9dd33f218367",
+      "source_id": "equip:152600398",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "20255e5c-c584-5050-a24c-7bdac422e3cf",
+      "familyId": "20255e5c-c584-5050-a24c-7bdac422e3cf",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600398",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "17268873-08e1-5b8b-ad3d-7faaeba28083",
+      "familyId": "17268873-08e1-5b8b-ad3d-7faaeba28083",
+      "source_id": "equip:172603375",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5a235ddd-3c7d-58e8-8dd4-473094fd2a2a",
+      "familyId": "5a235ddd-3c7d-58e8-8dd4-473094fd2a2a",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603375",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "682cf989-ecc3-5017-822f-005a1ef28ce0",
+      "familyId": "682cf989-ecc3-5017-822f-005a1ef28ce0",
+      "source_id": "equip:172603370",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3ab12e8f-323f-5f16-b89b-9c2f993400b6",
+      "familyId": "3ab12e8f-323f-5f16-b89b-9c2f993400b6",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603370",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b5437700-15c8-5dfc-9d0d-9b4deb05d59f",
+      "familyId": "b5437700-15c8-5dfc-9d0d-9b4deb05d59f",
+      "source_id": "equip:162601072",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5e1b6642-5e3a-5785-90c1-abcfbebdfd00",
+      "familyId": "5e1b6642-5e3a-5785-90c1-abcfbebdfd00",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601072",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c1a5c900-9037-54e9-a2b1-26b22e298286",
+      "familyId": "c1a5c900-9037-54e9-a2b1-26b22e298286",
+      "source_id": "equip:152600402",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "90d58d65-e579-5bb4-b121-ca6cc6e91926",
+      "familyId": "90d58d65-e579-5bb4-b121-ca6cc6e91926",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600402",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1fbafb35-0c38-5b51-824b-8e519eea2ec5",
+      "familyId": "1fbafb35-0c38-5b51-824b-8e519eea2ec5",
+      "source_id": "equip:162600834",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b7c4f72c-e1f3-54b3-82bc-56deee5c7a22",
+      "familyId": "b7c4f72c-e1f3-54b3-82bc-56deee5c7a22",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162600834",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7bdbd909-1645-5920-8484-4bb341cedaae",
+      "familyId": "7bdbd909-1645-5920-8484-4bb341cedaae",
+      "source_id": "equip:172600494",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9966d548-2d5e-56e3-b3e6-2e1b61c50275",
+      "familyId": "9966d548-2d5e-56e3-b3e6-2e1b61c50275",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172600494",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "40e18a6e-cb2c-5b61-b9fb-44a577634f26",
+      "familyId": "40e18a6e-cb2c-5b61-b9fb-44a577634f26",
+      "source_id": "equip:172600735",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1d2f8759-bf89-522c-ae6e-fbf386e6e9fb",
+      "familyId": "1d2f8759-bf89-522c-ae6e-fbf386e6e9fb",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172600735",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6ad8ed9d-25cb-506c-829e-3041390ceab6",
+      "familyId": "6ad8ed9d-25cb-506c-829e-3041390ceab6",
+      "source_id": "equip:172600736",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "10eaa097-0bf1-5cba-88b8-c0dac0d0bc7e",
+      "familyId": "10eaa097-0bf1-5cba-88b8-c0dac0d0bc7e",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172600736",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f6f940d3-ac19-5001-ae17-0cbfe1c8274a",
+      "familyId": "f6f940d3-ac19-5001-ae17-0cbfe1c8274a",
+      "source_id": "equip:162600893",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3536b571-057c-5f5b-88cd-cc9ddea451de",
+      "familyId": "3536b571-057c-5f5b-88cd-cc9ddea451de",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162600893",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e5186c37-937d-5059-a755-e6877255e109",
+      "familyId": "e5186c37-937d-5059-a755-e6877255e109",
+      "source_id": "equip:152600415",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a983f32c-2ca4-5e61-bc31-fdf82eda7a0c",
+      "familyId": "a983f32c-2ca4-5e61-bc31-fdf82eda7a0c",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600415",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "31e9fac9-e8e0-5224-a173-85831165d2ff",
+      "familyId": "31e9fac9-e8e0-5224-a173-85831165d2ff",
+      "source_id": "equip:152600469",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "266b8214-34a4-551c-bab7-fad761f4ea1a",
+      "familyId": "266b8214-34a4-551c-bab7-fad761f4ea1a",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600469",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3490b740-26ce-56db-b3e1-9d0f1e978d09",
+      "familyId": "3490b740-26ce-56db-b3e1-9d0f1e978d09",
+      "source_id": "equip:152600471",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d6be8d74-9347-5443-85cb-e3ce7334e97b",
+      "familyId": "d6be8d74-9347-5443-85cb-e3ce7334e97b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600471",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f9c09320-dcee-50a9-af27-70fe90b21238",
+      "familyId": "f9c09320-dcee-50a9-af27-70fe90b21238",
+      "source_id": "equip:152600472",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2eef9ae9-19fa-56c4-929b-567ae6e9ab80",
+      "familyId": "2eef9ae9-19fa-56c4-929b-567ae6e9ab80",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600472",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b7211ab3-597e-5a0b-b646-88894cbf9359",
+      "familyId": "b7211ab3-597e-5a0b-b646-88894cbf9359",
+      "source_id": "equip:152600478",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a66d96bd-47cf-595b-aee4-3b8435a4fc22",
+      "familyId": "a66d96bd-47cf-595b-aee4-3b8435a4fc22",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600478",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "658dea98-7801-5394-83f8-afc8fcdc6ed4",
+      "familyId": "658dea98-7801-5394-83f8-afc8fcdc6ed4",
+      "source_id": "equip:152600349",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3d030ce2-7176-5fa0-97ec-2507ab2ee610",
+      "familyId": "3d030ce2-7176-5fa0-97ec-2507ab2ee610",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600349",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7840c0f6-80be-527d-9168-aeb4fd26f889",
+      "familyId": "7840c0f6-80be-527d-9168-aeb4fd26f889",
+      "source_id": "equip:172603556",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "231b8870-d9c2-51d4-ae38-ee034e9a1c85",
+      "familyId": "231b8870-d9c2-51d4-ae38-ee034e9a1c85",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603556",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b76bb2db-ce03-5220-bbee-d9839058d3ae",
+      "familyId": "b76bb2db-ce03-5220-bbee-d9839058d3ae",
+      "source_id": "equip:172602805",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2f0d3ac9-f486-515c-b76c-3ef34733e352",
+      "familyId": "2f0d3ac9-f486-515c-b76c-3ef34733e352",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172602805",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3f83bb72-1218-517d-9546-b59c98cd8584",
+      "familyId": "3f83bb72-1218-517d-9546-b59c98cd8584",
+      "source_id": "equip:152600492",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1a5c016c-a0de-50b6-887d-9605fc39b175",
+      "familyId": "1a5c016c-a0de-50b6-887d-9605fc39b175",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600492",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1ebeb802-7396-5dad-b168-388cbb4052d4",
+      "familyId": "1ebeb802-7396-5dad-b168-388cbb4052d4",
+      "source_id": "equip:152600494",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "055be37e-3764-5a8e-b024-9841ea09f332",
+      "familyId": "055be37e-3764-5a8e-b024-9841ea09f332",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600494",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2e63aabc-3ba9-5787-a00d-0d785a3bf7da",
+      "familyId": "2e63aabc-3ba9-5787-a00d-0d785a3bf7da",
+      "source_id": "equip:152600495",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "eb8956c1-e0db-5268-be45-bd2c9d9392ad",
+      "familyId": "eb8956c1-e0db-5268-be45-bd2c9d9392ad",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600495",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5c7ea6f0-48fa-5e67-ba22-8dc68348df9a",
+      "familyId": "5c7ea6f0-48fa-5e67-ba22-8dc68348df9a",
+      "source_id": "equip:152600496",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fd720200-9ef2-5aee-a0a9-2c61ae10ea19",
+      "familyId": "fd720200-9ef2-5aee-a0a9-2c61ae10ea19",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600496",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "af38fece-33d8-5874-8e07-0e174300680a",
+      "familyId": "af38fece-33d8-5874-8e07-0e174300680a",
+      "source_id": "equip:152600455",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b5a0ecf9-c9f5-55c0-b099-4a006f39c0e6",
+      "familyId": "b5a0ecf9-c9f5-55c0-b099-4a006f39c0e6",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600455",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "50e6c283-5ff8-5951-a54f-6b1237da81af",
+      "familyId": "50e6c283-5ff8-5951-a54f-6b1237da81af",
+      "source_id": "equip:152600456",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "16e7944b-11ed-5b33-a982-8916b3b2ebfa",
+      "familyId": "16e7944b-11ed-5b33-a982-8916b3b2ebfa",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600456",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "466e4f96-fc0c-5841-87af-e84225574354",
+      "familyId": "466e4f96-fc0c-5841-87af-e84225574354",
+      "source_id": "equip:152600482",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8e5b3cf9-0e96-5956-b005-4817e4b40990",
+      "familyId": "8e5b3cf9-0e96-5956-b005-4817e4b40990",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600482",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8ae5d9c2-19ef-5498-ade2-75582a75515c",
+      "familyId": "8ae5d9c2-19ef-5498-ade2-75582a75515c",
+      "source_id": "equip:172603418",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6bcfa949-2415-52d9-af66-8af1b7716f6b",
+      "familyId": "6bcfa949-2415-52d9-af66-8af1b7716f6b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603418",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "31ecc993-e55b-59b6-b3ea-7bf4af900332",
+      "familyId": "31ecc993-e55b-59b6-b3ea-7bf4af900332",
+      "source_id": "equip:162601589",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1ea63ced-9d8f-5eea-919e-3e0a2dad0132",
+      "familyId": "1ea63ced-9d8f-5eea-919e-3e0a2dad0132",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601589",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c1effc60-b018-5cbf-8545-56f76ef6fc67",
+      "familyId": "c1effc60-b018-5cbf-8545-56f76ef6fc67",
+      "source_id": "equip:172603549",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c435b16f-2ebe-5610-8ae4-d1a20aae83ec",
+      "familyId": "c435b16f-2ebe-5610-8ae4-d1a20aae83ec",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603549",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fc882bda-b78e-5844-853d-db36d1f4a6ba",
+      "familyId": "fc882bda-b78e-5844-853d-db36d1f4a6ba",
+      "source_id": "equip:152600377",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2eb7ff72-fc4e-5d57-b347-2c7d7188c0a4",
+      "familyId": "2eb7ff72-fc4e-5d57-b347-2c7d7188c0a4",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600377",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ef8a7544-806b-5be9-8910-9d86cc33d167",
+      "familyId": "ef8a7544-806b-5be9-8910-9d86cc33d167",
+      "source_id": "equip:162601588",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d376f2bd-b77f-5c69-9098-fe5494c1a95f",
+      "familyId": "d376f2bd-b77f-5c69-9098-fe5494c1a95f",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601588",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "48b207ee-2e59-5600-acdb-6dddaf1c4572",
+      "familyId": "48b207ee-2e59-5600-acdb-6dddaf1c4572",
+      "source_id": "equip:162601718",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e23c0686-faf5-533e-8a95-d2095d91f49c",
+      "familyId": "e23c0686-faf5-533e-8a95-d2095d91f49c",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601718",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8c0b0a76-3e3a-5b11-be54-0fd3a11ef0ef",
+      "familyId": "8c0b0a76-3e3a-5b11-be54-0fd3a11ef0ef",
+      "source_id": "equip:162601862",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8782197d-2bb7-5f67-91ee-cb2f5cb3d719",
+      "familyId": "8782197d-2bb7-5f67-91ee-cb2f5cb3d719",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601862",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "757434de-6524-51ed-a0b8-368e4a40eb96",
+      "familyId": "757434de-6524-51ed-a0b8-368e4a40eb96",
+      "source_id": "equip:162601863",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "042496dd-cafa-500f-ac05-3b14e1b4d8a0",
+      "familyId": "042496dd-cafa-500f-ac05-3b14e1b4d8a0",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601863",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3a3fcd7d-de6d-5f86-b376-f080203fd78d",
+      "familyId": "3a3fcd7d-de6d-5f86-b376-f080203fd78d",
+      "source_id": "equip:162601864",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "38aa7e51-bfae-5831-b6ee-6da4268f1d4e",
+      "familyId": "38aa7e51-bfae-5831-b6ee-6da4268f1d4e",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601864",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "11e30182-20ec-5cc7-814e-1908c2725512",
+      "familyId": "11e30182-20ec-5cc7-814e-1908c2725512",
+      "source_id": "equip:172515661",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bd701f2a-cc7f-5ca4-a090-3478458f9019",
+      "familyId": "bd701f2a-cc7f-5ca4-a090-3478458f9019",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172515661",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "55fde46c-c75c-55bd-9a1f-4d0c24c35f63",
+      "familyId": "55fde46c-c75c-55bd-9a1f-4d0c24c35f63",
+      "source_id": "equip:172600523",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0e800f85-228c-5d70-aa64-a77d77357432",
+      "familyId": "0e800f85-228c-5d70-aa64-a77d77357432",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172600523",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0d17fa3b-1b1e-5214-8c7f-3a8be29b3d01",
+      "familyId": "0d17fa3b-1b1e-5214-8c7f-3a8be29b3d01",
+      "source_id": "equip:172600524",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e1e8117c-ed99-555f-8321-a260cc2ce51d",
+      "familyId": "e1e8117c-ed99-555f-8321-a260cc2ce51d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172600524",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ad82afa2-10a9-5117-825e-abdd25dac6e3",
+      "familyId": "ad82afa2-10a9-5117-825e-abdd25dac6e3",
+      "source_id": "equip:152600457",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "86e0b365-4b4e-55dd-9444-65d1f6642400",
+      "familyId": "86e0b365-4b4e-55dd-9444-65d1f6642400",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600457",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "abc7a6ee-975f-5cfc-85d7-582fe9b7718d",
+      "familyId": "abc7a6ee-975f-5cfc-85d7-582fe9b7718d",
+      "source_id": "equip:152600458",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4596595b-401b-591a-a24a-401c8d8d6f73",
+      "familyId": "4596595b-401b-591a-a24a-401c8d8d6f73",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600458",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4a434429-dbe2-5679-b375-64b266466389",
+      "familyId": "4a434429-dbe2-5679-b375-64b266466389",
+      "source_id": "equip:152600459",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ddfe6be9-bfbe-5e95-902a-e088bdc0b2da",
+      "familyId": "ddfe6be9-bfbe-5e95-902a-e088bdc0b2da",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600459",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3a456b88-8234-574c-bce0-ecc3f6792375",
+      "familyId": "3a456b88-8234-574c-bce0-ecc3f6792375",
+      "source_id": "equip:152600436",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8ea3a1f6-76fc-507f-8627-2287bc6d4d4d",
+      "familyId": "8ea3a1f6-76fc-507f-8627-2287bc6d4d4d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600436",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "80fde3ca-0b70-543d-bab8-217d2a8306b3",
+      "familyId": "80fde3ca-0b70-543d-bab8-217d2a8306b3",
+      "source_id": "equip:172603368",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "233cc311-42fd-551a-9531-ac6a13667e2f",
+      "familyId": "233cc311-42fd-551a-9531-ac6a13667e2f",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603368",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5eb14304-8669-5bf7-83f1-048a2b19432b",
+      "familyId": "5eb14304-8669-5bf7-83f1-048a2b19432b",
+      "source_id": "equip:152600374",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c41b57ad-dda1-526e-9c33-8c9e750df936",
+      "familyId": "c41b57ad-dda1-526e-9c33-8c9e750df936",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600374",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8c902b08-1855-5172-91c7-82dd638b2060",
+      "familyId": "8c902b08-1855-5172-91c7-82dd638b2060",
+      "source_id": "equip:152600386",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e2d1cc16-60c2-5eb8-8934-b848f1f8eabc",
+      "familyId": "e2d1cc16-60c2-5eb8-8934-b848f1f8eabc",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600386",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "48cea036-6dad-59f2-b80f-d85b07e2d18c",
+      "familyId": "48cea036-6dad-59f2-b80f-d85b07e2d18c",
+      "source_id": "equip:152600387",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5ac9eb93-4f5f-5a5b-b4e1-d2b7685fe5cd",
+      "familyId": "5ac9eb93-4f5f-5a5b-b4e1-d2b7685fe5cd",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600387",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c2154350-854d-5c21-8692-15869ff17737",
+      "familyId": "c2154350-854d-5c21-8692-15869ff17737",
+      "source_id": "equip:172603512",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c3fee120-2010-563b-a153-8598f0e82f6b",
+      "familyId": "c3fee120-2010-563b-a153-8598f0e82f6b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603512",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d0c60c39-5ad8-54d4-8691-70319740d523",
+      "familyId": "d0c60c39-5ad8-54d4-8691-70319740d523",
+      "source_id": "equip:172603680",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d509de0a-6a4a-5bfc-99aa-eb8c05781a12",
+      "familyId": "d509de0a-6a4a-5bfc-99aa-eb8c05781a12",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603680",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "100a1377-4f05-5db5-95e6-ec1feadca8ba",
+      "familyId": "100a1377-4f05-5db5-95e6-ec1feadca8ba",
+      "source_id": "equip:172603383",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "aa898eb6-1de7-5651-961c-4e5c064aeb1d",
+      "familyId": "aa898eb6-1de7-5651-961c-4e5c064aeb1d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603383",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2781f961-226c-5ff6-88e7-e44e225401eb",
+      "familyId": "2781f961-226c-5ff6-88e7-e44e225401eb",
+      "source_id": "equip:172603543",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3ed03e75-e30c-5779-a53e-076864887583",
+      "familyId": "3ed03e75-e30c-5779-a53e-076864887583",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603543",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8453bcb6-2339-505c-a275-cbe93e9fe4d8",
+      "familyId": "8453bcb6-2339-505c-a275-cbe93e9fe4d8",
+      "source_id": "equip:172603006",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1d971226-d636-558a-b2e6-a57a9d7c98bc",
+      "familyId": "1d971226-d636-558a-b2e6-a57a9d7c98bc",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603006",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8d74a256-3f36-57fa-90bf-b2f8116f7cd1",
+      "familyId": "8d74a256-3f36-57fa-90bf-b2f8116f7cd1",
+      "source_id": "equip:162601068",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a192e7f3-e9ac-594f-a668-e3c8c3e3195c",
+      "familyId": "a192e7f3-e9ac-594f-a668-e3c8c3e3195c",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601068",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9d035830-bf94-58d9-8035-05983899b523",
+      "familyId": "9d035830-bf94-58d9-8035-05983899b523",
+      "source_id": "equip:172603369",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a28b6576-f68d-5c92-98f7-353b6f5c7dec",
+      "familyId": "a28b6576-f68d-5c92-98f7-353b6f5c7dec",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603369",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7fb61ffa-c101-5732-a23c-caf32031e0b5",
+      "familyId": "7fb61ffa-c101-5732-a23c-caf32031e0b5",
+      "source_id": "equip:172603554",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3f8cb639-bdc5-5e62-8f02-54ad5255731d",
+      "familyId": "3f8cb639-bdc5-5e62-8f02-54ad5255731d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603554",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8cb4dcd1-d526-53bc-9121-e70f9bed09ab",
+      "familyId": "8cb4dcd1-d526-53bc-9121-e70f9bed09ab",
+      "source_id": "equip:172603528",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6d3aa1dc-60bb-5d63-939c-5efe858199b8",
+      "familyId": "6d3aa1dc-60bb-5d63-939c-5efe858199b8",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603528",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "771e1d23-5549-50f9-91f4-37eded2e7d1d",
+      "familyId": "771e1d23-5549-50f9-91f4-37eded2e7d1d",
+      "source_id": "equip:152600416",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2d2d0162-8765-5233-8044-e26645b04d1b",
+      "familyId": "2d2d0162-8765-5233-8044-e26645b04d1b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600416",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b98d86b2-e8f2-50d6-adac-2107b531d4ea",
+      "familyId": "b98d86b2-e8f2-50d6-adac-2107b531d4ea",
+      "source_id": "equip:152600488",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fc2b9425-6411-5f81-833a-a2392e5b1289",
+      "familyId": "fc2b9425-6411-5f81-833a-a2392e5b1289",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600488",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d9c208a9-327d-5a65-8812-ad1f2d85a054",
+      "familyId": "d9c208a9-327d-5a65-8812-ad1f2d85a054",
+      "source_id": "equip:162601584",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "32b6f1b1-d8dd-5f09-8395-1254726a0771",
+      "familyId": "32b6f1b1-d8dd-5f09-8395-1254726a0771",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601584",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6691bdc0-6064-57f4-ba3d-b6024777419c",
+      "familyId": "6691bdc0-6064-57f4-ba3d-b6024777419c",
+      "source_id": "equip:162601586",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b05eeba1-e02d-5ef9-b126-099da460dce3",
+      "familyId": "b05eeba1-e02d-5ef9-b126-099da460dce3",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601586",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4a7a8dbb-916f-5ec5-a99d-1475c640d09d",
+      "familyId": "4a7a8dbb-916f-5ec5-a99d-1475c640d09d",
+      "source_id": "equip:162601587",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "861539c3-ad2b-58ae-bd2e-840f50249dbf",
+      "familyId": "861539c3-ad2b-58ae-bd2e-840f50249dbf",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601587",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3881706f-48b9-58a6-a82c-ec9f0bedd088",
+      "familyId": "3881706f-48b9-58a6-a82c-ec9f0bedd088",
+      "source_id": "equip:162601710",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "79e89473-fb8b-5d1b-9ac2-3427fdb2bc5b",
+      "familyId": "79e89473-fb8b-5d1b-9ac2-3427fdb2bc5b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601710",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "296ee1f8-b98e-5a8e-b3bf-df6f9b8719f9",
+      "familyId": "296ee1f8-b98e-5a8e-b3bf-df6f9b8719f9",
+      "source_id": "equip:162601711",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4d3e9040-0627-556b-bd8f-88e1bd9da3fa",
+      "familyId": "4d3e9040-0627-556b-bd8f-88e1bd9da3fa",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601711",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fb6b5244-266f-523f-9d48-d2a36b9680d2",
+      "familyId": "fb6b5244-266f-523f-9d48-d2a36b9680d2",
+      "source_id": "equip:162601712",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4fb64839-dafa-57ea-ab58-5ffaad54e883",
+      "familyId": "4fb64839-dafa-57ea-ab58-5ffaad54e883",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601712",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d0023459-57cd-5f37-8786-6f7c54955b8c",
+      "familyId": "d0023459-57cd-5f37-8786-6f7c54955b8c",
+      "source_id": "equip:162601713",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a863622f-9c10-5961-a081-ea0ff447cb95",
+      "familyId": "a863622f-9c10-5961-a081-ea0ff447cb95",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601713",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "eeda25c4-b7c2-59c9-a8fa-8010013b76e7",
+      "familyId": "eeda25c4-b7c2-59c9-a8fa-8010013b76e7",
+      "source_id": "equip:162601714",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d55759f2-d7eb-5bba-818c-edc4d64f9904",
+      "familyId": "d55759f2-d7eb-5bba-818c-edc4d64f9904",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601714",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "47b17c88-da26-5d6b-9cd5-d4bdb6f117a6",
+      "familyId": "47b17c88-da26-5d6b-9cd5-d4bdb6f117a6",
+      "source_id": "equip:162601715",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4ffa3d2e-4cb7-55db-8e03-be0a3d1e80f5",
+      "familyId": "4ffa3d2e-4cb7-55db-8e03-be0a3d1e80f5",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601715",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "dd3ce957-c5d1-50d0-b44a-596373f13c77",
+      "familyId": "dd3ce957-c5d1-50d0-b44a-596373f13c77",
+      "source_id": "equip:162601717",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "350f2138-0d23-597c-8a89-9bd659563b02",
+      "familyId": "350f2138-0d23-597c-8a89-9bd659563b02",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601717",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "336f31c2-957b-5b71-a45b-25f721ecb9f4",
+      "familyId": "336f31c2-957b-5b71-a45b-25f721ecb9f4",
+      "source_id": "equip:162601861",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3f59befe-7d42-575b-8985-46f4cddac436",
+      "familyId": "3f59befe-7d42-575b-8985-46f4cddac436",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601861",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9cc161ff-bf46-5468-b837-c2128c45e329",
+      "familyId": "9cc161ff-bf46-5468-b837-c2128c45e329",
+      "source_id": "equip:172603505",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "93917ae6-0319-5022-97f2-362bd53fef2d",
+      "familyId": "93917ae6-0319-5022-97f2-362bd53fef2d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603505",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "848102f4-7ef8-56b3-9df4-6b65d15dc175",
+      "familyId": "848102f4-7ef8-56b3-9df4-6b65d15dc175",
+      "source_id": "equip:172603509",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "05326b8f-87d7-535b-adf7-5122f59be184",
+      "familyId": "05326b8f-87d7-535b-adf7-5122f59be184",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603509",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7d17bafa-fc63-5339-b38d-1d441710eaf6",
+      "familyId": "7d17bafa-fc63-5339-b38d-1d441710eaf6",
+      "source_id": "equip:172603674",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0867af9c-e5ea-5e31-aa04-e23a57bac425",
+      "familyId": "0867af9c-e5ea-5e31-aa04-e23a57bac425",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603674",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "aaed7e11-04ca-5c31-aa37-cde05d4492ca",
+      "familyId": "aaed7e11-04ca-5c31-aa37-cde05d4492ca",
+      "source_id": "equip:172603518",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1ae76b75-ae29-5130-86ca-e21e20f72133",
+      "familyId": "1ae76b75-ae29-5130-86ca-e21e20f72133",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603518",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "772a53f4-f297-5ba5-bcea-c725f1548f7a",
+      "familyId": "772a53f4-f297-5ba5-bcea-c725f1548f7a",
+      "source_id": "equip:172603386",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "44b75184-b999-52f7-a181-07359b930426",
+      "familyId": "44b75184-b999-52f7-a181-07359b930426",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603386",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ab419cc7-b241-58a8-ad59-d57994d033bf",
+      "familyId": "ab419cc7-b241-58a8-ad59-d57994d033bf",
+      "source_id": "equip:172603416",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4e309160-718c-575b-a21e-0db446082f04",
+      "familyId": "4e309160-718c-575b-a21e-0db446082f04",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603416",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "80ed486c-7d91-5d84-a52d-f57d312e6f3a",
+      "familyId": "80ed486c-7d91-5d84-a52d-f57d312e6f3a",
+      "source_id": "equip:172603420",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "be5b8398-774b-5f1a-b39c-a2e9bcd7cb93",
+      "familyId": "be5b8398-774b-5f1a-b39c-a2e9bcd7cb93",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603420",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ae867c8e-8b1b-55dd-bd97-6621a6cce99e",
+      "familyId": "ae867c8e-8b1b-55dd-bd97-6621a6cce99e",
+      "source_id": "equip:152600493",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fde16030-9788-5a44-85a2-06e95efadfe8",
+      "familyId": "fde16030-9788-5a44-85a2-06e95efadfe8",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600493",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ebc53e78-3983-5da9-8cec-758830030fac",
+      "familyId": "ebc53e78-3983-5da9-8cec-758830030fac",
+      "source_id": "equip:152600483",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "78315697-50d5-5b6f-89aa-67ada1574776",
+      "familyId": "78315697-50d5-5b6f-89aa-67ada1574776",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600483",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b88b426d-0aa0-58d5-9a2a-e46f5902aea8",
+      "familyId": "b88b426d-0aa0-58d5-9a2a-e46f5902aea8",
+      "source_id": "equip:152600484",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "45656593-8aaf-5606-a914-c0899c30e0f1",
+      "familyId": "45656593-8aaf-5606-a914-c0899c30e0f1",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600484",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1f5ebdd8-0fad-51a5-b499-72cb58110ea8",
+      "familyId": "1f5ebdd8-0fad-51a5-b499-72cb58110ea8",
+      "source_id": "equip:162601321",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c21a8497-c782-54b5-b8a3-a5b5de21f6d9",
+      "familyId": "c21a8497-c782-54b5-b8a3-a5b5de21f6d9",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601321",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "782716b5-0c05-5e93-9aec-b8bdf38ee798",
+      "familyId": "782716b5-0c05-5e93-9aec-b8bdf38ee798",
+      "source_id": "equip:162601719",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ceaef478-bea7-5c87-90f3-f9b3da7e39a1",
+      "familyId": "ceaef478-bea7-5c87-90f3-f9b3da7e39a1",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601719",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9bff00d0-e17e-5517-af9f-ecfcfbb4f22c",
+      "familyId": "9bff00d0-e17e-5517-af9f-ecfcfbb4f22c",
+      "source_id": "equip:162601859",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bd4a287d-334c-533e-be88-5c9d499be59a",
+      "familyId": "bd4a287d-334c-533e-be88-5c9d499be59a",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601859",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "307e5237-2423-5086-bcb0-7e51fa888d49",
+      "familyId": "307e5237-2423-5086-bcb0-7e51fa888d49",
+      "source_id": "equip:162601865",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0693ea27-6ccd-5877-a2a1-c9b8a22dbefc",
+      "familyId": "0693ea27-6ccd-5877-a2a1-c9b8a22dbefc",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601865",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "21edafbc-e2b7-5b2d-a629-bb9e267d682e",
+      "familyId": "21edafbc-e2b7-5b2d-a629-bb9e267d682e",
+      "source_id": "equip:162601866",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7836f156-3d4d-504d-80c7-930c3c6b56be",
+      "familyId": "7836f156-3d4d-504d-80c7-930c3c6b56be",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601866",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "123f3c8b-cb6b-543d-b614-4770e3be7ff7",
+      "familyId": "123f3c8b-cb6b-543d-b614-4770e3be7ff7",
+      "source_id": "equip:162601867",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ccbc2133-8ee6-5e18-bbe6-33c713443d97",
+      "familyId": "ccbc2133-8ee6-5e18-bbe6-33c713443d97",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601867",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3c368588-1111-5b43-8900-779e5c2e0f9f",
+      "familyId": "3c368588-1111-5b43-8900-779e5c2e0f9f",
+      "source_id": "equip:162601868",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5e118dba-bb99-5e8c-9407-6c19ad701f48",
+      "familyId": "5e118dba-bb99-5e8c-9407-6c19ad701f48",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:162601868",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bfbf9e23-a220-54f9-bea3-75f687b4c80c",
+      "familyId": "bfbf9e23-a220-54f9-bea3-75f687b4c80c",
+      "source_id": "equip:172602605",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f1c87749-73d5-5a94-8daf-681f5eda8bc1",
+      "familyId": "f1c87749-73d5-5a94-8daf-681f5eda8bc1",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172602605",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a5ee4161-7f19-5274-b868-5b9b3105354d",
+      "familyId": "a5ee4161-7f19-5274-b868-5b9b3105354d",
+      "source_id": "equip:152600438",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "eb680c91-98b0-5cff-84f1-c0087269645b",
+      "familyId": "eb680c91-98b0-5cff-84f1-c0087269645b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600438",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7bf39052-cc91-590a-a3db-ff080fcc7b29",
+      "familyId": "7bf39052-cc91-590a-a3db-ff080fcc7b29",
+      "source_id": "equip:172603682",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9fca611a-7e3e-5185-8eb6-41512acf59fd",
+      "familyId": "9fca611a-7e3e-5185-8eb6-41512acf59fd",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603682",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b28b1595-4d0c-5cc6-ba75-400e86f95e39",
+      "familyId": "b28b1595-4d0c-5cc6-ba75-400e86f95e39",
+      "source_id": "equip:152600408",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3815063d-7db9-5abe-9047-6c376ca87819",
+      "familyId": "3815063d-7db9-5abe-9047-6c376ca87819",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600408",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1a1af257-81ac-562f-9803-0cfa60bf8101",
+      "familyId": "1a1af257-81ac-562f-9803-0cfa60bf8101",
+      "source_id": "equip:152600409",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3267cef8-0c09-5431-ab59-b23190dc9183",
+      "familyId": "3267cef8-0c09-5431-ab59-b23190dc9183",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600409",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a7191e25-07e4-51f7-ac13-47f527531352",
+      "familyId": "a7191e25-07e4-51f7-ac13-47f527531352",
+      "source_id": "equip:152600410",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d40830c7-70a2-5a47-b1e9-ad30497df30e",
+      "familyId": "d40830c7-70a2-5a47-b1e9-ad30497df30e",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600410",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "46668c8a-6605-5563-994b-9b3e58639ea6",
+      "familyId": "46668c8a-6605-5563-994b-9b3e58639ea6",
+      "source_id": "equip:152600412",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3a2c9cc1-c8c6-563f-8460-dc4f9f3f252e",
+      "familyId": "3a2c9cc1-c8c6-563f-8460-dc4f9f3f252e",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600412",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "29bdb9d2-af31-5b1d-acd6-3a8808ed18ba",
+      "familyId": "29bdb9d2-af31-5b1d-acd6-3a8808ed18ba",
+      "source_id": "equip:152600419",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "648ec39f-dda9-5c0d-bc0b-12f8be14528c",
+      "familyId": "648ec39f-dda9-5c0d-bc0b-12f8be14528c",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600419",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "caf10266-7cfa-5dc1-8fda-e80caf27212a",
+      "familyId": "caf10266-7cfa-5dc1-8fda-e80caf27212a",
+      "source_id": "equip:152600432",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4c4b5116-9980-5d66-b322-9841d527df2a",
+      "familyId": "4c4b5116-9980-5d66-b322-9841d527df2a",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600432",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2cf857bb-8314-5b13-a5bd-18fb06002568",
+      "familyId": "2cf857bb-8314-5b13-a5bd-18fb06002568",
+      "source_id": "equip:172603546",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c03629f1-4276-5a05-8fcc-a876bde8cea9",
+      "familyId": "c03629f1-4276-5a05-8fcc-a876bde8cea9",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603546",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "00b0485d-128e-50a3-aadb-d1c14417b5ef",
+      "familyId": "00b0485d-128e-50a3-aadb-d1c14417b5ef",
+      "source_id": "equip:152600473",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "69057ab9-b53e-5301-a074-61530cbb90db",
+      "familyId": "69057ab9-b53e-5301-a074-61530cbb90db",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600473",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5a0b66dc-6dc9-59ed-962b-c4919c6f7b0d",
+      "familyId": "5a0b66dc-6dc9-59ed-962b-c4919c6f7b0d",
+      "source_id": "equip:172603544",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f71aa313-16e1-52a3-9e59-449f276fac8d",
+      "familyId": "f71aa313-16e1-52a3-9e59-449f276fac8d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172603544",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bd43f22a-0e8d-5b45-a273-379303d9554a",
+      "familyId": "bd43f22a-0e8d-5b45-a273-379303d9554a",
+      "source_id": "equip:152600359",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "da9c65ae-3520-52b9-be48-81a134eb214f",
+      "familyId": "da9c65ae-3520-52b9-be48-81a134eb214f",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600359",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1d1c3dc2-9cdb-5920-97e7-eec763aca637",
+      "familyId": "1d1c3dc2-9cdb-5920-97e7-eec763aca637",
+      "source_id": "equip:152600384",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "53986a3d-fc34-57eb-8cc6-a7bc41e424a8",
+      "familyId": "53986a3d-fc34-57eb-8cc6-a7bc41e424a8",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600384",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e2140511-0bb2-5743-bd9a-d2e3c1a1aedb",
+      "familyId": "e2140511-0bb2-5743-bd9a-d2e3c1a1aedb",
+      "source_id": "equip:152600391",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a2e6359c-d9b2-503f-b034-5d2223f13743",
+      "familyId": "a2e6359c-d9b2-503f-b034-5d2223f13743",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600391",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "35e92cc4-7a36-5ec8-81a0-91b1b16620fb",
+      "familyId": "35e92cc4-7a36-5ec8-81a0-91b1b16620fb",
+      "source_id": "equip:152600465",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "17f53f24-6031-537d-a30f-c4ac0e00bc37",
+      "familyId": "17f53f24-6031-537d-a30f-c4ac0e00bc37",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:152600465",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a3f5c48c-5241-56eb-8b75-c249fc170e60",
+      "familyId": "a3f5c48c-5241-56eb-8b75-c249fc170e60",
+      "source_id": "equip:172605548",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c4d5ce89-c65f-5411-bf31-92fd8311c0d3",
+      "familyId": "c4d5ce89-c65f-5411-bf31-92fd8311c0d3",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605548",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "479ce20a-3bf2-56c0-9df5-9aca4a5639ff",
+      "familyId": "479ce20a-3bf2-56c0-9df5-9aca4a5639ff",
+      "source_id": "equip:172605558",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3a99424b-910d-591c-8a63-8234313d1b04",
+      "familyId": "3a99424b-910d-591c-8a63-8234313d1b04",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605558",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5449c904-6024-5f31-b393-8a23d849359d",
+      "familyId": "5449c904-6024-5f31-b393-8a23d849359d",
+      "source_id": "equip:172605559",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "20b4b46d-72ed-50fd-96e9-3ec71392b6a8",
+      "familyId": "20b4b46d-72ed-50fd-96e9-3ec71392b6a8",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605559",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0eee0d57-424e-5355-b4ba-8e00ff7e1035",
+      "familyId": "0eee0d57-424e-5355-b4ba-8e00ff7e1035",
+      "source_id": "equip:172605597",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b128d389-e1bd-5578-ad17-ef75a54d4b25",
+      "familyId": "b128d389-e1bd-5578-ad17-ef75a54d4b25",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605597",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "820d0ad1-5e22-5ea4-9523-345fd5354c6d",
+      "familyId": "820d0ad1-5e22-5ea4-9523-345fd5354c6d",
+      "source_id": "equip:172605598",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ae06ff48-b969-53af-94fc-41b8b43ed9f5",
+      "familyId": "ae06ff48-b969-53af-94fc-41b8b43ed9f5",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605598",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "aa4ad50b-f26a-5e92-b53e-e98b4a14b0a2",
+      "familyId": "aa4ad50b-f26a-5e92-b53e-e98b4a14b0a2",
+      "source_id": "equip:172605600",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b56613d2-5004-5d8a-bdce-f8b282b9bfeb",
+      "familyId": "b56613d2-5004-5d8a-bdce-f8b282b9bfeb",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605600",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e9b2c201-3e62-5c13-b3a3-46151af7cb9a",
+      "familyId": "e9b2c201-3e62-5c13-b3a3-46151af7cb9a",
+      "source_id": "equip:172605603",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0b14f27a-1146-521d-9f85-f791f32fc256",
+      "familyId": "0b14f27a-1146-521d-9f85-f791f32fc256",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605603",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ee3ba7a1-e4a9-546f-97b6-e3774f5b94b9",
+      "familyId": "ee3ba7a1-e4a9-546f-97b6-e3774f5b94b9",
+      "source_id": "equip:172605604",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9b31476f-69ed-51f2-bfb9-842d6170c704",
+      "familyId": "9b31476f-69ed-51f2-bfb9-842d6170c704",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605604",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "74fb7941-afee-5234-a1e2-c76bcfcffcdb",
+      "familyId": "74fb7941-afee-5234-a1e2-c76bcfcffcdb",
+      "source_id": "equip:172605605",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d68b8270-2099-516e-95f3-1727c7e26694",
+      "familyId": "d68b8270-2099-516e-95f3-1727c7e26694",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605605",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f7dd253b-594d-506e-a4be-a29b530a9718",
+      "familyId": "f7dd253b-594d-506e-a4be-a29b530a9718",
+      "source_id": "equip:172605608",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ba356e7b-4897-5f64-a016-2849c99677ea",
+      "familyId": "ba356e7b-4897-5f64-a016-2849c99677ea",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172605608",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f72bba8f-b039-5a9f-abb7-663ea6cb824d",
+      "familyId": "f72bba8f-b039-5a9f-abb7-663ea6cb824d",
+      "source_id": "equip:172609342",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "58d75801-5534-57fa-a271-87f649100f55",
+      "familyId": "58d75801-5534-57fa-a271-87f649100f55",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609342",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8bed08c3-b6af-5fa8-8f77-7da6226268cc",
+      "familyId": "8bed08c3-b6af-5fa8-8f77-7da6226268cc",
+      "source_id": "equip:172609343",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "064958d6-45d8-5f9b-93cc-515a077cc8b2",
+      "familyId": "064958d6-45d8-5f9b-93cc-515a077cc8b2",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609343",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bf8cba9d-133b-5566-b231-a10dc6c54f9c",
+      "familyId": "bf8cba9d-133b-5566-b231-a10dc6c54f9c",
+      "source_id": "equip:172609347",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fc88d0b4-9097-5fd8-8076-b9da09a798e5",
+      "familyId": "fc88d0b4-9097-5fd8-8076-b9da09a798e5",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609347",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2daf1680-bc18-57ee-92fd-38f82da73d91",
+      "familyId": "2daf1680-bc18-57ee-92fd-38f82da73d91",
+      "source_id": "equip:172609356",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6e7937c3-a06c-54a0-a5e0-e621ff79871f",
+      "familyId": "6e7937c3-a06c-54a0-a5e0-e621ff79871f",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609356",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "06a86e4c-5e53-5427-8d08-e494018d2f90",
+      "familyId": "06a86e4c-5e53-5427-8d08-e494018d2f90",
+      "source_id": "equip:172609357",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "baecd4e3-3956-5cfb-b02e-8f8201e9f86b",
+      "familyId": "baecd4e3-3956-5cfb-b02e-8f8201e9f86b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609357",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5699f8d3-0fdf-5660-a1d2-fb29730200d4",
+      "familyId": "5699f8d3-0fdf-5660-a1d2-fb29730200d4",
+      "source_id": "equip:172609379",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6ae61d87-b1d6-55ba-a7ff-d8d921617c12",
+      "familyId": "6ae61d87-b1d6-55ba-a7ff-d8d921617c12",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609379",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d72b3978-4796-5334-9307-7c83cbb8702b",
+      "familyId": "d72b3978-4796-5334-9307-7c83cbb8702b",
+      "source_id": "equip:172609382",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0ac26f9e-ee29-5b86-a280-8b30f6eb916c",
+      "familyId": "0ac26f9e-ee29-5b86-a280-8b30f6eb916c",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609382",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9ae9a87a-eef6-586f-bca2-f63499454735",
+      "familyId": "9ae9a87a-eef6-586f-bca2-f63499454735",
+      "source_id": "equip:172609383",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5a2b3a06-4e3d-50d9-9114-5b21413a4b37",
+      "familyId": "5a2b3a06-4e3d-50d9-9114-5b21413a4b37",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609383",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "79f09bee-6e63-52d0-90e6-f53555bb1e3f",
+      "familyId": "79f09bee-6e63-52d0-90e6-f53555bb1e3f",
+      "source_id": "equip:172609384",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "81b1f242-a521-5307-b40a-dace038408c6",
+      "familyId": "81b1f242-a521-5307-b40a-dace038408c6",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609384",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "225ea204-e489-52b5-bd6d-f6f74cf45075",
+      "familyId": "225ea204-e489-52b5-bd6d-f6f74cf45075",
+      "source_id": "equip:172609386",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "37b1f977-a471-53fd-a5c5-1a157c3853b0",
+      "familyId": "37b1f977-a471-53fd-a5c5-1a157c3853b0",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609386",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3edaaa1e-dd71-5c25-943e-2680132be2b4",
+      "familyId": "3edaaa1e-dd71-5c25-943e-2680132be2b4",
+      "source_id": "equip:172609387",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "578fc95a-fea0-5030-a570-5cfeee1ea141",
+      "familyId": "578fc95a-fea0-5030-a570-5cfeee1ea141",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609387",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c4e47d49-5fd0-52d1-821a-2eda22924619",
+      "familyId": "c4e47d49-5fd0-52d1-821a-2eda22924619",
+      "source_id": "equip:172609580",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8e45cc54-c68d-5d48-9ae2-4b570cf1e4e6",
+      "familyId": "8e45cc54-c68d-5d48-9ae2-4b570cf1e4e6",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609580",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e02eb78d-2c9b-5171-933d-44ebd3e3c41a",
+      "familyId": "e02eb78d-2c9b-5171-933d-44ebd3e3c41a",
+      "source_id": "equip:172609581",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d65d9407-4ae9-5865-91f9-4cafeb4b1d82",
+      "familyId": "d65d9407-4ae9-5865-91f9-4cafeb4b1d82",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609581",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9a24c13e-0d6e-5e12-b5d0-8ca466021ba9",
+      "familyId": "9a24c13e-0d6e-5e12-b5d0-8ca466021ba9",
+      "source_id": "equip:172609583",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c2615e87-984c-5b1d-bf57-0178ecda84eb",
+      "familyId": "c2615e87-984c-5b1d-bf57-0178ecda84eb",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609583",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a428ff50-743f-56ac-8b69-92d4e158118e",
+      "familyId": "a428ff50-743f-56ac-8b69-92d4e158118e",
+      "source_id": "equip:172609586",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2b9bd04f-be07-5405-a01e-9af308a88339",
+      "familyId": "2b9bd04f-be07-5405-a01e-9af308a88339",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609586",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b114dffe-8600-5a0f-9a0e-8babdb04189f",
+      "familyId": "b114dffe-8600-5a0f-9a0e-8babdb04189f",
+      "source_id": "equip:172609633",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3fc5aaeb-aa72-5ae6-af7f-450b4391f3cd",
+      "familyId": "3fc5aaeb-aa72-5ae6-af7f-450b4391f3cd",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609633",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "479b167a-887f-5b1c-ae47-716decd7a0e9",
+      "familyId": "479b167a-887f-5b1c-ae47-716decd7a0e9",
+      "source_id": "equip:172609669",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8e74ce75-9285-554f-80c2-2ac281837ca6",
+      "familyId": "8e74ce75-9285-554f-80c2-2ac281837ca6",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609669",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6be8938e-8683-5f23-beab-a517dd14d62e",
+      "familyId": "6be8938e-8683-5f23-beab-a517dd14d62e",
+      "source_id": "equip:172609676",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8016fb8e-7c20-51e6-9500-3efad8202920",
+      "familyId": "8016fb8e-7c20-51e6-9500-3efad8202920",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609676",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4cb1d277-6476-58be-afc2-2dfbc5364c40",
+      "familyId": "4cb1d277-6476-58be-afc2-2dfbc5364c40",
+      "source_id": "equip:172609704",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "936ecd35-616b-51b2-ab6c-6929c9ad75b6",
+      "familyId": "936ecd35-616b-51b2-ab6c-6929c9ad75b6",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609704",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9655d4ac-fbe0-5a0e-86a3-0104efb08f44",
+      "familyId": "9655d4ac-fbe0-5a0e-86a3-0104efb08f44",
+      "source_id": "equip:172609950",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c1b9dcb8-1cf8-5f12-a0e6-68a07f20f075",
+      "familyId": "c1b9dcb8-1cf8-5f12-a0e6-68a07f20f075",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609950",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1f1ef348-78fb-5ad1-adba-796497a0c364",
+      "familyId": "1f1ef348-78fb-5ad1-adba-796497a0c364",
+      "source_id": "equip:172609966",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d928779e-f7ca-563d-a5fb-df4fd228b06e",
+      "familyId": "d928779e-f7ca-563d-a5fb-df4fd228b06e",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172609966",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0897f3d2-5f2a-5a27-9008-d14220316838",
+      "familyId": "0897f3d2-5f2a-5a27-9008-d14220316838",
+      "source_id": "equip:172611538",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "330138a2-9079-5d4c-94ce-7a8b9dce7765",
+      "familyId": "330138a2-9079-5d4c-94ce-7a8b9dce7765",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:172611538",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "559682c9-5249-5291-945a-4f7f8c790ca9",
+      "familyId": "559682c9-5249-5291-945a-4f7f8c790ca9",
+      "source_id": "equip:182603876",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d7fe0ce0-352d-5a05-95f3-951c0de58533",
+      "familyId": "d7fe0ce0-352d-5a05-95f3-951c0de58533",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182603876",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e40eb32a-0791-57c8-b5d3-4e7709e86112",
+      "familyId": "e40eb32a-0791-57c8-b5d3-4e7709e86112",
+      "source_id": "equip:182605169",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6de9741e-3324-5b45-8cd4-428321865782",
+      "familyId": "6de9741e-3324-5b45-8cd4-428321865782",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605169",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1bfbb24c-05dc-59ae-b911-5e2ece24322e",
+      "familyId": "1bfbb24c-05dc-59ae-b911-5e2ece24322e",
+      "source_id": "equip:182605513",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "208e3a2c-045b-5cf8-9c4a-c216f83c39fa",
+      "familyId": "208e3a2c-045b-5cf8-9c4a-c216f83c39fa",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605513",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "65410d45-ffa3-59e2-bf6b-2d653e61f55d",
+      "familyId": "65410d45-ffa3-59e2-bf6b-2d653e61f55d",
+      "source_id": "equip:182605660",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a97ef45a-8525-5ac1-a050-31b8c2510971",
+      "familyId": "a97ef45a-8525-5ac1-a050-31b8c2510971",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605660",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b3831d52-c775-545f-9ea7-545274bdb8b9",
+      "familyId": "b3831d52-c775-545f-9ea7-545274bdb8b9",
+      "source_id": "equip:182605666",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "82d4a261-2ca4-58bf-9f03-eb47c13a2fc3",
+      "familyId": "82d4a261-2ca4-58bf-9f03-eb47c13a2fc3",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605666",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b195d184-69d8-516b-9abc-9320334c3ec1",
+      "familyId": "b195d184-69d8-516b-9abc-9320334c3ec1",
+      "source_id": "equip:182605670",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "877e5352-2ffd-5208-be5c-20ceebbb3ff7",
+      "familyId": "877e5352-2ffd-5208-be5c-20ceebbb3ff7",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605670",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "07e3348b-9f1c-5542-ac5b-aca8c85a26f8",
+      "familyId": "07e3348b-9f1c-5542-ac5b-aca8c85a26f8",
+      "source_id": "equip:182605858",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ae015f32-a819-558b-a3b2-a328c85cf3d3",
+      "familyId": "ae015f32-a819-558b-a3b2-a328c85cf3d3",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605858",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "77831a1e-f9e0-5890-a956-0feca0a1badc",
+      "familyId": "77831a1e-f9e0-5890-a956-0feca0a1badc",
+      "source_id": "equip:182605863",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "cac204e8-1948-5ce7-9a23-bd1b9b508f7b",
+      "familyId": "cac204e8-1948-5ce7-9a23-bd1b9b508f7b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605863",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5f7ada9d-7ec6-5aff-8d54-b0081f827cbe",
+      "familyId": "5f7ada9d-7ec6-5aff-8d54-b0081f827cbe",
+      "source_id": "equip:182605866",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "df0cbd2c-41b2-5d2a-81b2-d41c0f772c93",
+      "familyId": "df0cbd2c-41b2-5d2a-81b2-d41c0f772c93",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605866",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d44f1026-dbdc-5588-8c5f-f73144b2c8f6",
+      "familyId": "d44f1026-dbdc-5588-8c5f-f73144b2c8f6",
+      "source_id": "equip:182605870",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "15bbab13-d279-5343-9633-18c577dded59",
+      "familyId": "15bbab13-d279-5343-9633-18c577dded59",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605870",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e88846b7-e1f0-568c-a46a-89fcc129c7da",
+      "familyId": "e88846b7-e1f0-568c-a46a-89fcc129c7da",
+      "source_id": "equip:182605873",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "571c9ad4-e9b7-5ec8-ab7b-3ae723f81607",
+      "familyId": "571c9ad4-e9b7-5ec8-ab7b-3ae723f81607",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605873",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "cae2d273-eeee-5e7c-934d-36521d075894",
+      "familyId": "cae2d273-eeee-5e7c-934d-36521d075894",
+      "source_id": "equip:182605874",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0bba0fb3-b8d9-5492-94e9-51ee5c51bf26",
+      "familyId": "0bba0fb3-b8d9-5492-94e9-51ee5c51bf26",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605874",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0e93afed-c761-5697-8d9e-9de412ecfef3",
+      "familyId": "0e93afed-c761-5697-8d9e-9de412ecfef3",
+      "source_id": "equip:182605876",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6ecb2b69-5491-571c-a7ac-22d1454b1542",
+      "familyId": "6ecb2b69-5491-571c-a7ac-22d1454b1542",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605876",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2c483b01-2268-5c53-9e43-68a2751d1f2a",
+      "familyId": "2c483b01-2268-5c53-9e43-68a2751d1f2a",
+      "source_id": "equip:182605877",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "298875c2-a158-555d-8ce7-20623c18eacb",
+      "familyId": "298875c2-a158-555d-8ce7-20623c18eacb",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605877",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0bbffd2e-0444-5312-ad73-d3317b7dc544",
+      "familyId": "0bbffd2e-0444-5312-ad73-d3317b7dc544",
+      "source_id": "equip:182605899",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6d1c3dfc-eee6-56ad-877c-adbc7b2f8f18",
+      "familyId": "6d1c3dfc-eee6-56ad-877c-adbc7b2f8f18",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605899",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e8425ab4-8c43-58c3-9979-687365d74e4a",
+      "familyId": "e8425ab4-8c43-58c3-9979-687365d74e4a",
+      "source_id": "equip:182605926",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d10baeb5-febe-574a-90c8-7894125a33c1",
+      "familyId": "d10baeb5-febe-574a-90c8-7894125a33c1",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182605926",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ef53301c-bb88-56e1-a13e-eb2e70231ed0",
+      "familyId": "ef53301c-bb88-56e1-a13e-eb2e70231ed0",
+      "source_id": "equip:182606048",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1534fcd7-a27c-5407-a884-2763d89e07f6",
+      "familyId": "1534fcd7-a27c-5407-a884-2763d89e07f6",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606048",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ae0748bc-6e9c-5b2b-8f35-4a4024895dd7",
+      "familyId": "ae0748bc-6e9c-5b2b-8f35-4a4024895dd7",
+      "source_id": "equip:182606054",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "876849ae-2d65-5993-8dec-45ed8c15a460",
+      "familyId": "876849ae-2d65-5993-8dec-45ed8c15a460",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606054",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "848e40b0-a190-518b-97b8-f0cfd3db046d",
+      "familyId": "848e40b0-a190-518b-97b8-f0cfd3db046d",
+      "source_id": "equip:182606055",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c262c888-8505-50f6-8aab-2225f72a5e38",
+      "familyId": "c262c888-8505-50f6-8aab-2225f72a5e38",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606055",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "af573e14-c99d-55b5-94a8-ff36e9b492e6",
+      "familyId": "af573e14-c99d-55b5-94a8-ff36e9b492e6",
+      "source_id": "equip:182606056",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3c1b473d-addc-56a4-8536-a17e0c749380",
+      "familyId": "3c1b473d-addc-56a4-8536-a17e0c749380",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606056",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ad0443a2-3038-5a63-9268-c45ca7367162",
+      "familyId": "ad0443a2-3038-5a63-9268-c45ca7367162",
+      "source_id": "equip:182606074",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e91fd592-bbc2-586a-bb48-27264e22a036",
+      "familyId": "e91fd592-bbc2-586a-bb48-27264e22a036",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606074",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "cffa3911-3613-5036-8515-b7dbaad3c12f",
+      "familyId": "cffa3911-3613-5036-8515-b7dbaad3c12f",
+      "source_id": "equip:182606079",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b9e25222-d0c4-5cc5-a44a-249c14fd66c6",
+      "familyId": "b9e25222-d0c4-5cc5-a44a-249c14fd66c6",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606079",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7879498c-f2e0-5838-aea8-4926eccc840c",
+      "familyId": "7879498c-f2e0-5838-aea8-4926eccc840c",
+      "source_id": "equip:182606087",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9ffdf65a-917f-5158-8ac4-f270ceff4ddb",
+      "familyId": "9ffdf65a-917f-5158-8ac4-f270ceff4ddb",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606087",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "78dae214-12eb-5240-88cc-4c6c353b6301",
+      "familyId": "78dae214-12eb-5240-88cc-4c6c353b6301",
+      "source_id": "equip:182606091",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1982f526-08c7-55e5-b850-ca4290ad8498",
+      "familyId": "1982f526-08c7-55e5-b850-ca4290ad8498",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606091",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4c02166b-71a0-5a45-baba-3ca2f9ca52d6",
+      "familyId": "4c02166b-71a0-5a45-baba-3ca2f9ca52d6",
+      "source_id": "equip:182606093",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c8db86d8-b73e-51aa-bc7a-bc34220a784a",
+      "familyId": "c8db86d8-b73e-51aa-bc7a-bc34220a784a",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606093",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "767db71b-1f27-5144-b008-ca08888d5a60",
+      "familyId": "767db71b-1f27-5144-b008-ca08888d5a60",
+      "source_id": "equip:182606094",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b07c764c-4b21-55e7-b455-2f0d93b2308b",
+      "familyId": "b07c764c-4b21-55e7-b455-2f0d93b2308b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606094",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8afb8a5f-70d1-532f-883f-b6682ba99b1b",
+      "familyId": "8afb8a5f-70d1-532f-883f-b6682ba99b1b",
+      "source_id": "equip:182606097",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "800c9d79-05d3-5b69-bd67-96a0718e1dc3",
+      "familyId": "800c9d79-05d3-5b69-bd67-96a0718e1dc3",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606097",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "67973a2e-c790-599b-89f1-a0092a85a058",
+      "familyId": "67973a2e-c790-599b-89f1-a0092a85a058",
+      "source_id": "equip:182606116",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ea2ba49e-b85a-596a-8831-8e4d59fe83ef",
+      "familyId": "ea2ba49e-b85a-596a-8831-8e4d59fe83ef",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606116",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e1e7c8cd-aa28-5977-a100-e093d6d78bee",
+      "familyId": "e1e7c8cd-aa28-5977-a100-e093d6d78bee",
+      "source_id": "equip:182606139",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d48b988d-c990-529d-9f42-0fc87df7290a",
+      "familyId": "d48b988d-c990-529d-9f42-0fc87df7290a",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606139",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "372d94d3-6cd7-54eb-ad5d-96ef44b4dc39",
+      "familyId": "372d94d3-6cd7-54eb-ad5d-96ef44b4dc39",
+      "source_id": "equip:182606144",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f92a00da-8d69-5717-bac7-c705e174e0b5",
+      "familyId": "f92a00da-8d69-5717-bac7-c705e174e0b5",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606144",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d59bafc7-3ede-56b4-98fe-1abc442c2fda",
+      "familyId": "d59bafc7-3ede-56b4-98fe-1abc442c2fda",
+      "source_id": "equip:182606146",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a7be59c3-1475-5177-adbb-6ae0257c4ef0",
+      "familyId": "a7be59c3-1475-5177-adbb-6ae0257c4ef0",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606146",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2a56cbba-bffc-5a02-8746-c9fa3428497c",
+      "familyId": "2a56cbba-bffc-5a02-8746-c9fa3428497c",
+      "source_id": "equip:182606151",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "15b87a2a-273d-575b-a0a1-5e183ae7ce7d",
+      "familyId": "15b87a2a-273d-575b-a0a1-5e183ae7ce7d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606151",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c5dd0644-22b0-588a-a2b0-dadaf4b42490",
+      "familyId": "c5dd0644-22b0-588a-a2b0-dadaf4b42490",
+      "source_id": "equip:182606157",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "23ae2c04-9f24-5927-8a4d-55039f3dcfe9",
+      "familyId": "23ae2c04-9f24-5927-8a4d-55039f3dcfe9",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606157",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e3d0f50f-4ca7-54bd-9cc4-db6372e58d4d",
+      "familyId": "e3d0f50f-4ca7-54bd-9cc4-db6372e58d4d",
+      "source_id": "equip:182606161",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "db3b0ef5-8d54-534f-afb1-59a7d982de99",
+      "familyId": "db3b0ef5-8d54-534f-afb1-59a7d982de99",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606161",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0c60737e-42fd-5317-8ec4-857913e61f8d",
+      "familyId": "0c60737e-42fd-5317-8ec4-857913e61f8d",
+      "source_id": "equip:182606168",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bde3429c-ffca-514e-b285-647755390b0f",
+      "familyId": "bde3429c-ffca-514e-b285-647755390b0f",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606168",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "04bc42a2-1648-560e-b2ee-1fc851d58447",
+      "familyId": "04bc42a2-1648-560e-b2ee-1fc851d58447",
+      "source_id": "equip:182606173",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fb1021c4-7bb7-5073-b790-e4f277d7c332",
+      "familyId": "fb1021c4-7bb7-5073-b790-e4f277d7c332",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606173",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7aecf2be-a322-5dd9-881f-18894ec07bbb",
+      "familyId": "7aecf2be-a322-5dd9-881f-18894ec07bbb",
+      "source_id": "equip:182606188",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e6e6cda4-6413-5f1d-bfa4-77dadf9dcb65",
+      "familyId": "e6e6cda4-6413-5f1d-bfa4-77dadf9dcb65",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606188",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6dc8e45a-fbb6-5fd6-9fa3-0295231320f9",
+      "familyId": "6dc8e45a-fbb6-5fd6-9fa3-0295231320f9",
+      "source_id": "equip:182606189",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "dd3a18fe-8b1a-546b-96e2-803b6844181d",
+      "familyId": "dd3a18fe-8b1a-546b-96e2-803b6844181d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606189",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "dfed2ed4-3633-50c5-bf20-2ed537a5bc27",
+      "familyId": "dfed2ed4-3633-50c5-bf20-2ed537a5bc27",
+      "source_id": "equip:182606200",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b57c4dfb-6876-5427-b23c-03cadef7b5f5",
+      "familyId": "b57c4dfb-6876-5427-b23c-03cadef7b5f5",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606200",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c67c5fac-3305-5107-982c-98ff4217d0e8",
+      "familyId": "c67c5fac-3305-5107-982c-98ff4217d0e8",
+      "source_id": "equip:182606315",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c8637efe-f2d6-5068-a88d-3d83b765f974",
+      "familyId": "c8637efe-f2d6-5068-a88d-3d83b765f974",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606315",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3f31da60-7905-5c1c-820f-eb3cb17da5e0",
+      "familyId": "3f31da60-7905-5c1c-820f-eb3cb17da5e0",
+      "source_id": "equip:182606317",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "28819627-e162-5c40-b631-8f04e0e0f19d",
+      "familyId": "28819627-e162-5c40-b631-8f04e0e0f19d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606317",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "00e9bcc8-3fe1-518f-af31-5e855bff5802",
+      "familyId": "00e9bcc8-3fe1-518f-af31-5e855bff5802",
+      "source_id": "equip:182606321",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7885755c-be5d-5e76-a2c8-39acbbb67eeb",
+      "familyId": "7885755c-be5d-5e76-a2c8-39acbbb67eeb",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606321",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b947cf1c-ef8d-5ae9-8c00-0911e5db501d",
+      "familyId": "b947cf1c-ef8d-5ae9-8c00-0911e5db501d",
+      "source_id": "equip:182606322",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "1a50d618-1602-5d62-b126-327cb612170d",
+      "familyId": "1a50d618-1602-5d62-b126-327cb612170d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182606322",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2cc355e1-b375-551c-8387-1358a265e13e",
+      "familyId": "2cc355e1-b375-551c-8387-1358a265e13e",
+      "source_id": "equip:182607026",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "37566f5a-77b0-506c-a1c5-ae6191a9fc63",
+      "familyId": "37566f5a-77b0-506c-a1c5-ae6191a9fc63",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607026",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7159c838-84c2-53bb-8cc3-87fb9fe4b482",
+      "familyId": "7159c838-84c2-53bb-8cc3-87fb9fe4b482",
+      "source_id": "equip:182607027",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0a4854a6-4363-5103-b5bd-c050ef783ffc",
+      "familyId": "0a4854a6-4363-5103-b5bd-c050ef783ffc",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607027",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e01349b2-2314-5c98-b8b3-a47416bbb6b7",
+      "familyId": "e01349b2-2314-5c98-b8b3-a47416bbb6b7",
+      "source_id": "equip:182607028",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "11d4ab0b-f87c-5545-bda7-ba1029586d6b",
+      "familyId": "11d4ab0b-f87c-5545-bda7-ba1029586d6b",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607028",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "eb37efd3-bbcd-5dad-bcf6-1dfe1b710279",
+      "familyId": "eb37efd3-bbcd-5dad-bcf6-1dfe1b710279",
+      "source_id": "equip:182607029",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d04dcf04-92c0-5fa5-ba13-ed2ebf7ba6a8",
+      "familyId": "d04dcf04-92c0-5fa5-ba13-ed2ebf7ba6a8",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607029",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f7cf649a-4491-547d-9865-163e5d6224d0",
+      "familyId": "f7cf649a-4491-547d-9865-163e5d6224d0",
+      "source_id": "equip:182607030",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c508a334-e7bc-5c25-83dd-e33243187949",
+      "familyId": "c508a334-e7bc-5c25-83dd-e33243187949",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607030",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "75326184-9279-5904-bc7d-f375de1dbed7",
+      "familyId": "75326184-9279-5904-bc7d-f375de1dbed7",
+      "source_id": "equip:182607032",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "376fe166-d477-5849-ac5d-a4a0a1a72e4f",
+      "familyId": "376fe166-d477-5849-ac5d-a4a0a1a72e4f",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607032",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4f142d96-904f-5436-acb7-c282678caa65",
+      "familyId": "4f142d96-904f-5436-acb7-c282678caa65",
+      "source_id": "equip:182607035",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "15412af4-b6e6-538a-8ec0-1b016dd57b99",
+      "familyId": "15412af4-b6e6-538a-8ec0-1b016dd57b99",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607035",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "f9241fb1-7445-5d55-b617-14a803b181e9",
+      "familyId": "f9241fb1-7445-5d55-b617-14a803b181e9",
+      "source_id": "equip:182607036",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5e3ff8a7-adba-5bd0-a9d8-a56cf3b002cf",
+      "familyId": "5e3ff8a7-adba-5bd0-a9d8-a56cf3b002cf",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607036",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "86339a00-c8b3-5a3e-8974-37283fe77e41",
+      "familyId": "86339a00-c8b3-5a3e-8974-37283fe77e41",
+      "source_id": "equip:182607037",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "37394b4d-ef01-550f-b192-356815409a6a",
+      "familyId": "37394b4d-ef01-550f-b192-356815409a6a",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607037",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4ae42f92-e6a5-52ae-b5b3-c3322ba64393",
+      "familyId": "4ae42f92-e6a5-52ae-b5b3-c3322ba64393",
+      "source_id": "equip:182607040",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "187cafd7-fa59-58bd-8e6e-37d170efd490",
+      "familyId": "187cafd7-fa59-58bd-8e6e-37d170efd490",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607040",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e37ca51b-aa00-52f7-9272-247ee4dee7fe",
+      "familyId": "e37ca51b-aa00-52f7-9272-247ee4dee7fe",
+      "source_id": "equip:182607041",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8255d705-e92b-5a80-836f-bf6570fc2816",
+      "familyId": "8255d705-e92b-5a80-836f-bf6570fc2816",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607041",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "18330f35-15d0-5c69-ad69-e6915eed437b",
+      "familyId": "18330f35-15d0-5c69-ad69-e6915eed437b",
+      "source_id": "equip:182607042",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d41e0c8e-f288-50c7-932d-7368f79eb1d3",
+      "familyId": "d41e0c8e-f288-50c7-932d-7368f79eb1d3",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607042",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "eb9119a1-c560-5360-8f12-053281b038e4",
+      "familyId": "eb9119a1-c560-5360-8f12-053281b038e4",
+      "source_id": "equip:182607043",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "35947242-beb0-58f1-8ce3-2d258b8dffdc",
+      "familyId": "35947242-beb0-58f1-8ce3-2d258b8dffdc",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607043",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "56ee5d20-c741-5b9f-b33d-244e1fe49973",
+      "familyId": "56ee5d20-c741-5b9f-b33d-244e1fe49973",
+      "source_id": "equip:182607044",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5dc81775-9d3d-59e6-bf79-fc03fae95210",
+      "familyId": "5dc81775-9d3d-59e6-bf79-fc03fae95210",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607044",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b5caedea-c10d-5a0b-a62b-20840b8dfb58",
+      "familyId": "b5caedea-c10d-5a0b-a62b-20840b8dfb58",
+      "source_id": "equip:182607046",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2e643a9f-dbf4-5dbf-a24a-fdb7b22c2273",
+      "familyId": "2e643a9f-dbf4-5dbf-a24a-fdb7b22c2273",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607046",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ea5ab3c9-6ca1-52cd-a11f-26c8cb7ddee3",
+      "familyId": "ea5ab3c9-6ca1-52cd-a11f-26c8cb7ddee3",
+      "source_id": "equip:182607047",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bfee52da-f1f7-5eb4-8648-2c9ae8386ac3",
+      "familyId": "bfee52da-f1f7-5eb4-8648-2c9ae8386ac3",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607047",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ca5f9768-bb24-50f0-801b-d9b4b5f16d59",
+      "familyId": "ca5f9768-bb24-50f0-801b-d9b4b5f16d59",
+      "source_id": "equip:182607048",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "54ef630c-1b68-517a-bf50-aa69fd5d983e",
+      "familyId": "54ef630c-1b68-517a-bf50-aa69fd5d983e",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607048",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fba8c2d5-a147-5693-90cb-07f82e277bff",
+      "familyId": "fba8c2d5-a147-5693-90cb-07f82e277bff",
+      "source_id": "equip:182607049",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b37bc80b-800e-5b32-8dac-a52ba5b14c97",
+      "familyId": "b37bc80b-800e-5b32-8dac-a52ba5b14c97",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607049",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "20d02024-0d9c-5ae7-a078-af16910f9568",
+      "familyId": "20d02024-0d9c-5ae7-a078-af16910f9568",
+      "source_id": "equip:182607050",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "004648bb-91ab-5fdd-8ea3-6bccbf6cc28a",
+      "familyId": "004648bb-91ab-5fdd-8ea3-6bccbf6cc28a",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607050",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "417a7952-10a0-5b2a-ae78-0ae9facf4ac4",
+      "familyId": "417a7952-10a0-5b2a-ae78-0ae9facf4ac4",
+      "source_id": "equip:182607315",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fc4580c6-47c8-5a07-a1b0-1310b751cf64",
+      "familyId": "fc4580c6-47c8-5a07-a1b0-1310b751cf64",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607315",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3b9fb66b-e36d-5359-ba77-f81519c2cf72",
+      "familyId": "3b9fb66b-e36d-5359-ba77-f81519c2cf72",
+      "source_id": "equip:182607334",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "65b181d6-8215-5fa8-ad39-83b98103c451",
+      "familyId": "65b181d6-8215-5fa8-ad39-83b98103c451",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607334",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "8d7b0c86-74e3-5bac-baa5-8d67ed874cd0",
+      "familyId": "8d7b0c86-74e3-5bac-baa5-8d67ed874cd0",
+      "source_id": "equip:182607335",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "d50369bd-d71a-581c-8c2d-c71d3de883e5",
+      "familyId": "d50369bd-d71a-581c-8c2d-c71d3de883e5",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607335",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "27c33370-80d5-5053-a0a5-cda05fd0d3d1",
+      "familyId": "27c33370-80d5-5053-a0a5-cda05fd0d3d1",
+      "source_id": "equip:182607336",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fb8f84a8-a22e-559c-a892-fa53583f6d28",
+      "familyId": "fb8f84a8-a22e-559c-a892-fa53583f6d28",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607336",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "68f57644-5718-5f59-867c-e0aa46c762cd",
+      "familyId": "68f57644-5718-5f59-867c-e0aa46c762cd",
+      "source_id": "equip:182607337",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "55bc8cab-b665-541a-89e6-9b88eb93dc3d",
+      "familyId": "55bc8cab-b665-541a-89e6-9b88eb93dc3d",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607337",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e50374d7-80cc-5140-829a-6b27b9cdddc9",
+      "familyId": "e50374d7-80cc-5140-829a-6b27b9cdddc9",
+      "source_id": "equip:182607338",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2d584eb4-af68-5626-bbb8-8507ec106d17",
+      "familyId": "2d584eb4-af68-5626-bbb8-8507ec106d17",
+      "source_id": "list:equip_master_200",
+      "target_id": "equip:182607338",
+      "type": "contains",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e4241b77-b85e-5737-b296-efec22d484b2",
+      "familyId": "e4241b77-b85e-5737-b296-efec22d484b2",
+      "source_id": "equip:172603512",
+      "target_id": "telemetry:52893a81",
+      "type": "reports",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0f391502-0fc2-593c-a24c-5a0917999e48",
+      "familyId": "0f391502-0fc2-593c-a24c-5a0917999e48",
+      "source_id": "openapi:iot",
+      "target_id": "telemetry:52893a81",
+      "type": "serves",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "0a494d97-a22f-53bb-a610-b7548d91060c",
+      "familyId": "0a494d97-a22f-53bb-a610-b7548d91060c",
+      "source_id": "equip:172603337",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c9568cb4-f371-5848-90a1-b5e208e2fe85",
+      "familyId": "c9568cb4-f371-5848-90a1-b5e208e2fe85",
+      "source_id": "equip:172603337",
+      "target_id": "gw:DAQ043068219",
+      "type": "collectedBy",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ea904870-b27c-5b34-8466-4f05e15f4992",
+      "familyId": "ea904870-b27c-5b34-8466-4f05e15f4992",
+      "source_id": "equip:172603337",
+      "target_id": "customer:meirisheng",
+      "type": "ownedBy",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "012a244e-8d83-58a4-a845-9743eacb3162",
+      "familyId": "012a244e-8d83-58a4-a845-9743eacb3162",
+      "source_id": "openapi:iot",
+      "target_id": "equip:172603337",
+      "type": "serves",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ca1e592b-6ec9-5708-baca-ea489fd3e55b",
+      "familyId": "ca1e592b-6ec9-5708-baca-ea489fd3e55b",
+      "source_id": "equip:62500730",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "16869aee-2a6c-53ca-a00e-6de21217458f",
+      "familyId": "16869aee-2a6c-53ca-a00e-6de21217458f",
+      "source_id": "equip:62500730",
+      "target_id": "runstatus:62500730:2026-05-09",
+      "type": "aggregates",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "576fab7c-a273-50b4-aed2-a55b34b78622",
+      "familyId": "576fab7c-a273-50b4-aed2-a55b34b78622",
+      "source_id": "equip:62500730",
+      "target_id": "customer:baoteng",
+      "type": "ownedBy",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "db385387-37d0-5f44-8098-2b277e00697e",
+      "familyId": "db385387-37d0-5f44-8098-2b277e00697e",
+      "source_id": "equip:172604773",
+      "target_id": "type:T-V856S",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3c603d4e-0623-5d34-a40f-3d18af205cf8",
+      "familyId": "3c603d4e-0623-5d34-a40f-3d18af205cf8",
+      "source_id": "equip:172604773",
+      "target_id": "alarm:514affa9",
+      "type": "raises",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bac9dd7b-160d-5c14-b25d-2b8ac1b05b4b",
+      "familyId": "bac9dd7b-160d-5c14-b25d-2b8ac1b05b4b",
+      "source_id": "equip:172604773",
+      "target_id": "customer:century",
+      "type": "ownedBy",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "390351c7-7bed-50f5-83bd-0fae8ce384de",
+      "familyId": "390351c7-7bed-50f5-83bd-0fae8ce384de",
+      "source_id": "equip:dgbt13",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4dca9412-22ea-5dd2-a8e0-ebab223f9454",
+      "familyId": "4dca9412-22ea-5dd2-a8e0-ebab223f9454",
+      "source_id": "equip:dgbt13",
+      "target_id": "customer:baoteng",
+      "type": "ownedBy",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7a1d0ce0-11b2-5c92-8e43-cf99c77b52a7",
+      "familyId": "7a1d0ce0-11b2-5c92-8e43-cf99c77b52a7",
+      "source_id": "equip:dgbt13",
+      "target_id": "program:e82008f3",
+      "type": "produces",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "ba2042c9-5a68-532b-9fee-35b370319539",
+      "familyId": "ba2042c9-5a68-532b-9fee-35b370319539",
+      "source_id": "equip:dgbt11",
+      "target_id": "type:T-600",
+      "type": "classifiedAs",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "6888e833-476b-5373-bb11-2092aa29dd6b",
+      "familyId": "6888e833-476b-5373-bb11-2092aa29dd6b",
+      "source_id": "equip:dgbt11",
+      "target_id": "customer:baoteng",
+      "type": "ownedBy",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b2d9bd80-2210-5b2a-93a9-d23a550901ea",
+      "familyId": "b2d9bd80-2210-5b2a-93a9-d23a550901ea",
+      "source_id": "equip:dgbt11",
+      "target_id": "progress:456ee5f1",
+      "type": "tracks",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b19c1e06-cd98-50a8-977a-215f0ef155e8",
+      "familyId": "b19c1e06-cd98-50a8-977a-215f0ef155e8",
+      "source_id": "openapi:iot",
+      "target_id": "customer:century",
+      "type": "serves",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fa4606ea-a1b8-5191-bf0c-f210e30ba1d0",
+      "familyId": "fa4606ea-a1b8-5191-bf0c-f210e30ba1d0",
+      "source_id": "openapi:iot",
+      "target_id": "customer:baoteng",
+      "type": "serves",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "cc4abd1b-faae-5a54-b2e6-e9fb157ca0ed",
+      "familyId": "cc4abd1b-faae-5a54-b2e6-e9fb157ca0ed",
+      "source_id": "openapi:iot",
+      "target_id": "customer:meirisheng",
+      "type": "serves",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

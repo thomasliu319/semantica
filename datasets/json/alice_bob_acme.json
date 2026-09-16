@@ -1,0 +1,67 @@
+{
+  "graph_id": "ca5b15b1-b613-4ff2-b652-08c83d72c755",
+  "nodes": [
+    {
+      "id": "alice",
+      "type": "Person",
+      "properties": {
+        "color": "#63E6FF",
+        "content": "Alice"
+      }
+    },
+    {
+      "id": "bob",
+      "type": "Person",
+      "properties": {
+        "color": "#63E6FF",
+        "content": "Bob"
+      }
+    },
+    {
+      "id": "acme",
+      "type": "Organization",
+      "properties": {
+        "color": "#A78BFA",
+        "content": "Acme"
+      }
+    },
+    {
+      "id": "new_york",
+      "type": "Location",
+      "properties": {
+        "color": "#34D399",
+        "content": "New York"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "bcc57eee-6bf9-5355-8875-8b72e4e41153",
+      "familyId": "bcc57eee-6bf9-5355-8875-8b72e4e41153",
+      "source_id": "alice",
+      "target_id": "acme",
+      "type": "WORKS_AT",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "a08280c7-79f6-51a5-946b-6ead8dd67d85",
+      "familyId": "a08280c7-79f6-51a5-946b-6ead8dd67d85",
+      "source_id": "bob",
+      "target_id": "alice",
+      "type": "KNOWS",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "02caad4f-cafb-5163-a752-1546a2b57656",
+      "familyId": "02caad4f-cafb-5163-a752-1546a2b57656",
+      "source_id": "acme",
+      "target_id": "new_york",
+      "type": "LOCATED_IN",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

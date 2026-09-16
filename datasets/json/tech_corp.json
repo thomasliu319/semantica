@@ -1,0 +1,71 @@
+{
+  "graph_id": "821269f9-f7c2-4feb-b93d-6fdb804efb9b",
+  "nodes": [
+    {
+      "id": "alice",
+      "type": "Person",
+      "properties": {
+        "age": 30,
+        "content": "Alice"
+      }
+    },
+    {
+      "id": "bob",
+      "type": "Person",
+      "properties": {
+        "age": 35,
+        "content": "Bob"
+      }
+    },
+    {
+      "id": "tech_corp",
+      "type": "Organization",
+      "properties": {
+        "founded": 2010,
+        "content": "Tech Corp"
+      }
+    },
+    {
+      "id": "sf",
+      "type": "Location",
+      "properties": {
+        "country": "USA",
+        "content": "San Francisco"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "32fce631-d3be-5f42-833b-26a06552fbaf",
+      "familyId": "32fce631-d3be-5f42-833b-26a06552fbaf",
+      "source_id": "alice",
+      "target_id": "bob",
+      "type": "knows",
+      "weight": 1.0,
+      "properties": {
+        "since": 2020
+      }
+    },
+    {
+      "id": "53f34b07-efbe-542d-889f-46c33adbd418",
+      "familyId": "53f34b07-efbe-542d-889f-46c33adbd418",
+      "source_id": "alice",
+      "target_id": "tech_corp",
+      "type": "works_for",
+      "weight": 1.0,
+      "properties": {
+        "role": "Engineer"
+      }
+    },
+    {
+      "id": "3e0d174f-c9fe-5a23-a443-a4cce0f08ea8",
+      "familyId": "3e0d174f-c9fe-5a23-a443-a4cce0f08ea8",
+      "source_id": "tech_corp",
+      "target_id": "sf",
+      "type": "located_in",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

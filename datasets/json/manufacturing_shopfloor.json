@@ -1,0 +1,351 @@
+{
+  "graph_id": "dbf3a561-6ee3-45a3-b85e-680d8bacddd9",
+  "nodes": [
+    {
+      "id": "site_1",
+      "type": "Site",
+      "properties": {
+        "content": "总厂"
+      }
+    },
+    {
+      "id": "wc_mill",
+      "type": "WorkCenter",
+      "properties": {
+        "workCenterCode": "WC-MILL",
+        "content": "数控铣削工段"
+      }
+    },
+    {
+      "id": "wc_turn",
+      "type": "WorkCenter",
+      "properties": {
+        "workCenterCode": "WC-TURN",
+        "content": "数控车削工段"
+      }
+    },
+    {
+      "id": "vmc_01",
+      "type": "CNCMill",
+      "properties": {
+        "assetCode": "VMC-01",
+        "content": "VMC-01"
+      }
+    },
+    {
+      "id": "ck_02",
+      "type": "CNCLathe",
+      "properties": {
+        "assetCode": "CK-02",
+        "content": "CK-02"
+      }
+    },
+    {
+      "id": "em_10",
+      "type": "CuttingTool",
+      "properties": {
+        "toolLifeRemaining": 80.0,
+        "content": "EM-10"
+      }
+    },
+    {
+      "id": "tn_08",
+      "type": "CuttingTool",
+      "properties": {
+        "toolLifeRemaining": 50.0,
+        "content": "TN-08"
+      }
+    },
+    {
+      "id": "vise_01",
+      "type": "Fixture",
+      "properties": {
+        "fixtureId": "FIX-VISE-01",
+        "content": "Vise-01"
+      }
+    },
+    {
+      "id": "steel_45",
+      "type": "Material",
+      "properties": {
+        "content": "45钢"
+      }
+    },
+    {
+      "id": "dwg_flange",
+      "type": "PartDrawing",
+      "properties": {
+        "drawingNo": "DWG-FLANGE-001",
+        "content": "法兰盘"
+      }
+    },
+    {
+      "id": "wp_1001",
+      "type": "Workpiece",
+      "properties": {
+        "workpieceNo": "WP-1001",
+        "content": "WP-1001"
+      }
+    },
+    {
+      "id": "pp_flange",
+      "type": "ProcessPlan",
+      "properties": {
+        "planNo": "PP-FLANGE-A",
+        "content": "法兰盘工艺"
+      }
+    },
+    {
+      "id": "op10",
+      "type": "Operation",
+      "properties": {
+        "operationNo": "OP10",
+        "sequenceNo": 10,
+        "content": "粗铣平面"
+      }
+    },
+    {
+      "id": "op20",
+      "type": "Operation",
+      "properties": {
+        "operationNo": "OP20",
+        "sequenceNo": 20,
+        "content": "车外圆"
+      }
+    },
+    {
+      "id": "wo_2026",
+      "type": "WorkOrder",
+      "properties": {
+        "workOrderNo": "WO-2026-001",
+        "content": "法兰盘工单"
+      }
+    },
+    {
+      "id": "zhang",
+      "type": "Operator",
+      "properties": {
+        "content": "张工"
+      }
+    },
+    {
+      "id": "exec_op10",
+      "type": "OperationExecution",
+      "properties": {
+        "content": "WO-2026-001/OP10",
+        "valid_from": "2026-09-01T08:00:00",
+        "valid_until": "2026-09-01T10:30:00"
+      }
+    },
+    {
+      "id": "insp_1",
+      "type": "Inspection",
+      "properties": {
+        "result": "pass",
+        "content": "WP-1001终检"
+      }
+    },
+    {
+      "id": "meas_od",
+      "type": "Measurement",
+      "properties": {
+        "measuredValue": 50.02,
+        "specMin": 49.9,
+        "specMax": 50.1,
+        "content": "外径"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "2490b70b-8611-5783-a19e-4e0938e01db2",
+      "familyId": "2490b70b-8611-5783-a19e-4e0938e01db2",
+      "source_id": "wc_mill",
+      "target_id": "site_1",
+      "type": "locatedIn",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "3dfae81f-ca3a-531b-a576-6bf7cd887a51",
+      "familyId": "3dfae81f-ca3a-531b-a576-6bf7cd887a51",
+      "source_id": "wc_turn",
+      "target_id": "site_1",
+      "type": "locatedIn",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c8f4c337-97d1-519c-93a8-d9e32962e175",
+      "familyId": "c8f4c337-97d1-519c-93a8-d9e32962e175",
+      "source_id": "vmc_01",
+      "target_id": "wc_mill",
+      "type": "installedAt",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "fed566e9-001d-5157-9e75-d4dbca9c4dbc",
+      "familyId": "fed566e9-001d-5157-9e75-d4dbca9c4dbc",
+      "source_id": "ck_02",
+      "target_id": "wc_turn",
+      "type": "installedAt",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "2bad696a-9c2d-56ca-b83f-2297b4bc5aae",
+      "familyId": "2bad696a-9c2d-56ca-b83f-2297b4bc5aae",
+      "source_id": "wp_1001",
+      "target_id": "steel_45",
+      "type": "madeFrom",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "eaafa215-befb-5060-b719-bcaf7dea02ed",
+      "familyId": "eaafa215-befb-5060-b719-bcaf7dea02ed",
+      "source_id": "wp_1001",
+      "target_id": "dwg_flange",
+      "type": "hasDrawing",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "59490293-5857-5da3-942b-82e39cbd0f54",
+      "familyId": "59490293-5857-5da3-942b-82e39cbd0f54",
+      "source_id": "pp_flange",
+      "target_id": "dwg_flange",
+      "type": "plansDrawing",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4ae398c8-1bf1-5c0b-b6d3-93d9b37056d9",
+      "familyId": "4ae398c8-1bf1-5c0b-b6d3-93d9b37056d9",
+      "source_id": "op10",
+      "target_id": "pp_flange",
+      "type": "partOfPlan",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "bf1aff84-e507-562b-80f6-31a3a0545e6f",
+      "familyId": "bf1aff84-e507-562b-80f6-31a3a0545e6f",
+      "source_id": "op20",
+      "target_id": "pp_flange",
+      "type": "partOfPlan",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "9a845b3e-0bd8-57a3-ab0e-04c1a735553a",
+      "familyId": "9a845b3e-0bd8-57a3-ab0e-04c1a735553a",
+      "source_id": "op10",
+      "target_id": "em_10",
+      "type": "usesTool",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "88d210bf-2b4d-5561-81b4-27fd36eab98e",
+      "familyId": "88d210bf-2b4d-5561-81b4-27fd36eab98e",
+      "source_id": "op10",
+      "target_id": "vise_01",
+      "type": "usesFixture",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7df0e0a8-4494-544a-8e35-772199f54b13",
+      "familyId": "7df0e0a8-4494-544a-8e35-772199f54b13",
+      "source_id": "op20",
+      "target_id": "tn_08",
+      "type": "usesTool",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "e4727c74-1a0b-5195-8253-211f93ec802f",
+      "familyId": "e4727c74-1a0b-5195-8253-211f93ec802f",
+      "source_id": "wo_2026",
+      "target_id": "pp_flange",
+      "type": "plannedBy",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4a94e8de-fc69-55e2-b595-fed26f8dbc1a",
+      "familyId": "4a94e8de-fc69-55e2-b595-fed26f8dbc1a",
+      "source_id": "wo_2026",
+      "target_id": "wp_1001",
+      "type": "produces",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4796711e-d5d1-56cc-91c1-9db6f59da8bd",
+      "familyId": "4796711e-d5d1-56cc-91c1-9db6f59da8bd",
+      "source_id": "exec_op10",
+      "target_id": "wo_2026",
+      "type": "belongsToWorkOrder",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "24010bb8-5878-5cf4-bb9f-e3f9f75f5afa",
+      "familyId": "24010bb8-5878-5cf4-bb9f-e3f9f75f5afa",
+      "source_id": "exec_op10",
+      "target_id": "op10",
+      "type": "executes",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5ddee269-6e8c-57de-9108-3057d2814bb1",
+      "familyId": "5ddee269-6e8c-57de-9108-3057d2814bb1",
+      "source_id": "exec_op10",
+      "target_id": "vmc_01",
+      "type": "executedOn",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "81c8f85f-c616-58f7-a136-7b2ace6b5d3b",
+      "familyId": "81c8f85f-c616-58f7-a136-7b2ace6b5d3b",
+      "source_id": "exec_op10",
+      "target_id": "zhang",
+      "type": "performedBy",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "4bb450cd-b97e-54db-a3f1-115787dda2fe",
+      "familyId": "4bb450cd-b97e-54db-a3f1-115787dda2fe",
+      "source_id": "exec_op10",
+      "target_id": "em_10",
+      "type": "usedTool",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "82b01fd4-40a8-580d-9135-42ecff69f2a7",
+      "familyId": "82b01fd4-40a8-580d-9135-42ecff69f2a7",
+      "source_id": "insp_1",
+      "target_id": "wp_1001",
+      "type": "inspects",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "5d0a90b5-8768-56a5-81b7-3d0d435b9fd7",
+      "familyId": "5d0a90b5-8768-56a5-81b7-3d0d435b9fd7",
+      "source_id": "insp_1",
+      "target_id": "meas_od",
+      "type": "hasMeasurement",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

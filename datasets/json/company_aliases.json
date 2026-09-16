@@ -1,0 +1,120 @@
+{
+  "graph_id": "59bc56c3-5bcf-4a3e-9aa1-6cefe44107b4",
+  "nodes": [
+    {
+      "id": "e1",
+      "type": "Company",
+      "properties": {
+        "industry": "Technology",
+        "hq": "Cupertino",
+        "founded": 1976,
+        "content": "Apple Inc."
+      }
+    },
+    {
+      "id": "e2",
+      "type": "Company",
+      "properties": {
+        "industry": "Tech",
+        "hq": "Cupertino, CA",
+        "content": "Apple Inc"
+      }
+    },
+    {
+      "id": "e3",
+      "type": "Company",
+      "properties": {
+        "industry": "Consumer Electronics",
+        "content": "Apple"
+      }
+    },
+    {
+      "id": "e4",
+      "type": "Company",
+      "properties": {
+        "industry": "Software",
+        "hq": "Redmond",
+        "content": "Microsoft Corp"
+      }
+    },
+    {
+      "id": "e5",
+      "type": "Company",
+      "properties": {
+        "industry": "Tech",
+        "hq": "Redmond, WA",
+        "content": "Microsoft"
+      }
+    },
+    {
+      "id": "e6",
+      "type": "Company",
+      "properties": {
+        "industry": "Internet",
+        "content": "Google LLC"
+      }
+    },
+    {
+      "id": "steve_jobs",
+      "type": "Person",
+      "properties": {
+        "content": "Steve Jobs"
+      }
+    },
+    {
+      "id": "tim_cook",
+      "type": "Person",
+      "properties": {
+        "content": "Tim Cook"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "57ac9968-1c9b-55b3-8236-3392b66fc44d",
+      "familyId": "57ac9968-1c9b-55b3-8236-3392b66fc44d",
+      "source_id": "e1",
+      "target_id": "steve_jobs",
+      "type": "founded_by",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "c3f802b4-e1c4-54e1-8627-0b4778e13a80",
+      "familyId": "c3f802b4-e1c4-54e1-8627-0b4778e13a80",
+      "source_id": "e3",
+      "target_id": "tim_cook",
+      "type": "ceo",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "7912c398-fdd2-505f-8d36-65bdc0f39bed",
+      "familyId": "7912c398-fdd2-505f-8d36-65bdc0f39bed",
+      "source_id": "e1",
+      "target_id": "e2",
+      "type": "same_as_candidate",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "13e86594-46a0-5369-a6e3-5ab4dd42b9e4",
+      "familyId": "13e86594-46a0-5369-a6e3-5ab4dd42b9e4",
+      "source_id": "e1",
+      "target_id": "e3",
+      "type": "same_as_candidate",
+      "weight": 1.0,
+      "properties": {}
+    },
+    {
+      "id": "b7c0fff6-2c3e-5ccc-9cee-03ce97c1024a",
+      "familyId": "b7c0fff6-2c3e-5ccc-9cee-03ce97c1024a",
+      "source_id": "e4",
+      "target_id": "e5",
+      "type": "same_as_candidate",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

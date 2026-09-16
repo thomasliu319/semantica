@@ -1,0 +1,112 @@
+{
+  "graph_id": "1e2e5a3b-eb74-467b-97fb-780f8ecd0000",
+  "nodes": [
+    {
+      "id": "python",
+      "type": "language",
+      "properties": {
+        "popularity": "high",
+        "content": "Python programming language"
+      }
+    },
+    {
+      "id": "javascript",
+      "type": "language",
+      "properties": {
+        "content": "JavaScript programming language"
+      }
+    },
+    {
+      "id": "web_dev",
+      "type": "concept",
+      "properties": {
+        "content": "Web Development"
+      }
+    },
+    {
+      "id": "ml",
+      "type": "concept",
+      "properties": {
+        "content": "Machine Learning"
+      }
+    },
+    {
+      "id": "metformin",
+      "type": "drug",
+      "properties": {
+        "aliases": [
+          "Glucophage"
+        ],
+        "content": "Metformin"
+      }
+    },
+    {
+      "id": "decision_1",
+      "type": "decision",
+      "properties": {
+        "category": "tech",
+        "outcome": "approved",
+        "confidence": "0.9",
+        "content": "Approve ML framework"
+      }
+    },
+    {
+      "id": "decision_2",
+      "type": "decision",
+      "properties": {
+        "category": "tech",
+        "outcome": "rejected",
+        "confidence": "0.4",
+        "content": "Reject legacy stack"
+      }
+    },
+    {
+      "id": "temporal_node",
+      "type": "event",
+      "properties": {
+        "content": "Conference talk",
+        "valid_from": "2025-01-01T00:00:00",
+        "valid_until": "2025-12-31T23:59:59"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "2a4278a6-c2b0-50e0-a957-94d013d1c7af",
+      "familyId": "2a4278a6-c2b0-50e0-a957-94d013d1c7af",
+      "source_id": "python",
+      "target_id": "ml",
+      "type": "used_in",
+      "weight": 0.9,
+      "properties": {}
+    },
+    {
+      "id": "f834ddbf-5652-55b0-bc8a-7c125841140c",
+      "familyId": "f834ddbf-5652-55b0-bc8a-7c125841140c",
+      "source_id": "javascript",
+      "target_id": "web_dev",
+      "type": "used_in",
+      "weight": 0.8,
+      "properties": {}
+    },
+    {
+      "id": "a3a34aa3-445c-59f9-adbb-b32a37e4d39a",
+      "familyId": "a3a34aa3-445c-59f9-adbb-b32a37e4d39a",
+      "source_id": "python",
+      "target_id": "web_dev",
+      "type": "used_in",
+      "weight": 0.5,
+      "properties": {}
+    },
+    {
+      "id": "99197b38-394e-5c1c-9016-17d50fc134cd",
+      "familyId": "99197b38-394e-5c1c-9016-17d50fc134cd",
+      "source_id": "decision_1",
+      "target_id": "ml",
+      "type": "about",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ],
+  "links": []
+}

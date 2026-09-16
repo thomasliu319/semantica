@@ -20,17 +20,17 @@
     "StartTime": "2026-03-01",
     "EndTime": "2026-08-31"
   },
-  "complete_count": 92,
-  "incomplete_count": 108,
+  "complete_count": 103,
+  "incomplete_count": 97,
   "by_type": {
-    "T-V856S": 72,
+    "T-V856S": 83,
     "T-600": 20
   },
   "by_area": {
-    "华南区": 57,
-    "华东区": 31,
-    "西南区": 2,
-    "": 2
+    "华东区": 41,
+    "华南区": 58,
+    "": 2,
+    "西南区": 2
   },
   "devices": [
     {
@@ -1232,6 +1232,126 @@
       },
       "source_dir": "datasets/json/iot_timeseries/172603674",
       "complete_dir": "datasets/json/iot_timeseries/_complete/172603674"
+    },
+    {
+      "OutFactoryCode": "172603544",
+      "identity": {
+        "OutFactoryCode": "172603544",
+        "EquipCode": "172603544_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "f9e674d4-3192-43c4-baa5-3d5accca6005",
+        "CompanyName": "东莞市鑫启电子科技有限公司",
+        "GwCode": "DAQ043066517",
+        "AreaName": "华南区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 1044,
+        "GetEquipProgramPageList.json": 618,
+        "GetEquipProductionProgressPageList.json": 218,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 1044,
+        "program_cycles": 626,
+        "progress_output": 626,
+        "run_hours": 1217.7,
+        "avg_run_rate_pct": 26.68
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 393,
+          "shutdown_alarm_count": 393,
+          "program_cycles": 111,
+          "program_seconds": 695937,
+          "progress_output": 111,
+          "progress_seconds": 695935,
+          "run_ok_days": 31,
+          "run_seconds": 1071235,
+          "standby_seconds": 1070493,
+          "stop_seconds": 0,
+          "breakdown_seconds": 506987,
+          "avg_run_rate_pct": 39.99
+        },
+        "2026-06": {
+          "alarm_count": 359,
+          "shutdown_alarm_count": 347,
+          "program_cycles": 127,
+          "program_seconds": 703910,
+          "progress_output": 127,
+          "progress_seconds": 703905,
+          "run_ok_days": 30,
+          "run_seconds": 1148376,
+          "standby_seconds": 1135188,
+          "stop_seconds": 31393,
+          "breakdown_seconds": 332651,
+          "avg_run_rate_pct": 42.99
+        },
+        "2026-07": {
+          "alarm_count": 106,
+          "shutdown_alarm_count": 64,
+          "program_cycles": 304,
+          "program_seconds": 772379,
+          "progress_output": 306,
+          "progress_seconds": 783695,
+          "run_ok_days": 31,
+          "run_seconds": 976374,
+          "standby_seconds": 1525767,
+          "stop_seconds": 0,
+          "breakdown_seconds": 176259,
+          "avg_run_rate_pct": 36.45
+        },
+        "2026-08": {
+          "alarm_count": 186,
+          "shutdown_alarm_count": 81,
+          "program_cycles": 84,
+          "program_seconds": 419470,
+          "progress_output": 82,
+          "progress_seconds": 408141,
+          "run_ok_days": 31,
+          "run_seconds": 1187903,
+          "standby_seconds": 1584937,
+          "stop_seconds": 1015,
+          "breakdown_seconds": 33335,
+          "avg_run_rate_pct": 40.64
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/172603544",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/172603544"
     },
     {
       "OutFactoryCode": "172603368",
@@ -4954,6 +5074,126 @@
       "complete_dir": "datasets/json/iot_timeseries/_complete/162601713"
     },
     {
+      "OutFactoryCode": "152600409",
+      "identity": {
+        "OutFactoryCode": "152600409",
+        "EquipCode": "152600409_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "e9b68b9d-e718-4aae-bb1e-5176e7e2360f",
+        "CompanyName": "全兴精工集团有限公司",
+        "GwCode": "DAQ043184854",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 37,
+        "GetEquipProgramPageList.json": 229,
+        "GetEquipProductionProgressPageList.json": 11,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 37,
+        "program_cycles": 258,
+        "progress_output": 258,
+        "run_hours": 218.8,
+        "avg_run_rate_pct": 4.88
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 8,
+          "shutdown_alarm_count": 8,
+          "program_cycles": 250,
+          "program_seconds": 286211,
+          "progress_output": 250,
+          "progress_seconds": 286208,
+          "run_ok_days": 31,
+          "run_seconds": 264535,
+          "standby_seconds": 2351358,
+          "stop_seconds": 51215,
+          "breakdown_seconds": 2032,
+          "avg_run_rate_pct": 10.06
+        },
+        "2026-08": {
+          "alarm_count": 29,
+          "shutdown_alarm_count": 20,
+          "program_cycles": 8,
+          "program_seconds": 14295,
+          "progress_output": 8,
+          "progress_seconds": 14295,
+          "run_ok_days": 31,
+          "run_seconds": 523305,
+          "standby_seconds": 1544527,
+          "stop_seconds": 691215,
+          "breakdown_seconds": 4062,
+          "avg_run_rate_pct": 19.21
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600409",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600409"
+    },
+    {
       "OutFactoryCode": "152600455",
       "identity": {
         "OutFactoryCode": "152600455",
@@ -5312,6 +5552,126 @@
       },
       "source_dir": "datasets/json/iot_timeseries/162601584",
       "complete_dir": "datasets/json/iot_timeseries/_complete/162601584"
+    },
+    {
+      "OutFactoryCode": "152600419",
+      "identity": {
+        "OutFactoryCode": "152600419",
+        "EquipCode": "152600419_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "ed783e13-f2c4-48ba-a04f-884bb3102f51",
+        "CompanyName": "利固盛精工机械（昆山）有限公司",
+        "GwCode": "DAQ043234123",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 129,
+        "GetEquipProgramPageList.json": 32,
+        "GetEquipProductionProgressPageList.json": 24,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 129,
+        "program_cycles": 39,
+        "progress_output": 39,
+        "run_hours": 203.0,
+        "avg_run_rate_pct": 4.18
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-08": {
+          "alarm_count": 129,
+          "shutdown_alarm_count": 97,
+          "program_cycles": 39,
+          "program_seconds": 238174,
+          "progress_output": 39,
+          "progress_seconds": 238174,
+          "run_ok_days": 31,
+          "run_seconds": 730701,
+          "standby_seconds": 1063505,
+          "stop_seconds": 920382,
+          "breakdown_seconds": 21527,
+          "avg_run_rate_pct": 25.08
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600419",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600419"
     },
     {
       "OutFactoryCode": "162601587",
@@ -6032,6 +6392,126 @@
       },
       "source_dir": "datasets/json/iot_timeseries/162601710",
       "complete_dir": "datasets/json/iot_timeseries/_complete/162601710"
+    },
+    {
+      "OutFactoryCode": "152600465",
+      "identity": {
+        "OutFactoryCode": "152600465",
+        "EquipCode": "152600465_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "fda2872e-33c6-4a5b-bdc2-b20553bd3db2",
+        "CompanyName": "江苏智鑫宸精密科技有限公司",
+        "GwCode": "DAQ043144130",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 128,
+        "GetEquipProgramPageList.json": 230,
+        "GetEquipProductionProgressPageList.json": 13,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 128,
+        "program_cycles": 275,
+        "progress_output": 275,
+        "run_hours": 179.8,
+        "avg_run_rate_pct": 3.89
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-08": {
+          "alarm_count": 128,
+          "shutdown_alarm_count": 80,
+          "program_cycles": 275,
+          "program_seconds": 223349,
+          "progress_output": 275,
+          "progress_seconds": 223345,
+          "run_ok_days": 31,
+          "run_seconds": 647100,
+          "standby_seconds": 1375055,
+          "stop_seconds": 701741,
+          "breakdown_seconds": 106365,
+          "avg_run_rate_pct": 23.32
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600465",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600465"
     },
     {
       "OutFactoryCode": "152600456",
@@ -7594,6 +8074,126 @@
       "complete_dir": "datasets/json/iot_timeseries/_complete/182606168"
     },
     {
+      "OutFactoryCode": "152600432",
+      "identity": {
+        "OutFactoryCode": "152600432",
+        "EquipCode": "152600432_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "ed783e13-f2c4-48ba-a04f-884bb3102f51",
+        "CompanyName": "利固盛精工机械（昆山）有限公司",
+        "GwCode": "DAQ043184446",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 31,
+        "GetEquipProgramPageList.json": 18,
+        "GetEquipProductionProgressPageList.json": 14,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 31,
+        "program_cycles": 18,
+        "progress_output": 18,
+        "run_hours": 150.4,
+        "avg_run_rate_pct": 2.98
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-08": {
+          "alarm_count": 31,
+          "shutdown_alarm_count": 23,
+          "program_cycles": 18,
+          "program_seconds": 238890,
+          "progress_output": 18,
+          "progress_seconds": 238890,
+          "run_ok_days": 31,
+          "run_seconds": 541466,
+          "standby_seconds": 1163442,
+          "stop_seconds": 1022662,
+          "breakdown_seconds": 18609,
+          "avg_run_rate_pct": 17.9
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600432",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600432"
+    },
+    {
       "OutFactoryCode": "162600834",
       "identity": {
         "OutFactoryCode": "162600834",
@@ -7832,6 +8432,126 @@
       },
       "source_dir": "datasets/json/iot_timeseries/182607335",
       "complete_dir": "datasets/json/iot_timeseries/_complete/182607335"
+    },
+    {
+      "OutFactoryCode": "152600412",
+      "identity": {
+        "OutFactoryCode": "152600412",
+        "EquipCode": "152600412_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "e9b68b9d-e718-4aae-bb1e-5176e7e2360f",
+        "CompanyName": "全兴精工集团有限公司",
+        "GwCode": "DAQ043123735",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 57,
+        "GetEquipProgramPageList.json": 317,
+        "GetEquipProductionProgressPageList.json": 17,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 57,
+        "program_cycles": 382,
+        "progress_output": 382,
+        "run_hours": 134.5,
+        "avg_run_rate_pct": 3.01
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 331,
+          "program_seconds": 266259,
+          "progress_output": 331,
+          "progress_seconds": 266255,
+          "run_ok_days": 31,
+          "run_seconds": 183791,
+          "standby_seconds": 2434448,
+          "stop_seconds": 51205,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 6.97
+        },
+        "2026-08": {
+          "alarm_count": 57,
+          "shutdown_alarm_count": 54,
+          "program_cycles": 51,
+          "program_seconds": 35040,
+          "progress_output": 51,
+          "progress_seconds": 35038,
+          "run_ok_days": 31,
+          "run_seconds": 300403,
+          "standby_seconds": 1761775,
+          "stop_seconds": 720154,
+          "breakdown_seconds": 20870,
+          "avg_run_rate_pct": 11.1
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600412",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600412"
     },
     {
       "OutFactoryCode": "152600387",
@@ -8194,6 +8914,126 @@
       "complete_dir": "datasets/json/iot_timeseries/_complete/182607044"
     },
     {
+      "OutFactoryCode": "152600410",
+      "identity": {
+        "OutFactoryCode": "152600410",
+        "EquipCode": "152600410_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "e9b68b9d-e718-4aae-bb1e-5176e7e2360f",
+        "CompanyName": "全兴精工集团有限公司",
+        "GwCode": "DAQ043044638",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 42,
+        "GetEquipProgramPageList.json": 97,
+        "GetEquipProductionProgressPageList.json": 8,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 42,
+        "program_cycles": 124,
+        "progress_output": 124,
+        "run_hours": 117.4,
+        "avg_run_rate_pct": 2.54
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2618406,
+          "stop_seconds": 50917,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-08": {
+          "alarm_count": 42,
+          "shutdown_alarm_count": 22,
+          "program_cycles": 124,
+          "program_seconds": 243270,
+          "progress_output": 124,
+          "progress_seconds": 243266,
+          "run_ok_days": 31,
+          "run_seconds": 422567,
+          "standby_seconds": 1532921,
+          "stop_seconds": 801927,
+          "breakdown_seconds": 6896,
+          "avg_run_rate_pct": 15.23
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600410",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600410"
+    },
+    {
       "OutFactoryCode": "162601718",
       "identity": {
         "OutFactoryCode": "162601718",
@@ -8312,6 +9152,126 @@
       },
       "source_dir": "datasets/json/iot_timeseries/162601718",
       "complete_dir": "datasets/json/iot_timeseries/_complete/162601718"
+    },
+    {
+      "OutFactoryCode": "152600384",
+      "identity": {
+        "OutFactoryCode": "152600384",
+        "EquipCode": "152600384_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "fb11e652-cf1c-4245-8a89-a8e8903c5d47",
+        "CompanyName": "温州合盛电子有限公司",
+        "GwCode": "DAQ043133751",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 76,
+        "GetEquipProgramPageList.json": 346,
+        "GetEquipProductionProgressPageList.json": 16,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 76,
+        "program_cycles": 601,
+        "progress_output": 601,
+        "run_hours": 104.6,
+        "avg_run_rate_pct": 2.34
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-08": {
+          "alarm_count": 76,
+          "shutdown_alarm_count": 50,
+          "program_cycles": 601,
+          "program_seconds": 785916,
+          "progress_output": 601,
+          "progress_seconds": 785913,
+          "run_ok_days": 31,
+          "run_seconds": 376430,
+          "standby_seconds": 832781,
+          "stop_seconds": 1561533,
+          "breakdown_seconds": 7583,
+          "avg_run_rate_pct": 14.03
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600384",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600384"
     },
     {
       "OutFactoryCode": "152600398",
@@ -8674,6 +9634,126 @@
       "complete_dir": "datasets/json/iot_timeseries/_complete/152600493"
     },
     {
+      "OutFactoryCode": "152600391",
+      "identity": {
+        "OutFactoryCode": "152600391",
+        "EquipCode": "152600391_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "fb11e652-cf1c-4245-8a89-a8e8903c5d47",
+        "CompanyName": "温州合盛电子有限公司",
+        "GwCode": "DAQ043133846",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 123,
+        "GetEquipProgramPageList.json": 37,
+        "GetEquipProductionProgressPageList.json": 7,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 123,
+        "program_cycles": 47,
+        "progress_output": 47,
+        "run_hours": 77.7,
+        "avg_run_rate_pct": 1.75
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-08": {
+          "alarm_count": 123,
+          "shutdown_alarm_count": 106,
+          "program_cycles": 47,
+          "program_seconds": 32536,
+          "progress_output": 47,
+          "progress_seconds": 32534,
+          "run_ok_days": 31,
+          "run_seconds": 279896,
+          "standby_seconds": 1015074,
+          "stop_seconds": 1397878,
+          "breakdown_seconds": 102641,
+          "avg_run_rate_pct": 10.47
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600391",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600391"
+    },
+    {
       "OutFactoryCode": "182607032",
       "identity": {
         "OutFactoryCode": "182607032",
@@ -8912,6 +9992,246 @@
       },
       "source_dir": "datasets/json/iot_timeseries/152600349",
       "complete_dir": "datasets/json/iot_timeseries/_complete/152600349"
+    },
+    {
+      "OutFactoryCode": "152600473",
+      "identity": {
+        "OutFactoryCode": "152600473",
+        "EquipCode": "152600473_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "f6cafdea-0bd7-46b1-b6fd-eece96e41581",
+        "CompanyName": "苏州国穗城精密模具有限公司",
+        "GwCode": "DAQ043075043",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 241,
+        "GetEquipProgramPageList.json": 155,
+        "GetEquipProductionProgressPageList.json": 16,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 241,
+        "program_cycles": 197,
+        "progress_output": 197,
+        "run_hours": 73.4,
+        "avg_run_rate_pct": 1.61
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 2592000,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 2678400,
+          "stop_seconds": 0,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-08": {
+          "alarm_count": 241,
+          "shutdown_alarm_count": 168,
+          "program_cycles": 197,
+          "program_seconds": 134806,
+          "progress_output": 197,
+          "progress_seconds": 134804,
+          "run_ok_days": 31,
+          "run_seconds": 264208,
+          "standby_seconds": 1433897,
+          "stop_seconds": 846994,
+          "breakdown_seconds": 191403,
+          "avg_run_rate_pct": 9.64
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600473",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600473"
+    },
+    {
+      "OutFactoryCode": "152600359",
+      "identity": {
+        "OutFactoryCode": "152600359",
+        "EquipCode": "152600359_sk",
+        "EquipName": "",
+        "EquipTypeCode": "T-V856S",
+        "EquipTypeName": "立式加工中心",
+        "CompanyId": "fb11e652-cf1c-4245-8a89-a8e8903c5d47",
+        "CompanyName": "温州合盛电子有限公司",
+        "GwCode": "DAQ043023446",
+        "AreaName": "华东区"
+      },
+      "excel_EquipTypeCode": "T-V856S",
+      "files": {
+        "GetEquipInfoPageList.json": 1,
+        "GetEquipSpindleWithFeedData.json": 1,
+        "GetEquipRunStatusList.json": 184,
+        "GetEquipAbnorPageList.json": 455,
+        "GetEquipProgramPageList.json": 44,
+        "GetEquipProductionProgressPageList.json": 9,
+        "GetEquipBootOrRunningTimeList.json": 1,
+        "trend_summary.json": true
+      },
+      "activity": {
+        "alarm_count": 455,
+        "program_cycles": 47,
+        "progress_output": 47,
+        "run_hours": 73.1,
+        "avg_run_rate_pct": 1.55
+      },
+      "monthly": {
+        "2026-03": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-04": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-05": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 31,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2678400,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-06": {
+          "alarm_count": 0,
+          "shutdown_alarm_count": 0,
+          "program_cycles": 0,
+          "program_seconds": 0,
+          "progress_output": 0,
+          "progress_seconds": 0,
+          "run_ok_days": 30,
+          "run_seconds": 0,
+          "standby_seconds": 0,
+          "stop_seconds": 2592000,
+          "breakdown_seconds": 0,
+          "avg_run_rate_pct": 0.0
+        },
+        "2026-07": {
+          "alarm_count": 117,
+          "shutdown_alarm_count": 106,
+          "program_cycles": 7,
+          "program_seconds": 4489,
+          "progress_output": 7,
+          "progress_seconds": 4489,
+          "run_ok_days": 31,
+          "run_seconds": 21754,
+          "standby_seconds": 403410,
+          "stop_seconds": 1960849,
+          "breakdown_seconds": 280446,
+          "avg_run_rate_pct": 0.84
+        },
+        "2026-08": {
+          "alarm_count": 338,
+          "shutdown_alarm_count": 334,
+          "program_cycles": 40,
+          "program_seconds": 29285,
+          "progress_output": 40,
+          "progress_seconds": 29284,
+          "run_ok_days": 31,
+          "run_seconds": 241410,
+          "standby_seconds": 1151144,
+          "stop_seconds": 1265328,
+          "breakdown_seconds": 84655,
+          "avg_run_rate_pct": 8.47
+        }
+      },
+      "source_dir": "datasets/json/iot_timeseries/152600359",
+      "complete_dir": "datasets/json/iot_timeseries/_complete/152600359"
     },
     {
       "OutFactoryCode": "182607315",
@@ -11079,7 +12399,6 @@
       "OutFactoryCode": "162601711",
       "missing": [
         "GetEquipAbnorPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11087,7 +12406,6 @@
       "OutFactoryCode": "162601714",
       "missing": [
         "GetEquipAbnorPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11095,19 +12413,13 @@
       "OutFactoryCode": "162601861",
       "missing": [
         "GetEquipAbnorPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
     {
       "OutFactoryCode": "172603386",
       "missing": [
-        "GetEquipRunStatusList.json",
         "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11115,7 +12427,6 @@
       "OutFactoryCode": "172603416",
       "missing": [
         "GetEquipAbnorPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11123,19 +12434,14 @@
       "OutFactoryCode": "172603420",
       "missing": [
         "GetEquipAbnorPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
     {
       "OutFactoryCode": "162601719",
       "missing": [
-        "GetEquipRunStatusList.json",
         "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11143,7 +12449,6 @@
       "OutFactoryCode": "162601859",
       "missing": [
         "GetEquipProgramPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11151,7 +12456,6 @@
       "OutFactoryCode": "162601865",
       "missing": [
         "GetEquipProgramPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11160,49 +12464,37 @@
       "missing": [
         "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
     {
       "OutFactoryCode": "162601867",
       "missing": [
+        "spindle",
         "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
     {
       "OutFactoryCode": "162601868",
       "missing": [
-        "GetEquipRunStatusList.json",
         "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
     {
       "OutFactoryCode": "172602605",
       "missing": [
-        "GetEquipRunStatusList.json",
         "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
     {
       "OutFactoryCode": "152600438",
       "missing": [
-        "GetEquipRunStatusList.json",
         "GetEquipAbnorPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11210,79 +12502,13 @@
       "OutFactoryCode": "172603682",
       "missing": [
         "GetEquipAbnorPageList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
     {
       "OutFactoryCode": "152600408",
       "missing": [
-        "GetEquipRunStatusList.json",
         "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600409",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600410",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600412",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600419",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600432",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
         "meta.json"
       ]
     },
@@ -11291,79 +12517,6 @@
       "missing": [
         "GetEquipRunStatusList.json",
         "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600473",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "172603544",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600359",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600384",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600391",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
-        "GetEquipProductionProgressPageList.json",
-        "GetEquipBootOrRunningTimeList.json",
-        "trend_summary.json",
-        "meta.json"
-      ]
-    },
-    {
-      "OutFactoryCode": "152600465",
-      "missing": [
-        "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
-        "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
         "trend_summary.json",
@@ -11374,7 +12527,6 @@
       "OutFactoryCode": "172605558",
       "missing": [
         "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
@@ -11386,7 +12538,6 @@
       "OutFactoryCode": "172605559",
       "missing": [
         "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
@@ -11398,7 +12549,6 @@
       "OutFactoryCode": "172605597",
       "missing": [
         "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
@@ -11410,7 +12560,6 @@
       "OutFactoryCode": "172605598",
       "missing": [
         "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
@@ -11422,7 +12571,6 @@
       "OutFactoryCode": "172605603",
       "missing": [
         "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
@@ -11434,7 +12582,6 @@
       "OutFactoryCode": "172605604",
       "missing": [
         "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
@@ -11446,7 +12593,6 @@
       "OutFactoryCode": "172605605",
       "missing": [
         "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
@@ -11458,7 +12604,6 @@
       "OutFactoryCode": "172605608",
       "missing": [
         "GetEquipRunStatusList.json",
-        "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",
         "GetEquipProductionProgressPageList.json",
         "GetEquipBootOrRunningTimeList.json",
@@ -11625,6 +12770,8 @@
     {
       "OutFactoryCode": "172609583",
       "missing": [
+        "identity",
+        "spindle",
         "GetEquipRunStatusList.json",
         "GetEquipAbnorPageList.json",
         "GetEquipProgramPageList.json",

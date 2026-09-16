@@ -126,15 +126,16 @@
     },
     {
       "file": "device_iot_model.json",
-      "title": "200-equip master + MES telemetry/alarm/program join model",
-      "source": "datasets/json/source/equip_master_200.json + MES/PdM OpenAPI docs",
+      "title": "200-equip master joined to complete IoT dimensions and API lineage",
+      "source": "datasets/json/source/equip_master_200.json + datasets/json/iot_timeseries/_complete",
       "tags": [
         "manufacturing",
         "iot",
-        "telemetry"
+        "telemetry",
+        "lineage"
       ],
-      "node_count": 218,
-      "edge_count": 421,
+      "node_count": 636,
+      "edge_count": 3913,
       "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/device_iot_model.json"
     },
     {

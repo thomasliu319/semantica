@@ -27,6 +27,7 @@ Open http://127.0.0.1:8000 then **Open Semantica Explorer**.
 | `programming_stack.json` | Decisions + languages | Explorer API tests |
 | `manufacturing_shopfloor.json` | Shop-floor ISA-95 | Manufacturing `seed.sql` |
 | `device_iot_model.json` | 200 设备主数据 + MES 遥测/报警/程序 | `source/equip_master_200.json` + MES/PdM OpenAPI |
+| `complete_device_ledger.json` | 92 台数据完备设备台账 | `iot_timeseries/_complete` |
 | `corporate_org.json` | Org chart | `corporate_ontology.ttl` |
 | `catalog.json` | Index with node/edge counts | Generated |
 

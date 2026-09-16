@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "ce38be82-e814-4ed0-a5fc-ac778e33509d"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T16:19:26",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "ce38be82-e814-4ed0-a5fc-ac778e33509d",
+      "CustomerName": "东莞市垚富五金科技有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 10,
+      "StatsEquipCount": 10,
+      "TotalRunningTime": 298829,
+      "TotalRunningTimeStr": "83小时29秒",
+      "TotalBootTime": 2837579,
+      "TotalBootTimeStr": "788小时12分钟59秒",
+      "HoursTiantaiTime": 1149,
+      "HoursTiantaiTimeStr": "19分钟9秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "fef90d84-af5d-49f6-9260-9fe58d0bf8e9"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T16:18:44",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "fef90d84-af5d-49f6-9260-9fe58d0bf8e9",
+      "CustomerName": "深圳市鑫隆精工制造有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 2,
+      "StatsEquipCount": 2,
+      "TotalRunningTime": 1329521,
+      "TotalRunningTimeStr": "369小时18分钟41秒",
+      "TotalBootTime": 1891796,
+      "TotalBootTimeStr": "525小时29分钟56秒",
+      "HoursTiantaiTime": 25568,
+      "HoursTiantaiTimeStr": "7小时6分钟8秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

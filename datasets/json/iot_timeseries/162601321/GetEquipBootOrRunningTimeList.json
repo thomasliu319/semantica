@@ -1,0 +1,31 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "dd7f14fa-d780-4a94-812f-592461792603"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T16:15:47",
+  "record_count": 0,
+  "declared_records": 0,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 0,
+      "records": 0,
+      "total": 0,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

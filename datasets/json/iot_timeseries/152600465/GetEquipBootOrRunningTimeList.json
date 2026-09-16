@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "fda2872e-33c6-4a5b-bdc2-b20553bd3db2"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T18:43:25",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "fda2872e-33c6-4a5b-bdc2-b20553bd3db2",
+      "CustomerName": "江苏智鑫宸精密科技有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 1,
+      "StatsEquipCount": 1,
+      "TotalRunningTime": 235136,
+      "TotalRunningTimeStr": "65小时18分钟56秒",
+      "TotalBootTime": 694736,
+      "TotalBootTimeStr": "192小时58分钟56秒",
+      "HoursTiantaiTime": 9044,
+      "HoursTiantaiTimeStr": "2小时30分钟44秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

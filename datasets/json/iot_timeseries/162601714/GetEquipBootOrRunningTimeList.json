@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "bdf00b47-05a9-4e6d-86fe-1e5ea975280f"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T18:31:49",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "bdf00b47-05a9-4e6d-86fe-1e5ea975280f",
+      "CustomerName": "东莞市毅祺五金制品有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 47,
+      "StatsEquipCount": 33,
+      "TotalRunningTime": 5881428,
+      "TotalRunningTimeStr": "1633小时43分钟48秒",
+      "TotalBootTime": 16460071,
+      "TotalBootTimeStr": "4572小时14分钟31秒",
+      "HoursTiantaiTime": 6793,
+      "HoursTiantaiTimeStr": "1小时53分钟13秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

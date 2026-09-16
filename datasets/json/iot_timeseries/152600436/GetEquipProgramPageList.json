@@ -1,0 +1,86 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "622cd9d5-7777-44a5-9505-7cd3db5bc362",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "152600436",
+    "EquipCode": "152600436_sk"
+  },
+  "fetched_at": "2026-09-16T15:31:17",
+  "record_count": 4,
+  "declared_records": 4,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 4,
+      "records": 4,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Id": "4e28af84-347c-4d5b-b233-0b0b4ce9649d",
+      "EquipCode": "152600436_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "1021990-101-OP30.PTP",
+      "OutputSumSecond": 3441,
+      "OutputSum": "57分钟21秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 3441,
+      "AvgOutPutTime": "57分钟21秒",
+      "StartTime": "2026-08-18 02:02:30",
+      "EndTime": "2026-08-18 08:06:17"
+    },
+    {
+      "Id": "26211a7c-c523-4325-b28f-5c566a821b4e",
+      "EquipCode": "152600436_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "1021990-101-OP30.PTP",
+      "OutputSumSecond": 3441,
+      "OutputSum": "57分钟21秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 3441,
+      "AvgOutPutTime": "57分钟21秒",
+      "StartTime": "2026-08-18 00:51:46",
+      "EndTime": "2026-08-18 08:05:51"
+    },
+    {
+      "Id": "d793045b-1ca7-4f60-8b2c-ed9bb20ec0f3",
+      "EquipCode": "152600436_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "1021990-101-OP30.PTP",
+      "OutputSumSecond": 4608,
+      "OutputSum": "1小时16分钟48秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 4608,
+      "AvgOutPutTime": "1小时16分钟48秒",
+      "StartTime": "2026-08-17 11:59:52",
+      "EndTime": "2026-08-17 12:12:09"
+    },
+    {
+      "Id": "501bd148-fb4a-4859-a7c5-879833dd3703",
+      "EquipCode": "152600436_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "1021990-101-OP30.PTP",
+      "OutputSumSecond": 83,
+      "OutputSum": "1分钟23秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 83,
+      "AvgOutPutTime": "1分钟23秒",
+      "StartTime": "2026-08-17 09:57:20",
+      "EndTime": "2026-08-17 09:57:32"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "api": "/OpenApi/GetEquipProductionProgressPageList",
+  "query": {
+    "companyId": "dd7f14fa-d780-4a94-812f-592461792603",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "162601868",
+    "EquipCode": "162601868_sk"
+  },
+  "fetched_at": "2026-09-16T18:35:19",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Seq": 1,
+      "EquipProgramOutPutInDayId": "f08f78e9-1e06-49ba-97cb-bb6ef4850e10",
+      "EquipInfoId": "71c8c81f-eb3b-423e-94e8-52e0ea793940",
+      "Sort": null,
+      "ProgramCode": "O13469.NC",
+      "Output": 16,
+      "AvgOutPutTimeSecond": 82,
+      "AvgOutPutTime": "1分钟22秒",
+      "StatisticalDate": "2026-08-15 00:00:00",
+      "StatisticalDateStr": "2026-08-15",
+      "CompanyId": "dd7f14fa-d780-4a94-812f-592461792603",
+      "CreateTime": "2026-09-16 18:35:19",
+      "EquipTypeName": "立式加工中心",
+      "OutFactoryCode": "162601868",
+      "EquipName": "",
+      "EquipCode": "162601868_sk",
+      "WorkshopId": "",
+      "EquipTypeCode": "T-V856S",
+      "OutputSumSecond": 1323,
+      "OutputSum": "22分钟3秒",
+      "PlanOutput": 0,
+      "ShiftStartTime": "2026-08-15 08:00:00",
+      "ShiftEndTime": "2026-08-16 08:00:00",
+      "ProcessingTimeSum": "7小时47分钟39秒",
+      "AvgProcessingTime": "29分钟13秒"
+    }
+  ]
+}

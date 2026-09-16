@@ -1,0 +1,120 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "9431dc11-0374-427c-8546-a241f463379c",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "182607046",
+    "EquipCode": "182607046_sk"
+  },
+  "fetched_at": "2026-09-16T16:18:12",
+  "record_count": 6,
+  "declared_records": 453,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 453,
+      "records": 453,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Id": "856c40ae-52b1-4442-9470-fc297bdfea39",
+      "EquipCode": "182607046_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "76-YB.NC",
+      "OutputSumSecond": 442,
+      "OutputSum": "7分钟22秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 442,
+      "AvgOutPutTime": "7分钟22秒",
+      "StartTime": "2026-08-09 19:10:34",
+      "EndTime": "2026-08-09 19:12:10"
+    },
+    {
+      "Id": "6001a0e1-94fb-46e6-884f-c1404f8032b6",
+      "EquipCode": "182607046_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "76-YB.NC",
+      "OutputSumSecond": 1776,
+      "OutputSum": "29分钟36秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 888,
+      "AvgOutPutTime": "14分钟48秒",
+      "StartTime": "2026-08-09 17:53:40",
+      "EndTime": "2026-08-09 18:02:10"
+    },
+    {
+      "Id": "55117bac-671c-4302-871a-9f8d896a6a29",
+      "EquipCode": "182607046_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "76-YB.NC",
+      "OutputSumSecond": 437,
+      "OutputSum": "7分钟17秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 437,
+      "AvgOutPutTime": "7分钟17秒",
+      "StartTime": "2026-08-09 17:08:59",
+      "EndTime": "2026-08-09 17:37:02"
+    },
+    {
+      "Id": "030f18a6-6d9a-46f8-8045-788e1c2af246",
+      "EquipCode": "182607046_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "76-YB.NC",
+      "OutputSumSecond": 450,
+      "OutputSum": "7分钟30秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 450,
+      "AvgOutPutTime": "7分钟30秒",
+      "StartTime": "2026-08-09 15:58:58",
+      "EndTime": "2026-08-09 17:01:30"
+    },
+    {
+      "Id": "9a72e6af-cee1-45ce-a414-6248fc53a554",
+      "EquipCode": "182607046_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "76-YB.NC",
+      "OutputSumSecond": 513,
+      "OutputSum": "8分钟33秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 513,
+      "AvgOutPutTime": "8分钟33秒",
+      "StartTime": "2026-08-09 15:23:27",
+      "EndTime": "2026-08-09 15:40:55"
+    },
+    {
+      "Id": "3559914d-48b7-4225-a374-e7658e0b48ed",
+      "EquipCode": "182607046_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "76-YB.NC",
+      "OutputSumSecond": 0,
+      "OutputSum": "0秒",
+      "Output": 3,
+      "AvgOutPutTimeSecond": 0,
+      "AvgOutPutTime": "0秒",
+      "StartTime": "2026-08-09 15:09:23",
+      "EndTime": "2026-08-09 15:09:34"
+    }
+  ],
+  "rows_before_filter": 453,
+  "filtered_by": {
+    "EquipCode": "182607046_sk"
+  }
+}

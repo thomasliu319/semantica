@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "86320c41-6221-443c-98dc-a3bbe1f6318c"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T16:19:37",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "86320c41-6221-443c-98dc-a3bbe1f6318c",
+      "CustomerName": "东莞市振亮精密科技有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 6,
+      "StatsEquipCount": 6,
+      "TotalRunningTime": 2023404,
+      "TotalRunningTimeStr": "562小时3分钟24秒",
+      "TotalBootTime": 6962849,
+      "TotalBootTimeStr": "1934小时7分钟29秒",
+      "HoursTiantaiTime": 8431,
+      "HoursTiantaiTimeStr": "2小时20分钟31秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

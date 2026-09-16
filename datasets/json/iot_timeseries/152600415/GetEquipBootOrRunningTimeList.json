@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "22d8acea-9d16-43b9-b5af-dd00599999dd"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:15:05",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "22d8acea-9d16-43b9-b5af-dd00599999dd",
+      "CustomerName": "常州扎克智能科技有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 20,
+      "StatsEquipCount": 20,
+      "TotalRunningTime": 1796232,
+      "TotalRunningTimeStr": "498小时57分钟12秒",
+      "TotalBootTime": 4938202,
+      "TotalBootTimeStr": "1371小时43分钟22秒",
+      "HoursTiantaiTime": 3454,
+      "HoursTiantaiTimeStr": "57分钟34秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

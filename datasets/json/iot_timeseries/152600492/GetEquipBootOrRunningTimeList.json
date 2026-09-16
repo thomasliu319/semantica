@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "2c1797d2-2117-479c-bf36-a3ca4ba7c53d"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:17:38",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "2c1797d2-2117-479c-bf36-a3ca4ba7c53d",
+      "CustomerName": "苏州丰誉隆精密机械有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 1,
+      "StatsEquipCount": 1,
+      "TotalRunningTime": 486326,
+      "TotalRunningTimeStr": "135小时5分钟26秒",
+      "TotalBootTime": 927213,
+      "TotalBootTimeStr": "257小时33分钟33秒",
+      "HoursTiantaiTime": 18705,
+      "HoursTiantaiTimeStr": "5小时11分钟45秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

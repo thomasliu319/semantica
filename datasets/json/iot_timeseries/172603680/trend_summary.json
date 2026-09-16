@@ -1,0 +1,2675 @@
+{
+  "OutFactoryCode": "172603680",
+  "range": {
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31"
+  },
+  "built_at": "2026-09-16T17:40:43",
+  "monthly": {
+    "2026-03": {
+      "alarm_count": 0,
+      "shutdown_alarm_count": 0,
+      "program_cycles": 0,
+      "program_seconds": 0,
+      "progress_output": 0,
+      "progress_seconds": 0,
+      "run_ok_days": 31,
+      "run_seconds": 0,
+      "standby_seconds": 2678400,
+      "stop_seconds": 0,
+      "breakdown_seconds": 0,
+      "avg_run_rate_pct": 0.0
+    },
+    "2026-04": {
+      "alarm_count": 0,
+      "shutdown_alarm_count": 0,
+      "program_cycles": 0,
+      "program_seconds": 0,
+      "progress_output": 0,
+      "progress_seconds": 0,
+      "run_ok_days": 30,
+      "run_seconds": 0,
+      "standby_seconds": 2592000,
+      "stop_seconds": 0,
+      "breakdown_seconds": 0,
+      "avg_run_rate_pct": 0.0
+    },
+    "2026-05": {
+      "alarm_count": 383,
+      "shutdown_alarm_count": 383,
+      "program_cycles": 1916,
+      "program_seconds": 475575,
+      "progress_output": 1916,
+      "progress_seconds": 475565,
+      "run_ok_days": 31,
+      "run_seconds": 480855,
+      "standby_seconds": 1422502,
+      "stop_seconds": 2130940,
+      "breakdown_seconds": 192485,
+      "avg_run_rate_pct": 16.15
+    },
+    "2026-06": {
+      "alarm_count": 911,
+      "shutdown_alarm_count": 869,
+      "program_cycles": 643,
+      "program_seconds": 620619,
+      "progress_output": 663,
+      "progress_seconds": 640589,
+      "run_ok_days": 30,
+      "run_seconds": 670015,
+      "standby_seconds": 1088865,
+      "stop_seconds": 298893,
+      "breakdown_seconds": 547262,
+      "avg_run_rate_pct": 25.81
+    },
+    "2026-07": {
+      "alarm_count": 76,
+      "shutdown_alarm_count": 68,
+      "program_cycles": 3202,
+      "program_seconds": 2087092,
+      "progress_output": 3183,
+      "progress_seconds": 2067344,
+      "run_ok_days": 31,
+      "run_seconds": 1709103,
+      "standby_seconds": 873953,
+      "stop_seconds": 311,
+      "breakdown_seconds": 95051,
+      "avg_run_rate_pct": 63.81
+    },
+    "2026-08": {
+      "alarm_count": 81,
+      "shutdown_alarm_count": 70,
+      "program_cycles": 2533,
+      "program_seconds": 935935,
+      "progress_output": 2532,
+      "progress_seconds": 935683,
+      "run_ok_days": 31,
+      "run_seconds": 1258059,
+      "standby_seconds": 1431759,
+      "stop_seconds": 882,
+      "breakdown_seconds": 49305,
+      "avg_run_rate_pct": 45.78
+    }
+  },
+  "daily_run_status": [
+    {
+      "date": "2026-03-01",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-02",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-03",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-04",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-05",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-06",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-07",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-08",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-09",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-10",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-11",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-12",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-13",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-14",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-15",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-16",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-17",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-18",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-19",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-20",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-21",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-22",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-23",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-24",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-25",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-26",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-27",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-28",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-29",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-30",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-31",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-01",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-02",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-03",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-04",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-05",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-06",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-07",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-08",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-09",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-10",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-11",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-12",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-13",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-14",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-15",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-16",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-17",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-18",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-19",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-20",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-21",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-22",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-23",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-24",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-25",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-26",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-27",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-28",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-29",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-30",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-05-01",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-05-02",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-05-03",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-05-04",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 56628,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-05-05",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 3862,
+      "StopTimeSec": 82549,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-05-06",
+      "ok": true,
+      "RunTimeSec": 25290,
+      "StandbyTimeSec": 39233,
+      "StopTimeSec": 2457,
+      "BreakDownTimeSec": 19420,
+      "RunTimeRatePct": 29.27
+    },
+    {
+      "date": "2026-05-07",
+      "ok": true,
+      "RunTimeSec": 24386,
+      "StandbyTimeSec": 56919,
+      "StopTimeSec": 1299,
+      "BreakDownTimeSec": 4762,
+      "RunTimeRatePct": 27.91
+    },
+    {
+      "date": "2026-05-08",
+      "ok": true,
+      "RunTimeSec": 29230,
+      "StandbyTimeSec": 53179,
+      "StopTimeSec": 538,
+      "BreakDownTimeSec": 3805,
+      "RunTimeRatePct": 33.69
+    },
+    {
+      "date": "2026-05-09",
+      "ok": true,
+      "RunTimeSec": 14976,
+      "StandbyTimeSec": 68115,
+      "StopTimeSec": 39289,
+      "BreakDownTimeSec": 994,
+      "RunTimeRatePct": 12.14
+    },
+    {
+      "date": "2026-05-10",
+      "ok": true,
+      "RunTimeSec": 20107,
+      "StandbyTimeSec": 12694,
+      "StopTimeSec": 17,
+      "BreakDownTimeSec": 53582,
+      "RunTimeRatePct": 23.27
+    },
+    {
+      "date": "2026-05-11",
+      "ok": true,
+      "RunTimeSec": 13804,
+      "StandbyTimeSec": 17688,
+      "StopTimeSec": 270066,
+      "BreakDownTimeSec": 6056,
+      "RunTimeRatePct": 4.49
+    },
+    {
+      "date": "2026-05-12",
+      "ok": true,
+      "RunTimeSec": 14810,
+      "StandbyTimeSec": 58646,
+      "StopTimeSec": 1015156,
+      "BreakDownTimeSec": 3868,
+      "RunTimeRatePct": 1.36
+    },
+    {
+      "date": "2026-05-13",
+      "ok": true,
+      "RunTimeSec": 6737,
+      "StandbyTimeSec": 25100,
+      "StopTimeSec": 138390,
+      "BreakDownTimeSec": 3804,
+      "RunTimeRatePct": 3.87
+    },
+    {
+      "date": "2026-05-14",
+      "ok": true,
+      "RunTimeSec": 19830,
+      "StandbyTimeSec": 57444,
+      "StopTimeSec": 211071,
+      "BreakDownTimeSec": 4461,
+      "RunTimeRatePct": 6.77
+    },
+    {
+      "date": "2026-05-15",
+      "ok": true,
+      "RunTimeSec": 10377,
+      "StandbyTimeSec": 30245,
+      "StopTimeSec": 43265,
+      "BreakDownTimeSec": 2537,
+      "RunTimeRatePct": 12.01
+    },
+    {
+      "date": "2026-05-16",
+      "ok": true,
+      "RunTimeSec": 23019,
+      "StandbyTimeSec": 17541,
+      "StopTimeSec": 43339,
+      "BreakDownTimeSec": 2510,
+      "RunTimeRatePct": 26.64
+    },
+    {
+      "date": "2026-05-17",
+      "ok": true,
+      "RunTimeSec": 18274,
+      "StandbyTimeSec": 65311,
+      "StopTimeSec": 2897,
+      "BreakDownTimeSec": 1937,
+      "RunTimeRatePct": 20.67
+    },
+    {
+      "date": "2026-05-18",
+      "ok": true,
+      "RunTimeSec": 12210,
+      "StandbyTimeSec": 10590,
+      "StopTimeSec": 75556,
+      "BreakDownTimeSec": 4081,
+      "RunTimeRatePct": 11.92
+    },
+    {
+      "date": "2026-05-19",
+      "ok": true,
+      "RunTimeSec": 23373,
+      "StandbyTimeSec": 60632,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2400,
+      "RunTimeRatePct": 27.05
+    },
+    {
+      "date": "2026-05-20",
+      "ok": true,
+      "RunTimeSec": 26115,
+      "StandbyTimeSec": 60357,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 30.2
+    },
+    {
+      "date": "2026-05-21",
+      "ok": true,
+      "RunTimeSec": 24518,
+      "StandbyTimeSec": 59399,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2515,
+      "RunTimeRatePct": 28.37
+    },
+    {
+      "date": "2026-05-22",
+      "ok": true,
+      "RunTimeSec": 24998,
+      "StandbyTimeSec": 58325,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3090,
+      "RunTimeRatePct": 28.93
+    },
+    {
+      "date": "2026-05-23",
+      "ok": true,
+      "RunTimeSec": 23843,
+      "StandbyTimeSec": 59487,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3130,
+      "RunTimeRatePct": 27.58
+    },
+    {
+      "date": "2026-05-24",
+      "ok": true,
+      "RunTimeSec": 18957,
+      "StandbyTimeSec": 67208,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 325,
+      "RunTimeRatePct": 21.92
+    },
+    {
+      "date": "2026-05-25",
+      "ok": true,
+      "RunTimeSec": 23439,
+      "StandbyTimeSec": 51659,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 11327,
+      "RunTimeRatePct": 27.12
+    },
+    {
+      "date": "2026-05-26",
+      "ok": true,
+      "RunTimeSec": 21975,
+      "StandbyTimeSec": 61277,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3166,
+      "RunTimeRatePct": 25.43
+    },
+    {
+      "date": "2026-05-27",
+      "ok": true,
+      "RunTimeSec": 24832,
+      "StandbyTimeSec": 43498,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 18098,
+      "RunTimeRatePct": 28.73
+    },
+    {
+      "date": "2026-05-28",
+      "ok": true,
+      "RunTimeSec": 24744,
+      "StandbyTimeSec": 58594,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3077,
+      "RunTimeRatePct": 28.63
+    },
+    {
+      "date": "2026-05-29",
+      "ok": true,
+      "RunTimeSec": 11011,
+      "StandbyTimeSec": 49723,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 25739,
+      "RunTimeRatePct": 12.73
+    },
+    {
+      "date": "2026-05-30",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 16576,
+      "StopTimeSec": 62023,
+      "BreakDownTimeSec": 7801,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-05-31",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-01",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-02",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-03",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 158,
+      "StopTimeSec": 30794,
+      "BreakDownTimeSec": 55448,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-04",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 538,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 85862,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-05",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 44689,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 41711,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-06",
+      "ok": true,
+      "RunTimeSec": 5877,
+      "StandbyTimeSec": 73856,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 6754,
+      "RunTimeRatePct": 6.8
+    },
+    {
+      "date": "2026-06-07",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 81217,
+      "StopTimeSec": 6219,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-08",
+      "ok": true,
+      "RunTimeSec": 12787,
+      "StandbyTimeSec": 64011,
+      "StopTimeSec": 16693,
+      "BreakDownTimeSec": 581,
+      "RunTimeRatePct": 13.59
+    },
+    {
+      "date": "2026-06-09",
+      "ok": true,
+      "RunTimeSec": 59874,
+      "StandbyTimeSec": 13302,
+      "StopTimeSec": 12594,
+      "BreakDownTimeSec": 630,
+      "RunTimeRatePct": 69.3
+    },
+    {
+      "date": "2026-06-10",
+      "ok": true,
+      "RunTimeSec": 15823,
+      "StandbyTimeSec": 69687,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 890,
+      "RunTimeRatePct": 18.31
+    },
+    {
+      "date": "2026-06-11",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 27855,
+      "StopTimeSec": 59075,
+      "BreakDownTimeSec": 3546,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-12",
+      "ok": true,
+      "RunTimeSec": 1397,
+      "StandbyTimeSec": 84291,
+      "StopTimeSec": 712,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 1.62
+    },
+    {
+      "date": "2026-06-13",
+      "ok": true,
+      "RunTimeSec": 16454,
+      "StandbyTimeSec": 69153,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 932,
+      "RunTimeRatePct": 19.01
+    },
+    {
+      "date": "2026-06-14",
+      "ok": true,
+      "RunTimeSec": 5010,
+      "StandbyTimeSec": 69136,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 12254,
+      "RunTimeRatePct": 5.8
+    },
+    {
+      "date": "2026-06-15",
+      "ok": true,
+      "RunTimeSec": 12250,
+      "StandbyTimeSec": 73835,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 315,
+      "RunTimeRatePct": 14.18
+    },
+    {
+      "date": "2026-06-16",
+      "ok": true,
+      "RunTimeSec": 50720,
+      "StandbyTimeSec": 35645,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 35,
+      "RunTimeRatePct": 58.7
+    },
+    {
+      "date": "2026-06-17",
+      "ok": true,
+      "RunTimeSec": 32739,
+      "StandbyTimeSec": 53543,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 118,
+      "RunTimeRatePct": 37.89
+    },
+    {
+      "date": "2026-06-18",
+      "ok": true,
+      "RunTimeSec": 41267,
+      "StandbyTimeSec": 43795,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 1338,
+      "RunTimeRatePct": 47.76
+    },
+    {
+      "date": "2026-06-19",
+      "ok": true,
+      "RunTimeSec": 59,
+      "StandbyTimeSec": 520,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 85821,
+      "RunTimeRatePct": 0.07
+    },
+    {
+      "date": "2026-06-20",
+      "ok": true,
+      "RunTimeSec": 27909,
+      "StandbyTimeSec": 57823,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 668,
+      "RunTimeRatePct": 32.3
+    },
+    {
+      "date": "2026-06-21",
+      "ok": true,
+      "RunTimeSec": 34527,
+      "StandbyTimeSec": 51873,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 39.96
+    },
+    {
+      "date": "2026-06-22",
+      "ok": true,
+      "RunTimeSec": 63166,
+      "StandbyTimeSec": 22945,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 289,
+      "RunTimeRatePct": 73.11
+    },
+    {
+      "date": "2026-06-23",
+      "ok": true,
+      "RunTimeSec": 36817,
+      "StandbyTimeSec": 32373,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 17210,
+      "RunTimeRatePct": 42.61
+    },
+    {
+      "date": "2026-06-24",
+      "ok": true,
+      "RunTimeSec": 37687,
+      "StandbyTimeSec": 11642,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 37071,
+      "RunTimeRatePct": 43.62
+    },
+    {
+      "date": "2026-06-25",
+      "ok": true,
+      "RunTimeSec": 20955,
+      "StandbyTimeSec": 65445,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 24.25
+    },
+    {
+      "date": "2026-06-26",
+      "ok": true,
+      "RunTimeSec": 10981,
+      "StandbyTimeSec": 25153,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 50291,
+      "RunTimeRatePct": 12.71
+    },
+    {
+      "date": "2026-06-27",
+      "ok": true,
+      "RunTimeSec": 55662,
+      "StandbyTimeSec": 16279,
+      "StopTimeSec": 6,
+      "BreakDownTimeSec": 14453,
+      "RunTimeRatePct": 64.42
+    },
+    {
+      "date": "2026-06-28",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 86400,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-29",
+      "ok": true,
+      "RunTimeSec": 62942,
+      "StandbyTimeSec": 101,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 23357,
+      "RunTimeRatePct": 72.85
+    },
+    {
+      "date": "2026-06-30",
+      "ok": true,
+      "RunTimeSec": 65112,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 21288,
+      "RunTimeRatePct": 75.36
+    },
+    {
+      "date": "2026-07-01",
+      "ok": true,
+      "RunTimeSec": 64951,
+      "StandbyTimeSec": 11730,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 9719,
+      "RunTimeRatePct": 75.17
+    },
+    {
+      "date": "2026-07-02",
+      "ok": true,
+      "RunTimeSec": 63497,
+      "StandbyTimeSec": 22903,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 73.49
+    },
+    {
+      "date": "2026-07-03",
+      "ok": true,
+      "RunTimeSec": 47877,
+      "StandbyTimeSec": 38523,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 55.41
+    },
+    {
+      "date": "2026-07-04",
+      "ok": true,
+      "RunTimeSec": 28143,
+      "StandbyTimeSec": 57109,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 1148,
+      "RunTimeRatePct": 32.57
+    },
+    {
+      "date": "2026-07-05",
+      "ok": true,
+      "RunTimeSec": 46444,
+      "StandbyTimeSec": 39956,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 53.75
+    },
+    {
+      "date": "2026-07-06",
+      "ok": true,
+      "RunTimeSec": 50987,
+      "StandbyTimeSec": 35413,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 59.01
+    },
+    {
+      "date": "2026-07-07",
+      "ok": true,
+      "RunTimeSec": 51703,
+      "StandbyTimeSec": 34697,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 59.84
+    },
+    {
+      "date": "2026-07-08",
+      "ok": true,
+      "RunTimeSec": 52125,
+      "StandbyTimeSec": 34275,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 60.33
+    },
+    {
+      "date": "2026-07-09",
+      "ok": true,
+      "RunTimeSec": 50379,
+      "StandbyTimeSec": 36039,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 58.3
+    },
+    {
+      "date": "2026-07-10",
+      "ok": true,
+      "RunTimeSec": 51574,
+      "StandbyTimeSec": 34826,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 59.69
+    },
+    {
+      "date": "2026-07-11",
+      "ok": true,
+      "RunTimeSec": 55982,
+      "StandbyTimeSec": 30418,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 64.79
+    },
+    {
+      "date": "2026-07-12",
+      "ok": true,
+      "RunTimeSec": 27513,
+      "StandbyTimeSec": 10551,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 48336,
+      "RunTimeRatePct": 31.84
+    },
+    {
+      "date": "2026-07-13",
+      "ok": true,
+      "RunTimeSec": 70752,
+      "StandbyTimeSec": 15643,
+      "StopTimeSec": 5,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 81.89
+    },
+    {
+      "date": "2026-07-14",
+      "ok": true,
+      "RunTimeSec": 71684,
+      "StandbyTimeSec": 14716,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 82.97
+    },
+    {
+      "date": "2026-07-15",
+      "ok": true,
+      "RunTimeSec": 66208,
+      "StandbyTimeSec": 20192,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 76.63
+    },
+    {
+      "date": "2026-07-16",
+      "ok": true,
+      "RunTimeSec": 73341,
+      "StandbyTimeSec": 13059,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 84.89
+    },
+    {
+      "date": "2026-07-17",
+      "ok": true,
+      "RunTimeSec": 71106,
+      "StandbyTimeSec": 15294,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 82.3
+    },
+    {
+      "date": "2026-07-18",
+      "ok": true,
+      "RunTimeSec": 70173,
+      "StandbyTimeSec": 16227,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 81.22
+    },
+    {
+      "date": "2026-07-19",
+      "ok": true,
+      "RunTimeSec": 71613,
+      "StandbyTimeSec": 14787,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 82.89
+    },
+    {
+      "date": "2026-07-20",
+      "ok": true,
+      "RunTimeSec": 67205,
+      "StandbyTimeSec": 19195,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 77.78
+    },
+    {
+      "date": "2026-07-21",
+      "ok": true,
+      "RunTimeSec": 72709,
+      "StandbyTimeSec": 13691,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 84.15
+    },
+    {
+      "date": "2026-07-22",
+      "ok": true,
+      "RunTimeSec": 70928,
+      "StandbyTimeSec": 15472,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 82.09
+    },
+    {
+      "date": "2026-07-23",
+      "ok": true,
+      "RunTimeSec": 72786,
+      "StandbyTimeSec": 7227,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 6387,
+      "RunTimeRatePct": 84.24
+    },
+    {
+      "date": "2026-07-24",
+      "ok": true,
+      "RunTimeSec": 72960,
+      "StandbyTimeSec": 5799,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 7641,
+      "RunTimeRatePct": 84.44
+    },
+    {
+      "date": "2026-07-25",
+      "ok": true,
+      "RunTimeSec": 64251,
+      "StandbyTimeSec": 21843,
+      "StopTimeSec": 306,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 74.36
+    },
+    {
+      "date": "2026-07-26",
+      "ok": true,
+      "RunTimeSec": 22540,
+      "StandbyTimeSec": 49393,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 14467,
+      "RunTimeRatePct": 26.09
+    },
+    {
+      "date": "2026-07-27",
+      "ok": true,
+      "RunTimeSec": 49360,
+      "StandbyTimeSec": 37040,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 57.13
+    },
+    {
+      "date": "2026-07-28",
+      "ok": true,
+      "RunTimeSec": 2245,
+      "StandbyTimeSec": 81776,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2379,
+      "RunTimeRatePct": 2.6
+    },
+    {
+      "date": "2026-07-29",
+      "ok": true,
+      "RunTimeSec": 45650,
+      "StandbyTimeSec": 40750,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 52.84
+    },
+    {
+      "date": "2026-07-30",
+      "ok": true,
+      "RunTimeSec": 51915,
+      "StandbyTimeSec": 34485,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 60.09
+    },
+    {
+      "date": "2026-07-31",
+      "ok": true,
+      "RunTimeSec": 30502,
+      "StandbyTimeSec": 50924,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 4974,
+      "RunTimeRatePct": 35.3
+    },
+    {
+      "date": "2026-08-01",
+      "ok": true,
+      "RunTimeSec": 36612,
+      "StandbyTimeSec": 49067,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 721,
+      "RunTimeRatePct": 42.38
+    },
+    {
+      "date": "2026-08-02",
+      "ok": true,
+      "RunTimeSec": 52274,
+      "StandbyTimeSec": 34126,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 60.5
+    },
+    {
+      "date": "2026-08-03",
+      "ok": true,
+      "RunTimeSec": 51288,
+      "StandbyTimeSec": 35112,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 59.36
+    },
+    {
+      "date": "2026-08-04",
+      "ok": true,
+      "RunTimeSec": 51551,
+      "StandbyTimeSec": 34811,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 38,
+      "RunTimeRatePct": 59.67
+    },
+    {
+      "date": "2026-08-05",
+      "ok": true,
+      "RunTimeSec": 56099,
+      "StandbyTimeSec": 30301,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 64.93
+    },
+    {
+      "date": "2026-08-06",
+      "ok": true,
+      "RunTimeSec": 36805,
+      "StandbyTimeSec": 49595,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 42.6
+    },
+    {
+      "date": "2026-08-07",
+      "ok": true,
+      "RunTimeSec": 43775,
+      "StandbyTimeSec": 41650,
+      "StopTimeSec": 17,
+      "BreakDownTimeSec": 958,
+      "RunTimeRatePct": 50.67
+    },
+    {
+      "date": "2026-08-08",
+      "ok": true,
+      "RunTimeSec": 52021,
+      "StandbyTimeSec": 34311,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 68,
+      "RunTimeRatePct": 60.21
+    },
+    {
+      "date": "2026-08-09",
+      "ok": true,
+      "RunTimeSec": 20184,
+      "StandbyTimeSec": 47593,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 18623,
+      "RunTimeRatePct": 23.36
+    },
+    {
+      "date": "2026-08-10",
+      "ok": true,
+      "RunTimeSec": 51385,
+      "StandbyTimeSec": 34830,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 185,
+      "RunTimeRatePct": 59.47
+    },
+    {
+      "date": "2026-08-11",
+      "ok": true,
+      "RunTimeSec": 49992,
+      "StandbyTimeSec": 36386,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 22,
+      "RunTimeRatePct": 57.86
+    },
+    {
+      "date": "2026-08-12",
+      "ok": true,
+      "RunTimeSec": 52532,
+      "StandbyTimeSec": 33861,
+      "StopTimeSec": 7,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 60.8
+    },
+    {
+      "date": "2026-08-13",
+      "ok": true,
+      "RunTimeSec": 50204,
+      "StandbyTimeSec": 36049,
+      "StopTimeSec": 147,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 58.11
+    },
+    {
+      "date": "2026-08-14",
+      "ok": true,
+      "RunTimeSec": 50240,
+      "StandbyTimeSec": 36160,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 58.15
+    },
+    {
+      "date": "2026-08-15",
+      "ok": true,
+      "RunTimeSec": 45715,
+      "StandbyTimeSec": 40685,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 52.91
+    },
+    {
+      "date": "2026-08-16",
+      "ok": true,
+      "RunTimeSec": 57116,
+      "StandbyTimeSec": 58156,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 49.55
+    },
+    {
+      "date": "2026-08-17",
+      "ok": true,
+      "RunTimeSec": 63934,
+      "StandbyTimeSec": 55199,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 53.67
+    },
+    {
+      "date": "2026-08-18",
+      "ok": true,
+      "RunTimeSec": 44722,
+      "StandbyTimeSec": 41234,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 444,
+      "RunTimeRatePct": 51.76
+    },
+    {
+      "date": "2026-08-19",
+      "ok": true,
+      "RunTimeSec": 44917,
+      "StandbyTimeSec": 41442,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 41,
+      "RunTimeRatePct": 51.99
+    },
+    {
+      "date": "2026-08-20",
+      "ok": true,
+      "RunTimeSec": 45754,
+      "StandbyTimeSec": 40646,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 52.96
+    },
+    {
+      "date": "2026-08-21",
+      "ok": true,
+      "RunTimeSec": 45707,
+      "StandbyTimeSec": 40494,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 199,
+      "RunTimeRatePct": 52.9
+    },
+    {
+      "date": "2026-08-22",
+      "ok": true,
+      "RunTimeSec": 41133,
+      "StandbyTimeSec": 45267,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 47.61
+    },
+    {
+      "date": "2026-08-23",
+      "ok": true,
+      "RunTimeSec": 19295,
+      "StandbyTimeSec": 40015,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 27090,
+      "RunTimeRatePct": 22.33
+    },
+    {
+      "date": "2026-08-24",
+      "ok": true,
+      "RunTimeSec": 45591,
+      "StandbyTimeSec": 40809,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 52.77
+    },
+    {
+      "date": "2026-08-25",
+      "ok": true,
+      "RunTimeSec": 45266,
+      "StandbyTimeSec": 41134,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 52.39
+    },
+    {
+      "date": "2026-08-26",
+      "ok": true,
+      "RunTimeSec": 44015,
+      "StandbyTimeSec": 42385,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 50.94
+    },
+    {
+      "date": "2026-08-27",
+      "ok": true,
+      "RunTimeSec": 40949,
+      "StandbyTimeSec": 45451,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 47.39
+    },
+    {
+      "date": "2026-08-28",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86049,
+      "StopTimeSec": 351,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-08-29",
+      "ok": true,
+      "RunTimeSec": 7032,
+      "StandbyTimeSec": 78596,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 772,
+      "RunTimeRatePct": 8.14
+    },
+    {
+      "date": "2026-08-30",
+      "ok": true,
+      "RunTimeSec": 9262,
+      "StandbyTimeSec": 76994,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 144,
+      "RunTimeRatePct": 10.72
+    },
+    {
+      "date": "2026-08-31",
+      "ok": true,
+      "RunTimeSec": 2689,
+      "StandbyTimeSec": 83351,
+      "StopTimeSec": 360,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 3.11
+    }
+  ],
+  "daily_progress": [
+    {
+      "date": "2026-05-06",
+      "ProgramCode": "DF503031-JX.NC",
+      "Output": 3,
+      "OutputSumSecond": 1166,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-06",
+      "ProgramCode": "DF503031-A1.NC",
+      "Output": 40,
+      "OutputSumSecond": 13279,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-07",
+      "ProgramCode": "DF503031-A1.NC",
+      "Output": 71,
+      "OutputSumSecond": 22871,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-08",
+      "ProgramCode": "DF503031-A1.NC",
+      "Output": 81,
+      "OutputSumSecond": 28088,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "DF503031-A1.NC",
+      "Output": 19,
+      "OutputSumSecond": 6037,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "DF503031-A1.NC",
+      "Output": 62,
+      "OutputSumSecond": 19931,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "DF503031-A1.NC",
+      "Output": 16,
+      "OutputSumSecond": 5064,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "1211-A2G.NC",
+      "Output": 42,
+      "OutputSumSecond": 10851,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "1211-A2G.NC",
+      "Output": 71,
+      "OutputSumSecond": 18839,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "1211-A2G.NC",
+      "Output": 27,
+      "OutputSumSecond": 6319,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "001.NC",
+      "Output": 27,
+      "OutputSumSecond": 2871,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "001.NC",
+      "Output": 99,
+      "OutputSumSecond": 23113,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-15",
+      "ProgramCode": "001.NC",
+      "Output": 46,
+      "OutputSumSecond": 10390,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-16",
+      "ProgramCode": "001.NC",
+      "Output": 100,
+      "OutputSumSecond": 22978,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-17",
+      "ProgramCode": "001.NC",
+      "Output": 79,
+      "OutputSumSecond": 19746,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "001.NC",
+      "Output": 63,
+      "OutputSumSecond": 15954,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "001.NC",
+      "Output": 99,
+      "OutputSumSecond": 23137,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "001.NC",
+      "Output": 100,
+      "OutputSumSecond": 23346,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "001.NC",
+      "Output": 105,
+      "OutputSumSecond": 24517,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-22",
+      "ProgramCode": "001.NC",
+      "Output": 108,
+      "OutputSumSecond": 25223,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "001.NC",
+      "Output": 102,
+      "OutputSumSecond": 23818,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-24",
+      "ProgramCode": "001.NC",
+      "Output": 81,
+      "OutputSumSecond": 18746,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "001.NC",
+      "Output": 100,
+      "OutputSumSecond": 23445,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "001.NC",
+      "Output": 94,
+      "OutputSumSecond": 21948,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "001.NC",
+      "Output": 106,
+      "OutputSumSecond": 24780,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-28",
+      "ProgramCode": "001.NC",
+      "Output": 129,
+      "OutputSumSecond": 27247,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "001.NC",
+      "Output": 46,
+      "OutputSumSecond": 11861,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-06",
+      "ProgramCode": "48T-GZ1",
+      "Output": 1,
+      "OutputSumSecond": 5887,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "48T-1.N",
+      "Output": 1,
+      "OutputSumSecond": 706,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "48-GZ2.",
+      "Output": 4,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "48T-Z.N",
+      "Output": 1,
+      "OutputSumSecond": 572,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "48T-17.",
+      "Output": 5,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "48-GZ2.",
+      "Output": 3,
+      "OutputSumSecond": 2790,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "48T-Z.N",
+      "Output": 31,
+      "OutputSumSecond": 72483,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "48T-GZ1-X1.NC",
+      "Output": 1,
+      "OutputSumSecond": 53,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "48T-GZ1-X.NC",
+      "Output": 2,
+      "OutputSumSecond": 516,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "48T-Z.N",
+      "Output": 1,
+      "OutputSumSecond": 7063,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "48T-55GZ.NC",
+      "Output": 1,
+      "OutputSumSecond": 2612,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "10R1-2.",
+      "Output": 1,
+      "OutputSumSecond": 158,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "10R1-1.",
+      "Output": 1,
+      "OutputSumSecond": 1284,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-14",
+      "ProgramCode": "48T-Z.N",
+      "Output": 1,
+      "OutputSumSecond": 4900,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "48T-Z.N",
+      "Output": 3,
+      "OutputSumSecond": 9249,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "48T-GZ1-FM-X.NC",
+      "Output": 1,
+      "OutputSumSecond": 357,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "48T-GZ1-FM2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1189,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "48T-GZ1-FM.NC",
+      "Output": 1,
+      "OutputSumSecond": 184,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "48T-Z.N",
+      "Output": 1,
+      "OutputSumSecond": 3824,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "48T-GZ1-FM2.NC",
+      "Output": 3,
+      "OutputSumSecond": 330,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "48T-GZ1-FM.NC",
+      "Output": 2,
+      "OutputSumSecond": 445,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "3814-YB",
+      "Output": 1,
+      "OutputSumSecond": 76454,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "3814-GZJ.NC",
+      "Output": 2,
+      "OutputSumSecond": 1083,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "3814-GZ-D10.NC",
+      "Output": 1,
+      "OutputSumSecond": 48,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "3814-GZ",
+      "Output": 1,
+      "OutputSumSecond": 475,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 40,
+      "OutputSumSecond": 41191,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-20",
+      "ProgramCode": "3814-GZ-D10.NC",
+      "Output": 1,
+      "OutputSumSecond": 189,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-20",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 28,
+      "OutputSumSecond": 27697,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 35,
+      "OutputSumSecond": 33132,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "D4J.NC",
+      "Output": 14,
+      "OutputSumSecond": 744,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "D4.NC",
+      "Output": 1,
+      "OutputSumSecond": 97,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 62,
+      "OutputSumSecond": 59340,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 38,
+      "OutputSumSecond": 36793,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-24",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 36,
+      "OutputSumSecond": 37366,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 21,
+      "OutputSumSecond": 19573,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-26",
+      "ProgramCode": "S27-4-GZJ.NC",
+      "Output": 5,
+      "OutputSumSecond": 100,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-26",
+      "ProgramCode": "S27-4-GZ.NC",
+      "Output": 6,
+      "OutputSumSecond": 772,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-26",
+      "ProgramCode": "S27-4.N",
+      "Output": 23,
+      "OutputSumSecond": 1078,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-26",
+      "ProgramCode": "MX-D608BFOV-SG.NC",
+      "Output": 76,
+      "OutputSumSecond": 8619,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "DW.NC",
+      "Output": 1,
+      "OutputSumSecond": 72,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "48T-DK.",
+      "Output": 20,
+      "OutputSumSecond": 627,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 55,
+      "OutputSumSecond": 53197,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 63,
+      "OutputSumSecond": 62216,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 66,
+      "OutputSumSecond": 65124,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 65,
+      "OutputSumSecond": 64338,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 65,
+      "OutputSumSecond": 58544,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "3814-38T.NC",
+      "Output": 43,
+      "OutputSumSecond": 47908,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "D516SG-GZ.NC",
+      "Output": 2,
+      "OutputSumSecond": 2589,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "D516-8F0V-SG.NC",
+      "Output": 67,
+      "OutputSumSecond": 25492,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-05",
+      "ProgramCode": "D516-8F0V-SG-2.NC",
+      "Output": 94,
+      "OutputSumSecond": 37882,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-05",
+      "ProgramCode": "D516-8F0V-SG.NC",
+      "Output": 22,
+      "OutputSumSecond": 8602,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-06",
+      "ProgramCode": "D516-8F0V-SG-2.NC",
+      "Output": 126,
+      "OutputSumSecond": 48659,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-07",
+      "ProgramCode": "D516-8F0V-SG-2.NC",
+      "Output": 31,
+      "OutputSumSecond": 12803,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-07",
+      "ProgramCode": "D516-8F0V-SG.NC",
+      "Output": 91,
+      "OutputSumSecond": 38408,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-08",
+      "ProgramCode": "D516-8F0V-SG.NC",
+      "Output": 122,
+      "OutputSumSecond": 52074,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-09",
+      "ProgramCode": "D516-8F0V-SG.NC",
+      "Output": 118,
+      "OutputSumSecond": 49383,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "D516-8F0V-SG.NC",
+      "Output": 127,
+      "OutputSumSecond": 51089,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 56,
+      "OutputSumSecond": 45946,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "D516-8F0V-SG.NC",
+      "Output": 7,
+      "OutputSumSecond": 2814,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 39,
+      "OutputSumSecond": 27333,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 127,
+      "OutputSumSecond": 70017,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 102,
+      "OutputSumSecond": 70033,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-15",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 95,
+      "OutputSumSecond": 62114,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 105,
+      "OutputSumSecond": 71544,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-17",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 104,
+      "OutputSumSecond": 69958,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-18",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 100,
+      "OutputSumSecond": 67192,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-19",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 135,
+      "OutputSumSecond": 68076,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-20",
+      "ProgramCode": "DMP-K7PR2D-BB-FG.NC",
+      "Output": 106,
+      "OutputSumSecond": 8866,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-20",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 99,
+      "OutputSumSecond": 63450,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-21",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 103,
+      "OutputSumSecond": 72685,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-22",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 101,
+      "OutputSumSecond": 94023,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-23",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 102,
+      "OutputSumSecond": 176567,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-24",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 101,
+      "OutputSumSecond": 78855,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-25",
+      "ProgramCode": "DMP-K7PR2D-BB.NC",
+      "Output": 77,
+      "OutputSumSecond": 112868,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-26",
+      "ProgramCode": "DMP-K5PRO-BB.NC",
+      "Output": 35,
+      "OutputSumSecond": 22537,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-27",
+      "ProgramCode": "DMP-K5PRO-BB.NC",
+      "Output": 58,
+      "OutputSumSecond": 54720,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "DMP-K5PRO-BB-FG.NC",
+      "Output": 14,
+      "OutputSumSecond": 1829,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "48T-DK.NC",
+      "Output": 35,
+      "OutputSumSecond": 2004,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 162,
+      "OutputSumSecond": 100741,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 225,
+      "OutputSumSecond": 171456,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 122,
+      "OutputSumSecond": 53945,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 144,
+      "OutputSumSecond": 38740,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "44T-DK.NC",
+      "Output": 1,
+      "OutputSumSecond": 251,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-02",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 209,
+      "OutputSumSecond": 52287,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-03",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 206,
+      "OutputSumSecond": 55411,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 199,
+      "OutputSumSecond": 101844,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 37,
+      "OutputSumSecond": 15096,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-07",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 88,
+      "OutputSumSecond": 23311,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 150,
+      "OutputSumSecond": 75688,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-09",
+      "ProgramCode": "MDI.PRG",
+      "Output": 1,
+      "OutputSumSecond": 263,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-09",
+      "ProgramCode": "DHRSS5-LOG.NC",
+      "Output": 87,
+      "OutputSumSecond": 30614,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-09",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 4,
+      "OutputSumSecond": 1031,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "DHRSS5-LOG.NC",
+      "Output": 24,
+      "OutputSumSecond": 4956,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 178,
+      "OutputSumSecond": 154244,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 159,
+      "OutputSumSecond": 52341,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 183,
+      "OutputSumSecond": 63468,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-13",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 168,
+      "OutputSumSecond": 52609,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-14",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 173,
+      "OutputSumSecond": 58562,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-15",
+      "ProgramCode": "TDS-D543B-8FOV-SG-Z.NC",
+      "Output": 179,
+      "OutputSumSecond": 49493,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-15",
+      "ProgramCode": "D543B-8FOV-SG.NC",
+      "Output": 21,
+      "OutputSumSecond": 7878,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-16",
+      "ProgramCode": "TDS-D543B-8FOV-SG-Z.NC",
+      "Output": 200,
+      "OutputSumSecond": 46848,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-17",
+      "ProgramCode": "TDS-D543B-8FOV-SG-Z.NC",
+      "Output": 115,
+      "OutputSumSecond": 45119,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-18",
+      "ProgramCode": "TDS-D543B-8FOV-SG-Z.NC",
+      "Output": 6,
+      "OutputSumSecond": 5629,
+      "PlanOutput": 0
+    }
+  ],
+  "spindle_snapshot": {
+    "fetched_at": "2026-09-16 15:32:29",
+    "Speed": "-26",
+    "Load": "20",
+    "Feed": "0.000",
+    "XLoad": "6",
+    "YLoad": "1",
+    "ZLoad": "49",
+    "ProgramCode": "TDS-D543B-8FOV-SG-Z.NC",
+    "KnifePosition": "6"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "d6bd8d79-2a6b-4438-8314-481ce942f4f2"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T16:03:32",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "d6bd8d79-2a6b-4438-8314-481ce942f4f2",
+      "CustomerName": "无锡亿群机械设备有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 3,
+      "StatsEquipCount": 3,
+      "TotalRunningTime": 3685869,
+      "TotalRunningTimeStr": "1023小时51分钟9秒",
+      "TotalBootTime": 11934735,
+      "TotalBootTimeStr": "3315小时12分钟15秒",
+      "HoursTiantaiTime": 12410,
+      "HoursTiantaiTimeStr": "3小时26分钟50秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

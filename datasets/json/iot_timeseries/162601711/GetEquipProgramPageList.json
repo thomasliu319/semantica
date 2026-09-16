@@ -1,0 +1,123 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "bdf00b47-05a9-4e6d-86fe-1e5ea975280f",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "162601711",
+    "EquipCode": "162601711_sk"
+  },
+  "fetched_at": "2026-09-16T18:21:10",
+  "record_count": 3,
+  "declared_records": 3048,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 500,
+      "records": 3048,
+      "total": 7,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 500,
+      "records": 3048,
+      "total": 7,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 500,
+      "records": 3048,
+      "total": 7,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 500,
+      "records": 3048,
+      "total": 7,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 500,
+      "records": 3048,
+      "total": 7,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 6,
+      "returned": 500,
+      "records": 3048,
+      "total": 7,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 7,
+      "returned": 48,
+      "records": 3048,
+      "total": 7,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Id": "5db72f4c-366c-463f-b980-13e37e0e4e17",
+      "EquipCode": "162601711_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "JJ1-3.NC",
+      "OutputSumSecond": 3400,
+      "OutputSum": "56分钟40秒",
+      "Output": 4,
+      "AvgOutPutTimeSecond": 850,
+      "AvgOutPutTime": "14分钟10秒",
+      "StartTime": "2026-08-11 15:40:31",
+      "EndTime": "2026-08-11 15:40:50"
+    },
+    {
+      "Id": "5dc7c888-2db6-4f83-9766-fdd15e03e92f",
+      "EquipCode": "162601711_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "JJ1-2.NC",
+      "OutputSumSecond": 1230,
+      "OutputSum": "20分钟30秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 1230,
+      "AvgOutPutTime": "20分钟30秒",
+      "StartTime": "2026-08-11 14:30:01",
+      "EndTime": "2026-08-11 14:30:06"
+    },
+    {
+      "Id": "f09f5f0e-146b-432f-aecd-245f8d0deb75",
+      "EquipCode": "162601711_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "JJ1-1.NC",
+      "OutputSumSecond": 5043,
+      "OutputSum": "1小时24分钟3秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 5043,
+      "AvgOutPutTime": "1小时24分钟3秒",
+      "StartTime": "2026-08-11 13:43:52",
+      "EndTime": "2026-08-11 13:44:09"
+    }
+  ],
+  "rows_before_filter": 3048,
+  "filtered_by": {
+    "EquipCode": "162601711_sk"
+  }
+}

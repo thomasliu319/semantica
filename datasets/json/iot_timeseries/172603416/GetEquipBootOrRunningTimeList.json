@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "ccd83436-cd0d-4fa5-84a2-c9191c139c36"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T18:32:22",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "ccd83436-cd0d-4fa5-84a2-c9191c139c36",
+      "CustomerName": "中山固耐得液压制品有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 4,
+      "StatsEquipCount": 4,
+      "TotalRunningTime": 9223060,
+      "TotalRunningTimeStr": "2561小时57分钟40秒",
+      "TotalBootTime": 34240847,
+      "TotalBootTimeStr": "9511小时20分钟47秒",
+      "HoursTiantaiTime": 17337,
+      "HoursTiantaiTimeStr": "4小时48分钟57秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

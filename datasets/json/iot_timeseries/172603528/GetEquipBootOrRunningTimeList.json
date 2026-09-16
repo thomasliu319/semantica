@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "b0bd6057-2548-4fcd-81a4-9c9b44950183"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:39:41",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "b0bd6057-2548-4fcd-81a4-9c9b44950183",
+      "CustomerName": "深圳市坪山新区裕进康五金制品厂",
+      "CustomerCount": 0,
+      "EquipCount": 3,
+      "StatsEquipCount": 3,
+      "TotalRunningTime": 5211756,
+      "TotalRunningTimeStr": "1447小时42分钟36秒",
+      "TotalBootTime": 6931472,
+      "TotalBootTimeStr": "1925小时24分钟32秒",
+      "HoursTiantaiTime": 12965,
+      "HoursTiantaiTimeStr": "3小时36分钟5秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

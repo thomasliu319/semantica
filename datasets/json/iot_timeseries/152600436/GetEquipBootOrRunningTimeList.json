@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "622cd9d5-7777-44a5-9505-7cd3db5bc362"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:31:24",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "622cd9d5-7777-44a5-9505-7cd3db5bc362",
+      "CustomerName": "无锡汉格精密机械有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 1,
+      "StatsEquipCount": 1,
+      "TotalRunningTime": 0,
+      "TotalRunningTimeStr": "0秒",
+      "TotalBootTime": 6625,
+      "TotalBootTimeStr": "1小时50分钟25秒",
+      "HoursTiantaiTime": 0,
+      "HoursTiantaiTimeStr": "0秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

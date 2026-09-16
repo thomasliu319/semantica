@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "fb11e652-cf1c-4245-8a89-a8e8903c5d47"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T18:41:13",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "fb11e652-cf1c-4245-8a89-a8e8903c5d47",
+      "CustomerName": "温州合盛电子有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 18,
+      "StatsEquipCount": 18,
+      "TotalRunningTime": 582769,
+      "TotalRunningTimeStr": "161小时52分钟49秒",
+      "TotalBootTime": 5930801,
+      "TotalBootTimeStr": "1647小时26分钟41秒",
+      "HoursTiantaiTime": 862,
+      "HoursTiantaiTimeStr": "14分钟22秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

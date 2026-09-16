@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "08fbb7b1-55eb-4560-85cf-2ac7e4ca853d"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:14:25",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "08fbb7b1-55eb-4560-85cf-2ac7e4ca853d",
+      "CustomerName": "深圳市鸿运盛业精密五金有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 1,
+      "StatsEquipCount": 1,
+      "TotalRunningTime": 1659280,
+      "TotalRunningTimeStr": "460小时54分钟40秒",
+      "TotalBootTime": 9474055,
+      "TotalBootTimeStr": "2631小时40分钟55秒",
+      "HoursTiantaiTime": 11937,
+      "HoursTiantaiTimeStr": "3小时18分钟57秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

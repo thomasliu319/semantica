@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "72ef346e-ef19-4b70-bbcd-2b7d5161c730"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:36:13",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "72ef346e-ef19-4b70-bbcd-2b7d5161c730",
+      "CustomerName": "东莞市博研自动化设备有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 1,
+      "StatsEquipCount": 1,
+      "TotalRunningTime": 3659759,
+      "TotalRunningTimeStr": "1016小时35分钟59秒",
+      "TotalBootTime": 9204847,
+      "TotalBootTimeStr": "2556小时54分钟7秒",
+      "HoursTiantaiTime": 27937,
+      "HoursTiantaiTimeStr": "7小时45分钟37秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

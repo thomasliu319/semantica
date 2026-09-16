@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "28bfe2ee-4941-4577-a9bb-18e8bb07b36c"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:18:04",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "28bfe2ee-4941-4577-a9bb-18e8bb07b36c",
+      "CustomerName": "东莞市东城建州精密机械厂（个体工商户）",
+      "CustomerCount": 0,
+      "EquipCount": 2,
+      "StatsEquipCount": 2,
+      "TotalRunningTime": 467354,
+      "TotalRunningTimeStr": "129小时49分钟14秒",
+      "TotalBootTime": 4430898,
+      "TotalBootTimeStr": "1230小时48分钟18秒",
+      "HoursTiantaiTime": 2815,
+      "HoursTiantaiTimeStr": "46分钟55秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

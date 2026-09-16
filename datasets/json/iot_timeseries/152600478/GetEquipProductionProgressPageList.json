@@ -1,0 +1,80 @@
+{
+  "api": "/OpenApi/GetEquipProductionProgressPageList",
+  "query": {
+    "companyId": "22d8acea-9d16-43b9-b5af-dd00599999dd",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "152600478",
+    "EquipCode": "152600478_sk"
+  },
+  "fetched_at": "2026-09-16T15:17:04",
+  "record_count": 2,
+  "declared_records": 2,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 2,
+      "records": 2,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Seq": 1,
+      "EquipProgramOutPutInDayId": "543b78be-8ca3-47f1-9caa-7bbc789f322b",
+      "EquipInfoId": "97f261ee-3f30-4032-9a4d-d705a97f4346",
+      "Sort": null,
+      "ProgramCode": "11.NC",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 14,
+      "AvgOutPutTime": "14秒",
+      "StatisticalDate": "2026-08-17 00:00:00",
+      "StatisticalDateStr": "2026-08-17",
+      "CompanyId": "22d8acea-9d16-43b9-b5af-dd00599999dd",
+      "CreateTime": "2026-09-16 15:17:04",
+      "EquipTypeName": "立式加工中心",
+      "OutFactoryCode": "152600478",
+      "EquipName": "",
+      "EquipCode": "152600478_sk",
+      "WorkshopId": "",
+      "EquipTypeCode": "T-V856S",
+      "OutputSumSecond": 14,
+      "OutputSum": "14秒",
+      "PlanOutput": 0,
+      "ShiftStartTime": "2026-08-17 08:00:00",
+      "ShiftEndTime": "2026-08-18 08:00:00",
+      "ProcessingTimeSum": "7分钟",
+      "AvgProcessingTime": "7分钟"
+    },
+    {
+      "Seq": 1,
+      "EquipProgramOutPutInDayId": "3706791d-297c-43bd-b9e5-5bbe2c698426",
+      "EquipInfoId": "97f261ee-3f30-4032-9a4d-d705a97f4346",
+      "Sort": null,
+      "ProgramCode": "11.NC",
+      "Output": 6,
+      "AvgOutPutTimeSecond": 2543,
+      "AvgOutPutTime": "42分钟23秒",
+      "StatisticalDate": "2026-08-16 00:00:00",
+      "StatisticalDateStr": "2026-08-16",
+      "CompanyId": "22d8acea-9d16-43b9-b5af-dd00599999dd",
+      "CreateTime": "2026-09-16 15:17:04",
+      "EquipTypeName": "立式加工中心",
+      "OutFactoryCode": "152600478",
+      "EquipName": "",
+      "EquipCode": "152600478_sk",
+      "WorkshopId": "",
+      "EquipTypeCode": "T-V856S",
+      "OutputSumSecond": 15262,
+      "OutputSum": "4小时14分钟22秒",
+      "PlanOutput": 0,
+      "ShiftStartTime": "2026-08-16 08:00:00",
+      "ShiftEndTime": "2026-08-17 08:00:00",
+      "ProcessingTimeSum": "4小时45分钟14秒",
+      "AvgProcessingTime": "47分钟32秒"
+    }
+  ]
+}

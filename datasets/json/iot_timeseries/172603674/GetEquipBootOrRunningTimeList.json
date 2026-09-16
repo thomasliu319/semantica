@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "c74ca132-ab5b-473e-8ade-f378b6e2541f"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:44:19",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "c74ca132-ab5b-473e-8ade-f378b6e2541f",
+      "CustomerName": "深圳市奥为东科技有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 2,
+      "StatsEquipCount": 2,
+      "TotalRunningTime": 5746142,
+      "TotalRunningTimeStr": "1596小时9分钟2秒",
+      "TotalBootTime": 9652451,
+      "TotalBootTimeStr": "2681小时14分钟11秒",
+      "HoursTiantaiTime": 24556,
+      "HoursTiantaiTimeStr": "6小时49分钟16秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

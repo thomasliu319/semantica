@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "0f8646b8-ec24-425d-9929-f3e59b5233d0"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:12:07",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "0f8646b8-ec24-425d-9929-f3e59b5233d0",
+      "CustomerName": "苏州熠炟精密科技有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 8,
+      "StatsEquipCount": 8,
+      "TotalRunningTime": 715568,
+      "TotalRunningTimeStr": "198小时46分钟8秒",
+      "TotalBootTime": 893206,
+      "TotalBootTimeStr": "248小时6分钟46秒",
+      "HoursTiantaiTime": 3440,
+      "HoursTiantaiTimeStr": "57分钟20秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

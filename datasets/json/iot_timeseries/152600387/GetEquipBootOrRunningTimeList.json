@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "7820d6ae-b6ed-48b2-a12a-7caaab3344bc"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:34:21",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "7820d6ae-b6ed-48b2-a12a-7caaab3344bc",
+      "CustomerName": "苏州华翊达车轮有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 10,
+      "StatsEquipCount": 10,
+      "TotalRunningTime": 6951064,
+      "TotalRunningTimeStr": "1930小时51分钟4秒",
+      "TotalBootTime": 15822356,
+      "TotalBootTimeStr": "4395小时5分钟56秒",
+      "HoursTiantaiTime": 7032,
+      "HoursTiantaiTimeStr": "1小时57分钟12秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

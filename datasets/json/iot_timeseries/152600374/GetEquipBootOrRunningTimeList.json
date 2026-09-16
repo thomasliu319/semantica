@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "76af4ef7-187b-4af0-8135-703cceb005c8"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:31:42",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "76af4ef7-187b-4af0-8135-703cceb005c8",
+      "CustomerName": "苏州鑫禄精密模具有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 6,
+      "StatsEquipCount": 6,
+      "TotalRunningTime": 404195,
+      "TotalRunningTimeStr": "112小时16分钟35秒",
+      "TotalBootTime": 946086,
+      "TotalBootTimeStr": "262小时48分钟6秒",
+      "HoursTiantaiTime": 2591,
+      "HoursTiantaiTimeStr": "43分钟11秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

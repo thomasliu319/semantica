@@ -569,6 +569,98 @@ def device_iot_model() -> ContextGraph:
     return graph
 
 
+def complete_device_ledger() -> ContextGraph:
+    """Explorer ledger of OpenAPI-complete devices (Mar–Aug 2026)."""
+    complete_dir = OUT_DIR / "iot_timeseries" / "_complete"
+    index = json.loads((complete_dir / "index.json").read_text(encoding="utf-8"))
+    fleet = json.loads((complete_dir / "fleet_trend.json").read_text(encoding="utf-8"))
+    graph = ContextGraph(advanced_analytics=False)
+
+    graph.add_node(
+        "ledger:complete",
+        "Dataset",
+        content="完整设备台账",
+        range="2026-03-01/2026-08-31",
+        device_count=len(index),
+        color="#A78BFA",
+    )
+    graph.add_node("type:T-V856S", "EquipType", content="T-V856S 立加", EquipTypeCode="T-V856S", color="#63E6FF")
+    graph.add_node("type:T-600", "EquipType", content="T-600 钻攻", EquipTypeCode="T-600", color="#34D399")
+    graph.add_node("band:high", "UtilBand", content="高利用率 ≥20%", color="#F87171")
+    graph.add_node("band:mid", "UtilBand", content="中利用率 5–20%", color="#FBBF24")
+    graph.add_node("band:low", "UtilBand", content="低利用率 <5%", color="#94A3B8")
+
+    for month, stats in (fleet.get("monthly") or {}).items():
+        node_id = f"month:{month}"
+        graph.add_node(
+            node_id,
+            "Month",
+            content=month,
+            run_hours=stats.get("run_hours"),
+            avg_run_rate_pct=stats.get("avg_run_rate_pct"),
+            alarm_count=stats.get("alarm_count"),
+            program_cycles=stats.get("program_cycles"),
+            color="#818CF8",
+        )
+        graph.add_edge("ledger:complete", node_id, "aggregates")
+
+    customers: dict[str, str] = {}
+    areas: set[str] = set()
+    for row in index:
+        code = str(row["OutFactoryCode"])
+        company = (row.get("CompanyName") or "未知客户").strip() or "未知客户"
+        area = (row.get("AreaName") or "").strip()
+        type_code = row.get("EquipTypeCode") or "T-V856S"
+        rate = float(row.get("avg_run_rate_pct") or 0)
+        if rate >= 20:
+            band = "band:high"
+        elif rate >= 5:
+            band = "band:mid"
+        else:
+            band = "band:low"
+
+        cust_id = customers.get(company)
+        if cust_id is None:
+            meta_path = complete_dir / code / "meta.json"
+            company_id = ""
+            if meta_path.exists():
+                ident = json.loads(meta_path.read_text(encoding="utf-8")).get("identity") or {}
+                company_id = ident.get("CompanyId") or ""
+            cust_id = f"customer:{company_id or company}"
+            customers[company] = cust_id
+            graph.add_node(cust_id, "Customer", content=company, CompanyId=company_id, color="#34D399")
+            graph.add_edge("ledger:complete", cust_id, "covers")
+
+        if area and area not in areas:
+            areas.add(area)
+            graph.add_node(f"area:{area}", "Area", content=area, color="#F59E0B")
+            graph.add_edge("ledger:complete", f"area:{area}", "covers")
+
+        equip_id = f"equip:{code}"
+        graph.add_node(
+            equip_id,
+            "Equip",
+            content=code,
+            OutFactoryCode=code,
+            EquipTypeCode=type_code,
+            CompanyName=company,
+            AreaName=area,
+            run_hours=row.get("run_hours"),
+            avg_run_rate_pct=rate,
+            alarm_count=row.get("alarm_count"),
+            program_cycles=row.get("program_cycles"),
+            progress_output=row.get("progress_output"),
+            complete=True,
+        )
+        graph.add_edge("ledger:complete", equip_id, "contains")
+        graph.add_edge(equip_id, f"type:{type_code}", "classifiedAs")
+        graph.add_edge(equip_id, cust_id, "ownedBy")
+        graph.add_edge(equip_id, band, "utilizes")
+        if area:
+            graph.add_edge(equip_id, f"area:{area}", "locatedIn")
+    return graph
+
+
 DATASETS = [
     (
         "alice_bob_acme.json",
@@ -646,6 +738,13 @@ DATASETS = [
         "datasets/json/source/equip_master_200.json + MES/PdM OpenAPI docs",
         "200-equip master + MES telemetry/alarm/program join model",
         ["manufacturing", "iot", "telemetry"],
+    ),
+    (
+        "complete_device_ledger.json",
+        complete_device_ledger,
+        "datasets/json/iot_timeseries/_complete",
+        "OpenAPI-complete device ledger with Mar–Aug utilization",
+        ["manufacturing", "iot", "explorer", "ledger"],
     ),
     (
         "corporate_org.json",

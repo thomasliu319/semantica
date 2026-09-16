@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "9a3028f1-2114-4a9a-8cc5-faba75fafe53"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:38:53",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "9a3028f1-2114-4a9a-8cc5-faba75fafe53",
+      "CustomerName": "广州市宏桦精密机械有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 2,
+      "StatsEquipCount": 2,
+      "TotalRunningTime": 3885048,
+      "TotalRunningTimeStr": "1079小时10分钟48秒",
+      "TotalBootTime": 11974735,
+      "TotalBootTimeStr": "3326小时18分钟55秒",
+      "HoursTiantaiTime": 17190,
+      "HoursTiantaiTimeStr": "4小时46分钟30秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

@@ -138,6 +138,20 @@
       "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/device_iot_model.json"
     },
     {
+      "file": "complete_device_ledger.json",
+      "title": "OpenAPI-complete device ledger with Mar–Aug utilization",
+      "source": "datasets/json/iot_timeseries/_complete",
+      "tags": [
+        "manufacturing",
+        "iot",
+        "explorer",
+        "ledger"
+      ],
+      "node_count": 162,
+      "edge_count": 522,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/complete_device_ledger.json"
+    },
+    {
       "file": "corporate_org.json",
       "title": "Corporate org chart aligned to the cookbook ontology",
       "source": "cookbook/introduction/corporate_ontology.ttl",

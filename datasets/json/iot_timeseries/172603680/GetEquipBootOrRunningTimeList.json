@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "937642b8-003f-44bd-add0-633a365a9406"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:35:38",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "937642b8-003f-44bd-add0-633a365a9406",
+      "CustomerName": "金泰胜金属制品（涟水）有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 3,
+      "StatsEquipCount": 3,
+      "TotalRunningTime": 4730260,
+      "TotalRunningTimeStr": "1313小时57分钟40秒",
+      "TotalBootTime": 11948832,
+      "TotalBootTimeStr": "3319小时7分钟12秒",
+      "HoursTiantaiTime": 13477,
+      "HoursTiantaiTimeStr": "3小时44分钟37秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

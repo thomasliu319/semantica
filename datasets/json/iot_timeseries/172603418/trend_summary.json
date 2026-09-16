@@ -1,0 +1,8310 @@
+{
+  "OutFactoryCode": "172603418",
+  "range": {
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31"
+  },
+  "built_at": "2026-09-16T17:40:43",
+  "monthly": {
+    "2026-03": {
+      "alarm_count": 0,
+      "shutdown_alarm_count": 0,
+      "program_cycles": 0,
+      "program_seconds": 0,
+      "progress_output": 0,
+      "progress_seconds": 0,
+      "run_ok_days": 31,
+      "run_seconds": 0,
+      "standby_seconds": 0,
+      "stop_seconds": 2678400,
+      "breakdown_seconds": 0,
+      "avg_run_rate_pct": 0.0
+    },
+    "2026-04": {
+      "alarm_count": 761,
+      "shutdown_alarm_count": 761,
+      "program_cycles": 515,
+      "program_seconds": 584201,
+      "progress_output": 516,
+      "progress_seconds": 603012,
+      "run_ok_days": 30,
+      "run_seconds": 357734,
+      "standby_seconds": 574910,
+      "stop_seconds": 1126941,
+      "breakdown_seconds": 502048,
+      "avg_run_rate_pct": 13.63
+    },
+    "2026-05": {
+      "alarm_count": 3303,
+      "shutdown_alarm_count": 3303,
+      "program_cycles": 1684,
+      "program_seconds": 1637366,
+      "progress_output": 1683,
+      "progress_seconds": 1618515,
+      "run_ok_days": 31,
+      "run_seconds": 1538206,
+      "standby_seconds": 515565,
+      "stop_seconds": 0,
+      "breakdown_seconds": 624702,
+      "avg_run_rate_pct": 57.43
+    },
+    "2026-06": {
+      "alarm_count": 3468,
+      "shutdown_alarm_count": 2947,
+      "program_cycles": 2391,
+      "program_seconds": 1071212,
+      "progress_output": 2408,
+      "progress_seconds": 1088788,
+      "run_ok_days": 30,
+      "run_seconds": 1209302,
+      "standby_seconds": 1152651,
+      "stop_seconds": 34298,
+      "breakdown_seconds": 268011,
+      "avg_run_rate_pct": 45.12
+    },
+    "2026-07": {
+      "alarm_count": 23,
+      "shutdown_alarm_count": 22,
+      "program_cycles": 1412,
+      "program_seconds": 1778291,
+      "progress_output": 1408,
+      "progress_seconds": 1773625,
+      "run_ok_days": 31,
+      "run_seconds": 1562275,
+      "standby_seconds": 1041076,
+      "stop_seconds": 349,
+      "breakdown_seconds": 74751,
+      "avg_run_rate_pct": 58.33
+    },
+    "2026-08": {
+      "alarm_count": 61,
+      "shutdown_alarm_count": 57,
+      "program_cycles": 573,
+      "program_seconds": 755629,
+      "progress_output": 560,
+      "progress_seconds": 742626,
+      "run_ok_days": 31,
+      "run_seconds": 1193190,
+      "standby_seconds": 1373141,
+      "stop_seconds": 2029,
+      "breakdown_seconds": 172507,
+      "avg_run_rate_pct": 43.64
+    }
+  },
+  "daily_run_status": [
+    {
+      "date": "2026-03-01",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-02",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-03",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-04",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-05",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-06",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-07",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-08",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-09",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-10",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-11",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-12",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-13",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-14",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-15",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-16",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-17",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-18",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-19",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-20",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-21",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-22",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-23",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-24",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-25",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-26",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-27",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-28",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-29",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-30",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-03-31",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-01",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-02",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-03",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-04",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-05",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-06",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-07",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-08",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-09",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-10",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-11",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-12",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-13",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 86400,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-14",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 45410,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-15",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 86400,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-16",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 86400,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-17",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 998,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 85402,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-18",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 52191,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 34209,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-19",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-20",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-04-21",
+      "ok": true,
+      "RunTimeSec": 11985,
+      "StandbyTimeSec": 73699,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 716,
+      "RunTimeRatePct": 13.87
+    },
+    {
+      "date": "2026-04-22",
+      "ok": true,
+      "RunTimeSec": 39640,
+      "StandbyTimeSec": 37870,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 8890,
+      "RunTimeRatePct": 45.88
+    },
+    {
+      "date": "2026-04-23",
+      "ok": true,
+      "RunTimeSec": 38696,
+      "StandbyTimeSec": 35640,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 12064,
+      "RunTimeRatePct": 44.79
+    },
+    {
+      "date": "2026-04-24",
+      "ok": true,
+      "RunTimeSec": 49386,
+      "StandbyTimeSec": 27701,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 9760,
+      "RunTimeRatePct": 56.87
+    },
+    {
+      "date": "2026-04-25",
+      "ok": true,
+      "RunTimeSec": 40458,
+      "StandbyTimeSec": 27866,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 18076,
+      "RunTimeRatePct": 46.83
+    },
+    {
+      "date": "2026-04-26",
+      "ok": true,
+      "RunTimeSec": 45746,
+      "StandbyTimeSec": 36214,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 12100,
+      "RunTimeRatePct": 48.63
+    },
+    {
+      "date": "2026-04-27",
+      "ok": true,
+      "RunTimeSec": 20921,
+      "StandbyTimeSec": 66211,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 1784,
+      "RunTimeRatePct": 23.53
+    },
+    {
+      "date": "2026-04-28",
+      "ok": true,
+      "RunTimeSec": 22452,
+      "StandbyTimeSec": 19895,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 44053,
+      "RunTimeRatePct": 25.99
+    },
+    {
+      "date": "2026-04-29",
+      "ok": true,
+      "RunTimeSec": 23414,
+      "StandbyTimeSec": 9399,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 53587,
+      "RunTimeRatePct": 27.1
+    },
+    {
+      "date": "2026-04-30",
+      "ok": true,
+      "RunTimeSec": 65036,
+      "StandbyTimeSec": 14426,
+      "StopTimeSec": 3741,
+      "BreakDownTimeSec": 3197,
+      "RunTimeRatePct": 75.27
+    },
+    {
+      "date": "2026-05-01",
+      "ok": true,
+      "RunTimeSec": 86400,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 100.0
+    },
+    {
+      "date": "2026-05-02",
+      "ok": true,
+      "RunTimeSec": 86400,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 100.0
+    },
+    {
+      "date": "2026-05-03",
+      "ok": true,
+      "RunTimeSec": 30234,
+      "StandbyTimeSec": 55657,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 565,
+      "RunTimeRatePct": 34.97
+    },
+    {
+      "date": "2026-05-04",
+      "ok": true,
+      "RunTimeSec": 52004,
+      "StandbyTimeSec": 9840,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 24556,
+      "RunTimeRatePct": 60.19
+    },
+    {
+      "date": "2026-05-05",
+      "ok": true,
+      "RunTimeSec": 49834,
+      "StandbyTimeSec": 8826,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 27740,
+      "RunTimeRatePct": 57.68
+    },
+    {
+      "date": "2026-05-06",
+      "ok": true,
+      "RunTimeSec": 42848,
+      "StandbyTimeSec": 38581,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 4971,
+      "RunTimeRatePct": 49.59
+    },
+    {
+      "date": "2026-05-07",
+      "ok": true,
+      "RunTimeSec": 56248,
+      "StandbyTimeSec": 9778,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 20374,
+      "RunTimeRatePct": 65.1
+    },
+    {
+      "date": "2026-05-08",
+      "ok": true,
+      "RunTimeSec": 64108,
+      "StandbyTimeSec": 15131,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 7161,
+      "RunTimeRatePct": 74.2
+    },
+    {
+      "date": "2026-05-09",
+      "ok": true,
+      "RunTimeSec": 51273,
+      "StandbyTimeSec": 12221,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 22906,
+      "RunTimeRatePct": 59.34
+    },
+    {
+      "date": "2026-05-10",
+      "ok": true,
+      "RunTimeSec": 35950,
+      "StandbyTimeSec": 30761,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 19689,
+      "RunTimeRatePct": 41.61
+    },
+    {
+      "date": "2026-05-11",
+      "ok": true,
+      "RunTimeSec": 50589,
+      "StandbyTimeSec": 17367,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 18444,
+      "RunTimeRatePct": 58.55
+    },
+    {
+      "date": "2026-05-12",
+      "ok": true,
+      "RunTimeSec": 59708,
+      "StandbyTimeSec": 14338,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 12354,
+      "RunTimeRatePct": 69.11
+    },
+    {
+      "date": "2026-05-13",
+      "ok": true,
+      "RunTimeSec": 47939,
+      "StandbyTimeSec": 13573,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 24888,
+      "RunTimeRatePct": 55.48
+    },
+    {
+      "date": "2026-05-14",
+      "ok": true,
+      "RunTimeSec": 61660,
+      "StandbyTimeSec": 18332,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 6408,
+      "RunTimeRatePct": 71.37
+    },
+    {
+      "date": "2026-05-15",
+      "ok": true,
+      "RunTimeSec": 55758,
+      "StandbyTimeSec": 5972,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 24670,
+      "RunTimeRatePct": 64.53
+    },
+    {
+      "date": "2026-05-16",
+      "ok": true,
+      "RunTimeSec": 51964,
+      "StandbyTimeSec": 26990,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 7446,
+      "RunTimeRatePct": 60.14
+    },
+    {
+      "date": "2026-05-17",
+      "ok": true,
+      "RunTimeSec": 19437,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 66963,
+      "RunTimeRatePct": 22.5
+    },
+    {
+      "date": "2026-05-18",
+      "ok": true,
+      "RunTimeSec": 38939,
+      "StandbyTimeSec": 19651,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 27810,
+      "RunTimeRatePct": 45.07
+    },
+    {
+      "date": "2026-05-19",
+      "ok": true,
+      "RunTimeSec": 51479,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 34921,
+      "RunTimeRatePct": 59.58
+    },
+    {
+      "date": "2026-05-20",
+      "ok": true,
+      "RunTimeSec": 40937,
+      "StandbyTimeSec": 30259,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 15204,
+      "RunTimeRatePct": 47.38
+    },
+    {
+      "date": "2026-05-21",
+      "ok": true,
+      "RunTimeSec": 46089,
+      "StandbyTimeSec": 34195,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 6116,
+      "RunTimeRatePct": 53.34
+    },
+    {
+      "date": "2026-05-22",
+      "ok": true,
+      "RunTimeSec": 56297,
+      "StandbyTimeSec": 4452,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 25651,
+      "RunTimeRatePct": 65.16
+    },
+    {
+      "date": "2026-05-23",
+      "ok": true,
+      "RunTimeSec": 56140,
+      "StandbyTimeSec": 25222,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 5038,
+      "RunTimeRatePct": 64.98
+    },
+    {
+      "date": "2026-05-24",
+      "ok": true,
+      "RunTimeSec": 41371,
+      "StandbyTimeSec": 9360,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 35669,
+      "RunTimeRatePct": 47.88
+    },
+    {
+      "date": "2026-05-25",
+      "ok": true,
+      "RunTimeSec": 52952,
+      "StandbyTimeSec": 26541,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 6907,
+      "RunTimeRatePct": 61.29
+    },
+    {
+      "date": "2026-05-26",
+      "ok": true,
+      "RunTimeSec": 54001,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 32399,
+      "RunTimeRatePct": 62.5
+    },
+    {
+      "date": "2026-05-27",
+      "ok": true,
+      "RunTimeSec": 53594,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 32806,
+      "RunTimeRatePct": 62.03
+    },
+    {
+      "date": "2026-05-28",
+      "ok": true,
+      "RunTimeSec": 56377,
+      "StandbyTimeSec": 0,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 30023,
+      "RunTimeRatePct": 65.25
+    },
+    {
+      "date": "2026-05-29",
+      "ok": true,
+      "RunTimeSec": 43027,
+      "StandbyTimeSec": 616,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 42757,
+      "RunTimeRatePct": 49.8
+    },
+    {
+      "date": "2026-05-30",
+      "ok": true,
+      "RunTimeSec": 44649,
+      "StandbyTimeSec": 1529,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 40222,
+      "RunTimeRatePct": 51.68
+    },
+    {
+      "date": "2026-05-31",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86373,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 44,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-01",
+      "ok": true,
+      "RunTimeSec": 47989,
+      "StandbyTimeSec": 35872,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2539,
+      "RunTimeRatePct": 55.54
+    },
+    {
+      "date": "2026-06-02",
+      "ok": true,
+      "RunTimeSec": 44267,
+      "StandbyTimeSec": 42070,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 75,
+      "RunTimeRatePct": 51.23
+    },
+    {
+      "date": "2026-06-03",
+      "ok": true,
+      "RunTimeSec": 55477,
+      "StandbyTimeSec": 27914,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3009,
+      "RunTimeRatePct": 64.21
+    },
+    {
+      "date": "2026-06-04",
+      "ok": true,
+      "RunTimeSec": 53491,
+      "StandbyTimeSec": 32865,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 44,
+      "RunTimeRatePct": 61.91
+    },
+    {
+      "date": "2026-06-05",
+      "ok": true,
+      "RunTimeSec": 47458,
+      "StandbyTimeSec": 36152,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2790,
+      "RunTimeRatePct": 54.93
+    },
+    {
+      "date": "2026-06-06",
+      "ok": true,
+      "RunTimeSec": 39859,
+      "StandbyTimeSec": 41892,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 4649,
+      "RunTimeRatePct": 46.13
+    },
+    {
+      "date": "2026-06-07",
+      "ok": true,
+      "RunTimeSec": 19515,
+      "StandbyTimeSec": 50455,
+      "StopTimeSec": 12438,
+      "BreakDownTimeSec": 11334,
+      "RunTimeRatePct": 20.82
+    },
+    {
+      "date": "2026-06-08",
+      "ok": true,
+      "RunTimeSec": 39390,
+      "StandbyTimeSec": 25446,
+      "StopTimeSec": 18421,
+      "BreakDownTimeSec": 4171,
+      "RunTimeRatePct": 45.05
+    },
+    {
+      "date": "2026-06-09",
+      "ok": true,
+      "RunTimeSec": 44119,
+      "StandbyTimeSec": 42517,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 82,
+      "RunTimeRatePct": 50.88
+    },
+    {
+      "date": "2026-06-10",
+      "ok": true,
+      "RunTimeSec": 57262,
+      "StandbyTimeSec": 28913,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 225,
+      "RunTimeRatePct": 66.28
+    },
+    {
+      "date": "2026-06-11",
+      "ok": true,
+      "RunTimeSec": 83253,
+      "StandbyTimeSec": 41094,
+      "StopTimeSec": 2732,
+      "BreakDownTimeSec": 46,
+      "RunTimeRatePct": 65.49
+    },
+    {
+      "date": "2026-06-12",
+      "ok": true,
+      "RunTimeSec": 53022,
+      "StandbyTimeSec": 37111,
+      "StopTimeSec": 707,
+      "BreakDownTimeSec": 18284,
+      "RunTimeRatePct": 48.59
+    },
+    {
+      "date": "2026-06-13",
+      "ok": true,
+      "RunTimeSec": 43784,
+      "StandbyTimeSec": 41853,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 780,
+      "RunTimeRatePct": 50.67
+    },
+    {
+      "date": "2026-06-14",
+      "ok": true,
+      "RunTimeSec": 17238,
+      "StandbyTimeSec": 69152,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 28,
+      "RunTimeRatePct": 19.95
+    },
+    {
+      "date": "2026-06-15",
+      "ok": true,
+      "RunTimeSec": 54325,
+      "StandbyTimeSec": 31909,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 200,
+      "RunTimeRatePct": 62.85
+    },
+    {
+      "date": "2026-06-16",
+      "ok": true,
+      "RunTimeSec": 41969,
+      "StandbyTimeSec": 41065,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3366,
+      "RunTimeRatePct": 48.58
+    },
+    {
+      "date": "2026-06-17",
+      "ok": true,
+      "RunTimeSec": 50967,
+      "StandbyTimeSec": 32258,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3175,
+      "RunTimeRatePct": 58.99
+    },
+    {
+      "date": "2026-06-18",
+      "ok": true,
+      "RunTimeSec": 51695,
+      "StandbyTimeSec": 32079,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2628,
+      "RunTimeRatePct": 59.83
+    },
+    {
+      "date": "2026-06-19",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-20",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-21",
+      "ok": true,
+      "RunTimeSec": 49501,
+      "StandbyTimeSec": 33565,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3334,
+      "RunTimeRatePct": 57.29
+    },
+    {
+      "date": "2026-06-22",
+      "ok": true,
+      "RunTimeSec": 44014,
+      "StandbyTimeSec": 32619,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 9767,
+      "RunTimeRatePct": 50.94
+    },
+    {
+      "date": "2026-06-23",
+      "ok": true,
+      "RunTimeSec": 55699,
+      "StandbyTimeSec": 2663,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 28038,
+      "RunTimeRatePct": 64.47
+    },
+    {
+      "date": "2026-06-24",
+      "ok": true,
+      "RunTimeSec": 46600,
+      "StandbyTimeSec": 32222,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 7578,
+      "RunTimeRatePct": 53.94
+    },
+    {
+      "date": "2026-06-25",
+      "ok": true,
+      "RunTimeSec": 23758,
+      "StandbyTimeSec": 21336,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 41306,
+      "RunTimeRatePct": 27.5
+    },
+    {
+      "date": "2026-06-26",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 82000,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 4425,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-06-27",
+      "ok": true,
+      "RunTimeSec": 25901,
+      "StandbyTimeSec": 8009,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 52490,
+      "RunTimeRatePct": 29.98
+    },
+    {
+      "date": "2026-06-28",
+      "ok": true,
+      "RunTimeSec": 19947,
+      "StandbyTimeSec": 55810,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 10660,
+      "RunTimeRatePct": 23.08
+    },
+    {
+      "date": "2026-06-29",
+      "ok": true,
+      "RunTimeSec": 47308,
+      "StandbyTimeSec": 4809,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 34283,
+      "RunTimeRatePct": 54.75
+    },
+    {
+      "date": "2026-06-30",
+      "ok": true,
+      "RunTimeSec": 51494,
+      "StandbyTimeSec": 16201,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 18705,
+      "RunTimeRatePct": 59.6
+    },
+    {
+      "date": "2026-07-01",
+      "ok": true,
+      "RunTimeSec": 36098,
+      "StandbyTimeSec": 50302,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 41.78
+    },
+    {
+      "date": "2026-07-02",
+      "ok": true,
+      "RunTimeSec": 34178,
+      "StandbyTimeSec": 52222,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 39.56
+    },
+    {
+      "date": "2026-07-03",
+      "ok": true,
+      "RunTimeSec": 52166,
+      "StandbyTimeSec": 34234,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 60.38
+    },
+    {
+      "date": "2026-07-04",
+      "ok": true,
+      "RunTimeSec": 53700,
+      "StandbyTimeSec": 32700,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 62.15
+    },
+    {
+      "date": "2026-07-05",
+      "ok": true,
+      "RunTimeSec": 21033,
+      "StandbyTimeSec": 55439,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 9928,
+      "RunTimeRatePct": 24.34
+    },
+    {
+      "date": "2026-07-06",
+      "ok": true,
+      "RunTimeSec": 62769,
+      "StandbyTimeSec": 23631,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 72.65
+    },
+    {
+      "date": "2026-07-07",
+      "ok": true,
+      "RunTimeSec": 63323,
+      "StandbyTimeSec": 23077,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 73.29
+    },
+    {
+      "date": "2026-07-08",
+      "ok": true,
+      "RunTimeSec": 66420,
+      "StandbyTimeSec": 19980,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 76.88
+    },
+    {
+      "date": "2026-07-09",
+      "ok": true,
+      "RunTimeSec": 61675,
+      "StandbyTimeSec": 24725,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 71.38
+    },
+    {
+      "date": "2026-07-10",
+      "ok": true,
+      "RunTimeSec": 50034,
+      "StandbyTimeSec": 36366,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 57.91
+    },
+    {
+      "date": "2026-07-11",
+      "ok": true,
+      "RunTimeSec": 48965,
+      "StandbyTimeSec": 35019,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2416,
+      "RunTimeRatePct": 56.67
+    },
+    {
+      "date": "2026-07-12",
+      "ok": true,
+      "RunTimeSec": 14594,
+      "StandbyTimeSec": 53870,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 17936,
+      "RunTimeRatePct": 16.89
+    },
+    {
+      "date": "2026-07-13",
+      "ok": true,
+      "RunTimeSec": 52928,
+      "StandbyTimeSec": 33472,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 61.26
+    },
+    {
+      "date": "2026-07-14",
+      "ok": true,
+      "RunTimeSec": 41991,
+      "StandbyTimeSec": 44460,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 48.57
+    },
+    {
+      "date": "2026-07-15",
+      "ok": true,
+      "RunTimeSec": 49295,
+      "StandbyTimeSec": 37105,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 57.05
+    },
+    {
+      "date": "2026-07-16",
+      "ok": true,
+      "RunTimeSec": 61090,
+      "StandbyTimeSec": 25310,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 70.71
+    },
+    {
+      "date": "2026-07-17",
+      "ok": true,
+      "RunTimeSec": 59485,
+      "StandbyTimeSec": 26915,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 68.85
+    },
+    {
+      "date": "2026-07-18",
+      "ok": true,
+      "RunTimeSec": 61785,
+      "StandbyTimeSec": 24615,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 71.51
+    },
+    {
+      "date": "2026-07-19",
+      "ok": true,
+      "RunTimeSec": 48138,
+      "StandbyTimeSec": 28330,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 9932,
+      "RunTimeRatePct": 55.72
+    },
+    {
+      "date": "2026-07-20",
+      "ok": true,
+      "RunTimeSec": 61507,
+      "StandbyTimeSec": 24893,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 71.19
+    },
+    {
+      "date": "2026-07-21",
+      "ok": true,
+      "RunTimeSec": 52878,
+      "StandbyTimeSec": 33522,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 61.2
+    },
+    {
+      "date": "2026-07-22",
+      "ok": true,
+      "RunTimeSec": 57327,
+      "StandbyTimeSec": 25353,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3720,
+      "RunTimeRatePct": 66.35
+    },
+    {
+      "date": "2026-07-23",
+      "ok": true,
+      "RunTimeSec": 54162,
+      "StandbyTimeSec": 28664,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 3574,
+      "RunTimeRatePct": 62.69
+    },
+    {
+      "date": "2026-07-24",
+      "ok": true,
+      "RunTimeSec": 52011,
+      "StandbyTimeSec": 8549,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 25840,
+      "RunTimeRatePct": 60.2
+    },
+    {
+      "date": "2026-07-25",
+      "ok": true,
+      "RunTimeSec": 40284,
+      "StandbyTimeSec": 45457,
+      "StopTimeSec": 349,
+      "BreakDownTimeSec": 310,
+      "RunTimeRatePct": 46.63
+    },
+    {
+      "date": "2026-07-26",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-07-27",
+      "ok": true,
+      "RunTimeSec": 56591,
+      "StandbyTimeSec": 29675,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 134,
+      "RunTimeRatePct": 65.5
+    },
+    {
+      "date": "2026-07-28",
+      "ok": true,
+      "RunTimeSec": 62148,
+      "StandbyTimeSec": 24252,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 71.93
+    },
+    {
+      "date": "2026-07-29",
+      "ok": true,
+      "RunTimeSec": 57867,
+      "StandbyTimeSec": 28533,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 66.98
+    },
+    {
+      "date": "2026-07-30",
+      "ok": true,
+      "RunTimeSec": 70764,
+      "StandbyTimeSec": 14675,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 961,
+      "RunTimeRatePct": 81.9
+    },
+    {
+      "date": "2026-07-31",
+      "ok": true,
+      "RunTimeSec": 57069,
+      "StandbyTimeSec": 29331,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 66.05
+    },
+    {
+      "date": "2026-08-01",
+      "ok": true,
+      "RunTimeSec": 57346,
+      "StandbyTimeSec": 29011,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 43,
+      "RunTimeRatePct": 66.37
+    },
+    {
+      "date": "2026-08-02",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 193,
+      "StopTimeSec": 341,
+      "BreakDownTimeSec": 85866,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-08-03",
+      "ok": true,
+      "RunTimeSec": 61125,
+      "StandbyTimeSec": 25071,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 204,
+      "RunTimeRatePct": 70.75
+    },
+    {
+      "date": "2026-08-04",
+      "ok": true,
+      "RunTimeSec": 54636,
+      "StandbyTimeSec": 31316,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 448,
+      "RunTimeRatePct": 63.24
+    },
+    {
+      "date": "2026-08-05",
+      "ok": true,
+      "RunTimeSec": 49359,
+      "StandbyTimeSec": 37041,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 57.13
+    },
+    {
+      "date": "2026-08-06",
+      "ok": true,
+      "RunTimeSec": 28948,
+      "StandbyTimeSec": 57452,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 33.5
+    },
+    {
+      "date": "2026-08-07",
+      "ok": true,
+      "RunTimeSec": 46658,
+      "StandbyTimeSec": 39698,
+      "StopTimeSec": 12,
+      "BreakDownTimeSec": 32,
+      "RunTimeRatePct": 54.0
+    },
+    {
+      "date": "2026-08-08",
+      "ok": true,
+      "RunTimeSec": 23824,
+      "StandbyTimeSec": 62281,
+      "StopTimeSec": 295,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 27.57
+    },
+    {
+      "date": "2026-08-09",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-08-10",
+      "ok": true,
+      "RunTimeSec": 50022,
+      "StandbyTimeSec": 34023,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2355,
+      "RunTimeRatePct": 57.9
+    },
+    {
+      "date": "2026-08-11",
+      "ok": true,
+      "RunTimeSec": 36137,
+      "StandbyTimeSec": 49547,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 716,
+      "RunTimeRatePct": 41.83
+    },
+    {
+      "date": "2026-08-12",
+      "ok": true,
+      "RunTimeSec": 35894,
+      "StandbyTimeSec": 48942,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 1564,
+      "RunTimeRatePct": 41.54
+    },
+    {
+      "date": "2026-08-13",
+      "ok": true,
+      "RunTimeSec": 49811,
+      "StandbyTimeSec": 35479,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 1110,
+      "RunTimeRatePct": 57.65
+    },
+    {
+      "date": "2026-08-14",
+      "ok": true,
+      "RunTimeSec": 58949,
+      "StandbyTimeSec": 24793,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2658,
+      "RunTimeRatePct": 68.23
+    },
+    {
+      "date": "2026-08-15",
+      "ok": true,
+      "RunTimeSec": 57844,
+      "StandbyTimeSec": 28556,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 66.95
+    },
+    {
+      "date": "2026-08-16",
+      "ok": true,
+      "RunTimeSec": 15737,
+      "StandbyTimeSec": 32783,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 67871,
+      "RunTimeRatePct": 13.52
+    },
+    {
+      "date": "2026-08-17",
+      "ok": true,
+      "RunTimeSec": 74494,
+      "StandbyTimeSec": 42052,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 2330,
+      "RunTimeRatePct": 62.67
+    },
+    {
+      "date": "2026-08-18",
+      "ok": true,
+      "RunTimeSec": 33941,
+      "StandbyTimeSec": 51424,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 1035,
+      "RunTimeRatePct": 39.28
+    },
+    {
+      "date": "2026-08-19",
+      "ok": true,
+      "RunTimeSec": 49665,
+      "StandbyTimeSec": 36053,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 682,
+      "RunTimeRatePct": 57.48
+    },
+    {
+      "date": "2026-08-20",
+      "ok": true,
+      "RunTimeSec": 46689,
+      "StandbyTimeSec": 38770,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 941,
+      "RunTimeRatePct": 54.04
+    },
+    {
+      "date": "2026-08-21",
+      "ok": true,
+      "RunTimeSec": 46816,
+      "StandbyTimeSec": 37821,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 1763,
+      "RunTimeRatePct": 54.19
+    },
+    {
+      "date": "2026-08-22",
+      "ok": true,
+      "RunTimeSec": 67615,
+      "StandbyTimeSec": 18444,
+      "StopTimeSec": 341,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 78.26
+    },
+    {
+      "date": "2026-08-23",
+      "ok": true,
+      "RunTimeSec": 0,
+      "StandbyTimeSec": 86400,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 0.0
+    },
+    {
+      "date": "2026-08-24",
+      "ok": true,
+      "RunTimeSec": 27348,
+      "StandbyTimeSec": 59052,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 31.65
+    },
+    {
+      "date": "2026-08-25",
+      "ok": true,
+      "RunTimeSec": 38885,
+      "StandbyTimeSec": 47515,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 45.01
+    },
+    {
+      "date": "2026-08-26",
+      "ok": true,
+      "RunTimeSec": 42076,
+      "StandbyTimeSec": 44324,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 0,
+      "RunTimeRatePct": 48.7
+    },
+    {
+      "date": "2026-08-27",
+      "ok": true,
+      "RunTimeSec": 43177,
+      "StandbyTimeSec": 42502,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 721,
+      "RunTimeRatePct": 49.97
+    },
+    {
+      "date": "2026-08-28",
+      "ok": true,
+      "RunTimeSec": 24487,
+      "StandbyTimeSec": 60351,
+      "StopTimeSec": 350,
+      "BreakDownTimeSec": 1212,
+      "RunTimeRatePct": 28.34
+    },
+    {
+      "date": "2026-08-29",
+      "ok": true,
+      "RunTimeSec": 21640,
+      "StandbyTimeSec": 64299,
+      "StopTimeSec": 0,
+      "BreakDownTimeSec": 461,
+      "RunTimeRatePct": 25.05
+    },
+    {
+      "date": "2026-08-30",
+      "ok": true,
+      "RunTimeSec": 15333,
+      "StandbyTimeSec": 70309,
+      "StopTimeSec": 334,
+      "BreakDownTimeSec": 424,
+      "RunTimeRatePct": 17.75
+    },
+    {
+      "date": "2026-08-31",
+      "ok": true,
+      "RunTimeSec": 34734,
+      "StandbyTimeSec": 51239,
+      "StopTimeSec": 356,
+      "BreakDownTimeSec": 71,
+      "RunTimeRatePct": 40.2
+    }
+  ],
+  "daily_progress": [
+    {
+      "date": "2026-04-22",
+      "ProgramCode": "GB06-07-005-CNC2.NC",
+      "Output": 12,
+      "OutputSumSecond": 2961,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-22",
+      "ProgramCode": "GB06-07-005-CNC1.NC",
+      "Output": 28,
+      "OutputSumSecond": 19701,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-22",
+      "ProgramCode": "GB06-07-004-CNC2.NC",
+      "Output": 16,
+      "OutputSumSecond": 5919,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-22",
+      "ProgramCode": "GB06-07-004-CNC1.NC",
+      "Output": 23,
+      "OutputSumSecond": 16323,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-23",
+      "ProgramCode": "YT08-03-201X-39148-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 14466,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-23",
+      "ProgramCode": "GSTM-06-05A-CNC2.NC",
+      "Output": 12,
+      "OutputSumSecond": 1583,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-23",
+      "ProgramCode": "GSTM-06-05A-CNC1.NC",
+      "Output": 16,
+      "OutputSumSecond": 11600,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-23",
+      "ProgramCode": "GB06-07-005-CNC2.NC",
+      "Output": 21,
+      "OutputSumSecond": 5310,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-23",
+      "ProgramCode": "CPHJ-02-52148-F88F-TJ-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 358,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-23",
+      "ProgramCode": "CPHJ-02-52148-F88F-TJ-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 3798,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-23",
+      "ProgramCode": "CPHJ-02-50209-TJ-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 477,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-23",
+      "ProgramCode": "CPHJ-02-50209-TJ-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 6437,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-24",
+      "ProgramCode": "YT08-03-201X-39148-CNC2.NC",
+      "Output": 19,
+      "OutputSumSecond": 752,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-24",
+      "ProgramCode": "YT08-03-201X-39148-CNC1.NC",
+      "Output": 10,
+      "OutputSumSecond": 12249,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-24",
+      "ProgramCode": "YJTM01-06-023X-41246-A-CNC2.NC",
+      "Output": 8,
+      "OutputSumSecond": 380,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-24",
+      "ProgramCode": "YJTM01-06-023X-41246-A-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 16443,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-24",
+      "ProgramCode": "TM07-02-202-73275-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 25587,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-25",
+      "ProgramCode": "YT08-03-101X-39148-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 23747,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-25",
+      "ProgramCode": "TM07-02-202-73275-CNC3.NC",
+      "Output": 11,
+      "OutputSumSecond": 4895,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-25",
+      "ProgramCode": "TM07-02-202-73275-CNC2.NC",
+      "Output": 10,
+      "OutputSumSecond": 5157,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-25",
+      "ProgramCode": "TM07-02-202-73275-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 7215,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-25",
+      "ProgramCode": "JZ07-004-006-24-32106-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 587,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-25",
+      "ProgramCode": "JZ07-004-006-24-32106-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 6810,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-26",
+      "ProgramCode": "YT08-03-101X-39148-CNC2.NC",
+      "Output": 14,
+      "OutputSumSecond": 1554,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-26",
+      "ProgramCode": "YT08-03-101X-39148-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 5027,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-26",
+      "ProgramCode": "GSCS05-01-1-52148-120B-CNC2.NC",
+      "Output": 8,
+      "OutputSumSecond": 6698,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-26",
+      "ProgramCode": "GSCS05-01-1-52148-120B-CNC1.NC",
+      "Output": 10,
+      "OutputSumSecond": 37323,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-27",
+      "ProgramCode": "CPHJ-DS04-30265-588-CNC3.NC",
+      "Output": 5,
+      "OutputSumSecond": 13024,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-28",
+      "ProgramCode": "JZHJ-02-WL-73288-Z04-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1524,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-28",
+      "ProgramCode": "JZHJ-02-WL-73288-Z04-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 10449,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-28",
+      "ProgramCode": "GSTM-02-20-73275-795-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 678,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-28",
+      "ProgramCode": "GSTM-02-20-73275-795-CNC1.NC",
+      "Output": 64,
+      "OutputSumSecond": 19576,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-28",
+      "ProgramCode": "GB06-11-003-CNC2.NC",
+      "Output": 14,
+      "OutputSumSecond": 2870,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-28",
+      "ProgramCode": "GB06-11-003-CNC1.NC",
+      "Output": 19,
+      "OutputSumSecond": 15149,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-29",
+      "ProgramCode": "GSTM-02-20-73275-795-CNC2.NC",
+      "Output": 88,
+      "OutputSumSecond": 10008,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-29",
+      "ProgramCode": "CPHJ-DS04-30265-588-CNC3.NC",
+      "Output": 24,
+      "OutputSumSecond": 238343,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-04-30",
+      "ProgramCode": "CPHJ-DS04-30265-588-CNC3.NC",
+      "Output": 5,
+      "OutputSumSecond": 48034,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-04",
+      "ProgramCode": "CPHJ-DS04-30265-588-CNC3.NC",
+      "Output": 2,
+      "OutputSumSecond": 18077,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-04",
+      "ProgramCode": "72173-90-01X-01-CNC3.NC",
+      "Output": 17,
+      "OutputSumSecond": 2715,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-04",
+      "ProgramCode": "72173-90-01X-01-CNC2.NC",
+      "Output": 16,
+      "OutputSumSecond": 2527,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-04",
+      "ProgramCode": "72173-90-01X-01-CNC1.NC",
+      "Output": 15,
+      "OutputSumSecond": 8094,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-04",
+      "ProgramCode": "72173-80-86X-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 19178,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-05",
+      "ProgramCode": "72173-80-86X-JAJU.NC",
+      "Output": 3,
+      "OutputSumSecond": 567,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-05",
+      "ProgramCode": "72173-80-86X-CNC2.NC",
+      "Output": 99,
+      "OutputSumSecond": 17745,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-05",
+      "ProgramCode": "72173-80-86X-CNC1.NC",
+      "Output": 18,
+      "OutputSumSecond": 31420,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-06",
+      "ProgramCode": "GSFB-FM-LKCCD-05-CNC2.NC",
+      "Output": 18,
+      "OutputSumSecond": 194526,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-06",
+      "ProgramCode": "GSFB-FM-LKCCD-02-2-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 7597,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-06",
+      "ProgramCode": "72173-90-23X-1V4-CNC2.NC",
+      "Output": 62,
+      "OutputSumSecond": 7159,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-06",
+      "ProgramCode": "72173-90-23X-1V4-CNC1.NC",
+      "Output": 15,
+      "OutputSumSecond": 13089,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-06",
+      "ProgramCode": "72173-80-86X-CNC2.NC",
+      "Output": 22,
+      "OutputSumSecond": 3824,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-07",
+      "ProgramCode": "ZZ08-11-012-CNC2.NC",
+      "Output": 29,
+      "OutputSumSecond": 13881,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-07",
+      "ProgramCode": "ZZ08-11-012-CNC1.NC",
+      "Output": 43,
+      "OutputSumSecond": 24501,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-07",
+      "ProgramCode": "GSJZ-34-08-A-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 7955,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-07",
+      "ProgramCode": "GSJZ-34-08-A-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 8207,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-07",
+      "ProgramCode": "GSFB-FM-LKCCD-05-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 398,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-08",
+      "ProgramCode": "ZZ08-11-012-CNC2.NC",
+      "Output": 12,
+      "OutputSumSecond": 6666,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-08",
+      "ProgramCode": "JZ07-005-002-CNC2.NC",
+      "Output": 8,
+      "OutputSumSecond": 2024,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-08",
+      "ProgramCode": "JZ07-005-002-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 8632,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-08",
+      "ProgramCode": "GSTMDGN-13-14-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 11086,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-08",
+      "ProgramCode": "GSTMDGN-13-09-CNC1.NC",
+      "Output": 16,
+      "OutputSumSecond": 33188,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "TM07-06-211-73275-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 195,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "TM07-06-211-73275-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2174,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "GSTMDGN-13-14-CNC3.NC",
+      "Output": 26,
+      "OutputSumSecond": 4611,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "GSTMDGN-13-14-CNC2.NC",
+      "Output": 15,
+      "OutputSumSecond": 5329,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "GSTMDGN-13-14-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 19913,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "GSTMDGN-13-09-CNC3.NC",
+      "Output": 10,
+      "OutputSumSecond": 2077,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "GSTMDGN-13-09-CNC2.NC",
+      "Output": 17,
+      "OutputSumSecond": 6617,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-09",
+      "ProgramCode": "DGNJCJ-03-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 10501,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "ZZ08-11-033-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 4084,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "ZZ08-11-032-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 2706,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "ZZ08-11-032-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 1878,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "TM07-ZJ-A-ZH52148-120BCNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1999,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "TM07-ZJ-A-ZH52148-120BCNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 944,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "TM07-06-213-75320-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 652,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "GSTMDGN-13-09-CNC4.NC",
+      "Output": 12,
+      "OutputSumSecond": 2736,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "GSTMDGN-13-09-CNC3.NC",
+      "Output": 2,
+      "OutputSumSecond": 415,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "GSTMDGN-07-08-CNC2.NC",
+      "Output": 18,
+      "OutputSumSecond": 3326,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "GSTMDGN-07-08-CNC1.NC",
+      "Output": 10,
+      "OutputSumSecond": 9634,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "GSFBPHJ-14-18-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1281,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "GSFBPHJ-14-18-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1647,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "CPHX-01-XWD-66220-Z12-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 282,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "CPHX-01-XWD-66220-Z12-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1153,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "CPBP-02-XWD-66220-Z11-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 207,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "CPBP-02-XWD-66220-Z11-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 639,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "CPBP-01-XWD-66220-Z11-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 268,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-10",
+      "ProgramCode": "CPBP-01-XWD-66220-Z11-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1129,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "ZZ08-11-032-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 4050,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "XGSHJZ19-01-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 666,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "XGSHJZ19-01-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 4368,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "GSTMDGN-06-13.NC",
+      "Output": 20,
+      "OutputSumSecond": 5814,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "GSTM-05-10.NC",
+      "Output": 3,
+      "OutputSumSecond": 858,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "GSFBPHJ-14-10.NC",
+      "Output": 1,
+      "OutputSumSecond": 326,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "GSFBPHJ-13-10.NC",
+      "Output": 1,
+      "OutputSumSecond": 218,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "GSFBPHJ-08-24.NC",
+      "Output": 3,
+      "OutputSumSecond": 1224,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "CS07-07-009-CNC2.NC",
+      "Output": 16,
+      "OutputSumSecond": 5096,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "CS07-07-009-CNC1.NC",
+      "Output": 20,
+      "OutputSumSecond": 18850,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "CS07-03-003-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 6330,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "72173-90-31X-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 217,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-11",
+      "ProgramCode": "72173-90-31X-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2572,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "JZTL-03-ZL-34174.NC",
+      "Output": 2,
+      "OutputSumSecond": 883,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "JZTL-03-CN71173.NC",
+      "Output": 5,
+      "OutputSumSecond": 672,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "JZTL-03-66285-HOK-00.NC",
+      "Output": 1,
+      "OutputSumSecond": 615,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "JZTL-02-66285-HOK-00.NC",
+      "Output": 1,
+      "OutputSumSecond": 885,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "JZGDCL-01-XWD-66220-Z04.NC",
+      "Output": 4,
+      "OutputSumSecond": 4679,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "GYBP-01-46131-04-TJ.NC",
+      "Output": 10,
+      "OutputSumSecond": 191990,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "GS-GB-08-03-CNC3.NC",
+      "Output": 8,
+      "OutputSumSecond": 776,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "FBPHJ-01-XWD-66220-Z01.NC",
+      "Output": 1,
+      "OutputSumSecond": 1279,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "CS07-03-003-CNC2.NC",
+      "Output": 17,
+      "OutputSumSecond": 6579,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "CS07-03-003-CNC1.NC",
+      "Output": 11,
+      "OutputSumSecond": 7724,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-12",
+      "ProgramCode": "BCPHXBP-01-CN71173-HB187.NC",
+      "Output": 3,
+      "OutputSumSecond": 3435,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "YLJ-03-TJ-031-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 556,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "YLJ-03-TJ-031-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1486,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "PXDJC-01-XWD-66220-Z09.NC",
+      "Output": 4,
+      "OutputSumSecond": 2445,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "JZTL-05-ZL-34174-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 940,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "JZTL-05-ZL-34174-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1983,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "JZTL-05-CN71173-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 535,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "JZHJ-05A-48-500-04CN.NC",
+      "Output": 2,
+      "OutputSumSecond": 2671,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "GYBP-01-46131-04-TJ.NC",
+      "Output": 1,
+      "OutputSumSecond": 1017,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "GBHJ-03-48-500-04CN-TJ.NC",
+      "Output": 2,
+      "OutputSumSecond": 2329,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "FB07-01-010-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 853,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "FB07-01-010-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 14707,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "CPZZ-02-1102-TJ-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 168,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-13",
+      "ProgramCode": "CPZZ-02-1102-TJ-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 4626,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "JZTL-01-ZL-34174-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 271,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "JZTL-01-ZL-34174-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 3290,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "JZHJ-05-73288-ZJ-K06.NC",
+      "Output": 2,
+      "OutputSumSecond": 10013,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "JZHJ-02-73288-K13-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 976,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "JZHJ-02-73288-K13-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 13824,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "JZHJ-01-72288-K13-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1286,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "JZHJ-01-72288-K13-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1513,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "FB07-01-010-CNC2.NC",
+      "Output": 8,
+      "OutputSumSecond": 8943,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "CS07-05-008-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 363,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "CS07-05-008-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 6251,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "CS07-05-006-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 451,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "CS07-05-006-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 6740,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "CPZZ-02-1279-TJ-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 154,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "CPZZ-02-1279-TJ-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 3138,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "CPZZ-02-1104-TJ-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 151,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-14",
+      "ProgramCode": "CPZZ-02-1104-TJ-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 2108,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-15",
+      "ProgramCode": "YT07-03-101-CN39300-01-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 91,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-15",
+      "ProgramCode": "YT07-03-101-CN39300-01-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1512,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-15",
+      "ProgramCode": "JZTL-01-71173-964-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 106,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-15",
+      "ProgramCode": "JZTL-01-71173-964-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 497,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-15",
+      "ProgramCode": "GS-DS-01C-2-CNC1.NC",
+      "Output": 31,
+      "OutputSumSecond": 22774,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-15",
+      "ProgramCode": "CS07-02-019-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 962,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-15",
+      "ProgramCode": "CS07-02-019-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 3489,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-16",
+      "ProgramCode": "GS-DS-01C-2-CNC1.NC",
+      "Output": 54,
+      "OutputSumSecond": 52456,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-17",
+      "ProgramCode": "GS-DS-01C-2-CNC2.NC",
+      "Output": 15,
+      "OutputSumSecond": 1168,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-17",
+      "ProgramCode": "GS-DS-01C-2-CNC1.NC",
+      "Output": 14,
+      "OutputSumSecond": 12464,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-17",
+      "ProgramCode": "CPHJ-01-73288-K01.NC",
+      "Output": 1,
+      "OutputSumSecond": 2560,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-17",
+      "ProgramCode": "BCPHXBP-01-73288-K02.NC",
+      "Output": 2,
+      "OutputSumSecond": 3646,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "ZJZJHJ-03-72288-ZJ-K03.NC",
+      "Output": 1,
+      "OutputSumSecond": 1512,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "LTZJHJ-03-72288-ZJ-K03.NC",
+      "Output": 1,
+      "OutputSumSecond": 1536,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "JZNY-02-73288-K03-1012.NC",
+      "Output": 1,
+      "OutputSumSecond": 814,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "JZNY-01-72288-K03-1012-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 901,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "JZNY-01-72288-K03-1012-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1912,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "GDFZCL-01-73288-K08.NC",
+      "Output": 2,
+      "OutputSumSecond": 2862,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CS07-08-008-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 913,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPZZYM-01-73288-K03.NC",
+      "Output": 2,
+      "OutputSumSecond": 696,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPJZNY-01-73310-A3P-1305-CNC2.N",
+      "Output": 2,
+      "OutputSumSecond": 2937,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPJZNY-01-32273-B5J-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2298,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPHXBP-02A-72288-K03-1012.NC",
+      "Output": 1,
+      "OutputSumSecond": 1105,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPHXBP-02-73288-K02.NC",
+      "Output": 1,
+      "OutputSumSecond": 810,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPHXBP-01A-73288-K05-1012.NC",
+      "Output": 2,
+      "OutputSumSecond": 2072,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPHXBP-01-73288-K02-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 3445,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPHXBP-01-73288-K02-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2034,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "CPHJ-02-73288-K01.NC",
+      "Output": 1,
+      "OutputSumSecond": 1469,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "BCPYCPHXBP-01-73310-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 3155,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "BCPYCPHXBP-01-32273-B5J-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 3596,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-18",
+      "ProgramCode": "BCPFBPHJ-01-73288-K01-1104.NC",
+      "Output": 1,
+      "OutputSumSecond": 1687,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "JZNY-01-52148-024-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 815,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "GSCS24-005-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 1084,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "GSCS24-005-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 6016,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "GSCS02-021-30194-CNC1.NC",
+      "Output": 19,
+      "OutputSumSecond": 26380,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "CS07-10-001-37309-168A-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 235,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "CS07-10-001-37309-168A-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 5119,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "CPJZNY-01-33178-A20-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1897,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "CPHXBP-01-55175-230571-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1543,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "CPBP-01-33188-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2978,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "CPBP-01-28220-A39-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 3646,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-19",
+      "ProgramCode": "BCPBPYCPHXBP-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2385,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "GSCS23-010-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 3151,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "GSCS23-010-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 3142,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "GSCS11-001-CNC2.NC",
+      "Output": 9,
+      "OutputSumSecond": 2096,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "GSCS11-001-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 3918,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "GSCS02-025-30194-CNC1.NC",
+      "Output": 18,
+      "OutputSumSecond": 18525,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "CS06-09-028-41246-04-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 293,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "CPJZNY-01-73310-A40-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1302,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "CPJZNY-01-28220-A39-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1808,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "CPHXBP-01-73310-A40-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2951,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-20",
+      "ProgramCode": "CPHXBP-01-29265-783-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 2988,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-07-01-FF-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 249,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-07-01-FF-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 640,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-06-14-FF-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 292,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-06-14-FF-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2136,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-06-05-FF-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 141,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-06-05-FF-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 676,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-06-04-TT-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 622,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-06-04-TT-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1996,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-02-01-TT-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 477,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "TMFQ-60194-02-01-TT-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 818,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "HJ01-03-ZJ28280-1-TT.NC",
+      "Output": 3,
+      "OutputSumSecond": 1218,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "GSTM-06-08-CNC1.NC",
+      "Output": 14,
+      "OutputSumSecond": 15826,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "CS07-04-009-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 965,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "CS07-04-009-CNC1.NC",
+      "Output": 33,
+      "OutputSumSecond": 17646,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "CPHXBP-01-29265-783-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 686,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-21",
+      "ProgramCode": "CPBP-01-29265-783-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1754,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-22",
+      "ProgramCode": "CS07-07-010-FF-1V3-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1342,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-22",
+      "ProgramCode": "CS07-07-010-FF-1V3-CNC1.NC",
+      "Output": 15,
+      "OutputSumSecond": 13717,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-22",
+      "ProgramCode": "CS07-04-009-CNC2.NC",
+      "Output": 26,
+      "OutputSumSecond": 4164,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-22",
+      "ProgramCode": "CS07-03-003-CNC2.NC",
+      "Output": 31,
+      "OutputSumSecond": 35211,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-22",
+      "ProgramCode": "CS07-03-003-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 748,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "XGSZZ08-10-1V3-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 375,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "XGSZZ08-10-1V3-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 4869,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "XGSHJZ19-02-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 3904,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "XGSHJZ19-01-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 1155,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "XGSHJZ19-01-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 6826,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "CS07-07-010-FF-1V3-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 7570,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "CS07-07-009-CNC2.NC",
+      "Output": 31,
+      "OutputSumSecond": 30214,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-23",
+      "ProgramCode": "CS07-07-009-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 727,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-24",
+      "ProgramCode": "ZZ08-197-003-30194.NC",
+      "Output": 12,
+      "OutputSumSecond": 22715,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-24",
+      "ProgramCode": "XGSZZ08-10-1V3-CNC1.NC",
+      "Output": 11,
+      "OutputSumSecond": 11941,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-24",
+      "ProgramCode": "CS07-03-004-CNC1.NC",
+      "Output": 14,
+      "OutputSumSecond": 6724,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "RP02-19-012-1V1-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 147,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "RP02-19-012-1V1-CNC1.NC",
+      "Output": 18,
+      "OutputSumSecond": 8533,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "RP02-19-011-1V2-CNC2.NC",
+      "Output": 30,
+      "OutputSumSecond": 16461,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "RP02-19-011-1V2-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 983,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "RP02-17-007-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 453,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "RP02-17-007-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 3127,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "CS17-13-009-1V3.NC",
+      "Output": 6,
+      "OutputSumSecond": 5551,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "CS17-13-007-1V3.NC",
+      "Output": 5,
+      "OutputSumSecond": 5740,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "CS07-03-014A-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 2,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "CS07-03-014A-CNC1.NC",
+      "Output": 16,
+      "OutputSumSecond": 10340,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-25",
+      "ProgramCode": "CS07-03-004-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 508,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "RP02-17-007-CNC1.NC",
+      "Output": 11,
+      "OutputSumSecond": 6732,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "GS-GB-08-03-CNC2.NC",
+      "Output": 9,
+      "OutputSumSecond": 12617,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "GS-GB-08-03-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1316,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CS07-03-006-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CS07-03-006-CNC1.NC",
+      "Output": 10,
+      "OutputSumSecond": 7893,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CPSJNY-01-CN73288-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 3515,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CPSJ-01-41244-921-534-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2167,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CPNY-01-25106-001-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 719,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CPJZNY-01-41244-921-534-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1887,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CPHXBP-01-73288-K02-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 6572,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CPHX-01-ZL45301-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 7236,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-26",
+      "ProgramCode": "CPBP-01-41244-921-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 3197,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "GSZJHJ-15-34-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "GSZJHJ-15-34-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 15173,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "GSCS05-07-75320A-CNC2.NC",
+      "Output": 11,
+      "OutputSumSecond": 10674,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "GSCS05-07-75320A-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 668,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "CS07-03-006-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 4141,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "CS06-13-001A-CNC2.NC",
+      "Output": 8,
+      "OutputSumSecond": 14768,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "CS06-13-001A-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1732,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "CS06-09-030-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1199,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "CS06-09-030-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 3150,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-27",
+      "ProgramCode": "CS06-013-002-32106-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1630,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-28",
+      "ProgramCode": "GSZJHJ-15-34-CNC1.NC",
+      "Output": 11,
+      "OutputSumSecond": 18314,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-28",
+      "ProgramCode": "GSZJHJ-15-33-CNC2.NC",
+      "Output": 28,
+      "OutputSumSecond": 37040,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-28",
+      "ProgramCode": "GSZJHJ-15-33-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1443,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "YLJ-01-116-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 896,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "YLJ-01-116-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 881,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "JZNY-02-XWD-24148-Z16-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 504,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "JZNY-01-XWD-24148-Z16-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 714,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "GSZJHJ-15-25-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 2121,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "GSZJHJ-15-17-CNC2.NC",
+      "Output": 13,
+      "OutputSumSecond": 20099,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "GSZJHJ-15-17-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1523,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "CPZZ-01-330-884-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 715,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "CPZZ-01-330-884-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2790,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "CPHXBP-02-XWD-24148-Z14.NC",
+      "Output": 1,
+      "OutputSumSecond": 477,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "CPHX-02-48-57200.NC",
+      "Output": 1,
+      "OutputSumSecond": 836,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "CPHJ-02-XWD-24148-Z13.NC",
+      "Output": 3,
+      "OutputSumSecond": 2112,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "CPBP-02-48-57200.NC",
+      "Output": 1,
+      "OutputSumSecond": 1097,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "CPBP-01-48-57200-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1582,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "BCPHXBP-02-XWD-24148-Z03.NC",
+      "Output": 1,
+      "OutputSumSecond": 449,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "BCPHXBP-01-XWD-24148-Z03.NC",
+      "Output": 2,
+      "OutputSumSecond": 1178,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "BCPBPYCPHXBP-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1323,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-29",
+      "ProgramCode": "BCPBPYCPHXBP-02-33178-3BC.NC",
+      "Output": 2,
+      "OutputSumSecond": 1247,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "ZJYJYJZHJ-01-XWD-Z04-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 302,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "ZJYJYJZHJ-01-XWD-Z04-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1429,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "ZJCPHJ-01-3090-02-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 1583,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "YJHJ-03-39300-B-K01.NC",
+      "Output": 2,
+      "OutputSumSecond": 1886,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "TMFQ-60194-06-09-CNC3.NC",
+      "Output": 4,
+      "OutputSumSecond": 523,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "LKGDCL-01-XWD-24148-Z11-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 219,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "LKGDCL-01-XWD-24148-Z11-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2126,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "JZHJ-01-52148-A3U.NC",
+      "Output": 1,
+      "OutputSumSecond": 1099,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "JZHJ-01-41282-A00.NC",
+      "Output": 1,
+      "OutputSumSecond": 1126,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "GSZJHJ-15-25-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 3436,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "GLPGDSDCL-01-XWD-24148-Z12.NC",
+      "Output": 1,
+      "OutputSumSecond": 690,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "FJCPHJ-01-3090-02-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1792,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "FJCPBP-01-3090-02-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1028,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "FBPHJ-01-XWD-24148-Z01.NC",
+      "Output": 1,
+      "OutputSumSecond": 1273,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "FBPHJ-01-CN73288-FF.NC",
+      "Output": 2,
+      "OutputSumSecond": 3361,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "FBFHJ-01-33178-3BC.NC",
+      "Output": 2,
+      "OutputSumSecond": 1741,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPZZYM-01-73288-K03.NC",
+      "Output": 3,
+      "OutputSumSecond": 3621,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPZZ-03-1104-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 459,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPZZ-03-1104-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2857,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPYZ-01-XWD-24148-Z06-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 529,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPYZ-01-XWD-24148-Z06-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 3069,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPSJNY-02-39148.NC",
+      "Output": 1,
+      "OutputSumSecond": 544,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPSJNY-01-39148-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 661,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPPMDCL-01-XWD-Z10-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 280,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPPMDCL-01-XWD-Z10-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1166,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPHX-02-XWD-24148-Z19-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 86,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPHX-02-XWD-24148-Z19-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 465,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPHX-01-XWD-24148-Z19-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 641,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPHX-01-XWD-24148-Z19-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 848,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPBP-02-XWD-24148-Z19-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 160,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPBP-02-XWD-24148-Z19-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 606,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPBP-01-XWD-24148-Z19-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 459,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-05-30",
+      "ProgramCode": "CPBP-01-XWD-24148-Z19-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 835,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "YJHJ-01-39300-B-KO1-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 204,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "YJHJ-01-39300-B-KO1-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 994,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "JZHJ-03-XWD-44208-Z05-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 142,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "JZHJ-03-XWD-44208-Z05-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1630,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "JZHJ-03-73288-ZJ-K06-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 314,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "JZHJ-03-73288-ZJ-K06-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 843,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "GSZJHJ-15-38-CNC2.NC",
+      "Output": 9,
+      "OutputSumSecond": 6514,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "GSZJHJ-15-38-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 20116,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "GS-CHJ-G-52148-035-CNC3.NC",
+      "Output": 17,
+      "OutputSumSecond": 10627,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "FJCPBP-01-3090-02-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 3876,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "CPZZ-03-1102-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 211,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "CPZZ-03-1102-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1729,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-01",
+      "ProgramCode": "2026-6-1-AAA.NC",
+      "Output": 1,
+      "OutputSumSecond": 364,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "TJLPBYPMDCL-01-468095.NC",
+      "Output": 4,
+      "OutputSumSecond": 2454,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "JZGDCL-01-XWD62280-1323.NC",
+      "Output": 5,
+      "OutputSumSecond": 5809,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "GS-SHJ08-05-CNC1.NC",
+      "Output": 24,
+      "OutputSumSecond": 14310,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "GS-CHJ-G-52148-035-CNC3.NC",
+      "Output": 26,
+      "OutputSumSecond": 15269,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "GDCL-01-52148-Z09.NC",
+      "Output": 1,
+      "OutputSumSecond": 809,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "FBFHJ-01-52148-1229.NC",
+      "Output": 1,
+      "OutputSumSecond": 1219,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "BCPZZYM-01-35173.NC",
+      "Output": 3,
+      "OutputSumSecond": 2718,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "BCPHXBP-02-52148-Z07.NC",
+      "Output": 1,
+      "OutputSumSecond": 562,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-02",
+      "ProgramCode": "BCPHXBP-01-52148-Z07.NC",
+      "Output": 1,
+      "OutputSumSecond": 1114,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "JZNY-02-35173.NC",
+      "Output": 1,
+      "OutputSumSecond": 539,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "JZNY-01-35173-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 701,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "GS-HJ02-ZH54215-A-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "GS-HJ02-ZH54215-A-CNC1.NC",
+      "Output": 21,
+      "OutputSumSecond": 32227,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "CPHXBP-02-35173.NC",
+      "Output": 2,
+      "OutputSumSecond": 1101,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "CPHXBP-01-35173-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1408,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "CPHJ-02-52148-1121.NC",
+      "Output": 3,
+      "OutputSumSecond": 1619,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "CPHJ-01-XWD-24148-Z13-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 1533,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "CPHJ-01-XWD-24148-Z13-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 8016,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "CPHJ-01-52148-1121.NC",
+      "Output": 4,
+      "OutputSumSecond": 4057,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "BCPBP-02-35173.NC",
+      "Output": 1,
+      "OutputSumSecond": 495,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-03",
+      "ProgramCode": "BCPBP-01-35173.NC",
+      "Output": 1,
+      "OutputSumSecond": 1588,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-04",
+      "ProgramCode": "GSZJHJ-13-15-CNC1.NC",
+      "Output": 30,
+      "OutputSumSecond": 30039,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-04",
+      "ProgramCode": "GSZJHJ-11-08-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 1306,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-04",
+      "ProgramCode": "GSZJHJ-11-08-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 3568,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-04",
+      "ProgramCode": "GS-HJ02-ZH54215-A-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 13903,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-04",
+      "ProgramCode": "GDCL-01-35173.NC",
+      "Output": 2,
+      "OutputSumSecond": 1484,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-04",
+      "ProgramCode": "BCPHXBP-02-YW27302.NC",
+      "Output": 1,
+      "OutputSumSecond": 680,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-04",
+      "ProgramCode": "BCPHXBP-01-YW27302.NC",
+      "Output": 6,
+      "OutputSumSecond": 2877,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-05",
+      "ProgramCode": "GSZJHJ-13-19-CNC1.NC",
+      "Output": 52,
+      "OutputSumSecond": 36157,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-05",
+      "ProgramCode": "GSZJHJ-13-15-CNC2.NC",
+      "Output": 32,
+      "OutputSumSecond": 7232,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-05",
+      "ProgramCode": "GSZJHJ-13-15-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 3105,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-06",
+      "ProgramCode": "GSZJHJ-13-20-CNC2.NC",
+      "Output": 10,
+      "OutputSumSecond": 5996,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-06",
+      "ProgramCode": "GSZJHJ-13-20-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 331,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-06",
+      "ProgramCode": "GSZJHJ-13-19-CNC1.NC",
+      "Output": 19,
+      "OutputSumSecond": 6719,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-06",
+      "ProgramCode": "GSZJHJ-13-18-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-06",
+      "ProgramCode": "GSZJHJ-13-18-CNC1.NC",
+      "Output": 71,
+      "OutputSumSecond": 23968,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-06",
+      "ProgramCode": "CPHXBP-01-XWD-24148-Z14-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 779,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-06",
+      "ProgramCode": "CPHXBP-01-XWD-24148-Z14-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2367,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-07",
+      "ProgramCode": "GSZJHJ-13-20-CNC2.NC",
+      "Output": 25,
+      "OutputSumSecond": 16140,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "XGSMY-08-11-73310-A3P-CNC2.NC",
+      "Output": 13,
+      "OutputSumSecond": 2667,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "XGSMY-08-11-73310-A3P-CNC1.NC",
+      "Output": 10,
+      "OutputSumSecond": 5344,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "GSZJHJ-13-20-CNC2.NC",
+      "Output": 40,
+      "OutputSumSecond": 26778,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "GSZJHJ-13-12-FF-CNC1.NC",
+      "Output": 21,
+      "OutputSumSecond": 9262,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "GSMY-05-21A-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 307,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "GSMY-05-21A-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 782,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "CS07-12-016-52148-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 97,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-08",
+      "ProgramCode": "CS07-12-016-52148-CNC1.NC",
+      "Output": 17,
+      "OutputSumSecond": 12122,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "YLJ-03-TJ-1126-CNC2.NC",
+      "Output": 10,
+      "OutputSumSecond": 988,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "YLJ-03-TJ-1126-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 15050,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "XGSZZ30-76-CNC1.NC",
+      "Output": 24,
+      "OutputSumSecond": 3108,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GSZJHJ-13-12-FF-CNC2.NC",
+      "Output": 22,
+      "OutputSumSecond": 3542,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GSZJHJ-13-12-FF-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 5469,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GS-GB-08-02-32106-CNC2.NC",
+      "Output": 14,
+      "OutputSumSecond": 641,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GS-GB-08-02-32106-CNC1.NC",
+      "Output": 14,
+      "OutputSumSecond": 5865,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GSCS14-12-33220-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 148,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GSCS14-12-33220-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 1539,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GSCS14-06-33220-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 146,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GSCS14-06-33220-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 1471,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "GKBPJZ-02-48-4695-FX.NC",
+      "Output": 8,
+      "OutputSumSecond": 23002,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "CS06-13-004-30194-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 658,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-09",
+      "ProgramCode": "CS06-13-004-30194-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 3770,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "XGSZZ30-76-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "XGSMY-08-11-73310-A3P-CNC2.NC",
+      "Output": 14,
+      "OutputSumSecond": 2867,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "XGSMY-08-11-73310-A3P-CNC1.NC",
+      "Output": 13,
+      "OutputSumSecond": 4720,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "MY09-02-012-XWD12120.NC",
+      "Output": 19,
+      "OutputSumSecond": 3329,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "LKNY-02-GF-72287-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 5241,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "LKNY-02-GF-72287-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 365,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "LKNY-01-GF-72287-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 4712,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "LKNY-01-GF-72287-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 8501,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "JSZL-02604-0099-002-A0-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1377,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "JSZL-02604-0099-001-A0-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 6021,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "CPHJ-03-50209-TJ-50209.NC",
+      "Output": 3,
+      "OutputSumSecond": 3936,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "CPHJ-02-50209-TJ-50209-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 162,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-10",
+      "ProgramCode": "CPHJ-02-50209-TJ-50209-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 1264,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-11",
+      "ProgramCode": "TM07-02-503-73275-CNC2.NC",
+      "Output": 32,
+      "OutputSumSecond": 3,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-11",
+      "ProgramCode": "TM07-02-503-73275-CNC1.NC",
+      "Output": 108,
+      "OutputSumSecond": 90,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-11",
+      "ProgramCode": "JSZL-02604-0099-002-A0-CNC2.NC",
+      "Output": 67,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-11",
+      "ProgramCode": "JSZL-02604-0099-001-A0-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1640,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-11",
+      "ProgramCode": "GS-GB-08-04A-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-11",
+      "ProgramCode": "CS07-01-006-CNC2.NC",
+      "Output": 156,
+      "OutputSumSecond": 185,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-11",
+      "ProgramCode": "CS07-01-006-CNC1.NC",
+      "Output": 160,
+      "OutputSumSecond": 97,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "ZJJZHJ-05-10-32126-01.NC",
+      "Output": 2,
+      "OutputSumSecond": 1895,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "ZJJZHJ-02-10-32126-01-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "YMJ-03-LG46100-TJ-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 3,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "YMJ-03-LG46100-TJ-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 3181,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "YMJ-02-LG46100-TJ-CNC2.NC",
+      "Output": 19,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "YMJ-02-LG46100-TJ-CNC1.NC",
+      "Output": 13,
+      "OutputSumSecond": 1,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "XSJLL-03-38300-A4J.NC",
+      "Output": 8,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "XSJLL-03-10-32126-01.NC",
+      "Output": 2,
+      "OutputSumSecond": 694,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "MSPMD-01-60210-Z04-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 653,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "MSPMD-01-60210-Z04-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 3879,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "MSPMD-01-38300-A4J-CNC2.NC",
+      "Output": 9,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "MSPMD-01-38300-A4J-CNC1.NC",
+      "Output": 19,
+      "OutputSumSecond": 98,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "MSPMD-01-10-32126-01-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 409,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "MSPMD-01-10-32126-01-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 1998,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "JZTL-03-60210-Z10.NC",
+      "Output": 3,
+      "OutputSumSecond": 1251,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "JZHJ-01-10-32126-01-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1133,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "JZHJ-01-10-32126-01-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 3755,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "GS-GB-08-04A-CNC2.NC",
+      "Output": 41,
+      "OutputSumSecond": 75,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "GS-GB-08-04A-CNC1.NC",
+      "Output": 48,
+      "OutputSumSecond": 14,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "FBPHJ-02-ZH49234-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1449,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "CPHJ-03-36194-TJ-1131.NC",
+      "Output": 2,
+      "OutputSumSecond": 1,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-12",
+      "ProgramCode": "CPHJ-02-36194-TJ-1131.NC",
+      "Output": 2,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "ZXGW-00-05-52148-A3U-FX.NC",
+      "Output": 2,
+      "OutputSumSecond": 381,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "ZXGW-00-05-44208-A1F-FX.NC",
+      "Output": 5,
+      "OutputSumSecond": 2403,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "ZJJZHJ-05-10-32126-01.NC",
+      "Output": 1,
+      "OutputSumSecond": 2290,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "XGSZZ-GB-02-09-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 4022,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "XGSZZ-GB-02-08-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 4400,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "XGSZZ-GB-02-08-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 3544,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "TM07-02-203-73275-CNC2.NC",
+      "Output": 24,
+      "OutputSumSecond": 798,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "TM07-02-203-73275-CNC1.NC",
+      "Output": 32,
+      "OutputSumSecond": 13927,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "PXDJC-01-60210-Z12-FF.NC",
+      "Output": 5,
+      "OutputSumSecond": 4047,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "FBPHJ-02-ZH49234-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 304,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-13",
+      "ProgramCode": "FBPHJ-02-ZH49234-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 6450,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-14",
+      "ProgramCode": "XGSZZ-GB-02-09-CNC2.NC",
+      "Output": 11,
+      "OutputSumSecond": 13957,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-14",
+      "ProgramCode": "XGSZZ-GB-02-08-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 4397,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "XGSZZ-GB-02-07-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 322,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "XGSZZ-GB-02-07-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 1548,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "XGSFB-GB-01-01-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 318,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "XGSFB-GB-01-01-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 2971,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "JZHJ-02-ZH73288-CNC1.NC",
+      "Output": 14,
+      "OutputSumSecond": 20491,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "GSZJHJ-18-01-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 266,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "GSZJHJ-18-01-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 2938,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "GSZJHJ-11-01-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 178,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "GSZJHJ-11-01-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 1905,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "FBPHJ-02-ZH73288-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 260,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "FBPHJ-02-ZH73288-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 7865,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "FBPHJ-02-ZH54215-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 4645,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "FBPHJ-02-CN73288T-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 257,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-15",
+      "ProgramCode": "FBPHJ-02-CN73288T-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 8383,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "YMJ-04-LG46100-TJ-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 180,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "YMJ-04-LG46100-TJ-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 1816,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "XGSZZ08-55.NC",
+      "Output": 54,
+      "OutputSumSecond": 3549,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JZTL-05-YJ75320-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 377,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JZTL-05-YJ75320-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2866,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JZTL-05-XWD72288-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 838,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JZTL-05-XWD72288-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 4775,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JZTL-05-66247-Z11.NC",
+      "Output": 6,
+      "OutputSumSecond": 853,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JZGB-01-ZH49234-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 360,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JZGB-01-ZH49234-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 1531,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JZ07-011-002-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 2259,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "JSZL-02604-0099-002-A0-FX.NC",
+      "Output": 1,
+      "OutputSumSecond": 5231,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "FBPHJ-02-ZH54215-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 197,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "FBPHJ-02-ZH54215-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 314,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "CS07-22-003-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 3605,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "CS07-22-003-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 1662,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "CS07-02-003-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 424,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-16",
+      "ProgramCode": "CS07-02-003-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2275,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "MSPMD-01-XWD72288-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 6777,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-02-YW71173-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1710,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-02-YW71173-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 6163,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-02-YW56200-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 982,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-02-YW56200-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 7006,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-02-YW52148-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1840,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-02-YW52148-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 5668,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-01-YW71173-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1779,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-01-YW71173-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1960,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-01-YW56200-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1548,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-01-YW56200-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1951,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-01-YW52148-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1815,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZHJ-01-YW52148-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1626,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZ07-011-002-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 808,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "JZ07-011-002-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 5099,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "CS07-08-001-52148-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 4293,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-17",
+      "ProgramCode": "CS07-02-019-52148.NC",
+      "Output": 3,
+      "OutputSumSecond": 630,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "XSJLL-03-YJ75320.NC",
+      "Output": 2,
+      "OutputSumSecond": 1020,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "MSPMD-01-XWD72288-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 874,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "MSPMD-01-XWD72288-098-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 355,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "MSPMD-01-XWD72288-098-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 5829,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "LKNY-02-ZH54215-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 598,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZTL-03-YJ75320.NC",
+      "Output": 1,
+      "OutputSumSecond": 464,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZTL-03-XWD72288.NC",
+      "Output": 2,
+      "OutputSumSecond": 1218,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZTL-01-YJ75320-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 103,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZTL-01-YJ75320-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 5786,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZTL-01-XWD72288-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 207,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZTL-01-XWD72288-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 7503,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZHJ-05-YW52148.NC",
+      "Output": 5,
+      "OutputSumSecond": 5812,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZHJ-02-XWD72288-Z14-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 990,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZHJ-02-XWD72288-Z14-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 4787,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZHJ-01-XWD72288-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1294,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-18",
+      "ProgramCode": "JZHJ-01-XWD72288-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1534,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "ZJ-01-52148-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 50,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "ZJ-01-52148.NC",
+      "Output": 4,
+      "OutputSumSecond": 1012,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "LKNY-02-ZH54215-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 2170,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "LKNY-01-ZH54215-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 5091,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "LKNY-01-ZH54215-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 8973,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "JZHJ-06-XWD72288-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 66,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "JZHJ-06-XWD72288-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2683,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GS-WJZ02-01A-52148-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1018,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GS-WJZ02-01A-52148-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1558,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-28-01-52148-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 439,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-28-01-52148-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 3942,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-18-12-52148-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 401,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-18-12-52148-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 915,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-13-06-52148-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 551,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-13-06-52148-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1332,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-06-03-52148-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 366,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-06-03-52148-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 5368,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-05-09-52148-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 717,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "GSJZ-05-09-52148-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2932,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "CPZZ-02-189-TJ-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 302,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-21",
+      "ProgramCode": "CPZZ-02-189-TJ-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 7627,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "ZHHJ-02-55501-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 5041,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "XSJLL-03-XWD72288.NC",
+      "Output": 6,
+      "OutputSumSecond": 3346,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "XSJLL-03-44208-A4T.NC",
+      "Output": 1,
+      "OutputSumSecond": 419,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "LTZJHJ-05-75320-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 1542,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "LTZJHJ-05-75320-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 693,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "JZHJ-06-YW71173.NC",
+      "Output": 3,
+      "OutputSumSecond": 1455,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "JZHJ-06-YW56200.NC",
+      "Output": 2,
+      "OutputSumSecond": 890,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "JZHJ-05-YW71173.NC",
+      "Output": 2,
+      "OutputSumSecond": 6415,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "JZHJ-05-YW56200.NC",
+      "Output": 4,
+      "OutputSumSecond": 7929,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "GSMY-03-080-2-M21-26148-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 1996,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "GSMY-03-080-2-M21-26148-CNC1.NC",
+      "Output": 13,
+      "OutputSumSecond": 3433,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "GSJZ-28-05-52148-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 312,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "GSJZ-28-05-52148-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 933,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "3TJT-02-CCJTY-TJ-CNC2.NC",
+      "Output": 11,
+      "OutputSumSecond": 6212,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-22",
+      "ProgramCode": "3TJT-02-CCJTY-TJ-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 3870,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "ZHHJ-02-55501-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 6736,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "ZHHJ-02-55501-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 8673,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "JZHJ-05-75320.NC",
+      "Output": 1,
+      "OutputSumSecond": 6807,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "JZHJ-02-75320-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 2703,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "JZHJ-02-75320-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 11730,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "JJ-CS-02-52148.NC",
+      "Output": 2,
+      "OutputSumSecond": 869,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "GSJZ-05-10-52148.NC",
+      "Output": 9,
+      "OutputSumSecond": 2498,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "222.NC",
+      "Output": 4,
+      "OutputSumSecond": 7275,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-23",
+      "ProgramCode": "111.NC",
+      "Output": 5,
+      "OutputSumSecond": 3382,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-24",
+      "ProgramCode": "ZZ08-37-110B-ZH49215-CNC1.NC",
+      "Output": 117,
+      "OutputSumSecond": 7100,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-24",
+      "ProgramCode": "Y-BC-002-CNC1.NC",
+      "Output": 35,
+      "OutputSumSecond": 25952,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-24",
+      "ProgramCode": "JZHJ-06-YW52148.NC",
+      "Output": 5,
+      "OutputSumSecond": 2096,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-24",
+      "ProgramCode": "JZHJ-06-75320-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 3919,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-24",
+      "ProgramCode": "JZHJ-05-75320.NC",
+      "Output": 3,
+      "OutputSumSecond": 15534,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "Y-BC-002-CNC2.NC",
+      "Output": 43,
+      "OutputSumSecond": 5946,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "Y-BC-002-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 6633,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "PMDJC-01-52148-Z06-1135-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "KTGSSB-02-21-ZH4695-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 328,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "KTGSSB-02-21-ZH4695-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 511,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "KTGSSB-01-02-ZH4695-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 349,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "KTGSSB-01-02-ZH4695-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 4018,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "JZHJ-06-YW52148.NC",
+      "Output": 1,
+      "OutputSumSecond": 382,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "GS-FB05-05-2-CNC2.NC",
+      "Output": 16,
+      "OutputSumSecond": 4724,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-25",
+      "ProgramCode": "GS-FB05-05-2.NC",
+      "Output": 4,
+      "OutputSumSecond": 1284,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "YT07-02-121-CN32293-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 6062,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "NYCS-03-04A-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 176,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "NYCS-03-04A-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 700,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "NYCS-02-07A-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 7699,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "NYCS-02-07A-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 8470,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "KTGCSB-02-25-ZH4695.NC",
+      "Output": 1,
+      "OutputSumSecond": 639,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "KTGCSB-02-23-ZH4695.NC",
+      "Output": 1,
+      "OutputSumSecond": 638,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-27",
+      "ProgramCode": "KTGCSB-02-19-ZH4695.NC",
+      "Output": 2,
+      "OutputSumSecond": 382,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-28",
+      "ProgramCode": "YT07-02-121-CN32293-CNC2.NC",
+      "Output": 12,
+      "OutputSumSecond": 7959,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-28",
+      "ProgramCode": "YT07-02-121-CN32293-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 11583,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "YT07-03-703-CN39300-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 5729,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "YT07-03-703-CN39300-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 13568,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "YT07-03-701A-CN39300-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 299,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "YT07-03-701A-CN39300-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2334,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "XWBCJHJ-01-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 417,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "XWBCJHJ-01-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 1983,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "NYCS-02-09A-FF.NC",
+      "Output": 2,
+      "OutputSumSecond": 994,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "KTGCSB-03-03-ZH4695.NC",
+      "Output": 2,
+      "OutputSumSecond": 590,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "CS17-13-003-72173-315-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 10157,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "CS17-13-003-72173-315-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 4781,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-29",
+      "ProgramCode": "CPHJ-01-73288-588A-CV.NC",
+      "Output": 5,
+      "OutputSumSecond": 5686,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "YT07-03-702-CN39300-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 186,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "YT07-03-702-CN39300-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 5495,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "YT07-03-701A-CN39300-FF-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 298,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "YT07-03-701A-CN39300-FF-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 3024,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "YT07-02-501-CN37309-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 325,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "YT07-02-501-CN37309-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1162,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "JZNY-02-73288-588A-CV.NC",
+      "Output": 1,
+      "OutputSumSecond": 964,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "JZNY-02-34148.NC",
+      "Output": 1,
+      "OutputSumSecond": 495,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "JZNY-01-73288-588A-CV-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2040,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "JZNY-01-34148-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 709,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "FQKHJ-05-73288-588A-CV.NC",
+      "Output": 1,
+      "OutputSumSecond": 1995,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "CPZZYM-01-73288-588A-CV.NC",
+      "Output": 1,
+      "OutputSumSecond": 2294,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "CPHJ-02-75320.NC",
+      "Output": 1,
+      "OutputSumSecond": 793,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "CPHJ-02-73288-588A-1125.NC",
+      "Output": 4,
+      "OutputSumSecond": 3071,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "CPHJ-02-34148-1141.NC",
+      "Output": 3,
+      "OutputSumSecond": 1458,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "CPHJ-01-75320.NC",
+      "Output": 1,
+      "OutputSumSecond": 3274,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "CPHJ-01-73288-588A-CV.NC",
+      "Output": 2,
+      "OutputSumSecond": 5059,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "CPHJ-01-34148-1141.NC",
+      "Output": 3,
+      "OutputSumSecond": 4242,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "BCPFBPHJ-01-73288-588A-CV.NC",
+      "Output": 1,
+      "OutputSumSecond": 2910,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "BCPCPHXBP-02-73288-588A-CV.NC",
+      "Output": 4,
+      "OutputSumSecond": 3795,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "BCPCPHXBP-02-34148.NC",
+      "Output": 3,
+      "OutputSumSecond": 1392,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "BCPCPHXBP-01-34148-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2124,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-06-30",
+      "ProgramCode": "1111.NC",
+      "Output": 4,
+      "OutputSumSecond": 3461,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "TM07-04-203-73275-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2891,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "TM07-04-203-73275-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2478,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "QMJ-10-08-A0-A-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 1134,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "QMJ-10-08-A0-A-CNC1.NC",
+      "Output": 13,
+      "OutputSumSecond": 5327,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "LYZJ38-17-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 2213,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "LYZJ38-17-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2512,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "LYZJ38-15-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 615,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "LYZJ38-15-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 1683,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "LYZJ38-14-FF-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 1231,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "LYZJ38-14-FF-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1062,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "JSXQJY-07-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 603,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "JSXQJY-07-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1248,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "GDCL-01-73288-588A-CV.NC",
+      "Output": 3,
+      "OutputSumSecond": 4727,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "CS17-13-004-72173-315-FX.NC",
+      "Output": 4,
+      "OutputSumSecond": 828,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "CPSJ-02-GF72287.NC",
+      "Output": 1,
+      "OutputSumSecond": 1013,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "CPSJ-01-GF72287-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1082,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "CPBP-02-GF72287.NC",
+      "Output": 1,
+      "OutputSumSecond": 826,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "CPBP-01-GF72287-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1857,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "BCPHXBP-02-GF72287.NC",
+      "Output": 1,
+      "OutputSumSecond": 601,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-01",
+      "ProgramCode": "BCPHXBP-01-GF72287.NC",
+      "Output": 1,
+      "OutputSumSecond": 1782,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "YLJ-04-428-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 277,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "YLJ-04-428-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 773,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "YLJ-03-116-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 1558,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "YLJ-03-116-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1085,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "YLJ-02-116-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 795,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "YLJ-02-116-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2327,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "YJ07-06-040-CNC1.NC",
+      "Output": 53,
+      "OutputSumSecond": 19366,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "LYZJ38-15-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 325,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "GBZX-01-34148-1141-CNC3.NC",
+      "Output": 5,
+      "OutputSumSecond": 1601,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "GBZX-01-34148-1141-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 2968,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-02",
+      "ProgramCode": "GBZX-01-34148-1141-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1342,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "YJ07-06-040-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 361,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "TM07-02-305-73275.NC",
+      "Output": 14,
+      "OutputSumSecond": 22574,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "GS-FZ8-34-04-26301-CNC2.NC",
+      "Output": 10,
+      "OutputSumSecond": 1557,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "GS-FZ8-34-04-26301-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 8436,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "GS-FZ8-34-04-26301-CC-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 6738,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "GS-FZ8-34-04-26301-BB-CNC2.NC",
+      "Output": 8,
+      "OutputSumSecond": 792,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "GS-FZ8-34-04-26301-BB-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 3782,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "CPNY-01-30194-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1653,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "CPHXBP-01-30194-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 3441,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-03",
+      "ProgramCode": "CPHJ-02-77-22.NC",
+      "Output": 3,
+      "OutputSumSecond": 1857,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "JZNY-01-73288-588A-CV-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2928,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "JZNY-01-34148-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2668,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "HXBP-01-30265-004-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1772,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "GS-ZS-05-01-CN52148-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 904,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "GS-ZS-05-01-CN52148-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 3972,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "CPSJ-01-GF72287-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 10620,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "CPBP-01-GF72287-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 4487,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "BCPCPHXBP-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 4683,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "BCPCPHXBP-01-34148-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 7045,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-04",
+      "ProgramCode": "22222.N",
+      "Output": 8,
+      "OutputSumSecond": 15576,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-05",
+      "ProgramCode": "YJ07-06-039-6061-CNC1.NC",
+      "Output": 16,
+      "OutputSumSecond": 19523,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-05",
+      "ProgramCode": "HXBP-01-30265-004-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1529,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-06",
+      "ProgramCode": "YJ07-06-039-6061-CNC1.NC",
+      "Output": 33,
+      "OutputSumSecond": 51259,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-07",
+      "ProgramCode": "YJ07-06-041-41246-CNC1.NC",
+      "Output": 13,
+      "OutputSumSecond": 21818,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-07",
+      "ProgramCode": "YJ07-06-039-6061-CNC1.NC",
+      "Output": 22,
+      "OutputSumSecond": 39902,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-08",
+      "ProgramCode": "YJ07-06-041-41246-CNC1.NC",
+      "Output": 25,
+      "OutputSumSecond": 66611,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-09",
+      "ProgramCode": "YJ07-06-041-41246-CNC1.NC",
+      "Output": 20,
+      "OutputSumSecond": 43677,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-09",
+      "ProgramCode": "37309-CC-SS-FF-CNC2.NC",
+      "Output": 9,
+      "OutputSumSecond": 7675,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-09",
+      "ProgramCode": "37309-CC-SS-FF-CNC1.NC",
+      "Output": 10,
+      "OutputSumSecond": 2663,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "PMDJC-01-XWD-50160-Z08-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 486,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "PMDJC-01-XWD-50160-Z08-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2354,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "GSZJHJ-15-36-3-73310-A40.NC",
+      "Output": 1,
+      "OutputSumSecond": 539,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "GSZJHJ-15-36-2-73310-A40.NC",
+      "Output": 1,
+      "OutputSumSecond": 664,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "GSZJHJ-15-35-1-73310-A40.NC",
+      "Output": 3,
+      "OutputSumSecond": 1110,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "GSZJHJ-15-25-73310-A40-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 320,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "GSZJHJ-15-25-73310-A40-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 1365,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "GSZJHJ-15-25-1-73310-A40-CNC2.N",
+      "Output": 1,
+      "OutputSumSecond": 269,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "GSZJHJ-15-25-1-73310-A40-CNC1.N",
+      "Output": 3,
+      "OutputSumSecond": 1358,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "CPHJ-03-50209-1-CNC2.NC",
+      "Output": 22,
+      "OutputSumSecond": 32719,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "CPHJ-03-50209-1-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2259,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "CPBP-02-XWD-50160-Z11-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 155,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "CPBP-02-XWD-50160-Z11-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 599,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-10",
+      "ProgramCode": "37309-CC-SS-FF-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1432,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "ZZ07-37-069-FF-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 1785,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "ZZ07-37-069-FF-CNC1.NC",
+      "Output": 11,
+      "OutputSumSecond": 9884,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "Y-BC-011-32106.NC",
+      "Output": 1,
+      "OutputSumSecond": 563,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "JZNY-02-52148-B4Y.NC",
+      "Output": 3,
+      "OutputSumSecond": 1200,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "JZNY-01-52148-B4Y-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1437,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "JZHJ-01-52148-B4Y.NC",
+      "Output": 3,
+      "OutputSumSecond": 2204,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "FQKHJ-05-73288-588A-CV.NC",
+      "Output": 1,
+      "OutputSumSecond": 1989,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPZZYM-01-73288-059.NC",
+      "Output": 4,
+      "OutputSumSecond": 7868,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPZZ-03-1345-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 369,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPZZ-03-1345-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2969,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPZZ-02-854-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 330,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPZZ-02-854-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2336,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPHX-01-XWD-50160-Z12-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 114,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPHX-01-XWD-50160-Z12-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 112,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPHX-01-XWD-50160-Z11-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 489,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPHX-01-XWD-50160-Z11-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2972,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "CPHJ-01-52148-B4Y.NC",
+      "Output": 4,
+      "OutputSumSecond": 6305,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "BCPCPHXBP-02-52148-B4Y.NC",
+      "Output": 2,
+      "OutputSumSecond": 1085,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "BCPCPHXBP-01-52148-B4Y-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1432,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-11",
+      "ProgramCode": "2026-7-11-FF.NC",
+      "Output": 1,
+      "OutputSumSecond": 50,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "ZZ08-11-050-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 3870,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "SJDMJZDMGDJC-03-52148-B4Y.NC",
+      "Output": 4,
+      "OutputSumSecond": 1881,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "JZHJZX-01-52148-B4Y-CNC3.NC",
+      "Output": 3,
+      "OutputSumSecond": 773,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "JZHJZX-01-52148-B4Y-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 557,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "JZHJZX-01-52148-B4Y-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 385,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "GDJC-01-52148-B4Y.NC",
+      "Output": 1,
+      "OutputSumSecond": 815,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "FBPHJ-01-52148-B4Y.NC",
+      "Output": 3,
+      "OutputSumSecond": 2687,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "CPHJ-02-52148-B4Y.NC",
+      "Output": 5,
+      "OutputSumSecond": 2772,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-12",
+      "ProgramCode": "CPCL-01-39148.NC",
+      "Output": 1,
+      "OutputSumSecond": 851,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "ZZ08-11-053-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 1542,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "ZZ08-11-053-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 8184,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "ZZ08-11-050-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 1285,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "ZZ08-11-050-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 3991,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "WZHJ-03-48-73288-588A.NC",
+      "Output": 8,
+      "OutputSumSecond": 10830,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "CPZZYM-01-73288-588A.NC",
+      "Output": 2,
+      "OutputSumSecond": 2255,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "CPHJ-02-73288-588A.NC",
+      "Output": 4,
+      "OutputSumSecond": 2313,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "CPHJ-01-73288-588A-1153.NC",
+      "Output": 4,
+      "OutputSumSecond": 7444,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-13",
+      "ProgramCode": "BCPFBPHJ-01-73288-588A.NC",
+      "Output": 5,
+      "OutputSumSecond": 8846,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "JZNY-02-50206-1341.NC",
+      "Output": 1,
+      "OutputSumSecond": 321,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "GSCS22-052-60194-CNC2.NC",
+      "Output": 50,
+      "OutputSumSecond": 14066,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "GSCS22-052-60194-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 215,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "GSCS22-051-60194-CNC1.NC",
+      "Output": 24,
+      "OutputSumSecond": 14913,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "CPZZYM-01-73288-588A.NC",
+      "Output": 3,
+      "OutputSumSecond": 4899,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "CPHXBP-02-50206-1341.NC",
+      "Output": 2,
+      "OutputSumSecond": 1105,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "CPHXBP-01-50206-1341-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 3475,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "BCPBP-02-50206.NC",
+      "Output": 1,
+      "OutputSumSecond": 107,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-14",
+      "ProgramCode": "BCPBP-01-50206.NC",
+      "Output": 1,
+      "OutputSumSecond": 1408,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-15",
+      "ProgramCode": "YJ07-07-013-CNC2.NC",
+      "Output": 39,
+      "OutputSumSecond": 25057,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-15",
+      "ProgramCode": "YJ07-07-013-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 577,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-15",
+      "ProgramCode": "GSCS22-051-60194-CNC1.NC",
+      "Output": 31,
+      "OutputSumSecond": 19858,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "YJ07-07-013-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 4141,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "FBPHJ-01-SX-32126-03-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "CS17-14-014-37309-CNC2.NC",
+      "Output": 10,
+      "OutputSumSecond": 1892,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "CS17-14-014-37309-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 5650,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "CS17-13-004-37309-168A-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 5264,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "CS17-13-004-37309-168A-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 9079,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "37309-CC-SS-XX-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 3435,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-16",
+      "ProgramCode": "37309-CC-SS-XX-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 26925,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-17",
+      "ProgramCode": "TM07-04-004-01-73288-CNC1.NC",
+      "Output": 17,
+      "OutputSumSecond": 12677,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-17",
+      "ProgramCode": "GSFL-DJ-01-CNC2.NC",
+      "Output": 37,
+      "OutputSumSecond": 24415,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-17",
+      "ProgramCode": "GSFL-DJ-01-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 577,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-17",
+      "ProgramCode": "FBPHJ-01-SX-32126-03-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 9184,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-17",
+      "ProgramCode": "FBPHJ-01-SX-32126-03-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 3707,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-18",
+      "ProgramCode": "YJ07-06-039-41246-CNC2.NC",
+      "Output": 16,
+      "OutputSumSecond": 39475,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-18",
+      "ProgramCode": "YJ07-06-039-41246-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 783,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-18",
+      "ProgramCode": "TM07-04-004-01-73288-CNC1.NC",
+      "Output": 20,
+      "OutputSumSecond": 14050,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-19",
+      "ProgramCode": "YJ07-06-041-41246-CNC2.NC",
+      "Output": 10,
+      "OutputSumSecond": 24468,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-19",
+      "ProgramCode": "YJ07-06-041-41246-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 739,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-19",
+      "ProgramCode": "YJ07-06-039-41246-CNC2.NC",
+      "Output": 9,
+      "OutputSumSecond": 15816,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-20",
+      "ProgramCode": "YJ07-07-013-CNC1.NC",
+      "Output": 24,
+      "OutputSumSecond": 15438,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-20",
+      "ProgramCode": "YJ07-06-041-41246-CNC2.NC",
+      "Output": 17,
+      "OutputSumSecond": 38524,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-21",
+      "ProgramCode": "YJ07-07-013-CNC1.NC",
+      "Output": 76,
+      "OutputSumSecond": 57598,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-22",
+      "ProgramCode": "YJ07-07-013-CNC1.NC",
+      "Output": 16,
+      "OutputSumSecond": 25758,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-22",
+      "ProgramCode": "CPJZNY-01-73275-794-560-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 7176,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-22",
+      "ProgramCode": "CPJZNY-01-29265-006-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1559,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-22",
+      "ProgramCode": "CPHXBP-01-73310-A40-559-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 19230,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-22",
+      "ProgramCode": "CPBCPHXBP-01-54173-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 2043,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-22",
+      "ProgramCode": "BCPCPHXBP-01-29265-006-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 4391,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-22",
+      "ProgramCode": "BCPBPYCPHXBP-01-CNC2.NC",
+      "Output": 17,
+      "OutputSumSecond": 39316,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-23",
+      "ProgramCode": "GSZJHJ-15-57-CNC2.NC",
+      "Output": 52,
+      "OutputSumSecond": 128692,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-23",
+      "ProgramCode": "GSZJHJ-15-57-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 8368,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-23",
+      "ProgramCode": "CPJZNY-01-73275-794-560-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 18025,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-24",
+      "ProgramCode": "WXCL-01-46135.NC",
+      "Output": 6,
+      "OutputSumSecond": 2193,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-24",
+      "ProgramCode": "TCLZZ-01-73288.NC",
+      "Output": 4,
+      "OutputSumSecond": 8629,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-24",
+      "ProgramCode": "HJFJ-20-186-CNC1.NC",
+      "Output": 28,
+      "OutputSumSecond": 12470,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-24",
+      "ProgramCode": "GSZJHJ-15-63-CNC2.NC",
+      "Output": 33,
+      "OutputSumSecond": 54912,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-24",
+      "ProgramCode": "GSZJHJ-15-63-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 545,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-24",
+      "ProgramCode": "GSZJHJ-15-57-CNC2.NC",
+      "Output": 15,
+      "OutputSumSecond": 28915,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-25",
+      "ProgramCode": "TCLZZ-01-73288.NC",
+      "Output": 10,
+      "OutputSumSecond": 59597,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-25",
+      "ProgramCode": "HJ06-04-006-C-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 14420,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-27",
+      "ProgramCode": "HJ06-04-006-C-CNC2.NC",
+      "Output": 10,
+      "OutputSumSecond": 8210,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-27",
+      "ProgramCode": "HJ06-04-006-C-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 16676,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-27",
+      "ProgramCode": "CPZZ-02-1157-TJ-CNC1.NC",
+      "Output": 12,
+      "OutputSumSecond": 31080,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "YJHJ-02-ZH41246-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 643,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "YJHJ-02-ZH38300-F68A-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 365,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "YJHJ-02-ZH38300-F68A-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 27508,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "YJHJ-01-ZH41246-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 3104,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "YJHJ-01-ZH41246-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 8389,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "YJHJ-01-ZH38300-F168A-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 11478,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "YJHJ-01-ZH38300-F168A-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 4808,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "XHJFJ-31A-07-1-CNC2.NC",
+      "Output": 8,
+      "OutputSumSecond": 5075,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "XHJFJ-31A-07-1-CNC1.NC",
+      "Output": 18,
+      "OutputSumSecond": 13942,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-28",
+      "ProgramCode": "CPZZ-02-1157-TJ-CNC2.NC",
+      "Output": 9,
+      "OutputSumSecond": 5372,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "YJHJ-02-ZH41246-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 2742,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "YJHJ-02-ZH41246-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 16569,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "XHJFJ-CL02-03-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 2631,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "XHJFJ-CL02-03-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 10780,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "XHJFJ-CL02-01-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 930,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "XHJFJ-CL02-01-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 13176,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "JZHJ-01-72288-588A-CNC2.NC",
+      "Output": 4,
+      "OutputSumSecond": 3887,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "JZHJ-01-72288-588A-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 6121,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "HJFJ-16-114-1-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 4206,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "HJFJ-16-114-1-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 4461,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "HJFJ-16-114-1-BB-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "HJFJ-16-114-1-BB-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 455,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-29",
+      "ProgramCode": "FQKHJ-01-48-73288-588A-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2810,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "MDI.PRG",
+      "Output": 1,
+      "OutputSumSecond": 1662,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "LHHJ-02-XWD-45220-Z04-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 3159,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "LHHJ-02-XWD-45220-Z04-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 4302,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "JZHJ-05-XWD72288-098.NC",
+      "Output": 7,
+      "OutputSumSecond": 49476,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "JZHJ-02-48-73288-588A-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2662,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "FQKHJ-02-73288-588A-CV-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 6885,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "FQKHJ-02-73288-588A-CV-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 17112,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "FQKHJ-01-48-73288-588A-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 8771,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-30",
+      "ProgramCode": "FQKHJ-01-48-73288-588A-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 2243,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "XGSFB-LPHC-03-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 1900,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "XGSFB-LPHC-03-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2897,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "MSPMD-01-XWD-45220-Z09-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2156,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "LHHJ-05-XWD45220-Z04.NC",
+      "Output": 1,
+      "OutputSumSecond": 6035,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "LHHJ-01-XWD-45220-Z04-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 563,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "JZTL-05-XWD-45220-Z10-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 2941,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "JZTL-05-XWD-45220-Z10-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2639,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "JZHJ-06-XWD-45220-Z04-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 453,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "JZHJ-06-XWD-45220-Z04-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 2199,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "JZHJ-02-77287-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 5750,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "JZHJ-02-48-73288-588A-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 11353,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "JZHJ-02-48-73288-588A-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 13656,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "FJZTL-05-XWD-45220-Z11-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1300,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-07-31",
+      "ProgramCode": "FJZTL-05-XWD-45220-Z11-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 980,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "YJHJ-07-ZH38300-F166A-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 12008,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "MSPMD-01-XWD-45220-Z09-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 643,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "MSPMD-01-XWD-45220-Z09-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1989,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "JZTL-01-73310-K10-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 4274,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "JZHJ-05-73310-K02.NC",
+      "Output": 3,
+      "OutputSumSecond": 7152,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "JZHJ-02-XWD72288-Z14-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 2279,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "JZHJ-02-XWD72288-Z14-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 11017,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "JZHJ-02-73310-K02-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 5345,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "JZHJ-01-73310-K02-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1417,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "JZHJ-01-73310-K02-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 3927,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "CPZZ-02-1159-FF-TJ-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 4401,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "CPHJ-02-ZH46116-TJ-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 338,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-01",
+      "ProgramCode": "CPHJ-02-ZH46116-TJ-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 3229,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-03",
+      "ProgramCode": "YJHJ-07-ZH38300-F166A-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 1946,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-03",
+      "ProgramCode": "YJHJ-02-ZH38300-F68A-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 336,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-03",
+      "ProgramCode": "YJHJ-02-30205-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 1165,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-03",
+      "ProgramCode": "YJHJ-02-30205-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 8331,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-03",
+      "ProgramCode": "GSMY-04-05-73310-A3P-CNC2.NC",
+      "Output": 9,
+      "OutputSumSecond": 2931,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-03",
+      "ProgramCode": "GSMY-04-05-73310-A3P-CNC1.NC",
+      "Output": 19,
+      "OutputSumSecond": 46420,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "YJHJ-02-ZH38300-F68A-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 680,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "YJHJ-02-ZH38300-F68A-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 36745,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "YJHJ-01-ZH38300-F168A-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 11922,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "YJHJ-01-ZH38300-F168A-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 3487,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "YJHJ-01-30205-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 3069,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "CPZZ-02-HB208-TJ-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 10911,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "CPZZ-02-HB208-TJ-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 5868,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "BZDHJJ-03-24311-HJBZD-01-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 414,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "BZDHJJ-03-24311-HJBZD-01-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 5782,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-04",
+      "ProgramCode": "BZDHJJ-02-24311-HJBZD-01.NC",
+      "Output": 8,
+      "OutputSumSecond": 4367,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "XSJLL-03-67281-HOK-002.NC",
+      "Output": 4,
+      "OutputSumSecond": 10024,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "LHHJ-01-XWD-45220-Z04-FX.NC",
+      "Output": 2,
+      "OutputSumSecond": 4314,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "JZHJ-02-55175-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 18277,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "JZGB-01-30205-TJ-CNC1.NC",
+      "Output": 7,
+      "OutputSumSecond": 10509,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "CPZZ-02-189-TJ-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 3255,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "CPZZ-02-189-TJ-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 66510,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "CPZZ-02-1358-TJ-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 1660,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "CPZZ-02-1358-TJ-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 3111,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-05",
+      "ProgramCode": "CPZZ-02-1169-TJ-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 5898,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-06",
+      "ProgramCode": "YJHJ-07-30205-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-06",
+      "ProgramCode": "XZK-01-30205-CNC1.NC",
+      "Output": 6,
+      "OutputSumSecond": 5553,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-06",
+      "ProgramCode": "GSZJTM-04-13-CNC2.NC",
+      "Output": 36,
+      "OutputSumSecond": 19320,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-07",
+      "ProgramCode": "JZTL-01-77287-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 136,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-07",
+      "ProgramCode": "JZTL-01-77287-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 5453,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-07",
+      "ProgramCode": "JZTL-01-55175-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 114,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-07",
+      "ProgramCode": "JZTL-01-55175-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 11986,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-07",
+      "ProgramCode": "GSZJTM-04-13-CNC2.NC",
+      "Output": 33,
+      "OutputSumSecond": 28992,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "XSJLL-03-55175.NC",
+      "Output": 2,
+      "OutputSumSecond": 2704,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "JZTL-01-CN71173-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 3681,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "JZHJ-01-55175-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "GSTM-06-05A-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 127,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "GSTM-06-05A-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 4697,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "GSTM-06-03A-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 307,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "GS-GB-14-02-ZH57200-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 120,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "GS-GB-14-02-ZH57200-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 680,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "GBZZ65-54-1.NC",
+      "Output": 2,
+      "OutputSumSecond": 466,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-08",
+      "ProgramCode": "CATL-4695-161.NC",
+      "Output": 6,
+      "OutputSumSecond": 3406,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "XSJLL-03-48-37323.NC",
+      "Output": 1,
+      "OutputSumSecond": 1212,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "WMFBP-01-67281-HOK-002-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 14014,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "JZNY-01-48-37323-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 5412,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "JZHJ-01-48-37323-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "GSCS-CCD-08-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 232,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "GSCS-CCD-08-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2409,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "GSCS28-002-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 225,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "GSCS28-002-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 2190,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "CPJBCPBP-01-48-37323-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 10798,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "CPHXBP-01-55175-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-10",
+      "ProgramCode": "BCPYCPHXBP-01-55175-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 27620,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "TPIM-01-55175-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 139,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "JZNY-02-48-500CN-04.NC",
+      "Output": 2,
+      "OutputSumSecond": 1422,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "JZNY-01-48-500CN-04-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2391,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "HXBP-02-48-500CN.NC",
+      "Output": 2,
+      "OutputSumSecond": 986,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "FBFHJ-01-72287.NC",
+      "Output": 3,
+      "OutputSumSecond": 3656,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "CPHXBP-01-72287-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 1145,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "CPHJ-02-72287.NC",
+      "Output": 1,
+      "OutputSumSecond": 757,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "CPHJ-01-72287.NC",
+      "Output": 1,
+      "OutputSumSecond": 1606,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "CPCCCL-01-72287.NC",
+      "Output": 4,
+      "OutputSumSecond": 4561,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "CPBP-02-48-500CN.NC",
+      "Output": 1,
+      "OutputSumSecond": 392,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "CPBP-01-48-500CN-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 3111,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-11",
+      "ProgramCode": "BCPHXBP-01-72287.NC",
+      "Output": 1,
+      "OutputSumSecond": 1522,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "MY09-09-019-FF-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 172,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "JZHJ-03-37323-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1878,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "JZHJ-01-YJ-15150-Z07-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 356,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "JZHJ-01-YJ-15150-Z07-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 2835,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "JZHJ-01-36257-A3K-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 1629,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "JZHJ-01-36257-A3K-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 3053,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "JZHJ-01-32265-MOK-004-CNC2.NC",
+      "Output": 6,
+      "OutputSumSecond": 1842,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "JZHJ-01-32265-MOK-004-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 3974,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "FB07-12-003A-CNC2.NC",
+      "Output": 7,
+      "OutputSumSecond": 2149,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "FB07-12-003A-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 1618,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "CPZZ-01-216-1059-CNC2.NC",
+      "Output": 5,
+      "OutputSumSecond": 2164,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "CPZZ-01-216-1059-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 520,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "2222.NC",
+      "Output": 5,
+      "OutputSumSecond": 1620,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-12",
+      "ProgramCode": "1111.NC",
+      "Output": 2,
+      "OutputSumSecond": 822,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-13",
+      "ProgramCode": "OSHJ-01-06-591-S-CNC2.NC",
+      "Output": 22,
+      "OutputSumSecond": 27263,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-13",
+      "ProgramCode": "OSHJ-01-06-591-S-CNC1.NC",
+      "Output": 11,
+      "OutputSumSecond": 8202,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-13",
+      "ProgramCode": "MY09-09-036-FF-CNC2.NC",
+      "Output": 2,
+      "OutputSumSecond": 165,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-13",
+      "ProgramCode": "MY09-09-036-FF-CNC1.NC",
+      "Output": 5,
+      "OutputSumSecond": 3596,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-13",
+      "ProgramCode": "MY09-09-019-FF-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 53,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-13",
+      "ProgramCode": "MY09-09-019-FF-CNC1.NC",
+      "Output": 9,
+      "OutputSumSecond": 7606,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-14",
+      "ProgramCode": "GS-HJ01-ZH41246-CNC1.NC",
+      "Output": 17,
+      "OutputSumSecond": 43877,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-14",
+      "ProgramCode": "CS17-14-014-32106-CNC2.NC",
+      "Output": 3,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-14",
+      "ProgramCode": "CS17-14-014-32106-CNC1.NC",
+      "Output": 3,
+      "OutputSumSecond": 423,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-14",
+      "ProgramCode": "CS17-13-006-33238-CNC1.NC",
+      "Output": 4,
+      "OutputSumSecond": 2834,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-14",
+      "ProgramCode": "CS07-12-015-33238.NC",
+      "Output": 12,
+      "OutputSumSecond": 1587,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-15",
+      "ProgramCode": "GS-HJ01-ZH41246-CNC3.NC",
+      "Output": 30,
+      "OutputSumSecond": 30815,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-15",
+      "ProgramCode": "GS-HJ01-ZH41246-CNC2.NC",
+      "Output": 29,
+      "OutputSumSecond": 20315,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-15",
+      "ProgramCode": "GS-HJ01-ZH41246-CNC1.NC",
+      "Output": 8,
+      "OutputSumSecond": 20180,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-16",
+      "ProgramCode": "GS-HJ01-ZH41246-CNC3.NC",
+      "Output": 14,
+      "OutputSumSecond": 16006,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-17",
+      "ProgramCode": "ZJZJHJ-03-72288-ZJ-K03.NC",
+      "Output": 7,
+      "OutputSumSecond": 12077,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-17",
+      "ProgramCode": "ZJZJHJ-01-73288-ZJ-K03-CNC2.NC",
+      "Output": 1,
+      "OutputSumSecond": 0,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-17",
+      "ProgramCode": "ZJZJHJ-01-73288-ZJ-K03-CNC1.NC",
+      "Output": 1,
+      "OutputSumSecond": 846,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-17",
+      "ProgramCode": "GS-HJ01-ZH41246-CNC3.NC",
+      "Output": 10,
+      "OutputSumSecond": 13606,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-17",
+      "ProgramCode": "FBPHJ-01-CN73288-FF.NC",
+      "Output": 5,
+      "OutputSumSecond": 8225,
+      "PlanOutput": 0
+    },
+    {
+      "date": "2026-08-17",
+      "ProgramCode": "BCPZX-03-75-72287-CNC1.NC",
+      "Output": 2,
+      "OutputSumSecond": 825,
+      "PlanOutput": 0
+    }
+  ],
+  "spindle_snapshot": {
+    "fetched_at": "2026-09-16 15:18:57",
+    "Speed": "0",
+    "Load": "0",
+    "Feed": "",
+    "XLoad": "",
+    "YLoad": "",
+    "ZLoad": "",
+    "ProgramCode": "",
+    "KnifePosition": ""
+  }
+}

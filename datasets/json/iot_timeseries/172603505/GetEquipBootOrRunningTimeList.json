@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "bf557159-ead4-4f47-913f-216b4b2a1e04"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:45:01",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "bf557159-ead4-4f47-913f-216b4b2a1e04",
+      "CustomerName": "无锡创科奇精密制造有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 3,
+      "StatsEquipCount": 3,
+      "TotalRunningTime": 7541626,
+      "TotalRunningTimeStr": "2094小时53分钟46秒",
+      "TotalBootTime": 16623070,
+      "TotalBootTimeStr": "4617小时31分钟10秒",
+      "HoursTiantaiTime": 20654,
+      "HoursTiantaiTimeStr": "5小时44分钟14秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

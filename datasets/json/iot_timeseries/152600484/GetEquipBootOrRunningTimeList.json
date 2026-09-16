@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "dc90947f-b057-411e-b3ee-9b53e0802053"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-16T15:44:55",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "dc90947f-b057-411e-b3ee-9b53e0802053",
+      "CustomerName": "重庆锦鸿工程机械有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 5,
+      "StatsEquipCount": 5,
+      "TotalRunningTime": 954578,
+      "TotalRunningTimeStr": "265小时9分钟38秒",
+      "TotalBootTime": 1835257,
+      "TotalBootTimeStr": "509小时47分钟37秒",
+      "HoursTiantaiTime": 7343,
+      "HoursTiantaiTimeStr": "2小时2分钟23秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

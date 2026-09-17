@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "d5846912-2daa-406e-91fa-4cd1cc7361f8"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-17T07:37:43",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "d5846912-2daa-406e-91fa-4cd1cc7361f8",
+      "CustomerName": "江苏灿领精密科技有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 20,
+      "StatsEquipCount": 19,
+      "TotalRunningTime": 2033721,
+      "TotalRunningTimeStr": "564小时55分钟21秒",
+      "TotalBootTime": 2839647,
+      "TotalBootTimeStr": "788小时47分钟27秒",
+      "HoursTiantaiTime": 4117,
+      "HoursTiantaiTimeStr": "1小时8分钟37秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

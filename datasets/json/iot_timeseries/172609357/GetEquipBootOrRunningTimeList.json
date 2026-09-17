@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "91426f3d-82b4-4343-a095-bbb7595fd022"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-17T07:33:11",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "91426f3d-82b4-4343-a095-bbb7595fd022",
+      "CustomerName": "盐城市鑫飞机械配件厂（普通合伙）",
+      "CustomerCount": 0,
+      "EquipCount": 2,
+      "StatsEquipCount": 2,
+      "TotalRunningTime": 625563,
+      "TotalRunningTimeStr": "173小时46分钟3秒",
+      "TotalBootTime": 1915103,
+      "TotalBootTimeStr": "531小时58分钟23秒",
+      "HoursTiantaiTime": 11751,
+      "HoursTiantaiTimeStr": "3小时15分钟51秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

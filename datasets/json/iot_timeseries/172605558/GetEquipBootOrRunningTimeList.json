@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "0d4061d2-19f7-4c65-8013-e1dcd9cbd5c8"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-17T07:33:08",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "0d4061d2-19f7-4c65-8013-e1dcd9cbd5c8",
+      "CustomerName": "东莞市康斯金属制品有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 30,
+      "StatsEquipCount": 30,
+      "TotalRunningTime": 134928554,
+      "TotalRunningTimeStr": "37480小时9分钟14秒",
+      "TotalBootTime": 198509968,
+      "TotalBootTimeStr": "55141小时39分钟28秒",
+      "HoursTiantaiTime": 38502,
+      "HoursTiantaiTimeStr": "10小时41分钟42秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

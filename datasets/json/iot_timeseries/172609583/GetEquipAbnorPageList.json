@@ -1,0 +1,24 @@
+{
+  "api": "/OpenApi/GetEquipAbnorPageList",
+  "query": {
+    "companyId": "21e224c9-2bb7-4c40-9815-8250916a4831",
+    "OutFactoryCode": "172609583",
+    "EquipName": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31"
+  },
+  "fetched_at": "2026-09-17T07:40:37",
+  "record_count": 0,
+  "declared_records": 0,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 0,
+      "records": 0,
+      "total": 0,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": []
+}

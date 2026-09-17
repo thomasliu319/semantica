@@ -1,12 +1,13 @@
 {
   "api": "/OpenApi/GetEquipInfoPageList",
   "query": {
-    "OutFactoryCode": "172609583",
-    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+    "CustomerId": "",
+    "OutFactoryCode": "",
+    "EquipCode": "172609583"
   },
-  "fetched_at": "2026-09-16T15:57:41",
-  "IsSuccess": true,
-  "Message": "操作成功",
+  "fetched_at": "2026-09-17T10:06:32",
+  "IsSuccess": false,
+  "Message": "参数错误：客户ID不能为空!",
   "record_count": 0,
   "rows": []
 }

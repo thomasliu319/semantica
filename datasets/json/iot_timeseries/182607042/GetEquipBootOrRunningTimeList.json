@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "9431dc11-0374-427c-8546-a241f463379c"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-17T07:54:31",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "9431dc11-0374-427c-8546-a241f463379c",
+      "CustomerName": "伟迈特精密五金（中山）有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 20,
+      "StatsEquipCount": 20,
+      "TotalRunningTime": 1667160,
+      "TotalRunningTimeStr": "463小时6分钟",
+      "TotalBootTime": 8139035,
+      "TotalBootTimeStr": "2260小时50分钟35秒",
+      "HoursTiantaiTime": 3206,
+      "HoursTiantaiTimeStr": "53分钟26秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

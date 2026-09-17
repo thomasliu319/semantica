@@ -156,6 +156,17 @@ def post(path: str, body: dict, timeout: int = 90) -> dict:
                 raw = resp.read().decode("utf-8", errors="replace")
             obj = json.loads(raw)
             return strip_secrets(obj)
+        except urllib.error.HTTPError as exc:
+            detail = ""
+            try:
+                detail = " ".join(exc.read().decode("utf-8", errors="replace").split())[:120]
+            except Exception:
+                detail = str(exc)
+            last_error = RuntimeError(f"{path} HTTP {exc.code} {detail}".strip()[:180])
+            if exc.code >= 500 and attempt < 3:
+                time.sleep(min(2 ** attempt, 8))
+                continue
+            raise last_error
         except TRANSIENT as exc:
             last_error = exc
             time.sleep(min(2 ** attempt, 20))
@@ -214,32 +225,191 @@ def _paginate(path: str, body: dict, *, page_size: int = PAGE_SIZE) -> dict:
     }
 
 
+def month_windows(start: date, end: date) -> list[tuple[date, date]]:
+    windows = []
+    cur = date(start.year, start.month, 1)
+    while cur <= end:
+        if cur.month == 12:
+            nxt = date(cur.year + 1, 1, 1)
+        else:
+            nxt = date(cur.year, cur.month + 1, 1)
+        win_start = max(cur, start)
+        win_end = min(end, nxt - timedelta(days=1))
+        windows.append((win_start, win_end))
+        cur = nxt
+    return windows
+
+
+def week_windows(start: date, end: date) -> list[tuple[date, date]]:
+    windows = []
+    cur = start
+    while cur <= end:
+        win_end = min(end, cur + timedelta(days=6))
+        windows.append((cur, win_end))
+        cur = win_end + timedelta(days=1)
+    return windows
+
+
+def paginate_range(path: str, body: dict, start: date, end: date, *, dest: Path | None = None, page_size: int = 20) -> dict:
+    rows: list = []
+    pages_meta: list = []
+    chunks: list = []
+    done: set[tuple[str, str]] = set()
+    if dest and dest.exists():
+        try:
+            prev = load_json(dest)
+        except Exception:
+            prev = {}
+        if prev.get("api") == path:
+            rows = list(prev.get("rows") or [])
+            pages_meta = list(prev.get("pages") or [])
+            chunks = list(prev.get("chunks") or [])
+            done = {
+                (str(chunk.get("StartTime")), str(chunk.get("EndTime")))
+                for chunk in chunks
+                if chunk.get("ok")
+            }
+
+    def persist(partial: bool) -> dict:
+        payload = {
+            "api": path,
+            "query": {k: v for k, v in body.items() if k not in {"page", "rows", "StartTime", "EndTime"}},
+            "range": {"StartTime": start.isoformat(), "EndTime": end.isoformat()},
+            "chunked": "adaptive",
+            "partial": partial,
+            "chunks": chunks,
+            "fetched_at": datetime.now().isoformat(timespec="seconds"),
+            "record_count": len(rows),
+            "pages": pages_meta,
+            "rows": rows,
+        }
+        if dest:
+            write_json(dest, payload)
+        return payload
+
+    def fetch_window(win_start: date, win_end: date, sizes: tuple[int, ...] = (20, 10, 5)) -> bool:
+        key = (win_start.isoformat(), win_end.isoformat())
+        if key in done:
+            return True
+        payload = dict(body)
+        payload["StartTime"] = win_start.isoformat()
+        payload["EndTime"] = win_end.isoformat()
+        last_exc = None
+        tried: list[int] = []
+        for size in sizes:
+            if size in tried:
+                continue
+            tried.append(size)
+            try:
+                part = paginate(path, payload, page_size=size)
+                rows.extend(part.get("rows") or [])
+                pages_meta.extend(part.get("pages") or [])
+                chunks.append(
+                    {
+                        "StartTime": win_start.isoformat(),
+                        "EndTime": win_end.isoformat(),
+                        "record_count": part.get("record_count"),
+                        "page_size": size,
+                        "ok": True,
+                    }
+                )
+                done.add(key)
+                persist(True)
+                return True
+            except Exception as exc:
+                last_exc = exc
+                log(f"    retry {path} {win_start}..{win_end} page_size={size}: {exc}")
+        chunks.append(
+            {
+                "StartTime": win_start.isoformat(),
+                "EndTime": win_end.isoformat(),
+                "ok": False,
+                "error": str(last_exc)[:200] if last_exc else "failed",
+            }
+        )
+        persist(True)
+        return False
+
+    failed_months: list[tuple[date, date]] = []
+    for win_start, win_end in month_windows(start, end):
+        if fetch_window(win_start, win_end, (page_size,)):
+            continue
+        failed_months.append((win_start, win_end))
+
+    leftover: list[tuple[date, date]] = []
+    for win_start, win_end in failed_months:
+        week_ok = True
+        for week_start, week_end in week_windows(win_start, win_end):
+            if not fetch_window(week_start, week_end, (page_size, 10)):
+                week_ok = False
+                leftover.append((week_start, week_end))
+        if week_ok:
+            log(f"    recovered {path} {win_start} by week windows")
+
+    still_failed: list[str] = []
+    for win_start, win_end in leftover:
+        day_ok = True
+        for day in daterange(win_start, win_end):
+            if not fetch_window(day, day, (page_size, 10, 5)):
+                day_ok = False
+                still_failed.append(day.isoformat())
+        if day_ok:
+            log(f"    recovered {path} {win_start}..{win_end} by day windows")
+
+    payload = persist(bool(still_failed))
+    if still_failed:
+        raise RuntimeError(f"{path} failed days={still_failed[:8]}{'...' if len(still_failed) > 8 else ''}")
+    payload["partial"] = False
+    if dest:
+        write_json(dest, payload)
+    return payload
+
+
+def paginate_months(path: str, body: dict, start: date, end: date, *, page_size: int = 100) -> dict:
+    return paginate_range(path, body, start, end, page_size=page_size)
+
+
 def fetch_info(out_factory: str) -> dict:
-    envelope = post(
-        "/OpenApi/GetEquipInfoPageList",
-        {
-            "page": 1,
-            "rows": 20,
-            "CustomerId": DEFAULT_CUSTOMER_ID,
-            "OutFactoryCode": out_factory,
-            "EquipCode": "",
-            "CompanyName": "",
-            "EquipName": "",
-            "GwCode": "",
-            "SIMNo": "",
-            "EquipTypeName": "",
-            "AreaName": "",
-        },
-    )
-    rows = result_rows(envelope)
-    return {
+    queries = [
+        {"CustomerId": DEFAULT_CUSTOMER_ID, "OutFactoryCode": out_factory, "EquipCode": ""},
+        {"CustomerId": "", "OutFactoryCode": out_factory, "EquipCode": ""},
+        {"CustomerId": DEFAULT_CUSTOMER_ID, "OutFactoryCode": "", "EquipCode": out_factory},
+        {"CustomerId": "", "OutFactoryCode": "", "EquipCode": out_factory},
+    ]
+    last: dict | None = None
+    for query in queries:
+        envelope = post(
+            "/OpenApi/GetEquipInfoPageList",
+            {
+                "page": 1,
+                "rows": 20,
+                "CompanyName": "",
+                "EquipName": "",
+                "GwCode": "",
+                "SIMNo": "",
+                "EquipTypeName": "",
+                "AreaName": "",
+                **query,
+            },
+        )
+        rows = result_rows(envelope)
+        last = {
+            "api": "/OpenApi/GetEquipInfoPageList",
+            "query": query,
+            "fetched_at": datetime.now().isoformat(timespec="seconds"),
+            "IsSuccess": envelope.get("IsSuccess"),
+            "Message": envelope.get("Message"),
+            "record_count": len(rows),
+            "rows": rows,
+        }
+        if rows:
+            return last
+    return last or {
         "api": "/OpenApi/GetEquipInfoPageList",
-        "query": {"OutFactoryCode": out_factory, "CustomerId": DEFAULT_CUSTOMER_ID},
+        "query": {"OutFactoryCode": out_factory},
         "fetched_at": datetime.now().isoformat(timespec="seconds"),
-        "IsSuccess": envelope.get("IsSuccess"),
-        "Message": envelope.get("Message"),
-        "record_count": len(rows),
-        "rows": rows,
+        "record_count": 0,
+        "rows": [],
     }
 
 
@@ -539,7 +709,7 @@ def process_device(
             return {"rows": [], "record_count": 0, "error": str(exc)}
 
     info_path = folder / "GetEquipInfoPageList.json"
-    info = load_or_fetch(info_path, lambda: fetch_info(code), reusable=lambda p: "rows" in p)
+    info = load_or_fetch(info_path, lambda: fetch_info(code), reusable=lambda p: bool(p.get("rows")))
     ident = identity_from_info(info, str(record.get("EquipTypeCode") or ""))
     company_id = ident["CompanyId"] or DEFAULT_CUSTOMER_ID
     equip_code = ident["EquipCode"]
@@ -550,31 +720,47 @@ def process_device(
         reusable=lambda p: bool(p.get("ResultData")),
     )
 
+    alarm_path = folder / "GetEquipAbnorPageList.json"
     alarms = load_or_fetch(
-        folder / "GetEquipAbnorPageList.json",
-        lambda: paginate(
+        alarm_path,
+        lambda: paginate_range(
             "/OpenApi/GetEquipAbnorPageList",
             {
                 "companyId": DEFAULT_CUSTOMER_ID,
                 "OutFactoryCode": code,
                 "EquipName": ident["EquipName"],
-                "StartTime": start.isoformat(),
-                "EndTime": end.isoformat(),
             },
+            start,
+            end,
+            dest=alarm_path,
+            page_size=20,
         ),
+        reusable=lambda p: not p.get("partial") and not p.get("error"),
     )
 
+    program_path = folder / "GetEquipProgramPageList.json"
+
     def fetch_program():
-        program = paginate(
+        if not ident.get("CompanyId") and not ident.get("EquipCode"):
+            return {
+                "api": "/OpenApi/GetEquipProgramPageList",
+                "query": {"OutFactoryCode": code},
+                "note": "GetEquipInfoPageList returned no identity; program list skipped",
+                "record_count": 0,
+                "rows": [],
+            }
+        program = paginate_range(
             "/OpenApi/GetEquipProgramPageList",
             {
                 "companyId": company_id,
-                "StartTime": start.isoformat(),
-                "EndTime": end.isoformat(),
                 "EquipName": ident["EquipName"],
                 "OutFactoryCode": code,
                 "EquipCode": equip_code,
             },
+            start,
+            end,
+            dest=program_path,
+            page_size=20,
         )
         if equip_code:
             mixed = program.get("rows") or []
@@ -586,19 +772,24 @@ def process_device(
                 program["record_count"] = len(kept)
         return program
 
-    program = load_or_fetch(folder / "GetEquipProgramPageList.json", fetch_program)
+    program = load_or_fetch(
+        program_path,
+        fetch_program,
+        reusable=lambda p: not p.get("partial") and not p.get("error"),
+    )
     progress = load_or_fetch(
         folder / "GetEquipProductionProgressPageList.json",
-        lambda: paginate(
+        lambda: paginate_months(
             "/OpenApi/GetEquipProductionProgressPageList",
             {
                 "companyId": company_id,
-                "StartTime": start.isoformat(),
-                "EndTime": end.isoformat(),
                 "EquipName": ident["EquipName"],
                 "OutFactoryCode": code,
                 "EquipCode": equip_code,
             },
+            start,
+            end,
+            page_size=100,
         ),
     )
     boot = load_or_fetch(
@@ -609,8 +800,10 @@ def process_device(
     run_path = folder / "GetEquipRunStatusList.json"
     if skip_run_status:
         run_status = load_json(run_path) if run_path.exists() else {"rows": [], "skipped": True}
-    elif run_path.exists() and not load_json(run_path).get("partial"):
+    elif run_path.exists():
         run_status = load_json(run_path)
+        if run_status.get("partial") or run_ok_days(run_status) < len(days):
+            run_status = fetch_run_status(code, company_id, days, run_path)
     else:
         run_status = fetch_run_status(code, company_id, days, run_path)
 
@@ -701,12 +894,14 @@ def device_gaps(folder: Path, *, days: int) -> list[str]:
         except Exception:
             missing.append(name)
             continue
-        if payload.get("error"):
+        if payload.get("error") or payload.get("partial"):
             missing.append(name)
             continue
         if name == "GetEquipInfoPageList.json" and not (payload.get("rows") or []):
             missing.append("identity")
-        if name == "GetEquipSpindleWithFeedData.json" and not payload.get("ResultData"):
+        if name == "GetEquipSpindleWithFeedData.json" and not (
+            payload.get("ResultData") or payload.get("IsSuccess")
+        ):
             missing.append("spindle")
         if name == "GetEquipRunStatusList.json":
             ok = run_ok_days(payload)

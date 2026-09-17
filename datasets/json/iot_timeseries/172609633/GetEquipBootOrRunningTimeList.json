@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "34ce54fa-8189-4d4b-a700-4af560a99e57"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-17T07:37:30",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "34ce54fa-8189-4d4b-a700-4af560a99e57",
+      "CustomerName": "苏州盛菱皓鑫精密机械科技有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 4,
+      "StatsEquipCount": 3,
+      "TotalRunningTime": 0,
+      "TotalRunningTimeStr": "0秒",
+      "TotalBootTime": 7601,
+      "TotalBootTimeStr": "2小时6分钟41秒",
+      "HoursTiantaiTime": 0,
+      "HoursTiantaiTimeStr": "0秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

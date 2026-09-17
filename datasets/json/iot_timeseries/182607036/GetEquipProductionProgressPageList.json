@@ -1,0 +1,53 @@
+{
+  "api": "/OpenApi/GetEquipProductionProgressPageList",
+  "query": {
+    "companyId": "9431dc11-0374-427c-8546-a241f463379c",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "182607036",
+    "EquipCode": "182607036_sk"
+  },
+  "fetched_at": "2026-09-17T07:54:31",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Seq": 1,
+      "EquipProgramOutPutInDayId": "9368c559-9170-46d5-af71-8174371efb54",
+      "EquipInfoId": "6e96632f-ba1f-4e8a-8585-059b65959ae0",
+      "Sort": null,
+      "ProgramCode": "T123.NC",
+      "Output": 3,
+      "AvgOutPutTimeSecond": 337,
+      "AvgOutPutTime": "5分钟37秒",
+      "StatisticalDate": "2026-08-17 00:00:00",
+      "StatisticalDateStr": "2026-08-17",
+      "CompanyId": "9431dc11-0374-427c-8546-a241f463379c",
+      "CreateTime": "2026-09-17 07:54:31",
+      "EquipTypeName": "钻攻机",
+      "OutFactoryCode": "182607036",
+      "EquipName": "",
+      "EquipCode": "182607036_sk",
+      "WorkshopId": "",
+      "EquipTypeCode": "T-600",
+      "OutputSumSecond": 1011,
+      "OutputSum": "16分钟51秒",
+      "PlanOutput": 0,
+      "ShiftStartTime": "2026-08-17 08:00:00",
+      "ShiftEndTime": "2026-08-18 08:00:00",
+      "ProcessingTimeSum": "12小时17分钟3秒",
+      "AvgProcessingTime": "4小时5分钟41秒"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "api": "/OpenApi/GetEquipBootOrRunningTimeList",
+  "query": {
+    "customerIdList": [
+      "fb553ff4-9a87-413d-8054-061d1a131d93"
+    ],
+    "equipTypeId": "",
+    "areaName": "",
+    "province": "",
+    "city": "",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "IsReverseOrder": 1,
+    "CustomerId": "21e224c9-2bb7-4c40-9815-8250916a4831"
+  },
+  "fetched_at": "2026-09-17T07:50:10",
+  "record_count": 1,
+  "declared_records": 1,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 1,
+      "records": 1,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "RowNumber": 1,
+      "CustomerId": "fb553ff4-9a87-413d-8054-061d1a131d93",
+      "CustomerName": "惠州江铜精密技术有限公司",
+      "CustomerCount": 0,
+      "EquipCount": 10,
+      "StatsEquipCount": 10,
+      "TotalRunningTime": 1340239,
+      "TotalRunningTimeStr": "372小时17分钟19秒",
+      "TotalBootTime": 1687733,
+      "TotalBootTimeStr": "468小时48分钟53秒",
+      "HoursTiantaiTime": 5155,
+      "HoursTiantaiTimeStr": "1小时25分钟55秒/天/台",
+      "TimeRange": null
+    }
+  ],
+  "note": "Customer-level aggregate for the device's CompanyId, not a per-machine series."
+}

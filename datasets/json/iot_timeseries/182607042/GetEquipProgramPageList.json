@@ -1,0 +1,45 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "9431dc11-0374-427c-8546-a241f463379c",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "182607042",
+    "EquipCode": "182607042_sk"
+  },
+  "fetched_at": "2026-09-17T07:54:35",
+  "record_count": 1,
+  "declared_records": 453,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 453,
+      "records": 453,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Id": "4402d8a4-7a40-41f2-9eff-002fde2ee3c3",
+      "EquipCode": "182607042_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "88.NC",
+      "OutputSumSecond": 57750,
+      "OutputSum": "16小时2分钟30秒",
+      "Output": 50,
+      "AvgOutPutTimeSecond": 1155,
+      "AvgOutPutTime": "19分钟15秒",
+      "StartTime": "2026-08-10 15:07:10",
+      "EndTime": "2026-08-10 15:07:31"
+    }
+  ],
+  "rows_before_filter": 453,
+  "filtered_by": {
+    "EquipCode": "182607042_sk"
+  }
+}

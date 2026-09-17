@@ -1,0 +1,120 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "7f43523d-82f7-44b2-b869-150e1f0dbb9c",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "182606116",
+    "EquipCode": "182606116_sk"
+  },
+  "fetched_at": "2026-09-17T07:49:36",
+  "record_count": 6,
+  "declared_records": 6,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 6,
+      "records": 6,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Id": "e1fda5e9-39bb-498c-9d25-8230804ab565",
+      "EquipCode": "182606116_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "DMB-18.NC",
+      "OutputSumSecond": 284,
+      "OutputSum": "4分钟44秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 284,
+      "AvgOutPutTime": "4分钟44秒",
+      "StartTime": "2026-08-17 08:31:22",
+      "EndTime": "2026-08-17 09:33:35"
+    },
+    {
+      "Id": "994063e7-2bc5-4b0d-95ea-b0926bdaf262",
+      "EquipCode": "182606116_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "DMB-18.NC",
+      "OutputSumSecond": 299,
+      "OutputSum": "4分钟59秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 299,
+      "AvgOutPutTime": "4分钟59秒",
+      "StartTime": "2026-08-17 08:24:40",
+      "EndTime": "2026-08-17 08:26:23"
+    },
+    {
+      "Id": "6bc85035-eb2c-4561-91cb-b9287d77fc41",
+      "EquipCode": "182606116_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "DMB-18.NC",
+      "OutputSumSecond": 302,
+      "OutputSum": "5分钟2秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 302,
+      "AvgOutPutTime": "5分钟2秒",
+      "StartTime": "2026-08-17 08:17:11",
+      "EndTime": "2026-08-17 08:17:22"
+    },
+    {
+      "Id": "cc71b182-44af-438d-8d22-d29aa7caf02a",
+      "EquipCode": "182606116_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "DMB-18.NC",
+      "OutputSumSecond": 3172,
+      "OutputSum": "52分钟52秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 3172,
+      "AvgOutPutTime": "52分钟52秒",
+      "StartTime": "2026-08-17 08:08:35",
+      "EndTime": "2026-08-17 08:11:56"
+    },
+    {
+      "Id": "037fa0e8-7249-483e-b797-916cb1f39a0a",
+      "EquipCode": "182606116_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "DMB-18.NC",
+      "OutputSumSecond": 572,
+      "OutputSum": "9分钟32秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 572,
+      "AvgOutPutTime": "9分钟32秒",
+      "StartTime": "2026-08-16 16:15:29",
+      "EndTime": "2026-08-16 16:44:56"
+    },
+    {
+      "Id": "4fb73958-3edc-41b2-939d-8ddfc4f83453",
+      "EquipCode": "182606116_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "DMB-18.NC",
+      "OutputSumSecond": 67,
+      "OutputSum": "1分钟7秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 67,
+      "AvgOutPutTime": "1分钟7秒",
+      "StartTime": "2026-08-16 15:46:10",
+      "EndTime": "2026-08-16 15:55:37"
+    }
+  ],
+  "rows_before_filter": 6,
+  "filtered_by": {
+    "EquipCode": "182606116_sk"
+  }
+}

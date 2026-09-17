@@ -1,0 +1,29 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "9431dc11-0374-427c-8546-a241f463379c",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "182607035",
+    "EquipCode": "182607035_sk"
+  },
+  "fetched_at": "2026-09-17T07:54:20",
+  "record_count": 0,
+  "declared_records": 453,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 453,
+      "records": 453,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [],
+  "rows_before_filter": 453,
+  "filtered_by": {
+    "EquipCode": "182607035_sk"
+  }
+}

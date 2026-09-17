@@ -1,0 +1,75 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "9431dc11-0374-427c-8546-a241f463379c",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "182607036",
+    "EquipCode": "182607036_sk"
+  },
+  "fetched_at": "2026-09-17T07:54:22",
+  "record_count": 3,
+  "declared_records": 453,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 453,
+      "records": 453,
+      "total": 1,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Id": "11c84fa7-87f8-4471-aa9b-09165c73d34e",
+      "EquipCode": "182607036_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "T123.NC",
+      "OutputSumSecond": 0,
+      "OutputSum": "0秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 0,
+      "AvgOutPutTime": "0秒",
+      "StartTime": "2026-08-17 17:04:04",
+      "EndTime": "2026-08-17 17:07:37"
+    },
+    {
+      "Id": "4cc42417-763f-4e6a-ab85-0a4536060730",
+      "EquipCode": "182607036_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "T123.NC",
+      "OutputSumSecond": 0,
+      "OutputSum": "0秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 0,
+      "AvgOutPutTime": "0秒",
+      "StartTime": "2026-08-17 16:14:46",
+      "EndTime": "2026-08-17 16:34:08"
+    },
+    {
+      "Id": "7622c8d3-8800-4513-8855-8bf63c20e169",
+      "EquipCode": "182607036_sk",
+      "EquipName": "",
+      "EquipTypeName": "钻攻机",
+      "EquipTypeCode": "T-600",
+      "ProgramCode": "T123.NC",
+      "OutputSumSecond": 1011,
+      "OutputSum": "16分钟51秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 1011,
+      "AvgOutPutTime": "16分钟51秒",
+      "StartTime": "2026-08-17 16:03:23",
+      "EndTime": "2026-08-17 16:07:58"
+    }
+  ],
+  "rows_before_filter": 453,
+  "filtered_by": {
+    "EquipCode": "182607036_sk"
+  }
+}

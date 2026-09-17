@@ -1,0 +1,25 @@
+{
+  "api": "/OpenApi/GetEquipProductionProgressPageList",
+  "query": {
+    "companyId": "9431dc11-0374-427c-8546-a241f463379c",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "182607028",
+    "EquipCode": "182607028_sk"
+  },
+  "fetched_at": "2026-09-17T07:54:38",
+  "record_count": 0,
+  "declared_records": 0,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 0,
+      "records": 0,
+      "total": 0,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": []
+}

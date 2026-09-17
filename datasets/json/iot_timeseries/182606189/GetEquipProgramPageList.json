@@ -1,0 +1,61 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "ce38be82-e814-4ed0-a5fc-ac778e33509d",
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31",
+    "EquipName": "",
+    "OutFactoryCode": "182606189",
+    "EquipCode": "182606189_sk"
+  },
+  "fetched_at": "2026-09-17T07:50:06",
+  "record_count": 0,
+  "declared_records": 2480,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 500,
+      "records": 2480,
+      "total": 5,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 500,
+      "records": 2480,
+      "total": 5,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 500,
+      "records": 2480,
+      "total": 5,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 500,
+      "records": 2480,
+      "total": 5,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 480,
+      "records": 2480,
+      "total": 5,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [],
+  "rows_before_filter": 2480,
+  "filtered_by": {
+    "EquipCode": "182606189_sk"
+  }
+}

@@ -1,13 +1,13 @@
 # Spec: IoT 时序数据处理
 
-状态：`frozen`（B1–D5）+ **E1/E2 重开**。见 [decisions.md](../../decisions.md)。列定义见 [schemas.md](../../schemas.md)。
+状态：`frozen`（B1–D5、E1/E2）。见 [decisions.md](../../decisions.md)。列定义见 [schemas.md](../../schemas.md)。
 
 ## ADDED Requirements
 
 ### Requirement: 清洗输入集
 
 系统 SHALL 只读取 Excel 200 台清单中通过 `device_gaps(days=184)` 的完备设备。完备定义：8 个接口 JSON + `meta.json` + `trend_summary.json`、身份行非空、运行状态 184 个 `ok` 日。  
-系统 SHALL NOT 把未完备的 12 台写入任何事实表或维度表（D1）。  
+系统 SHALL NOT 把未完备设备写入任何事实表或维度表（D1；当前 `172609583`）。  
 系统 SHALL NOT 以 `_complete/catalog.json` 为输入；以磁盘完备判定为准。
 
 #### Scenario: 完备设备进入清洗
@@ -144,9 +144,9 @@
 
 ### Requirement: 轴伺服与维护信号缺口
 
-`[NEEDS CLARIFICATION: E1]` 轴/伺服：跟随误差无字段；XYZ 负载与电流仅存在于 `spindle_asof` 快照；温度全空。  
-`[NEEDS CLARIFICATION: E2]` 维护：无保养/换刀/维修主数据。报警 `ProcessDept` SHALL NOT 当作部门（与 `AbnoContent` 重复）。  
-在 E1/E2 作答前，系统 SHALL NOT 将主轴快照展开为 4–8 月轴时序，SHALL NOT 输出名为保养/换刀台账的表。
+轴/伺服（E1 `snapshot_keep`）：跟随误差无字段；XYZ 负载与电流仅存在于 `spindle_asof` 快照；温度全空。  
+维护（E2 `uncover`）：无保养/换刀/维修主数据。报警 `ProcessDept` SHALL NOT 当作部门（与 `AbnoContent` 重复）。  
+系统 SHALL NOT 将主轴快照展开为 4–8 月轴时序，SHALL NOT 输出名为保养/换刀台账的表。
 
 环境/辅机（冷却液、液压、振动）当前无接口，SHALL 记入 `dq_report.uncovered_signals`。
 

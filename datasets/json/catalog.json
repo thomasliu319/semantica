@@ -153,6 +153,21 @@
       "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/complete_device_ledger.json"
     },
     {
+      "file": "iot_cleaned_semantics.json",
+      "title": "清洗后完备设备语义图：机型×月衍生强度、客户×设备、报警号×机型",
+      "source": "datasets/processed/iot_mar_aug_2026",
+      "tags": [
+        "manufacturing",
+        "iot",
+        "explorer",
+        "cleaned",
+        "semantics"
+      ],
+      "node_count": 404,
+      "edge_count": 1282,
+      "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/iot_cleaned_semantics.json"
+    },
+    {
       "file": "corporate_org.json",
       "title": "Corporate org chart aligned to the cookbook ontology",
       "source": "cookbook/introduction/corporate_ontology.ttl",

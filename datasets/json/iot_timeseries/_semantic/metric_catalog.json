@@ -1,44 +1,241 @@
 {
   "title": "完备设备语义指标目录",
-  "window": { "StartTime": "2026-04-01", "EndTime": "2026-08-31" },
-  "population": { "complete_devices": 199, "excluded": ["172609583"], "note": "磁盘完备，非 _complete/catalog.json" },
-  "decisions": ["B1 clean_only", "B4 pooled_flag", "B5 drop_mar", "D3 by_company"],
+  "window": {
+    "StartTime": "2026-04-01",
+    "EndTime": "2026-08-31"
+  },
+  "population": {
+    "complete_devices": 199,
+    "excluded": [
+      "172609583"
+    ],
+    "note": "磁盘完备，非 _complete/catalog.json"
+  },
+  "decisions": [
+    "B1 clean_only",
+    "B4 pooled_flag",
+    "B5 drop_mar",
+    "D3 by_company",
+    "E1 snapshot_keep",
+    "E2 uncover"
+  ],
   "dimensions": [
-    { "id": "out_factory_code", "name_zh": "出厂编号", "role": "device_key" },
-    { "id": "equip_code", "name_zh": "数控系统编码", "role": "join_key" },
-    { "id": "equip_name", "name_zh": "客户设备编码", "role": "site_label" },
-    { "id": "equip_type_code", "name_zh": "设备类型编码", "role": "type" },
-    { "id": "equip_type_name", "name_zh": "设备名称", "role": "type_label" },
-    { "id": "company_id", "name_zh": "客户ID", "role": "split_key" },
-    { "id": "company_name", "name_zh": "客户名称", "role": "split_label" },
-    { "id": "area_name", "name_zh": "区域", "role": "geo" },
-    { "id": "date", "name_zh": "统计日期", "role": "time_day" },
-    { "id": "month", "name_zh": "自然月", "role": "time_month" },
-    { "id": "program_code", "name_zh": "加工程序名", "role": "job" },
-    { "id": "abno_code", "name_zh": "报警号", "role": "alarm" },
-    { "id": "abno_type_name", "name_zh": "报警类别", "role": "alarm_type" },
-    { "id": "is_shutdown", "name_zh": "是否停机报警", "role": "alarm_flag" },
-    { "id": "as_of", "name_zh": "快照时刻", "role": "snapshot", "not": "history" }
+    {
+      "id": "out_factory_code",
+      "name_zh": "出厂编号",
+      "role": "device_key"
+    },
+    {
+      "id": "equip_code",
+      "name_zh": "数控系统编码",
+      "role": "join_key"
+    },
+    {
+      "id": "equip_name",
+      "name_zh": "客户设备编码",
+      "role": "site_label"
+    },
+    {
+      "id": "equip_type_code",
+      "name_zh": "设备类型编码",
+      "role": "type"
+    },
+    {
+      "id": "equip_type_name",
+      "name_zh": "设备名称",
+      "role": "type_label"
+    },
+    {
+      "id": "company_id",
+      "name_zh": "客户ID",
+      "role": "split_key"
+    },
+    {
+      "id": "company_name",
+      "name_zh": "客户名称",
+      "role": "split_label"
+    },
+    {
+      "id": "area_name",
+      "name_zh": "区域",
+      "role": "geo"
+    },
+    {
+      "id": "date",
+      "name_zh": "统计日期",
+      "role": "time_day"
+    },
+    {
+      "id": "month",
+      "name_zh": "自然月",
+      "role": "time_month"
+    },
+    {
+      "id": "program_code",
+      "name_zh": "加工程序名",
+      "role": "job"
+    },
+    {
+      "id": "abno_code",
+      "name_zh": "报警号",
+      "role": "alarm"
+    },
+    {
+      "id": "abno_type_name",
+      "name_zh": "报警类别",
+      "role": "alarm_type"
+    },
+    {
+      "id": "is_shutdown",
+      "name_zh": "是否停机报警",
+      "role": "alarm_flag"
+    },
+    {
+      "id": "as_of",
+      "name_zh": "快照时刻",
+      "role": "snapshot",
+      "not": "history"
+    }
   ],
   "measures": [
-    { "id": "run_time_sec", "name_zh": "运行时间", "grain": "device_day", "domain": "cnc_run", "unit": "s", "not": "件数" },
-    { "id": "standby_time_sec", "name_zh": "待机时间", "grain": "device_day", "domain": "cnc_run", "unit": "s", "not": "停机" },
-    { "id": "stop_time_sec", "name_zh": "关机时间", "grain": "device_day", "domain": "cnc_run", "unit": "s", "not": "停机" },
-    { "id": "breakdown_time_sec", "name_zh": "故障时间", "grain": "device_day", "domain": "cnc_run", "unit": "s", "not": "停机报警条数" },
-    { "id": "run_time_rate_pct", "name_zh": "运行时间占比", "grain": "device_day", "domain": "cnc_run", "unit": "%", "not": "客户近30天稼动率" },
-    { "id": "is_run_day", "name_zh": "有运行日", "grain": "device_day", "domain": "cnc_run", "unit": "flag", "formula": "run_time_sec>0" },
-    { "id": "run_hours", "name_zh": "运行小时", "grain": "additive", "domain": "cnc_run", "unit": "h", "formula": "run_time_sec/3600" },
-    { "id": "alarm_count", "name_zh": "报警条数", "grain": "alarm|device_day", "domain": "alarm", "unit": "count" },
-    { "id": "alarm_shutdown_count", "name_zh": "停机报警条数", "grain": "alarm|device_day", "domain": "alarm", "unit": "count", "formula": "IsShutdown=1" },
-    { "id": "alarm_duration_sec", "name_zh": "报警持续秒", "grain": "alarm", "domain": "alarm", "unit": "s", "source": "DurationDetail" },
-    { "id": "program_cycles", "name_zh": "累计循环次数", "grain": "program_cycle|device_day", "domain": "program", "unit": "count" },
-    { "id": "program_seconds", "name_zh": "累计循环时间", "grain": "program_cycle", "domain": "program", "unit": "s" },
-    { "id": "progress_output", "name_zh": "日产量循环次数", "grain": "progress_day", "domain": "program", "unit": "count" },
-    { "id": "plan_output", "name_zh": "计划产量", "grain": "progress_day", "domain": "program", "unit": "count", "coverage": "4_devices" },
-    { "id": "plan_achievement_pct", "name_zh": "计划达成率", "grain": "progress_day", "domain": "program", "unit": "%", "formula": "output/plan_output", "do_not": "fleet_average" },
-    { "id": "spindle_load", "name_zh": "主轴负载", "grain": "spindle_asof", "domain": "axis_snapshot", "unit": "raw" },
-    { "id": "feed", "name_zh": "进给", "grain": "spindle_asof", "domain": "axis_snapshot", "unit": "raw" },
-    { "id": "speed", "name_zh": "转速", "grain": "spindle_asof", "domain": "axis_snapshot", "unit": "raw" }
+    {
+      "id": "run_time_sec",
+      "name_zh": "运行时间",
+      "grain": "device_day",
+      "domain": "cnc_run",
+      "unit": "s",
+      "not": "件数"
+    },
+    {
+      "id": "standby_time_sec",
+      "name_zh": "待机时间",
+      "grain": "device_day",
+      "domain": "cnc_run",
+      "unit": "s",
+      "not": "停机"
+    },
+    {
+      "id": "stop_time_sec",
+      "name_zh": "关机时间",
+      "grain": "device_day",
+      "domain": "cnc_run",
+      "unit": "s",
+      "not": "停机"
+    },
+    {
+      "id": "breakdown_time_sec",
+      "name_zh": "故障时间",
+      "grain": "device_day",
+      "domain": "cnc_run",
+      "unit": "s",
+      "not": "停机报警条数"
+    },
+    {
+      "id": "run_time_rate_pct",
+      "name_zh": "运行时间占比",
+      "grain": "device_day",
+      "domain": "cnc_run",
+      "unit": "%",
+      "not": "客户近30天稼动率"
+    },
+    {
+      "id": "is_run_day",
+      "name_zh": "有运行日",
+      "grain": "device_day",
+      "domain": "cnc_run",
+      "unit": "flag",
+      "formula": "run_time_sec>0"
+    },
+    {
+      "id": "run_hours",
+      "name_zh": "运行小时",
+      "grain": "additive",
+      "domain": "cnc_run",
+      "unit": "h",
+      "formula": "run_time_sec/3600"
+    },
+    {
+      "id": "alarm_count",
+      "name_zh": "报警条数",
+      "grain": "alarm|device_day",
+      "domain": "alarm",
+      "unit": "count"
+    },
+    {
+      "id": "alarm_shutdown_count",
+      "name_zh": "停机报警条数",
+      "grain": "alarm|device_day",
+      "domain": "alarm",
+      "unit": "count",
+      "formula": "IsShutdown=1"
+    },
+    {
+      "id": "alarm_duration_sec",
+      "name_zh": "报警持续秒",
+      "grain": "alarm",
+      "domain": "alarm",
+      "unit": "s",
+      "source": "DurationDetail"
+    },
+    {
+      "id": "program_cycles",
+      "name_zh": "累计循环次数",
+      "grain": "program_cycle|device_day",
+      "domain": "program",
+      "unit": "count"
+    },
+    {
+      "id": "program_seconds",
+      "name_zh": "累计循环时间",
+      "grain": "program_cycle",
+      "domain": "program",
+      "unit": "s"
+    },
+    {
+      "id": "progress_output",
+      "name_zh": "日产量循环次数",
+      "grain": "progress_day",
+      "domain": "program",
+      "unit": "count"
+    },
+    {
+      "id": "plan_output",
+      "name_zh": "计划产量",
+      "grain": "progress_day",
+      "domain": "program",
+      "unit": "count",
+      "coverage": "sparse"
+    },
+    {
+      "id": "plan_achievement_pct",
+      "name_zh": "计划达成率",
+      "grain": "progress_day",
+      "domain": "program",
+      "unit": "%",
+      "formula": "output/plan_output",
+      "do_not": "fleet_average"
+    },
+    {
+      "id": "spindle_load",
+      "name_zh": "主轴负载",
+      "grain": "spindle_asof",
+      "domain": "axis_snapshot",
+      "unit": "raw"
+    },
+    {
+      "id": "feed",
+      "name_zh": "进给",
+      "grain": "spindle_asof",
+      "domain": "axis_snapshot",
+      "unit": "raw"
+    },
+    {
+      "id": "speed",
+      "name_zh": "转速",
+      "grain": "spindle_asof",
+      "domain": "axis_snapshot",
+      "unit": "raw"
+    }
   ],
   "slices": [
     "equip_type_code × month",
@@ -46,5 +243,21 @@
     "out_factory_code × date",
     "abno_code × equip_type_code",
     "program_code × out_factory_code"
+  ],
+  "derived_recipes": [
+    {"id": "alarm_per_run_hour", "op": "div", "a": "alarm_count", "b": "run_hours", "name_zh": "每运行小时报警", "not": "故障率 / OEE"},
+    {"id": "shutdown_alarm_rate", "op": "div", "a": "alarm_shutdown_count", "b": "alarm_count", "name_zh": "停机报警占比", "not": "故障时长占比"},
+    {"id": "run_hours_per_run_day", "op": "div", "a": "run_hours", "b": "run_days", "name_zh": "有运行日均运行小时", "not": "开机率"},
+    {"id": "run_hours_per_device", "op": "div", "a": "run_hours", "b": "devices", "name_zh": "单台运行小时", "not": "客户近30天稼动率"},
+    {"id": "cycles_per_run_hour", "op": "div", "a": "program_cycles", "b": "run_hours", "name_zh": "每运行小时循环", "not": "计划达成率"},
+    {"id": "seconds_per_cycle", "op": "div", "a": "program_seconds", "b": "program_cycles", "name_zh": "单次循环秒"},
+    {"id": "alarm_per_device", "op": "div", "a": "alarm_count", "b": "devices", "name_zh": "单台报警条数"},
+    {"id": "run_time_share", "op": "div", "a": "run_time_sec", "b": "total_time_sec", "name_zh": "运行时间结构占比", "not": "客户近30天稼动率"},
+    {"id": "standby_time_share", "op": "div", "a": "standby_time_sec", "b": "total_time_sec", "name_zh": "待机时间结构占比", "not": "停机"},
+    {"id": "stop_time_share", "op": "div", "a": "stop_time_sec", "b": "total_time_sec", "name_zh": "关机时间结构占比", "not": "停机"},
+    {"id": "breakdown_time_share", "op": "div", "a": "breakdown_time_sec", "b": "total_time_sec", "name_zh": "故障时间结构占比", "not": "停机报警占比"},
+    {"id": "run_hours_share", "op": "share", "a": "run_hours", "name_zh": "运行小时舰队份额", "not": "稼动率"},
+    {"id": "alarm_duration_per_event", "op": "div", "a": "alarm_duration_sec", "b": "alarm_count", "name_zh": "单条报警持续秒"},
+    {"id": "compose", "note": "Analyze 可对基础指标做 ÷ × + − 份额；除零为 null；禁止 OEE / is_fault / 舰队平均计划达成率"}
   ]
 }

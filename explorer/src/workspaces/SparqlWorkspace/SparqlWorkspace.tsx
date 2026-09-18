@@ -3,10 +3,79 @@ import Editor, { useMonaco } from "@monaco-editor/react";
 import { Play, Copy, Download, Table2, AlertCircle, FileCode2 } from "lucide-react";
 
 const TEMPLATES: { label: string; query: string }[] = [
+  {
+    label: "机型×月报警强度",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?label ?hours ?alarms ?intensity ?stopShare
+WHERE {
+  ?slice a ent:TypeMonth ;
+         rdfs:label ?label ;
+         prop:run_hours ?hours ;
+         prop:alarm_count ?alarms ;
+         prop:alarm_per_run_hour ?intensity ;
+         prop:stop_time_share ?stopShare .
+}
+ORDER BY DESC(?intensity)
+LIMIT 20`,
+  },
+  {
+    label: "衍生指标目录",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?label ?formula ?domain ?not
+WHERE {
+  ?m a ent:DerivedMetric ;
+     rdfs:label ?label ;
+     prop:formula ?formula ;
+     prop:domain ?domain .
+  OPTIONAL { ?m prop:not_label ?not }
+}
+LIMIT 30`,
+  },
+  {
+    label: "机型×月运行小时",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?label ?hours ?alarms
+WHERE {
+  ?slice a ent:TypeMonth ;
+         rdfs:label ?label ;
+         prop:run_hours ?hours ;
+         prop:alarm_count ?alarms .
+}
+ORDER BY DESC(?hours)
+LIMIT 20`,
+  },
+  {
+    label: "已批准清洗决策",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?d ?label ?category ?outcome
+WHERE {
+  ?d a ent:decision ;
+     rdfs:label ?label ;
+     prop:category ?category ;
+     prop:outcome ?outcome .
+}
+LIMIT 20`,
+  },
+  {
+    label: "O0005 打在哪些设备",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+SELECT ?equip
+WHERE {
+  <http://semantica.local/entity/alarm:O0005> prop:raisedOnEquip ?equip .
+}
+LIMIT 20`,
+  },
   { label: "All triples", query: "SELECT ?s ?p ?o\nWHERE {\n  ?s ?p ?o\n}\nLIMIT 20" },
   { label: "Node types", query: "SELECT ?type (COUNT(?s) AS ?count)\nWHERE {\n  ?s a ?type\n}\nGROUP BY ?type\nORDER BY DESC(?count)" },
-  { label: "Outgoing edges", query: "SELECT ?predicate ?object\nWHERE {\n  <urn:node:example> ?predicate ?object\n}\nLIMIT 50" },
-  { label: "Path between", query: "SELECT ?mid ?p1 ?p2\nWHERE {\n  <urn:node:a> ?p1 ?mid .\n  ?mid ?p2 <urn:node:b>\n}\nLIMIT 20" },
 ];
 
 export function SparqlWorkspace() {

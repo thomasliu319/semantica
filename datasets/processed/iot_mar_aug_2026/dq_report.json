@@ -1,0 +1,126 @@
+{
+  "window": {
+    "start": "2026-04-01",
+    "end": "2026-08-31"
+  },
+  "complete_devices": 199,
+  "excluded_incomplete": [
+    {
+      "out_factory_code": "172609583",
+      "missing": [
+        "identity"
+      ]
+    }
+  ],
+  "uncovered_signals": [
+    "跟随误差",
+    "轴温",
+    "冷却液",
+    "液压",
+    "振动",
+    "保养台账",
+    "换刀事件"
+  ],
+  "rules": [
+    {
+      "rule_id": "dropped_idle_device_month",
+      "table": "device_day",
+      "count": 646,
+      "example_keys": [
+        "152600398|2026-04",
+        "152600398|2026-05",
+        "152600398|2026-06",
+        "152600398|2026-07",
+        "162601072|2026-04",
+        "162601072|2026-05",
+        "162601072|2026-06",
+        "162601072|2026-07"
+      ],
+      "note": "整月运行秒为 0"
+    },
+    {
+      "rule_id": "dropped_march",
+      "table": "alarm_event",
+      "count": 1194,
+      "example_keys": [
+        "ef568dda-9ee3-44b2-99f2-04475c2c210f",
+        "d545ec4e-354b-4078-b582-54b5a3dd8964",
+        "95c8c1af-e44d-4741-ab75-41191e77273e",
+        "efbffe9c-61b1-4f9a-b0d4-45a91af8c7ce",
+        "be379dca-252f-44b7-ba31-273d4cab3045",
+        "ad1c320e-d37b-44f2-925c-19ca4fbd9b91",
+        "4087807a-852c-438b-bf03-2745fcea27c7",
+        "48e15fa1-ddfa-4eb0-b56f-1aeb7e053c3d"
+      ],
+      "note": ""
+    },
+    {
+      "rule_id": "dropped_march",
+      "table": "device_day",
+      "count": 6169,
+      "example_keys": [
+        "152600398|2026-03-01",
+        "152600398|2026-03-02",
+        "152600398|2026-03-03",
+        "152600398|2026-03-04",
+        "152600398|2026-03-05",
+        "152600398|2026-03-06",
+        "152600398|2026-03-07",
+        "152600398|2026-03-08"
+      ],
+      "note": ""
+    },
+    {
+      "rule_id": "dropped_march",
+      "table": "program_cycle",
+      "count": 2,
+      "example_keys": [
+        "1db8b5e5-8ec9-45fb-9484-f3b6e2164497",
+        "65ad3daa-c40e-41cb-8b0e-a8fae7801459"
+      ],
+      "note": ""
+    },
+    {
+      "rule_id": "dropped_march",
+      "table": "progress_day",
+      "count": 2,
+      "example_keys": [
+        "0023e063-c0e5-44d3-8b3d-47c6c9cd81fc",
+        "acbb72e2-6c64-4425-84fe-c3003ad6d2b7"
+      ],
+      "note": ""
+    },
+    {
+      "rule_id": "four_bucket_imbalance",
+      "table": "device_day",
+      "count": 2043,
+      "example_keys": [
+        "152600398|2026-08-06",
+        "152600398|2026-08-16",
+        "152600398|2026-08-17",
+        "172603375|2026-04-13",
+        "172603375|2026-04-24",
+        "172603375|2026-04-26",
+        "172603375|2026-04-27",
+        "172603375|2026-05-05"
+      ],
+      "note": "四桶秒之和 ≠ total_time_sec"
+    },
+    {
+      "rule_id": "program_end_before_start",
+      "table": "program_cycle",
+      "count": 63,
+      "example_keys": [
+        "1c2f1371-e8ab-4aae-a776-81e0166b1789",
+        "6dea6f0f-f8d8-4cdb-881d-7ae781a92496",
+        "854e6d2e-ddc9-4b73-8aa8-187c927671e6",
+        "9affc981-9a55-4b14-b310-07f4f33c803d",
+        "11bc4340-4c64-407a-b9b0-36483bcbd490",
+        "2a911d72-b50f-43d2-a4de-cb1e743ec906",
+        "6441eda9-c203-4b7e-a0a9-5d7cb1f871c9",
+        "94b11f5f-7a08-4792-a5f7-d53ab4baa5cf"
+      ],
+      "note": ""
+    }
+  ]
+}

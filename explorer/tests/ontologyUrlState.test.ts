@@ -4,6 +4,8 @@ import test from "node:test";
 import {
   applyEntitySelection,
   applyTab,
+  canonicalizeExplorerUrl,
+  canonicalizeSearch,
   clearEntitySelection,
   hasOntologyUrlState,
   parseOntologyUrlState,
@@ -16,9 +18,18 @@ import {
 function withStubbedLocation(search: string, hash: string, body: () => void): string[] {
   const written: string[] = [];
   const original = (globalThis as { window?: unknown }).window;
+  const location = { search, hash, pathname: "/" };
   (globalThis as { window?: unknown }).window = {
-    location: { search, hash },
-    history: { replaceState: (_s: unknown, _t: string, url: string) => written.push(url) },
+    location,
+    history: {
+      replaceState: (_s: unknown, _t: string, url: string) => {
+        written.push(url);
+        const parsed = new URL(url, "http://127.0.0.1");
+        location.search = parsed.search;
+        location.hash = parsed.hash;
+        location.pathname = parsed.pathname;
+      },
+    },
   };
   try {
     body();
@@ -34,20 +45,35 @@ test("selecting an entity round-trips and pins the editor tab", () => {
     tab: "editor",
     entityUri: "https://example.test/foo#Bar",
   });
+  assert.equal(search.startsWith("?v=iot2&"), true);
 });
 
-test("clearing the selection drops only the entity and keeps unrelated params", () => {
-  const search = applyEntitySelection("?view=graph&depth=2", "https://example.test/foo#Bar");
-  const cleared = parseOntologyUrlState(removeEntitySelection(search));
-
-  assert.equal(cleared.entityUri, undefined);
-  assert.equal(cleared.tab, "editor");
-  assert.equal(new URLSearchParams(removeEntitySelection(search)).get("depth"), "2");
+test("writers keep v=iot2 and drop other versions", () => {
+  const search = applyEntitySelection("?v=metrics1&view=graph", "https://example.test/foo#Bar");
+  assert.equal(
+    search,
+    "?v=iot2&ontologyTab=editor&ontologyEntity=https%3A%2F%2Fexample.test%2Ffoo%23Bar",
+  );
+  const cleared = removeEntitySelection(search);
+  assert.equal(cleared, "?v=iot2&ontologyTab=editor");
+  assert.equal(parseOntologyUrlState(cleared).entityUri, undefined);
 });
 
 test("writing a tab leaves an existing entity selection alone", () => {
   const search = applyTab(applyEntitySelection("", "urn:x"), "health");
   assert.deepEqual(parseOntologyUrlState(search), { tab: "health", entityUri: "urn:x" });
+});
+
+test("/ and leftover v= params canonicalize to the IoT registry URL", () => {
+  assert.equal(canonicalizeSearch(""), "?v=iot2&ontologyTab=registry");
+  assert.equal(canonicalizeSearch("?v=iot2"), "?v=iot2&ontologyTab=registry");
+  assert.equal(canonicalizeSearch("?v=metrics1"), "?v=iot2&ontologyTab=registry");
+  assert.equal(canonicalizeSearch("?v=iot2&ontologyTab=health"), "?v=iot2&ontologyTab=health");
+  assert.equal(canonicalizeSearch("?v=iot2&ontologyTab=registry"), "?v=iot2&ontologyTab=registry");
+  assert.equal(
+    canonicalizeSearch("?ontologyEntity=urn%3Ax"),
+    "?v=iot2&ontologyTab=editor&ontologyEntity=urn%3Ax",
+  );
 });
 
 test("absent params read as undefined, blank params as empty strings", () => {
@@ -80,18 +106,25 @@ test("entity URIs survive characters that need escaping", () => {
   assert.equal(parseOntologyUrlState(search).entityUri, entityUri);
 });
 
-test("every writer preserves the URL fragment", () => {
-  const written = withStubbedLocation("?view=graph", "#section-3", () => {
+test("every writer preserves the URL fragment and pins v=iot2", () => {
+  const written = withStubbedLocation("?v=metrics1", "#section-3", () => {
     writeTab("health");
     writeEntitySelection("urn:x");
     clearEntitySelection();
   });
 
   assert.deepEqual(written, [
-    "?view=graph&ontologyTab=health#section-3",
-    "?view=graph&ontologyTab=editor&ontologyEntity=urn%3Ax#section-3",
-    "?view=graph#section-3",
+    "/?v=iot2&ontologyTab=health#section-3",
+    "/?v=iot2&ontologyTab=editor&ontologyEntity=urn%3Ax#section-3",
+    "/?v=iot2&ontologyTab=editor#section-3",
   ]);
+});
+
+test("canonicalizeExplorerUrl upgrades / to the IoT registry URL", () => {
+  const written = withStubbedLocation("", "", () => {
+    canonicalizeExplorerUrl();
+  });
+  assert.deepEqual(written, ["/?v=iot2&ontologyTab=registry"]);
 });
 
 test("readOntologyUrlState with no argument reads live URL state", () => {

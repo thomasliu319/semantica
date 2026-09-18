@@ -1,5 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { AlertCircle } from 'lucide-react';
+import { clearStaleChunkReloadToken, isStaleChunkError, reloadOnceForStaleChunk } from './chunkLoadError';
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -28,6 +29,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error("ErrorBoundary caught an error:", error, errorInfo);
     this.clearSettleTimer();
+    reloadOnceForStaleChunk(error);
   }
 
   componentWillUnmount() {
@@ -55,11 +57,13 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
     this.settleTimer = setTimeout(() => {
       this.settleTimer = null;
       this.setState({ retryCount: 0 });
+      clearStaleChunkReloadToken();
     }, RETRY_SETTLE_MS);
   };
 
   render() {
     if (this.state.hasError) {
+      const staleChunk = isStaleChunkError(this.state.error);
       const maxRetriesReached = this.state.retryCount >= 3;
 
       return (
@@ -73,14 +77,16 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
         >
           <AlertCircle size={32} style={{ marginBottom: 4, opacity: 0.8 }} />
           <div style={{ fontWeight: 500, fontSize: '15px' }}>
-            Something went wrong in this view.
+            {staleChunk ? "This view needs a refresh." : "Something went wrong in this view."}
           </div>
           <div style={{ fontSize: '13px', opacity: 0.7, maxWidth: 450, textAlign: 'center', marginBottom: 8, lineHeight: 1.5 }}>
-            {maxRetriesReached 
+            {staleChunk
+              ? "The interface was updated while this page was open. Reload to load the latest diagram."
+              : maxRetriesReached 
               ? "This view continues to encounter a critical error. Please switch to another workspace or reload the page to restore functionality."
               : "An unexpected problem occurred while rendering this workspace. Your data is safe, but this view cannot be displayed."}
           </div>
-          {!maxRetriesReached ? (
+          {!maxRetriesReached && !staleChunk ? (
             <button 
               className="ws-btn ws-btn--ghost" 
               style={{ 
@@ -100,7 +106,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
               }}
               onClick={() => window.location.reload()}
             >
-              Reload Application
+              Reload
             </button>
           )}
         </div>

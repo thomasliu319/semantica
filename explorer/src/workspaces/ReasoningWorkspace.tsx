@@ -2,13 +2,30 @@ import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { BrainCircuit, Play, RotateCcw, CheckCircle2, AlertCircle, Zap, GitBranch, Info } from "lucide-react";
 
-const SAMPLE_FACTS = `inhibits(Metformin, mTOR)
-causes(mTOR, Neurodegeneration)
-treats(Metformin, Diabetes)`;
+const SAMPLE_FACTS = `classifiedAs(T-V856S, Equip)
+raisedOn(O0005, T-V856S)
+highAlarm(O0005)
+confusedWith(StopTime, Idle)`;
 
-const SAMPLE_RULE = `IF inhibits(Metformin, mTOR) AND causes(mTOR, Neurodegeneration) THEN candidate(Metformin, Alzheimer's)`;
+const SAMPLE_RULE = `IF raisedOn(?code, T-V856S) AND highAlarm(?code) THEN investigate(?code, VMC)
+IF classifiedAs(?type, Equip) AND confusedWith(StopTime, Idle) THEN forbidRename(?type, 停机秒)`;
 
 const TEMPLATES = [
+  {
+    label: "报警强度对比",
+    facts: `alarmPerHour(T-V856S, high)
+alarmPerHour(T-600, low)
+runTimeShare(T-V856S, structure)
+confusedWith(runTimeShare, 稼动率)`,
+    rule: `IF alarmPerHour(?type, high) THEN inspectAlarmDensity(?type)
+IF alarmPerHour(T-V856S, high) AND alarmPerHour(T-600, low) THEN typeAlarmGap(T-V856S, T-600)
+IF confusedWith(runTimeShare, 稼动率) THEN forbidRename(runTimeShare, 稼动率)`,
+  },
+  {
+    label: "IoT 报警升级",
+    facts: SAMPLE_FACTS,
+    rule: SAMPLE_RULE,
+  },
   {
     label: "Drug Candidate",
     facts: `inhibits(Metformin, mTOR)\ncauses(mTOR, Neurodegeneration)\ntreats(Metformin, Diabetes)`,

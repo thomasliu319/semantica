@@ -12,8 +12,8 @@ const MOCK_FIELDS: FieldRow[] = [
 ];
 
 export function DiffMergeWorkspace() {
-  const [primaryId, setPrimaryId]   = useState("n-primary-1");
-  const [duplicateId, setDuplicateId] = useState("n-dup-2");
+  const [primaryId, setPrimaryId]   = useState("demo:status-stop");
+  const [duplicateId, setDuplicateId] = useState("demo:status-idle-mislabel");
   const [status, setStatus]   = useState<"idle" | "loading" | "success" | "error">("idle");
   const [msg, setMsg]         = useState("");
 

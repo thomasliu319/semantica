@@ -28,6 +28,7 @@ Open http://127.0.0.1:8000 then **Open Semantica Explorer**.
 | `manufacturing_shopfloor.json` | Shop-floor ISA-95 | Manufacturing `seed.sql` |
 | `device_iot_model.json` | 200 设备主数据 + 完备时序维度血缘（客户/区域/城市/网关/API/报警类型/共享程序） | `source/equip_master_200.json` + `iot_timeseries/_complete` |
 | `complete_device_ledger.json` | 92 台数据完备设备台账 | `iot_timeseries/_complete` |
+| `iot_cleaned_semantics.json` | 清洗后 199 台语义图（机型×月 / 客户×设备 / 报警号） | `processed/iot_mar_aug_2026` |
 | `corporate_org.json` | Org chart | `corporate_ontology.ttl` |
 | `catalog.json` | Index with node/edge counts | Generated |
 

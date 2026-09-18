@@ -1,8 +1,10 @@
-// Sole owner of the Ontology Hub deep-link query parameters: the names below must not be
-// spelled out anywhere else, so that the protocol can change in one place.
+// Sole owner of the Explorer deep-link query: v (app version) plus Ontology Hub tab/entity.
+const VERSION_PARAM = "v";
 const TAB_PARAM = "ontologyTab";
 const ENTITY_PARAM = "ontologyEntity";
 const EDITOR_TAB = "editor";
+export const APP_VERSION = "iot2";
+export const DEFAULT_TAB = "registry";
 
 export interface OntologyUrlState {
   /** Raw parameter value; the set of legal tab ids belongs to the workspace, not this module. */
@@ -19,26 +21,62 @@ export function parseOntologyUrlState(search: string): OntologyUrlState {
   };
 }
 
+function ontologyParams(search: string): URLSearchParams {
+  const incoming = new URLSearchParams(search);
+  const next = new URLSearchParams();
+  next.set(VERSION_PARAM, APP_VERSION);
+  if (incoming.has(TAB_PARAM)) {
+    next.set(TAB_PARAM, incoming.get(TAB_PARAM) ?? "");
+  }
+  if (incoming.has(ENTITY_PARAM)) {
+    next.set(ENTITY_PARAM, incoming.get(ENTITY_PARAM) ?? "");
+  }
+  return next;
+}
+
+function serializeSearch(params: URLSearchParams): string {
+  const text = params.toString();
+  return text ? `?${text}` : "";
+}
+
+/** Sole version is `v=iot2`. Bare `/` and other `v=` land on Ontology Hub registry. */
+export function canonicalizeSearch(search: string): string {
+  const incoming = new URLSearchParams(search);
+  const next = new URLSearchParams();
+  next.set(VERSION_PARAM, APP_VERSION);
+  const entity = incoming.get(ENTITY_PARAM);
+  const tab = incoming.get(TAB_PARAM);
+  if (entity) {
+    next.set(TAB_PARAM, EDITOR_TAB);
+    next.set(ENTITY_PARAM, entity);
+  } else if (tab) {
+    next.set(TAB_PARAM, tab);
+  } else {
+    next.set(TAB_PARAM, DEFAULT_TAB);
+  }
+  return serializeSearch(next);
+}
+
 export function applyTab(search: string, tab: string): string {
-  const params = new URLSearchParams(search);
+  const params = ontologyParams(search);
   params.set(TAB_PARAM, tab);
-  return `?${params.toString()}`;
+  return serializeSearch(params);
 }
 
 // A selected entity is only addressable from the editor, so the tab moves with it.
 export function applyEntitySelection(search: string, entityUri: string): string {
-  const params = new URLSearchParams(search);
+  const params = ontologyParams(search);
   params.set(TAB_PARAM, EDITOR_TAB);
   params.set(ENTITY_PARAM, entityUri);
-  return `?${params.toString()}`;
+  return serializeSearch(params);
 }
 
 // Pairs with applyEntitySelection: an entity URI is resolved back to its owning ontology on
 // load, so leaving a stale one behind when the active ontology changes reopens the old ontology.
 export function removeEntitySelection(search: string): string {
-  const params = new URLSearchParams(search);
+  const params = ontologyParams(search);
   params.delete(ENTITY_PARAM);
-  return `?${params.toString()}`;
+  return serializeSearch(params);
 }
 
 /**
@@ -66,16 +104,28 @@ export function hasOntologyUrlState(search?: string): boolean {
   return tab !== undefined || entityUri !== undefined;
 }
 
-// The transform returns a query string only, so the fragment has to be carried
-// across explicitly: replaceState with a bare "?..." drops it. This is the one
-// place that knows how the URL is written, so it is the only place that can.
+// Always keep v=iot2. Unknown keys are dropped. The fragment is carried across.
 function updateSearch(transform: (search: string) => string): void {
   try {
+    const path = window.location.pathname || "/";
     window.history.replaceState(
       null,
       "",
-      `${transform(window.location.search)}${window.location.hash}`,
+      `${path}${transform(window.location.search)}${window.location.hash}`,
     );
+  } catch {
+    // Deep-link state is a convenience; every caller stays correct without it.
+  }
+}
+
+export function canonicalizeExplorerUrl(): void {
+  try {
+    const current = window.location.search;
+    const next = canonicalizeSearch(current);
+    if (next === current || (next === "" && current === "")) {
+      return;
+    }
+    updateSearch(() => next);
   } catch {
     // Deep-link state is a convenience; every caller stays correct without it.
   }

@@ -7,9 +7,13 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import pandas as pd
+
 from semantica.context.context_graph import ContextGraph
+from semantica.explorer.iot_metrics import DEVICE_DAY_NAMED, PRESETS, stamp_metrics
 
 OUT_DIR = Path(__file__).resolve().parent / "json"
+PROCESSED_IOT = Path(__file__).resolve().parent / "processed" / "iot_mar_aug_2026"
 
 
 def _save(graph: ContextGraph, filename: str, *, source: str, title: str, tags: list[str]) -> dict:
@@ -1102,6 +1106,504 @@ def complete_device_ledger() -> ContextGraph:
     return graph
 
 
+def _num(value, digits: int | None = 1):
+    if value is None:
+        return 0 if digits is None else 0.0
+    try:
+        if pd.isna(value):
+            return 0 if digits is None else 0.0
+    except TypeError:
+        pass
+    number = float(value)
+    if digits is None:
+        return int(round(number))
+    return round(number, digits)
+
+
+def _text(value, default: str = "") -> str:
+    if value is None:
+        return default
+    try:
+        if pd.isna(value):
+            return default
+    except TypeError:
+        pass
+    text = str(value).strip()
+    return text if text and text.lower() != "nan" else default
+
+
+def _metric_props(row) -> dict:
+    bases = {key: getattr(row, key) for key in DEVICE_DAY_NAMED if hasattr(row, key)}
+    stamped = stamp_metrics(bases)
+    share = getattr(row, "run_hours_share_of_month", None)
+    try:
+        if share is not None and not pd.isna(share):
+            stamped["run_hours_share_of_month"] = round(float(share), 4)
+    except TypeError:
+        pass
+    return stamped
+
+
+def cleaned_iot_semantics() -> ContextGraph:
+    """Explorer graph from cleaned Apr–Aug parquet (metrics.md slices)."""
+    dim = pd.read_parquet(PROCESSED_IOT / "device_dim.parquet")
+    day = pd.read_parquet(PROCESSED_IOT / "device_day.parquet")
+    alarms = pd.read_parquet(PROCESSED_IOT / "alarm_event.parquet")
+    report = json.loads((PROCESSED_IOT / "dq_report.json").read_text(encoding="utf-8"))
+    graph = ContextGraph(advanced_analytics=False)
+
+    graph.add_node(
+        "dataset:cleaned",
+        "Dataset",
+        content="清洗后完备设备语义图",
+        window="2026-04-01/2026-08-31",
+        complete_devices=int(report.get("complete_devices") or len(dim)),
+        color="#A78BFA",
+    )
+    graph.add_node("type:T-V856S", "EquipType", content="T-V856S 立加", EquipTypeCode="T-V856S", color="#63E6FF")
+    graph.add_node("type:T-600", "EquipType", content="T-600 钻攻", EquipTypeCode="T-600", color="#34D399")
+    graph.add_edge("dataset:cleaned", "type:T-V856S", "covers")
+    graph.add_edge("dataset:cleaned", "type:T-600", "covers")
+    graph.add_node("band:high", "UtilBand", content="高运行 ≥360h", color="#F87171")
+    graph.add_node("band:mid", "UtilBand", content="中运行 80–360h", color="#FBBF24")
+    graph.add_node("band:low", "UtilBand", content="低运行 <80h", color="#94A3B8")
+    graph.add_node("domain:cnc_run", "MeasureDomain", content="CNC运行 / 时间结构", color="#818CF8")
+    graph.add_node("domain:alarm", "MeasureDomain", content="报警 / 事件", color="#FB7185")
+    graph.add_node("domain:program", "MeasureDomain", content="程序 / 产量", color="#2DD4BF")
+    for domain in ("domain:cnc_run", "domain:alarm", "domain:program"):
+        graph.add_edge("dataset:cleaned", domain, "defines")
+
+    month_agg = day.groupby("month", as_index=False).agg(**DEVICE_DAY_NAMED).sort_values("month")
+    for row in month_agg.itertuples(index=False):
+        node_id = f"month:{row.month}"
+        graph.add_node(node_id, "Month", content=str(row.month), color="#818CF8", **_metric_props(row))
+        graph.add_edge("dataset:cleaned", node_id, "aggregates")
+        graph.add_edge(node_id, "domain:cnc_run", "reports")
+
+    type_month = day.groupby(["equip_type_code", "month"], as_index=False).agg(**DEVICE_DAY_NAMED)
+    month_hours = type_month.groupby("month")["run_hours"].transform("sum")
+    type_month = type_month.assign(run_hours_share_of_month=type_month["run_hours"] / month_hours.replace(0, pd.NA))
+    for row in type_month.itertuples(index=False):
+        slice_id = f"slice:{row.equip_type_code}:{row.month}"
+        graph.add_node(
+            slice_id,
+            "TypeMonth",
+            content=f"{row.equip_type_code} {row.month}",
+            EquipTypeCode=row.equip_type_code,
+            month=row.month,
+            color="#C084FC",
+            **_metric_props(row),
+        )
+        graph.add_edge("dataset:cleaned", slice_id, "slices")
+        graph.add_edge(slice_id, f"type:{row.equip_type_code}", "ofType")
+        graph.add_edge(slice_id, f"month:{row.month}", "inMonth", weight=max(float(row.run_hours), 0.1))
+
+    type_stats = day.groupby("equip_type_code", as_index=False).agg(**DEVICE_DAY_NAMED)
+    for row in type_stats.itertuples(index=False):
+        graph.add_node_attribute(f"type:{row.equip_type_code}", _metric_props(row))
+
+    device_stats = day.groupby("out_factory_code", as_index=False).agg(
+        **DEVICE_DAY_NAMED,
+        mean_run_rate_pct=("run_time_rate_pct", "mean"),
+    )
+    stats_by_code = {str(row.out_factory_code): row for row in device_stats.itertuples(index=False)}
+    cust_stats = day.groupby("company_id", as_index=False).agg(**DEVICE_DAY_NAMED)
+    cust_by_id = {_text(row.company_id): row for row in cust_stats.itertuples(index=False)}
+    area_day = day.merge(dim[["out_factory_code", "area_name"]].drop_duplicates("out_factory_code"), on="out_factory_code", how="left")
+    area_day["area_name"] = area_day["area_name"].fillna("空").replace("", "空")
+    area_stats = area_day.groupby("area_name", as_index=False).agg(**DEVICE_DAY_NAMED)
+    area_by_name = {_text(row.area_name, "空"): row for row in area_stats.itertuples(index=False)}
+
+    for area in sorted({str(v).strip() for v in dim["area_name"].fillna("空")}):
+        label = area if area and area != "None" else "空"
+        stats = area_by_name.get(label)
+        graph.add_node(f"area:{label}", "Area", content=label, color="#F59E0B", **(_metric_props(stats) if stats is not None else {}))
+        graph.add_edge("dataset:cleaned", f"area:{label}", "covers")
+
+    customers: dict[str, str] = {}
+    for row in dim.itertuples(index=False):
+        code = str(row.out_factory_code)
+        company = _text(row.company_name, "未知客户")
+        company_id = _text(row.company_id)
+        area = _text(row.area_name, "空")
+        type_code = _text(row.equip_type_code, "T-V856S")
+        stats = stats_by_code.get(code)
+        run_hours = _num(getattr(stats, "run_hours", 0))
+        if run_hours >= 360:
+            band = "band:high"
+        elif run_hours >= 80:
+            band = "band:mid"
+        else:
+            band = "band:low"
+
+        cust_key = company_id or company
+        cust_id = customers.get(cust_key)
+        if cust_id is None:
+            cust_id = f"customer:{cust_key}"
+            customers[cust_key] = cust_id
+            c_stats = cust_by_id.get(company_id)
+            graph.add_node(
+                cust_id,
+                "Customer",
+                content=company,
+                CompanyId=company_id,
+                color="#34D399",
+                **(_metric_props(c_stats) if c_stats is not None else {}),
+            )
+            graph.add_edge("dataset:cleaned", cust_id, "covers")
+
+        equip_id = f"equip:{code}"
+        graph.add_node(
+            equip_id,
+            "Equip",
+            content=code,
+            OutFactoryCode=code,
+            EquipTypeCode=type_code,
+            EquipTypeName=row.equip_type_name,
+            CompanyName=company,
+            AreaName=area,
+            mean_run_rate_pct=_num(getattr(stats, "mean_run_rate_pct", 0), 2),
+            complete=True,
+            **(_metric_props(stats) if stats is not None else {"run_hours": run_hours}),
+        )
+        graph.add_edge("dataset:cleaned", equip_id, "contains")
+        graph.add_edge(equip_id, f"type:{type_code}", "classifiedAs")
+        graph.add_edge(equip_id, cust_id, "ownedBy")
+        graph.add_edge(equip_id, band, "utilizes")
+        graph.add_edge(equip_id, f"area:{area}", "locatedIn")
+
+    alarm_work = alarms.assign(_one=1)
+    alarm_by_code = alarm_work.groupby("abno_code", as_index=False).agg(
+        alarm_count=("_one", "sum"),
+        alarm_shutdown_count=("is_shutdown", "sum"),
+        alarm_duration_sec=("duration_sec", "sum"),
+    )
+    alarm_code_stats = {str(row.abno_code or "未知"): row for row in alarm_by_code.itertuples(index=False)}
+    alarm_top = (
+        alarm_work.groupby(["abno_code", "equip_type_code"], as_index=False)
+        .agg(
+            alarm_count=("_one", "sum"),
+            alarm_shutdown_count=("is_shutdown", "sum"),
+            alarm_duration_sec=("duration_sec", "sum"),
+        )
+        .sort_values("alarm_count", ascending=False)
+        .head(12)
+    )
+    seen_codes: set[str] = set()
+    for row in alarm_top.itertuples(index=False):
+        code = str(row.abno_code or "未知")
+        alarm_id = f"alarm:{code}"
+        if code not in seen_codes:
+            code_stats = alarm_code_stats.get(code, row)
+            graph.add_node(
+                alarm_id,
+                "AlarmCode",
+                content=code,
+                color="#FB7185",
+                **stamp_metrics(
+                    {
+                        "alarm_count": getattr(code_stats, "alarm_count", 0),
+                        "alarm_shutdown_count": getattr(code_stats, "alarm_shutdown_count", 0),
+                        "alarm_duration_sec": getattr(code_stats, "alarm_duration_sec", 0),
+                    }
+                ),
+            )
+            graph.add_edge("dataset:cleaned", alarm_id, "indexes")
+            graph.add_edge(alarm_id, "domain:alarm", "belongsTo")
+            seen_codes.add(code)
+        graph.add_edge(
+            alarm_id,
+            f"type:{row.equip_type_code}",
+            "raisedOn",
+            weight=float(row.alarm_count),
+            alarm_count=_num(row.alarm_count, None),
+        )
+
+    for rule in report.get("rules") or []:
+        rule_id = rule.get("rule_id")
+        table = rule.get("table")
+        node_id = f"dq:{rule_id}:{table}"
+        graph.add_node(
+            node_id,
+            "DataQuality",
+            content=f"{rule_id} / {table}",
+            count=_num(rule.get("count"), None),
+            note=rule.get("note") or "",
+            color="#F97316",
+        )
+        graph.add_edge("dataset:cleaned", node_id, "flagged")
+
+    for row in report.get("excluded_incomplete") or []:
+        code = str(row.get("out_factory_code"))
+        node_id = f"excluded:{code}"
+        graph.add_node(
+            node_id,
+            "IncompleteEquip",
+            content=code,
+            missing=",".join(row.get("missing") or []),
+            color="#64748B",
+        )
+        graph.add_edge("dataset:cleaned", node_id, "excludes")
+    _attach_workspace_semantics(graph, day, alarms)
+    return graph
+
+
+def _attach_workspace_semantics(graph: ContextGraph, day: pd.DataFrame, alarms: pd.DataFrame) -> None:
+    """Richer links plus Decision / Ontology / Provenance / Enrich demo nodes."""
+    onto = "http://semantica.local/iot/ontology"
+    skos = "http://semantica.local/iot/skos"
+    graph.add_node(
+        onto,
+        "owl:Ontology",
+        content="IoT 设备清洗本体",
+        **{"rdfs:label": "IoT 设备清洗本体", "uri": onto, "owl:versionInfo": "1.0", "color": "#E879F9"},
+    )
+    graph.add_edge("dataset:cleaned", onto, "conformsTo")
+    classes = [
+        (f"{onto}#Equip", "设备", "T-V856S / T-600 物理机"),
+        (f"{onto}#Customer", "客户", "现场使用方，后续切分键"),
+        (f"{onto}#AlarmCode", "报警号", "AbnoCode，不是故障秒"),
+        (f"{onto}#TypeMonth", "机型×月", "推荐切片"),
+        (f"{onto}#RunStatus", "运行状态四桶", "运行/待机/关机/故障"),
+    ]
+    for uri, label, comment in classes:
+        graph.add_node(
+            uri,
+            "owl:Class",
+            content=label,
+            **{"rdfs:label": label, "rdfs:comment": comment, "scheme_uri": onto, "color": "#E879F9"},
+        )
+        graph.add_edge(uri, onto, "rdfs:isDefinedBy")
+    graph.add_edge(f"{onto}#TypeMonth", f"{onto}#Equip", "rdfs:subClassOf")
+    graph.add_edge("type:T-V856S", f"{onto}#Equip", "rdf:type")
+    graph.add_edge("type:T-600", f"{onto}#Equip", "rdf:type")
+
+    graph.add_node(
+        skos,
+        "skos:ConceptScheme",
+        content="运行状态词表",
+        **{"skos:prefLabel": "运行状态词表", "uri": skos, "scheme_uri": skos, "color": "#38BDF8"},
+    )
+    graph.add_edge(onto, skos, "owl:imports")
+    concepts = [
+        ("run", "运行", "RunTime，不是件数"),
+        ("standby", "待机", "StandbyTime"),
+        ("stop", "关机", "StopTime，不是停机"),
+        ("breakdown", "故障", "BreakDownTime，不是停机报警条数"),
+        ("idle", "停机", "仅 IsShutdown / IdleCount"),
+        ("util30d", "近30天稼动率", "客户列表 UtilRate，禁止当每日运行占比"),
+    ]
+    for slug, label, definition in concepts:
+        cid = f"{skos}#{slug}"
+        graph.add_node(
+            cid,
+            "skos:Concept",
+            content=label,
+            **{
+                "skos:prefLabel": label,
+                "skos:definition": definition,
+                "scheme_uri": skos,
+                "color": "#38BDF8",
+            },
+        )
+        graph.add_edge(cid, skos, "skos:inScheme")
+    graph.add_edge(f"{skos}#run", f"{skos}#standby", "skos:related")
+    graph.add_edge(f"{skos}#stop", f"{skos}#idle", "skos:related")
+    graph.add_edge(f"{skos}#breakdown", f"{skos}#idle", "skos:related")
+    graph.add_edge(f"{skos}#run", "domain:cnc_run", "denotes")
+    graph.add_edge(f"{skos}#idle", "domain:alarm", "denotes")
+    graph.add_edge(f"{skos}#util30d", "domain:cnc_run", "notToBeConfusedWith")
+
+    for recipe in PRESETS:
+        formula = f"{recipe['a']} {recipe['op']} {recipe['b']}" if recipe.get("b") else f"share({recipe['a']})"
+        metric_id = f"metric:{recipe['id']}"
+        graph.add_node(
+            metric_id,
+            "DerivedMetric",
+            content=recipe["name_zh"],
+            formula=formula,
+            op=recipe["op"],
+            domain=recipe.get("domain") or "",
+            not_label=recipe.get("not") or "",
+            color="#A78BFA",
+        )
+        domain_id = f"domain:{recipe.get('domain') or 'cnc_run'}"
+        graph.add_edge(metric_id, domain_id, "measures")
+
+    programs = pd.read_parquet(PROCESSED_IOT / "program_cycle.parquet")
+    top_programs = (
+        programs.groupby(["program_code", "equip_type_code"], as_index=False)
+        .agg(cycles=("output", "sum"), devices=("out_factory_code", "nunique"))
+        .sort_values("cycles", ascending=False)
+        .head(8)
+    )
+    seen_prog: set[str] = set()
+    for row in top_programs.itertuples(index=False):
+        code = _text(row.program_code, "未知程序")
+        pid = f"program:{code}"
+        if code not in seen_prog:
+            graph.add_node(pid, "ProgramCode", content=code, color="#2DD4BF")
+            graph.add_edge("dataset:cleaned", pid, "indexes")
+            graph.add_edge(pid, "domain:program", "belongsTo")
+            seen_prog.add(code)
+        graph.add_edge(
+            pid,
+            f"type:{row.equip_type_code}",
+            "runsOn",
+            weight=float(row.cycles or 0),
+            cycles=_num(row.cycles, None),
+        )
+
+    o0005 = alarms[(alarms["abno_code"] == "O0005") & (alarms["equip_type_code"] == "T-V856S")]
+    if not o0005.empty:
+        top_equips = o0005.groupby("out_factory_code").size().sort_values(ascending=False).head(6)
+        for code, count in top_equips.items():
+            graph.add_edge("alarm:O0005", f"equip:{code}", "raisedOnEquip", weight=float(count), alarm_count=int(count))
+
+    top_run = (
+        day.groupby("out_factory_code", as_index=False)["run_hours"].sum().sort_values("run_hours", ascending=False).head(5)
+    )
+    for row in top_run.itertuples(index=False):
+        graph.add_edge(f"equip:{row.out_factory_code}", "month:2026-08", "peakedIn", weight=float(row.run_hours))
+
+    graph.add_node(
+        "event:aug-run-surge",
+        "event",
+        content="8 月运行抬升到 3.8 万小时",
+        valid_from="2026-08-01T00:00:00",
+        valid_until="2026-08-31T23:59:59",
+        run_hours=38226.3,
+        color="#FBBF24",
+    )
+    graph.add_node(
+        "event:jul-alarm-drop",
+        "event",
+        content="7 月报警掉到 2074 条",
+        valid_from="2026-07-01T00:00:00",
+        valid_until="2026-07-31T23:59:59",
+        alarm_count=2074,
+        color="#FB7185",
+    )
+    graph.add_edge("event:aug-run-surge", "month:2026-08", "about")
+    graph.add_edge("event:jul-alarm-drop", "month:2026-07", "about")
+    graph.add_edge("event:aug-run-surge", "domain:cnc_run", "measures")
+    graph.add_edge("event:jul-alarm-drop", "domain:alarm", "measures")
+
+    decisions = [
+        (
+            "decision:drop_mar",
+            "丢掉 2026-03 空转月",
+            "data_quality",
+            "3 月几乎全停，若留在 device_day 会把利用率拉成近零",
+            "Grill B5：3 月只进 dq_report，业务窗口从 4 月起",
+            "approved",
+            0.96,
+            [("about", "domain:cnc_run"), ("resultedIn", "dq:dropped_march:device_day")],
+        ),
+        (
+            "decision:drop_idle_month",
+            "丢掉整月零运行的设备-月",
+            "data_quality",
+            "接口齐全不等于这段时间在干活",
+            "Grill B3：台留在 device_dim，空月从 device_day 删除，4–8 月事件仍保留",
+            "approved",
+            0.93,
+            [("about", "domain:cnc_run"), ("resultedIn", "dq:dropped_idle_device_month:device_day")],
+        ),
+        (
+            "decision:exclude_172609583",
+            "排除无台账设备 172609583",
+            "data_quality",
+            "GetEquipInfoPageList 空，没有 CompanyId/EquipCode",
+            "D1 exclude：不编造身份，不进清洗集",
+            "approved",
+            0.99,
+            [("about", "excluded:172609583")],
+        ),
+        (
+            "decision:snapshot_keep",
+            "主轴只作快照，不摊到 4–8 月",
+            "signal_coverage",
+            "GetEquipSpindleWithFeedData 无日期入参",
+            "E1 snapshot_keep：禁止把 as_of 当工况时序",
+            "approved",
+            0.94,
+            [("about", "domain:cnc_run")],
+        ),
+        (
+            "decision:uncover_cmms",
+            "没有保养换刀台账就不造维护表",
+            "signal_coverage",
+            "报警几乎全是已解决，ProcessDept 是正文不是部门",
+            "E2 uncover：宁肯错杀，缺口写入 uncovered_signals",
+            "approved",
+            0.92,
+            [("about", "domain:alarm")],
+        ),
+        (
+            "decision:no_fleet_plan_kpi",
+            "禁止把计划达成率做舰队平均",
+            "metric_semantics",
+            "PlanOutput 只有极少数设备非空",
+            "只在 plan_output 非空且非 0 的进度行计算达成率",
+            "approved",
+            0.9,
+            [("about", "domain:program")],
+        ),
+    ]
+    for node_id, content, category, scenario, reasoning, outcome, confidence, links in decisions:
+        graph.add_node(
+            node_id,
+            "decision",
+            content=content,
+            category=category,
+            scenario=scenario,
+            reasoning=reasoning,
+            outcome=outcome,
+            confidence=confidence,
+            timestamp="2026-09-17",
+            color="#F472B6",
+        )
+        for rel, target in links:
+            graph.add_edge(node_id, target, rel)
+    graph.add_edge("decision:drop_mar", "decision:drop_idle_month", "precedes")
+    graph.add_edge("decision:snapshot_keep", "decision:uncover_cmms", "relatedTo")
+
+    graph.add_node("agent:semantica-clean", "system", content="process_iot_timeseries.py", color="#94A3B8")
+    graph.add_node("activity:iot-clean", "process", content="清洗 199 台 Mar–Aug JSON → parquet", color="#F59E0B")
+    graph.add_node("entity:iot-json", "Dataset", content="datasets/json/iot_timeseries", color="#64748B")
+    graph.add_node("entity:iot-parquet", "Dataset", content="datasets/processed/iot_mar_aug_2026", color="#64748B")
+    graph.add_edge("activity:iot-clean", "agent:semantica-clean", "wasAssociatedWith")
+    graph.add_edge("activity:iot-clean", "entity:iot-json", "used")
+    graph.add_edge("activity:iot-clean", "entity:iot-parquet", "generated")
+    graph.add_edge("dataset:cleaned", "entity:iot-parquet", "wasDerivedFrom")
+
+    graph.add_node(
+        "demo:status-stop",
+        "Customer",
+        content="关机时间",
+        note="Enrich 合并样例：保留端",
+        color="#FDE68A",
+    )
+    graph.add_node(
+        "demo:status-idle-mislabel",
+        "Customer",
+        content="关机时间（误标停机）",
+        note="Enrich 合并样例：重复端",
+        color="#FDE68A",
+    )
+    graph.add_edge("demo:status-stop", f"{skos}#stop", "labeledAs")
+    graph.add_edge("demo:status-idle-mislabel", f"{skos}#idle", "misreadAs")
+    graph.add_edge("demo:status-idle-mislabel", "demo:status-stop", "sameAsCandidate")
+    graph.add_node(
+        "customer:alias-shebeiku",
+        "Customer",
+        content="设备库",
+        note="与现场客户「设备库」同名，供 Entity Resolution 扫描",
+        color="#FDE68A",
+    )
+
+
 DATASETS = [
     (
         "alice_bob_acme.json",
@@ -1186,6 +1688,13 @@ DATASETS = [
         "datasets/json/iot_timeseries/_complete",
         "OpenAPI-complete device ledger with Mar–Aug utilization",
         ["manufacturing", "iot", "explorer", "ledger"],
+    ),
+    (
+        "iot_cleaned_semantics.json",
+        cleaned_iot_semantics,
+        "datasets/processed/iot_mar_aug_2026",
+        "清洗后完备设备语义图：机型×月衍生强度、客户×设备、报警号×机型",
+        ["manufacturing", "iot", "explorer", "cleaned", "semantics"],
     ),
     (
         "corporate_org.json",

@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {
+      "id": "import:signal-uncovered",
+      "type": "SignalGap",
+      "content": "跟随误差（无接口）",
+      "properties": { "domain": "axis", "note": "Enrich 导入样例" }
+    },
+    {
+      "id": "import:cmms-gap",
+      "type": "SignalGap",
+      "content": "换刀台账（无 CMMS）",
+      "properties": { "domain": "maintain", "note": "Enrich 导入样例" }
+    }
+  ],
+  "edges": [
+    {
+      "source": "import:signal-uncovered",
+      "target": "dataset:cleaned",
+      "type": "missingFrom"
+    },
+    {
+      "source": "import:cmms-gap",
+      "target": "dataset:cleaned",
+      "type": "missingFrom"
+    }
+  ]
+}

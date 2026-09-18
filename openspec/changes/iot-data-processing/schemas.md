@@ -124,6 +124,10 @@
 | `program_seconds` | OutputSumSecond 当日 | — | |
 | `progress_output` | Output 当日合计 | 累计循环次数 | 从表 `progress_day` |
 | `progress_plan_output` | PlanOutput 当日合计 | 计划产量 | |
+| `company_id` | 回填 dim | 客户 ID | 后续按客户切分 |
+| `month` | 自 `date` | 自然月 | `YYYY-MM` |
+| `is_run_day` | `run_time_sec > 0` | 有运行日 | 不是开机 |
+| `run_hours` | `run_time_sec / 3600` | 运行小时 | |
 
 四桶语义锁定：运行 / 待机 / 关机 / 故障。不发明「停机秒」。
 
@@ -268,7 +272,7 @@
 | `as_of` | Timestamp / fetched_at | 快照时刻 |
 | `is_summary` | IsSummary | 汇总行；`true` 或名称=合计 → 丢弃 |
 
-只保留 188 台涉及的 `CompanyId`。
+只保留完备设备涉及的 `CompanyId`。
 
 ---
 

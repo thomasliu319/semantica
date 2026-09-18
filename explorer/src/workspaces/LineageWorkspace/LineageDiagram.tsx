@@ -31,8 +31,8 @@ const THEME_CSS = `
 export function LineageDiagram() {
   const [nodes, setNodes] = useState<any[]>([]);
   const [edges, setEdges] = useState<any[]>([]);
-  const [searchId, setSearchId] = useState("");
-  const [activeId, setActiveId] = useState("");
+  const [searchId, setSearchId] = useState("activity:iot-clean");
+  const [activeId, setActiveId] = useState("activity:iot-clean");
   const [error, setError] = useState("");
 
   const downloadReport = async (format: "json" | "markdown") => {
@@ -90,29 +90,37 @@ export function LineageDiagram() {
           setError(data.message || "Warning: Partial success loading lineage.");
         }
 
+        const payloadNodes = Array.isArray(data?.nodes) ? data.nodes : [];
+        const payloadEdges = Array.isArray(data?.edges) ? data.edges : [];
         const counters: Record<string, number> = { "group_agent": 0, "group_activity": 0, "group_entity": 0 };
 
-        const mappedNodes = data.nodes.map((n: any) => {
-          const c = counters[n.parent_id] || 0;
-          counters[n.parent_id] = c + 1;
-          return {
-            id: n.id,
-            data: { label: n.label + "\n(" + n.prov_type + ")" },
-            position: { x: 50 + c * 180, y: 30 },
-            parentId: n.parent_id,
-            extent: "parent",
-            type: "default"
-          };
-        });
+        const mappedNodes = payloadNodes
+          .filter((n: { id?: string }) => Boolean(n?.id))
+          .map((n: { id: string; label?: string; prov_type?: string; parent_id?: string }) => {
+            const parentId = n.parent_id && n.parent_id in counters ? n.parent_id : "group_entity";
+            const c = counters[parentId] || 0;
+            counters[parentId] = c + 1;
+            return {
+              id: String(n.id),
+              data: { label: `${n.label || n.id}\n(${n.prov_type || "Entity"})` },
+              position: { x: 50 + c * 180, y: 30 },
+              parentId,
+              extent: "parent" as const,
+              type: "default"
+            };
+          });
 
-        const mappedEdges = data.edges.map((e: any) => ({
-          id: e.id,
-          source: e.source,
-          target: e.target,
-          label: e.label,
-          animated: true,
-          style: { stroke: "#58a6ff" }
-        }));
+        const nodeIds = new Set(["group_agent", "group_activity", "group_entity", ...mappedNodes.map((n: { id: string }) => n.id)]);
+        const mappedEdges = payloadEdges
+          .filter((e: { id?: string; source?: string; target?: string }) => e?.source && e?.target && nodeIds.has(e.source) && nodeIds.has(e.target))
+          .map((e: { id: string; source: string; target: string; label?: string }) => ({
+            id: String(e.id || `${e.source}-${e.target}`),
+            source: e.source,
+            target: e.target,
+            label: e.label,
+            animated: true,
+            style: { stroke: "#58a6ff" }
+          }));
 
         if (!ignore) {
           setNodes([...xLanes, ...mappedNodes]);
@@ -136,7 +144,7 @@ export function LineageDiagram() {
         <input
           className="ws-input"
           type="text"
-          placeholder="Enter Node ID…"
+          placeholder="activity:iot-clean"
           value={searchId}
           onChange={(e) => setSearchId(e.target.value)}
           onKeyDown={(e) => { if (e.key === "Enter") setActiveId(searchId); }}

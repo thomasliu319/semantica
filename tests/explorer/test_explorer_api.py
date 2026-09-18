@@ -147,6 +147,42 @@ class TestHealthInfo:
         assert response.status_code == 200
         assert '<div id="root"></div>' in response.text
         assert '<script src="/assets/app.js"></script>' in response.text
+        assert str(response.url).endswith("/?v=iot2&ontologyTab=registry")
+
+    def test_root_redirects_bare_and_other_versions_to_iot2_registry(self, tmp_path, monkeypatch):
+        from starlette.testclient import TestClient
+        from semantica.explorer import app as app_module
+        from semantica.explorer.app import create_app
+
+        package_dir = tmp_path / "semantica"
+        static_dir = package_dir / "static"
+        static_dir.mkdir(parents=True)
+        (static_dir / "index.html").write_text(
+            '<!doctype html><html><body><div id="root"></div></body></html>',
+            encoding="utf-8",
+        )
+
+        class FakeAppPath:
+            def __init__(self, *_args, **_kwargs):
+                self.path = package_dir / "explorer" / "app.py"
+
+            def resolve(self):
+                return self.path.resolve()
+
+        monkeypatch.setattr(app_module, "Path", FakeAppPath)
+
+        with TestClient(create_app()) as test_client:
+            bare = test_client.get("/", follow_redirects=False)
+            other = test_client.get("/?v=metrics1", follow_redirects=False)
+            canonical = test_client.get(
+                "/?v=iot2&ontologyTab=registry", follow_redirects=False
+            )
+
+        assert bare.status_code == 307
+        assert bare.headers["location"].endswith("/?v=iot2&ontologyTab=registry")
+        assert other.status_code == 307
+        assert other.headers["location"].endswith("/?v=iot2&ontologyTab=registry")
+        assert canonical.status_code == 200
 
     def test_health(self, client):
         response = client.get("/api/health")

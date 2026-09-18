@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState, type ReactNode } from 'react';
+import { lazy, Suspense, useEffect, useState, type ComponentType, type ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import {
   ArrowRight,
@@ -17,27 +17,40 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { ErrorBoundary } from './ErrorBoundary';
+import { reloadOnceForStaleChunk } from './chunkLoadError';
 import { ExploreWorkspaceTabs, type ExploreView } from './ExploreWorkspaceTabs';
 import { fetchAgentMemoryAvailability } from './explorerCapabilities';
-import { hasOntologyUrlState } from './workspaces/OntologyWorkspace/ontologyUrlState';
+import { canonicalizeExplorerUrl, hasOntologyUrlState } from './workspaces/OntologyWorkspace/ontologyUrlState';
 
-const DecisionWorkspace = lazy(() => import('./workspaces/DecisionWorkspace/DecisionWorkspace').then((module) => ({ default: module.DecisionWorkspace })));
-const DiffMergeWorkspace = lazy(() => import('./workspaces/DiffMergeWorkspace/DiffMergeWorkspace').then((module) => ({ default: module.DiffMergeWorkspace })));
-const GraphWorkspace = lazy(() => import('./workspaces/GraphWorkspace/GraphWorkspace').then((module) => ({ default: module.GraphWorkspace })));
-const MemoryWorkspace = lazy(() => import('./workspaces/MemoryWorkspace').then((module) => ({ default: module.MemoryWorkspace })));
-const ImportExportWorkspace = lazy(() => import('./workspaces/ImportExportWorkspace/ImportExportWorkspace').then((module) => ({ default: module.ImportExportWorkspace })));
-const LineageDiagram = lazy(() => import('./workspaces/LineageWorkspace/LineageDiagram').then((module) => ({ default: module.LineageDiagram })));
-const ReasoningWorkspace = lazy(() => import('./workspaces/ReasoningWorkspace').then((module) => ({ default: module.ReasoningWorkspace })));
-const SparqlWorkspace = lazy(() => import('./workspaces/SparqlWorkspace/SparqlWorkspace').then((module) => ({ default: module.SparqlWorkspace })));
-const VocabularyWorkspace = lazy(() => import('./workspaces/VocabularyWorkspace/VocabularyWorkspace').then((module) => ({ default: module.VocabularyWorkspace })));
-const RegistryTab = lazy(() => import('./workspaces/EnrichWorkspace/RegistryTab').then((module) => ({ default: module.RegistryTab })));
-const EntityResolutionTab = lazy(() => import('./workspaces/EnrichWorkspace/EntityResolutionTab').then((module) => ({ default: module.EntityResolutionTab })));
-const KGOverviewTab = lazy(() => import('./workspaces/ManageWorkspace/KGOverviewTab').then((module) => ({ default: module.KGOverviewTab })));
-const OntologySummaryTab = lazy(() => import('./workspaces/ManageWorkspace/OntologySummaryTab').then((module) => ({ default: module.OntologySummaryTab })));
-const OntologyWorkspace = lazy(() => import('./workspaces/OntologyWorkspace').then((module) => ({ default: module.OntologyWorkspace })));
+function lazyWorkspace<T extends ComponentType<any>>(loader: () => Promise<{ default: T }>) {
+  return lazy(() =>
+    loader().catch((error: unknown) => {
+      if (reloadOnceForStaleChunk(error)) {
+        return new Promise<{ default: T }>(() => {});
+      }
+      throw error;
+    }),
+  );
+}
+
+const DecisionWorkspace = lazyWorkspace(() => import('./workspaces/DecisionWorkspace/DecisionWorkspace').then((module) => ({ default: module.DecisionWorkspace })));
+const DiffMergeWorkspace = lazyWorkspace(() => import('./workspaces/DiffMergeWorkspace/DiffMergeWorkspace').then((module) => ({ default: module.DiffMergeWorkspace })));
+const GraphWorkspace = lazyWorkspace(() => import('./workspaces/GraphWorkspace/GraphWorkspace').then((module) => ({ default: module.GraphWorkspace })));
+const MemoryWorkspace = lazyWorkspace(() => import('./workspaces/MemoryWorkspace').then((module) => ({ default: module.MemoryWorkspace })));
+const ImportExportWorkspace = lazyWorkspace(() => import('./workspaces/ImportExportWorkspace/ImportExportWorkspace').then((module) => ({ default: module.ImportExportWorkspace })));
+const LineageDiagram = lazyWorkspace(() => import('./workspaces/LineageWorkspace/LineageDiagram').then((module) => ({ default: module.LineageDiagram })));
+const ReasoningWorkspace = lazyWorkspace(() => import('./workspaces/ReasoningWorkspace').then((module) => ({ default: module.ReasoningWorkspace })));
+const SparqlWorkspace = lazyWorkspace(() => import('./workspaces/SparqlWorkspace/SparqlWorkspace').then((module) => ({ default: module.SparqlWorkspace })));
+const MetricsWorkspace = lazyWorkspace(() => import('./workspaces/MetricsWorkspace').then((module) => ({ default: module.MetricsWorkspace })));
+const VocabularyWorkspace = lazyWorkspace(() => import('./workspaces/VocabularyWorkspace/VocabularyWorkspace').then((module) => ({ default: module.VocabularyWorkspace })));
+const RegistryTab = lazyWorkspace(() => import('./workspaces/EnrichWorkspace/RegistryTab').then((module) => ({ default: module.RegistryTab })));
+const EntityResolutionTab = lazyWorkspace(() => import('./workspaces/EnrichWorkspace/EntityResolutionTab').then((module) => ({ default: module.EntityResolutionTab })));
+const KGOverviewTab = lazyWorkspace(() => import('./workspaces/ManageWorkspace/KGOverviewTab').then((module) => ({ default: module.KGOverviewTab })));
+const OntologySummaryTab = lazyWorkspace(() => import('./workspaces/ManageWorkspace/OntologySummaryTab').then((module) => ({ default: module.OntologySummaryTab })));
+const OntologyWorkspace = lazyWorkspace(() => import('./workspaces/OntologyWorkspace').then((module) => ({ default: module.OntologyWorkspace })));
 
 type WorkspaceId = 'welcome' | 'explore' | 'analyze' | 'decisions' | 'enrich' | 'manage' | 'ontology-hub';
-type AnalyzeView = 'sparql' | 'reasoning';
+type AnalyzeView = 'metrics' | 'sparql' | 'reasoning';
 type EnrichView = 'import' | 'merge' | 'registry' | 'resolve';
 type ManageView = 'lineage' | 'kg-overview' | 'ontology';
 
@@ -97,6 +110,7 @@ const navItems: NavItem[] = [
 ];
 
 function readInitialWorkspace(): WorkspaceId {
+  canonicalizeExplorerUrl();
   return hasOntologyUrlState() ? 'ontology-hub' : 'welcome';
 }
 
@@ -1574,7 +1588,7 @@ function WelcomeScreen({
     },
     {
       label: 'Analyze',
-      description: 'Inference and queries',
+      description: '指标组合与查询',
       icon: BrainCircuit,
       onClick: onOpenReasoning,
     },
@@ -1782,7 +1796,7 @@ function WelcomeScreen({
 export default function App() {
   const [activeWorkspace, setActiveWorkspace] = useState<WorkspaceId>(readInitialWorkspace);
   const [exploreView, setExploreView] = useState<ExploreView>('graph');
-  const [analyzeView, setAnalyzeView] = useState<AnalyzeView>('reasoning');
+  const [analyzeView, setAnalyzeView] = useState<AnalyzeView>('metrics');
   const [enrichView, setEnrichView] = useState<EnrichView>('import');
   const [manageView, setManageView] = useState<ManageView>('lineage');
   const [graphFocusRequest, setGraphFocusRequest] = useState<{ nodeId: string; token: number } | null>(null);
@@ -1833,7 +1847,7 @@ export default function App() {
           }}
           onOpenReasoning={() => {
             setActiveWorkspace('analyze');
-            setAnalyzeView('reasoning');
+            setAnalyzeView('metrics');
           }}
           onOpenImport={() => {
             setActiveWorkspace('enrich');
@@ -1879,10 +1893,13 @@ export default function App() {
       return (
         <WorkspaceShell
           title="Analyze"
-          subtitle="Query the active graph and test inference rules."
-          kicker={analyzeView === 'reasoning' ? 'Reasoning Engine' : 'SPARQL Query'}
+          subtitle="按维度组合基础指标，查询衍生强度与时间结构占比。"
+          kicker={analyzeView === 'metrics' ? 'Metric Composer' : analyzeView === 'reasoning' ? 'Reasoning Engine' : 'SPARQL Query'}
           tabs={
             <>
+              <button className="workspace-tab" data-active={analyzeView === 'metrics'} onClick={() => setAnalyzeView('metrics')}>
+                Metrics Composer
+              </button>
               <button className="workspace-tab" data-active={analyzeView === 'reasoning'} onClick={() => setAnalyzeView('reasoning')}>
                 Reasoning Playground
               </button>
@@ -1894,7 +1911,7 @@ export default function App() {
         >
           <ErrorBoundary key={`analyze-${analyzeView}`}>
             <Suspense fallback={<WorkspaceFallback />}>
-              {analyzeView === 'reasoning' ? <ReasoningWorkspace /> : <SparqlWorkspace />}
+              {analyzeView === 'metrics' ? <MetricsWorkspace /> : analyzeView === 'reasoning' ? <ReasoningWorkspace /> : <SparqlWorkspace />}
             </Suspense>
           </ErrorBoundary>
         </WorkspaceShell>

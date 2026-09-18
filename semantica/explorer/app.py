@@ -7,10 +7,11 @@ import os
 from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Optional
+from urllib.parse import urlencode
 
 from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 from .. import __version__
@@ -21,6 +22,35 @@ from .markdown_resources import MarkdownResourceRegistry
 from .runtime import explorer_capabilities, install_mutation_bridge
 from .session import GraphSession
 from .ws import ConnectionManager, install_graph_updates_websocket
+
+APP_VERSION = "iot2"
+DEFAULT_ONTOLOGY_TAB = "registry"
+
+
+def canonical_explorer_query(query_params) -> str:
+    entity = query_params.get("ontologyEntity")
+    tab = query_params.get("ontologyTab")
+    if entity:
+        return urlencode(
+            {"v": APP_VERSION, "ontologyTab": "editor", "ontologyEntity": entity}
+        )
+    if tab:
+        return urlencode({"v": APP_VERSION, "ontologyTab": tab})
+    return urlencode({"v": APP_VERSION, "ontologyTab": DEFAULT_ONTOLOGY_TAB})
+
+
+def explorer_query_is_canonical(query_params) -> bool:
+    keys = set(query_params.keys())
+    extra = keys - {"v", "ontologyTab", "ontologyEntity"}
+    if extra or query_params.get("v") != APP_VERSION:
+        return False
+    entity = query_params.get("ontologyEntity")
+    tab = query_params.get("ontologyTab")
+    if not tab:
+        return False
+    if entity:
+        return keys == {"v", "ontologyTab", "ontologyEntity"} and tab == "editor"
+    return keys == {"v", "ontologyTab"}
 
 
 def _read_int_env(name: str, default: int) -> int:
@@ -158,6 +188,7 @@ def create_app(
 
     from .routes.analytics import router as analytics_router
     from .routes.annotations import router as annotations_router
+    from .routes.iot_metrics import router as iot_metrics_router
     from .routes.decisions import router as decisions_router
     from .routes.enrich import router as enrich_router
     from .routes.export_import import router as export_import_router
@@ -173,6 +204,7 @@ def create_app(
     _auth = [Depends(require_auth)]
     app.include_router(graph_router, dependencies=_auth)
     app.include_router(analytics_router, dependencies=_auth)
+    app.include_router(iot_metrics_router, dependencies=_auth)
     app.include_router(decisions_router, dependencies=_auth)
     app.include_router(temporal_router, dependencies=_auth)
     app.include_router(enrich_router, dependencies=_auth)
@@ -187,11 +219,25 @@ def create_app(
 
     install_graph_updates_websocket(app, settings["allowed_origins"])
 
-    @app.get("/", include_in_schema=False)
-    async def root():
+    def spa_index():
         index_path = Path(__file__).resolve().parent.parent / "static" / "index.html"
         if index_path.is_file():
-            return FileResponse(index_path)
+            return FileResponse(
+                index_path,
+                headers={"Cache-Control": "no-store"},
+            )
+        return None
+
+    @app.get("/", include_in_schema=False)
+    async def root(request: Request):
+        if not explorer_query_is_canonical(request.query_params):
+            location = request.url.replace(
+                query=canonical_explorer_query(request.query_params)
+            )
+            return RedirectResponse(url=str(location), status_code=307)
+        indexed = spa_index()
+        if indexed is not None:
+            return indexed
         _logger.warning(
             "Explorer frontend bundle not found — UI unavailable. "
             "Install the package via pip to get the pre-built bundle, "
@@ -237,9 +283,9 @@ def create_app(
         async def serve_spa(full_path: str):
             if full_path.startswith("api/"):
                 raise HTTPException(status_code=404, detail="API route not found")
-            index_path = static_dir / "index.html"
-            if index_path.is_file():
-                return FileResponse(index_path)
+            indexed = spa_index()
+            if indexed is not None:
+                return indexed
             raise HTTPException(status_code=404, detail="Frontend build missing")
 
     return app

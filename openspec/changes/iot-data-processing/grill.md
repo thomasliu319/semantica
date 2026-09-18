@@ -112,7 +112,7 @@ JSON 原始层只读，不改。
 2. 生成 `specs/iot-data-processing/spec.md`（SHALL + Scenario）。
 3. 再写 `tasks.md` 和清洗脚本。
 
-B1–D5 已闭环。下列 **E1–E2 因信号清单增补而重开**，答完前不得把轴/伺服、维护当成 4–8 月时序或 CMMS 台账。
+B1–D5、E1–E2 已闭环，答案见 [decisions.md](./decisions.md)。
 
 ---
 

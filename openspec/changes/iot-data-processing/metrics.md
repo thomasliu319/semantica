@@ -95,6 +95,27 @@
 
 不要切片：把 `UtilRate`（客户近 30 天）和日 `run_time_rate_pct` 放在同一张趋势里。
 
+## 衍生指标（基础度量自由组合）
+
+Analyze 的 Metrics Composer 对清洗 parquet 按粒度加总后再做四则 / 份额。**除数为 0 → null**。不是 OEE，不造 `is_fault`。
+
+| id | 公式 | 粒度特征 | 不是 |
+|---|---|---|---|
+| `alarm_per_run_hour` | `alarm_count / run_hours` | 机型×月：立加密度远高于钻攻 | 故障率 |
+| `shutdown_alarm_rate` | `alarm_shutdown_count / alarm_count` | 报警号：停机报警占比 | 故障时长占比 |
+| `run_hours_per_run_day` | `run_hours / run_days` | 设备：有运行日的强度 | 开机率 |
+| `run_hours_per_device` | `run_hours / devices` | 客户 / 区域：单台水平 | 近30天稼动率 |
+| `cycles_per_run_hour` | `program_cycles / run_hours` | 机型×月：加工节奏 | 计划达成率 |
+| `seconds_per_cycle` | `program_seconds / program_cycles` | 程序号 | |
+| `run_time_share` | `run_time_sec / total_time_sec` | 四桶结构 | 客户近30天稼动率 |
+| `stop_time_share` | `stop_time_sec / total_time_sec` | 关机结构 | 停机 |
+| `breakdown_time_share` | `breakdown_time_sec / total_time_sec` | 故障秒结构 | 停机报警占比 |
+| `run_hours_share` | `run_hours / Σ run_hours` | 当前结果集内份额 | 稼动率 |
+| `run_hours_mom` | `(h_t − h_{t−1}) / h_{t−1}` | 仅自然月 | 3 月已丢掉，4 月为 null |
+| `run_hours_share_of_month` | 机型小时 / 当月总小时 | 仅机型×月 | |
+
+自定义：任意两个已选基础指标做 `÷ × + −`，或对单个指标做份额。`plan_achievement_pct` 仍禁止舰队平均。
+
 ## 4–8 月实算摘要
 
 | 切片 | 运行小时 | 报警 | 停机报警 | 循环次数 |

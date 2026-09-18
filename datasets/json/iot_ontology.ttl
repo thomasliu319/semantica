@@ -1,0 +1,48 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://semantica.local/iot/ontology#> .
+
+<http://semantica.local/iot/ontology> a owl:Ontology ;
+    rdfs:label "IoT 设备清洗本体" ;
+    owl:versionInfo "1.0" ;
+    rdfs:comment "对照 MES 文档状态词：关机 ≠ 停机；运行占比 ≠ 近30天稼动率。" .
+
+:Equip a owl:Class ;
+    rdfs:label "设备" ;
+    rdfs:comment "出厂编号 OutFactoryCode 标识的一台物理机。" .
+
+:Customer a owl:Class ;
+    rdfs:label "客户" ;
+    rdfs:comment "CompanyId，后续模型切分按客户不是按设备随机。" .
+
+:AlarmCode a owl:Class ;
+    rdfs:label "报警号" ;
+    rdfs:comment "AbnoCode。停机报警条数不是故障秒。" .
+
+:TypeMonth a owl:Class ;
+    rdfs:label "机型×月" ;
+    rdfs:subClassOf :Equip .
+
+:RunStatus a owl:Class ;
+    rdfs:label "运行状态四桶" ;
+    rdfs:comment "运行 / 待机 / 关机 / 故障。" .
+
+<http://semantica.local/iot/skos> a skos:ConceptScheme ;
+    skos:prefLabel "运行状态词表" .
+
+<http://semantica.local/iot/skos#run> a skos:Concept ;
+    skos:prefLabel "运行" ;
+    skos:definition "RunTime，不是加工件数。" ;
+    skos:inScheme <http://semantica.local/iot/skos> .
+
+<http://semantica.local/iot/skos#stop> a skos:Concept ;
+    skos:prefLabel "关机" ;
+    skos:definition "StopTime，不是停机。" ;
+    skos:inScheme <http://semantica.local/iot/skos> ;
+    skos:related <http://semantica.local/iot/skos#idle> .
+
+<http://semantica.local/iot/skos#idle> a skos:Concept ;
+    skos:prefLabel "停机" ;
+    skos:definition "仅来自报警 IsShutdown 或客户 IdleCount。" ;
+    skos:inScheme <http://semantica.local/iot/skos> .

@@ -1,0 +1,4352 @@
+{
+  "api": "/OpenApi/GetEquipProgramPageList",
+  "query": {
+    "companyId": "dd7f14fa-d780-4a94-812f-592461792603",
+    "EquipName": "",
+    "OutFactoryCode": "162601865",
+    "EquipCode": "162601865_sk"
+  },
+  "range": {
+    "StartTime": "2026-03-01",
+    "EndTime": "2026-08-31"
+  },
+  "chunked": "adaptive",
+  "partial": false,
+  "chunks": [
+    {
+      "StartTime": "2026-03-01",
+      "EndTime": "2026-03-31",
+      "record_count": 0,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-04-01",
+      "EndTime": "2026-04-30",
+      "record_count": 621,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-05-01",
+      "EndTime": "2026-05-31",
+      "record_count": 1600,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-06-01",
+      "EndTime": "2026-06-30",
+      "record_count": 1600,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-07-01",
+      "EndTime": "2026-07-31",
+      "record_count": 787,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-08-01",
+      "EndTime": "2026-08-31",
+      "ok": false,
+      "error": "/OpenApi/GetEquipProgramPageList failed after 8 retries: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "StartTime": "2026-08-01",
+      "EndTime": "2026-08-07",
+      "record_count": 1258,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-08-08",
+      "EndTime": "2026-08-14",
+      "record_count": 1600,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-08-15",
+      "EndTime": "2026-08-21",
+      "record_count": 1600,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-08-22",
+      "EndTime": "2026-08-28",
+      "record_count": 0,
+      "page_size": 20,
+      "ok": true
+    },
+    {
+      "StartTime": "2026-08-29",
+      "EndTime": "2026-08-31",
+      "record_count": 0,
+      "page_size": 20,
+      "ok": true
+    }
+  ],
+  "fetched_at": "2026-09-17T18:01:15",
+  "record_count": 39,
+  "pages": [
+    {
+      "page": 1,
+      "returned": 0,
+      "records": 0,
+      "total": 0,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 6,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 7,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 8,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 9,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 10,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 11,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 12,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 13,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 14,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 15,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 16,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 17,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 18,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 19,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 20,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 21,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 22,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 23,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 24,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 25,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 26,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 27,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 28,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 29,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 30,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 31,
+      "returned": 20,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 32,
+      "returned": 1,
+      "records": 621,
+      "total": 32,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 6,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 7,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 8,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 9,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 10,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 11,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 12,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 13,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 14,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 15,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 16,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 17,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 18,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 19,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 20,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 21,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 22,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 23,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 24,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 25,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 26,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 27,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 28,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 29,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 30,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 31,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 32,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 33,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 34,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 35,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 36,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 37,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 38,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 39,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 40,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 41,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 42,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 43,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 44,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 45,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 46,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 47,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 48,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 49,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 50,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 51,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 52,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 53,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 54,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 55,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 56,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 57,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 58,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 59,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 60,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 61,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 62,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 63,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 64,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 65,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 66,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 67,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 68,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 69,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 70,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 71,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 72,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 73,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 74,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 75,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 76,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 77,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 78,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 79,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 80,
+      "returned": 20,
+      "records": 3997,
+      "total": 200,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 6,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 7,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 8,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 9,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 10,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 11,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 12,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 13,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 14,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 15,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 16,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 17,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 18,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 19,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 20,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 21,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 22,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 23,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 24,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 25,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 26,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 27,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 28,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 29,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 30,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 31,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 32,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 33,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 34,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 35,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 36,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 37,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 38,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 39,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 40,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 41,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 42,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 43,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 44,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 45,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 46,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 47,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 48,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 49,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 50,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 51,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 52,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 53,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 54,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 55,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 56,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 57,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 58,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 59,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 60,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 61,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 62,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 63,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 64,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 65,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 66,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 67,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 68,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 69,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 70,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 71,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 72,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 73,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 74,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 75,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 76,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 77,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 78,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 79,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 80,
+      "returned": 20,
+      "records": 4893,
+      "total": 245,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 6,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 7,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 8,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 9,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 10,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 11,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 12,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 13,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 14,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 15,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 16,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 17,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 18,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 19,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 20,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 21,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 22,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 23,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 24,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 25,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 26,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 27,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 28,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 29,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 30,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 31,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 32,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 33,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 34,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 35,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 36,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 37,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 38,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 39,
+      "returned": 20,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 40,
+      "returned": 7,
+      "records": 787,
+      "total": 40,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 6,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 7,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 8,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 9,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 10,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 11,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 12,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 13,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 14,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 15,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 16,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 17,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 18,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 19,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 20,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 21,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 22,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 23,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 24,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 25,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 26,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 27,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 28,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 29,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 30,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 31,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 32,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 33,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 34,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 35,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 36,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 37,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 38,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 39,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 40,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 41,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 42,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 43,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 44,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 45,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 46,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 47,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 48,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 49,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 50,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 51,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 52,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 53,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 54,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 55,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 56,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 57,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 58,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 59,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 60,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 61,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 62,
+      "returned": 20,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 63,
+      "returned": 18,
+      "records": 1258,
+      "total": 63,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 6,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 7,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 8,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 9,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 10,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 11,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 12,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 13,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 14,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 15,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 16,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 17,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 18,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 19,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 20,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 21,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 22,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 23,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 24,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 25,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 26,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 27,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 28,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 29,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 30,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 31,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 32,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 33,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 34,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 35,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 36,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 37,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 38,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 39,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 40,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 41,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 42,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 43,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 44,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 45,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 46,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 47,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 48,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 49,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 50,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 51,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 52,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 53,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 54,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 55,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 56,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 57,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 58,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 59,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 60,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 61,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 62,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 63,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 64,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 65,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 66,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 67,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 68,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 69,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 70,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 71,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 72,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 73,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 74,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 75,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 76,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 77,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 78,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 79,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 80,
+      "returned": 20,
+      "records": 7326,
+      "total": 367,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 2,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 3,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 4,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 5,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 6,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 7,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 8,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 9,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 10,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 11,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 12,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 13,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 14,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 15,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 16,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 17,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 18,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 19,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 20,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 21,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 22,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 23,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 24,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 25,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 26,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 27,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 28,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 29,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 30,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 31,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 32,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 33,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 34,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 35,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 36,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 37,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 38,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 39,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 40,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 41,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 42,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 43,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 44,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 45,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 46,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 47,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 48,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 49,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 50,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 51,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 52,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 53,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 54,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 55,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 56,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 57,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 58,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 59,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 60,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 61,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 62,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 63,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 64,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 65,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 66,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 67,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 68,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 69,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 70,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 71,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 72,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 73,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 74,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 75,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 76,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 77,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 78,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 79,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 80,
+      "returned": 20,
+      "records": 4082,
+      "total": 205,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 0,
+      "records": 0,
+      "total": 0,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    },
+    {
+      "page": 1,
+      "returned": 0,
+      "records": 0,
+      "total": 0,
+      "IsSuccess": true,
+      "Message": "操作成功"
+    }
+  ],
+  "rows": [
+    {
+      "Id": "3ccb307a-4481-4bbd-bdcf-c762d730f62c",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360A.NC",
+      "OutputSumSecond": 2756,
+      "OutputSum": "45分钟56秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1378,
+      "AvgOutPutTime": "22分钟58秒",
+      "StartTime": "2026-08-14 20:55:43",
+      "EndTime": "2026-08-15 08:03:47"
+    },
+    {
+      "Id": "2e5fd745-f442-4bb2-a924-dcb95e5d6837",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360A.NC",
+      "OutputSumSecond": 2756,
+      "OutputSum": "45分钟56秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1378,
+      "AvgOutPutTime": "22分钟58秒",
+      "StartTime": "2026-08-14 20:54:11",
+      "EndTime": "2026-08-15 07:58:28"
+    },
+    {
+      "Id": "70d9df5e-6f17-451a-9431-6c239c980227",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360A.NC",
+      "OutputSumSecond": 6219,
+      "OutputSum": "1小时43分钟39秒",
+      "Output": 3,
+      "AvgOutPutTimeSecond": 2073,
+      "AvgOutPutTime": "34分钟33秒",
+      "StartTime": "2026-08-14 20:28:45",
+      "EndTime": "2026-08-14 20:29:33"
+    },
+    {
+      "Id": "31421614-c3fe-46d6-85f0-1dbf43fb9836",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360A.NC",
+      "OutputSumSecond": 2762,
+      "OutputSum": "46分钟2秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1381,
+      "AvgOutPutTime": "23分钟1秒",
+      "StartTime": "2026-08-14 19:45:32",
+      "EndTime": "2026-08-14 19:45:58"
+    },
+    {
+      "Id": "d12daa36-a593-48a3-9701-99edf0673096",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360A.NC",
+      "OutputSumSecond": 2948,
+      "OutputSum": "49分钟8秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1474,
+      "AvgOutPutTime": "24分钟34秒",
+      "StartTime": "2026-08-14 19:16:15",
+      "EndTime": "2026-08-14 19:20:37"
+    },
+    {
+      "Id": "b457b784-09c3-43f4-86aa-0b62827849a4",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360A.NC",
+      "OutputSumSecond": 2746,
+      "OutputSum": "45分钟46秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1373,
+      "AvgOutPutTime": "22分钟53秒",
+      "StartTime": "2026-08-14 18:37:49",
+      "EndTime": "2026-08-14 18:47:28"
+    },
+    {
+      "Id": "9d14fe78-47ac-4c9f-afd5-2e0e914a0c41",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360A.NC",
+      "OutputSumSecond": 696,
+      "OutputSum": "11分钟36秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 696,
+      "AvgOutPutTime": "11分钟36秒",
+      "StartTime": "2026-08-14 18:07:45",
+      "EndTime": "2026-08-14 18:07:58"
+    },
+    {
+      "Id": "2d19681f-cfd9-4a5d-a637-6ed0c27bd2dd",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360A.NC",
+      "OutputSumSecond": 2574,
+      "OutputSum": "42分钟54秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1287,
+      "AvgOutPutTime": "21分钟27秒",
+      "StartTime": "2026-08-14 17:53:37",
+      "EndTime": "2026-08-14 17:56:01"
+    },
+    {
+      "Id": "d5459991-d7c6-4c97-8ef3-f57441926384",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 765,
+      "OutputSum": "12分钟45秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 765,
+      "AvgOutPutTime": "12分钟45秒",
+      "StartTime": "2026-08-14 15:20:39",
+      "EndTime": "2026-08-14 15:21:27"
+    },
+    {
+      "Id": "786a7213-551e-4158-9be8-a09994ae9b70",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 764,
+      "OutputSum": "12分钟44秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 764,
+      "AvgOutPutTime": "12分钟44秒",
+      "StartTime": "2026-08-14 14:48:49",
+      "EndTime": "2026-08-14 14:49:10"
+    },
+    {
+      "Id": "fa8c8cef-2d55-4412-8951-a1b83fee7825",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 0,
+      "OutputSum": "0秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 0,
+      "AvgOutPutTime": "0秒",
+      "StartTime": "2026-08-14 14:33:24",
+      "EndTime": "2026-08-14 14:33:35"
+    },
+    {
+      "Id": "824da153-2b9a-4530-812f-67b061ecab4b",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 862,
+      "OutputSum": "14分钟22秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 862,
+      "AvgOutPutTime": "14分钟22秒",
+      "StartTime": "2026-08-14 14:02:14",
+      "EndTime": "2026-08-14 14:04:01"
+    },
+    {
+      "Id": "984c9a88-a825-428d-8afd-2668dd8fd25e",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 890,
+      "OutputSum": "14分钟50秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 890,
+      "AvgOutPutTime": "14分钟50秒",
+      "StartTime": "2026-08-14 13:45:21",
+      "EndTime": "2026-08-14 13:47:11"
+    },
+    {
+      "Id": "db8f3574-2232-4962-abec-555c8837b852",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 834,
+      "OutputSum": "13分钟54秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 834,
+      "AvgOutPutTime": "13分钟54秒",
+      "StartTime": "2026-08-14 13:28:04",
+      "EndTime": "2026-08-14 13:28:09"
+    },
+    {
+      "Id": "8b7c6b32-3cc8-4966-8bbc-28268e2950da",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 861,
+      "OutputSum": "14分钟21秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 861,
+      "AvgOutPutTime": "14分钟21秒",
+      "StartTime": "2026-08-14 13:11:56",
+      "EndTime": "2026-08-14 13:13:30"
+    },
+    {
+      "Id": "aa628475-ae7b-4e24-93de-abb9ba0f1698",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 3454,
+      "OutputSum": "57分钟34秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1727,
+      "AvgOutPutTime": "28分钟47秒",
+      "StartTime": "2026-08-14 12:53:49",
+      "EndTime": "2026-08-14 12:57:08"
+    },
+    {
+      "Id": "a501771b-cbc4-4740-be52-38f359857025",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 870,
+      "OutputSum": "14分钟30秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 870,
+      "AvgOutPutTime": "14分钟30秒",
+      "StartTime": "2026-08-14 12:19:41",
+      "EndTime": "2026-08-14 12:22:23"
+    },
+    {
+      "Id": "6574e9a3-9b00-483f-834d-c7faccf2ee2f",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 855,
+      "OutputSum": "14分钟15秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 855,
+      "AvgOutPutTime": "14分钟15秒",
+      "StartTime": "2026-08-14 12:04:19",
+      "EndTime": "2026-08-14 12:04:49"
+    },
+    {
+      "Id": "9ef8c571-7909-48ee-ae06-0f40760b6f13",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 881,
+      "OutputSum": "14分钟41秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 881,
+      "AvgOutPutTime": "14分钟41秒",
+      "StartTime": "2026-08-14 10:11:17",
+      "EndTime": "2026-08-14 10:11:42"
+    },
+    {
+      "Id": "16723ff1-eb42-4b82-8dce-f632ebc7e720",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 846,
+      "OutputSum": "14分钟6秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 846,
+      "AvgOutPutTime": "14分钟6秒",
+      "StartTime": "2026-08-14 09:06:25",
+      "EndTime": "2026-08-14 09:08:40"
+    },
+    {
+      "Id": "a6565826-e066-46d8-aaf4-04bd0838ace4",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "LF-360.NC",
+      "OutputSumSecond": 3474,
+      "OutputSum": "57分钟54秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1737,
+      "AvgOutPutTime": "28分钟57秒",
+      "StartTime": "2026-08-14 08:49:36",
+      "EndTime": "2026-08-14 08:49:46"
+    },
+    {
+      "Id": "560e47c1-5c53-428f-8c8a-5aaa17333d8f",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121A.NC",
+      "OutputSumSecond": 79,
+      "OutputSum": "1分钟19秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 79,
+      "AvgOutPutTime": "1分钟19秒",
+      "StartTime": "2026-08-17 17:07:03",
+      "EndTime": "2026-08-17 17:07:58"
+    },
+    {
+      "Id": "728266fe-0ea6-4f2d-bae4-7315586d9dbe",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121A.NC",
+      "OutputSumSecond": 100,
+      "OutputSum": "1分钟40秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 100,
+      "AvgOutPutTime": "1分钟40秒",
+      "StartTime": "2026-08-17 16:47:31",
+      "EndTime": "2026-08-17 16:49:30"
+    },
+    {
+      "Id": "3f98b37f-9948-4e44-863b-a7492c831db7",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121A.NC",
+      "OutputSumSecond": 128,
+      "OutputSum": "2分钟8秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 128,
+      "AvgOutPutTime": "2分钟8秒",
+      "StartTime": "2026-08-17 16:42:56",
+      "EndTime": "2026-08-17 16:45:14"
+    },
+    {
+      "Id": "d2d37192-39d7-40bf-a947-be0965323432",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 876,
+      "OutputSum": "14分钟36秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 876,
+      "AvgOutPutTime": "14分钟36秒",
+      "StartTime": "2026-08-17 13:52:13",
+      "EndTime": "2026-08-17 13:52:29"
+    },
+    {
+      "Id": "42a02c28-8748-4b99-9b23-47b3c14bbb59",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 875,
+      "OutputSum": "14分钟35秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 875,
+      "AvgOutPutTime": "14分钟35秒",
+      "StartTime": "2026-08-17 13:35:17",
+      "EndTime": "2026-08-17 13:36:52"
+    },
+    {
+      "Id": "21683ec0-5960-4eec-912c-556a115eed04",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 3504,
+      "OutputSum": "58分钟24秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1752,
+      "AvgOutPutTime": "29分钟12秒",
+      "StartTime": "2026-08-17 13:19:22",
+      "EndTime": "2026-08-17 13:20:19"
+    },
+    {
+      "Id": "46c3a916-c914-4208-a79e-0f3395a6618d",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 875,
+      "OutputSum": "14分钟35秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 875,
+      "AvgOutPutTime": "14分钟35秒",
+      "StartTime": "2026-08-17 12:45:06",
+      "EndTime": "2026-08-17 12:45:11"
+    },
+    {
+      "Id": "5bd2bfcc-6051-4bb3-b229-0629a00ecf02",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 7884,
+      "OutputSum": "2小时11分钟24秒",
+      "Output": 3,
+      "AvgOutPutTimeSecond": 2628,
+      "AvgOutPutTime": "43分钟48秒",
+      "StartTime": "2026-08-17 12:28:58",
+      "EndTime": "2026-08-17 12:30:30"
+    },
+    {
+      "Id": "8d2f0695-a989-4106-858f-fbf5a5029609",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 3436,
+      "OutputSum": "57分钟16秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1718,
+      "AvgOutPutTime": "28分钟38秒",
+      "StartTime": "2026-08-17 11:39:00",
+      "EndTime": "2026-08-17 11:39:47"
+    },
+    {
+      "Id": "0c2d6943-4697-4684-b5ac-7741727f9980",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 201,
+      "OutputSum": "3分钟21秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 201,
+      "AvgOutPutTime": "3分钟21秒",
+      "StartTime": "2026-08-17 11:08:31",
+      "EndTime": "2026-08-17 11:22:15"
+    },
+    {
+      "Id": "e62ad220-3dad-4c22-9b8b-da72ff4793bf",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 1585,
+      "OutputSum": "26分钟25秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 1585,
+      "AvgOutPutTime": "26分钟25秒",
+      "StartTime": "2026-08-17 11:04:17",
+      "EndTime": "2026-08-17 11:05:33"
+    },
+    {
+      "Id": "6d9b33a8-5b72-4375-96ac-e80c54d8640a",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 7887,
+      "OutputSum": "2小时11分钟27秒",
+      "Output": 3,
+      "AvgOutPutTimeSecond": 2629,
+      "AvgOutPutTime": "43分钟49秒",
+      "StartTime": "2026-08-17 10:33:29",
+      "EndTime": "2026-08-17 10:33:42"
+    },
+    {
+      "Id": "c06e827c-9c6c-4c33-8652-30ea2ab70884",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 0,
+      "OutputSum": "0秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 0,
+      "AvgOutPutTime": "0秒",
+      "StartTime": "2026-08-17 09:45:45",
+      "EndTime": "2026-08-17 09:47:10"
+    },
+    {
+      "Id": "474ff241-b2ce-49c4-9603-b8bee410b5f3",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 874,
+      "OutputSum": "14分钟34秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 874,
+      "AvgOutPutTime": "14分钟34秒",
+      "StartTime": "2026-08-17 09:30:38",
+      "EndTime": "2026-08-17 09:31:26"
+    },
+    {
+      "Id": "ad353886-fa3e-4ef3-bb66-236bf75e9c5e",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 876,
+      "OutputSum": "14分钟36秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 876,
+      "AvgOutPutTime": "14分钟36秒",
+      "StartTime": "2026-08-17 09:12:49",
+      "EndTime": "2026-08-17 09:15:41"
+    },
+    {
+      "Id": "f0515ef3-c616-4c98-a2d8-5f1d7755c6df",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 1135,
+      "OutputSum": "18分钟55秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 1135,
+      "AvgOutPutTime": "18分钟55秒",
+      "StartTime": "2026-08-17 08:55:02",
+      "EndTime": "2026-08-17 08:57:58"
+    },
+    {
+      "Id": "a2cd051b-551f-4063-8a3d-d0e8ba69c48a",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 774,
+      "OutputSum": "12分钟54秒",
+      "Output": 1,
+      "AvgOutPutTimeSecond": 774,
+      "AvgOutPutTime": "12分钟54秒",
+      "StartTime": "2026-08-17 08:38:25",
+      "EndTime": "2026-08-17 08:38:46"
+    },
+    {
+      "Id": "aa8c8059-74dd-4823-b940-b5fa88b1803e",
+      "EquipCode": "162601865_sk",
+      "EquipName": "",
+      "EquipTypeName": "立式加工中心",
+      "EquipTypeCode": "T-V856S",
+      "ProgramCode": "C-1121.NC",
+      "OutputSumSecond": 3328,
+      "OutputSum": "55分钟28秒",
+      "Output": 2,
+      "AvgOutPutTimeSecond": 1664,
+      "AvgOutPutTime": "27分钟44秒",
+      "StartTime": "2026-08-17 08:17:06",
+      "EndTime": "2026-08-17 08:23:40"
+    }
+  ],
+  "rows_before_filter": 9066,
+  "filtered_by": {
+    "EquipCode": "162601865_sk"
+  }
+}

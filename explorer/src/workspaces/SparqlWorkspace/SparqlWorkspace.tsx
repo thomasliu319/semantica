@@ -4,21 +4,96 @@ import { Play, Copy, Download, Table2, AlertCircle, FileCode2 } from "lucide-rea
 
 const TEMPLATES: { label: string; query: string }[] = [
   {
+    label: "NL编译：T-V856S 4/5/9月",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?slice ?type ?month ?hours ?days ?alarms
+WHERE {
+  ?slice a ent:TypeMonth ;
+         prop:EquipTypeCode ?type ;
+         prop:month ?month .
+  OPTIONAL { ?slice prop:run_hours ?hours }
+  OPTIONAL { ?slice prop:run_days ?days }
+  OPTIONAL { ?slice prop:alarm_count ?alarms }
+  OPTIONAL { ?slice prop:ofType ?etype }
+  FILTER(LCASE(STR(?type)) IN ("t-v856s"))
+  FILTER(?month IN ("2026-04", "2026-05", "2026-09"))
+}
+ORDER BY ?month`,
+  },
+  {
     label: "机型×月报警强度",
     query: `PREFIX ent: <http://semantica.local/entity/>
 PREFIX prop: <http://semantica.local/prop/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?label ?hours ?alarms ?intensity ?stopShare
+SELECT ?type ?month ?hours ?alarms ?intensity ?stopShare ?monthShare
 WHERE {
   ?slice a ent:TypeMonth ;
-         rdfs:label ?label ;
+         prop:EquipTypeCode ?type ;
+         prop:month ?month ;
          prop:run_hours ?hours ;
          prop:alarm_count ?alarms ;
          prop:alarm_per_run_hour ?intensity ;
-         prop:stop_time_share ?stopShare .
+         prop:stop_time_share ?stopShare ;
+         prop:run_hours_share_of_month ?monthShare .
 }
-ORDER BY DESC(?intensity)
+ORDER BY DESC(?intensity)`,
+  },
+  {
+    label: "客户单台运行与报警强度",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?label ?devices ?hoursPerDevice ?alarmPerHour
+WHERE {
+  ?c a ent:Customer ;
+     rdfs:label ?label ;
+     prop:devices ?devices ;
+     prop:run_hours_per_device ?hoursPerDevice ;
+     prop:alarm_per_run_hour ?alarmPerHour .
+}
+ORDER BY DESC(?alarmPerHour)
 LIMIT 20`,
+  },
+  {
+    label: "报警号停机占比",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?code ?alarms ?shutdownRate ?secPerEvent
+WHERE {
+  ?a a ent:AlarmCode ;
+     rdfs:label ?code ;
+     prop:alarm_count ?alarms ;
+     prop:shutdown_alarm_rate ?shutdownRate ;
+     prop:alarm_duration_per_event ?secPerEvent .
+}
+ORDER BY DESC(?alarms)`,
+  },
+  {
+    label: "O0005 全部属性",
+    query: `PREFIX prop: <http://semantica.local/prop/>
+SELECT ?p ?o
+WHERE {
+  <http://semantica.local/entity/alarm:O0005> ?p ?o .
+}`,
+  },
+  {
+    label: "机型×月现算循环/报警",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+SELECT ?type ?month ?cyclesPerAlarm
+WHERE {
+  ?slice a ent:TypeMonth ;
+         prop:EquipTypeCode ?type ;
+         prop:month ?month ;
+         prop:program_cycles ?cycles ;
+         prop:alarm_count ?alarms .
+  FILTER(?alarms > 0)
+  BIND(?cycles / ?alarms AS ?cyclesPerAlarm)
+}
+ORDER BY DESC(?cyclesPerAlarm)`,
   },
   {
     label: "衍生指标目录",

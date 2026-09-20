@@ -199,6 +199,15 @@
       "unit": "count"
     },
     {
+      "id": "devices",
+      "name_zh": "设备台数",
+      "grain": "type_month / area / customer",
+      "domain": "fleet",
+      "unit": "nunique",
+      "phrases": ["设备台数", "设备数", "台数", "设备分布"],
+      "not": "跨月相加"
+    },
+    {
       "id": "plan_output",
       "name_zh": "计划产量",
       "grain": "progress_day",

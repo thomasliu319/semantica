@@ -11,7 +11,7 @@ from collections import OrderedDict, defaultdict
 from dataclasses import dataclass
 from typing import Any, DefaultDict, Dict, Iterable, List, Optional, Tuple
 
-_TOKEN_RE = re.compile(r"[a-z0-9]+")
+_TOKEN_RE = re.compile(r"[a-z0-9]+|[\u4e00-\u9fff]+")
 _WHITESPACE_RE = re.compile(r"\s+")
 _CURATED_ALIAS_KEYS = (
     "label",

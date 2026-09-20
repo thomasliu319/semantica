@@ -154,7 +154,7 @@
     },
     {
       "file": "iot_cleaned_semantics.json",
-      "title": "清洗后完备设备语义图：机型×月衍生强度、客户×设备、报警号×机型",
+      "title": "清洗后完备设备语义图：机型×月 / 设备×月 / 客户×设备 / 区域",
       "source": "datasets/processed/iot_mar_aug_2026",
       "tags": [
         "manufacturing",
@@ -163,8 +163,8 @@
         "cleaned",
         "semantics"
       ],
-      "node_count": 404,
-      "edge_count": 1282,
+      "node_count": 753,
+      "edge_count": 2329,
       "explorer": "SEMANTICA_ALLOW_ANONYMOUS=true semantica-explorer --graph datasets/json/iot_cleaned_semantics.json"
     },
     {

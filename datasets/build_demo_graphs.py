@@ -1264,6 +1264,7 @@ def cleaned_iot_semantics() -> ContextGraph:
             AreaName=area,
             mean_run_rate_pct=_num(getattr(stats, "mean_run_rate_pct", 0), 2),
             complete=True,
+            aliases=[code, company, area, type_code],
             **(_metric_props(stats) if stats is not None else {"run_hours": run_hours}),
         )
         graph.add_edge("dataset:cleaned", equip_id, "contains")
@@ -1271,6 +1272,27 @@ def cleaned_iot_semantics() -> ContextGraph:
         graph.add_edge(equip_id, cust_id, "ownedBy")
         graph.add_edge(equip_id, band, "utilizes")
         graph.add_edge(equip_id, f"area:{area}", "locatedIn")
+
+    equip_month = day.groupby(["out_factory_code", "month", "equip_type_code"], as_index=False).agg(**DEVICE_DAY_NAMED)
+    for row in equip_month.itertuples(index=False):
+        code = str(row.out_factory_code)
+        equip_id = f"equip:{code}"
+        if graph.find_node(equip_id) is None:
+            continue
+        node_id = f"equipmonth:{code}:{row.month}"
+        graph.add_node(
+            node_id,
+            "EquipMonth",
+            content=f"{code} {row.month}",
+            OutFactoryCode=code,
+            month=row.month,
+            EquipTypeCode=row.equip_type_code,
+            color="#7DD3FC",
+            **_metric_props(row),
+        )
+        graph.add_edge(node_id, equip_id, "ofEquip")
+        graph.add_edge(node_id, f"month:{row.month}", "inMonth", weight=max(float(row.run_hours), 0.1))
+        graph.add_edge(node_id, f"type:{row.equip_type_code}", "ofType")
 
     alarm_work = alarms.assign(_one=1)
     alarm_by_code = alarm_work.groupby("abno_code", as_index=False).agg(

@@ -176,6 +176,45 @@ class CausalChainResponse(BaseModel):
     chain: List[Dict[str, Any]] = Field(default_factory=list)
 
 
+class GraphRAGRequest(BaseModel):
+    query: str = Field(..., min_length=1, max_length=500)
+    max_hops: int = Field(2, ge=1, le=2)
+    max_results: int = Field(12, ge=1, le=20)
+
+
+class GraphRAGSource(BaseModel):
+    id: str
+    type: str = ""
+    content: str = ""
+    score: float = 0.0
+    kind: str = "retrieve"
+    hop: int = 0
+    facts: str = ""
+
+
+class GraphRAGPathHop(BaseModel):
+    source: str
+    relationship: str
+    target: str
+    hop: int = 1
+
+
+class GraphRAGResponse(BaseModel):
+    decision_id: str
+    query: str
+    response: str
+    reasoning_path: str = ""
+    confidence: float = 0.0
+    outcome: str = ""
+    num_sources: int = 0
+    num_reasoning_paths: int = 0
+    sources: List[GraphRAGSource] = Field(default_factory=list)
+    path: List[GraphRAGPathHop] = Field(default_factory=list)
+    chain: List[Dict[str, Any]] = Field(default_factory=list)
+    sparql: str = ""
+    mapping: List[Dict[str, Any]] = Field(default_factory=list)
+
+
 class ComplianceResponse(BaseModel):
     decision_id: str
     compliant: bool = True

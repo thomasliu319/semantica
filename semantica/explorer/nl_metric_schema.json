@@ -1,0 +1,52 @@
+{
+  "title": "GraphRAG NL ↔ 图字段 ↔ SPARQL",
+  "note": "问句命中 phrases 任一即绑定 field；编译器按 field 自动加 OPTIONAL prop 与 SELECT 变量。新指标只改本文件。",
+  "measures": [
+    {
+      "field": "run_hours",
+      "label": "运行小时",
+      "prop": "run_hours",
+      "sparql": "hours",
+      "how": "sum",
+      "phrases": ["运行时间", "运行小时", "运行时长"],
+      "not": "客户近30天稼动率"
+    },
+    {
+      "field": "run_days",
+      "label": "运行天数",
+      "prop": "run_days",
+      "sparql": "days",
+      "how": "sum",
+      "phrases": ["运行天数", "运行日"],
+      "not": "日历天数"
+    },
+    {
+      "field": "devices",
+      "label": "设备台数",
+      "prop": "devices",
+      "sparql": "devices",
+      "how": "each",
+      "phrases": ["设备台数", "设备数", "台数", "设备分布"],
+      "not": "跨月 SUM；机型×月是当月有运行的台数 nunique"
+    },
+    {
+      "field": "alarm_count",
+      "label": "报警条数",
+      "prop": "alarm_count",
+      "sparql": "alarms",
+      "how": "sum",
+      "phrases": ["报警条数", "报警数", "报警次数"],
+      "not": "故障秒"
+    },
+    {
+      "field": "alarm_per_run_hour",
+      "label": "报警强度",
+      "prop": "alarm_per_run_hour",
+      "sparql": "intensity",
+      "how": "ratio",
+      "ratio": ["alarm_count", "run_hours"],
+      "phrases": ["报警强度"],
+      "not": "单月强度再平均"
+    }
+  ]
+}

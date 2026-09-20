@@ -8,7 +8,15 @@ from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, Query
 
 from ..dependencies import get_session
-from ..schemas import CausalChainResponse, CausalDistanceReport, ComplianceResponse, DecisionResponse
+from ..decision_graphrag import run_graphrag
+from ..schemas import (
+    CausalChainResponse,
+    CausalDistanceReport,
+    ComplianceResponse,
+    DecisionResponse,
+    GraphRAGRequest,
+    GraphRAGResponse,
+)
 from ..session import GraphSession
 
 router = APIRouter(prefix="/api/decisions", tags=["Decisions"])
@@ -50,6 +58,25 @@ async def list_decisions(
         ]
 
     return [_node_to_decision(node) for node in nodes[skip : skip + limit]]
+
+
+@router.post("/graphrag", response_model=GraphRAGResponse)
+async def run_decision_graphrag(
+    body: GraphRAGRequest,
+    session: GraphSession = Depends(get_session),
+):
+    """Retrieve seeds, expand 2 hops, record the query as a decision with evidence."""
+    try:
+        payload = await asyncio.to_thread(
+            run_graphrag,
+            session,
+            body.query,
+            max_hops=body.max_hops,
+            max_results=body.max_results,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    return GraphRAGResponse(**payload)
 
 
 @router.get("/causal-distance", response_model=CausalDistanceReport)

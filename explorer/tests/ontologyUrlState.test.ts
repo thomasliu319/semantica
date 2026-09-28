@@ -4,11 +4,13 @@ import test from "node:test";
 import {
   applyEntitySelection,
   applyTab,
+  applyVersion,
   canonicalizeExplorerUrl,
   canonicalizeSearch,
   clearEntitySelection,
   hasOntologyUrlState,
   parseOntologyUrlState,
+  parseVersion,
   readOntologyUrlState,
   removeEntitySelection,
   writeEntitySelection,
@@ -125,6 +127,23 @@ test("canonicalizeExplorerUrl upgrades / to the IoT registry URL", () => {
     canonicalizeExplorerUrl();
   });
   assert.deepEqual(written, ["/?v=iot2&ontologyTab=registry"]);
+});
+
+test("v=marketing is a legal version and is preserved, unknown versions are not", () => {
+  assert.equal(canonicalizeSearch("?v=marketing"), "?v=marketing&ontologyTab=registry");
+  assert.equal(canonicalizeSearch("?v=iot2"), "?v=iot2&ontologyTab=registry");
+  assert.equal(canonicalizeSearch("?v=metrics1"), "?v=iot2&ontologyTab=registry");
+  assert.equal(parseVersion("?v=marketing"), "marketing");
+  assert.equal(parseVersion("?v=iot2"), "iot2");
+  assert.equal(parseVersion("?v=metrics1"), "iot2");
+});
+
+test("applyVersion switches the version and resets to the registry tab", () => {
+  assert.equal(
+    applyVersion("?v=iot2&ontologyTab=editor&ontologyEntity=urn%3Ax", "marketing"),
+    "?v=marketing&ontologyTab=registry",
+  );
+  assert.equal(applyVersion("?v=marketing&ontologyTab=health", "iot2"), "?v=iot2&ontologyTab=registry");
 });
 
 test("readOntologyUrlState with no argument reads live URL state", () => {

@@ -25,24 +25,34 @@ from .ws import ConnectionManager, install_graph_updates_websocket
 
 APP_VERSION = "iot2"
 DEFAULT_ONTOLOGY_TAB = "registry"
+# Legal Explorer "versions". ``iot2`` is the original IoT experience; ``marketing``
+# carries the marketing/operations domain. The version only selects the graph +
+# metric domain served by this process — it never mixes the two datasets.
+VALID_VERSIONS = {"iot2", "marketing"}
+
+
+def _canonical_version(query_params) -> str:
+    incoming = query_params.get("v")
+    return incoming if incoming in VALID_VERSIONS else APP_VERSION
 
 
 def canonical_explorer_query(query_params) -> str:
+    version = _canonical_version(query_params)
     entity = query_params.get("ontologyEntity")
     tab = query_params.get("ontologyTab")
     if entity:
         return urlencode(
-            {"v": APP_VERSION, "ontologyTab": "editor", "ontologyEntity": entity}
+            {"v": version, "ontologyTab": "editor", "ontologyEntity": entity}
         )
     if tab:
-        return urlencode({"v": APP_VERSION, "ontologyTab": tab})
-    return urlencode({"v": APP_VERSION, "ontologyTab": DEFAULT_ONTOLOGY_TAB})
+        return urlencode({"v": version, "ontologyTab": tab})
+    return urlencode({"v": version, "ontologyTab": DEFAULT_ONTOLOGY_TAB})
 
 
 def explorer_query_is_canonical(query_params) -> bool:
     keys = set(query_params.keys())
     extra = keys - {"v", "ontologyTab", "ontologyEntity"}
-    if extra or query_params.get("v") != APP_VERSION:
+    if extra or query_params.get("v") not in VALID_VERSIONS:
         return False
     entity = query_params.get("ontologyEntity")
     tab = query_params.get("ontologyTab")
@@ -90,15 +100,18 @@ def create_app(
     session: Optional[GraphSession] = None,
     provenance_storage_path: Optional[str] = None,
     agent_memory: Optional[AgentMemory] = None,
+    marketing_session: Optional[GraphSession] = None,
 ) -> FastAPI:
     """Create an Explorer application over live graph and memory objects.
 
     Args:
-        session: Graph session exposed by the Explorer. A new in-memory graph
-            session is created when omitted.
+        session: Graph session exposed by the Explorer under ``v=iot2``. A new
+            in-memory graph session is created when omitted.
         provenance_storage_path: Optional per-app provenance database path.
         agent_memory: Existing AgentMemory instance to expose in the Memories
             workspace. The workspace is unavailable when omitted.
+        marketing_session: Optional second session exposed under ``v=marketing``.
+            When omitted, ``v=marketing`` falls back to the primary session.
 
     Returns:
         Configured FastAPI application.
@@ -137,6 +150,10 @@ def create_app(
         app.state.event_loop = asyncio.get_running_loop()
         app.state.ws_manager = ConnectionManager()
         app.state.session = active_session
+        app.state.sessions = {
+            "iot2": active_session,
+            "marketing": marketing_session or active_session,
+        }
         app.state.agent_memory = agent_memory
         app.state.markdown_resources = markdown_resources
         install_mutation_bridge(app, active_session)
@@ -189,6 +206,7 @@ def create_app(
     from .routes.analytics import router as analytics_router
     from .routes.annotations import router as annotations_router
     from .routes.iot_metrics import router as iot_metrics_router
+    from .routes.marketing_metrics import router as marketing_metrics_router
     from .routes.decisions import router as decisions_router
     from .routes.enrich import router as enrich_router
     from .routes.export_import import router as export_import_router
@@ -205,6 +223,7 @@ def create_app(
     app.include_router(graph_router, dependencies=_auth)
     app.include_router(analytics_router, dependencies=_auth)
     app.include_router(iot_metrics_router, dependencies=_auth)
+    app.include_router(marketing_metrics_router, dependencies=_auth)
     app.include_router(decisions_router, dependencies=_auth)
     app.include_router(temporal_router, dependencies=_auth)
     app.include_router(enrich_router, dependencies=_auth)

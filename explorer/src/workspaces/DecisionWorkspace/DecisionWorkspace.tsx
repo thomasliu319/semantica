@@ -2,8 +2,9 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { Scale, Search, ArrowRight, Info, Play, GitBranch, Circle, Rows3 } from "lucide-react";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { readVersion } from "../OntologyWorkspace/ontologyUrlState";
 
-const GRAPHRAG_TEMPLATE_GROUPS = [
+const IOT_GRAPHRAG_TEMPLATE_GROUPS = [
   {
     dim: "设备 × 月",
     items: [
@@ -47,7 +48,53 @@ const GRAPHRAG_TEMPLATE_GROUPS = [
     ],
   },
 ];
-const GRAPHRAG_TEMPLATES = GRAPHRAG_TEMPLATE_GROUPS.flatMap((group) => group.items);
+
+const MARKETING_GRAPHRAG_TEMPLATE_GROUPS = [
+  {
+    dim: "达成率 · 科室/大区",
+    items: [
+      "管理出机达成率",
+      "华南大区 考核出机达成率",
+      "华东一区销售一科 管理签单达成",
+    ],
+  },
+  {
+    dim: "达成率 · 产品类型",
+    items: [
+      "通用钻攻机 管理出机达成率",
+      "立加 考核出机达成率",
+    ],
+  },
+  {
+    dim: "结构 / 份额",
+    items: [
+      "产品类型出货结构",
+      "通用钻攻机 出货份额",
+    ],
+  },
+  {
+    dim: "客户 × 机型",
+    items: [
+      "客户 C01000008 机型",
+      "客户 C01000005 机型",
+    ],
+  },
+  {
+    dim: "业务员行为",
+    items: [
+      "连续3个月不签单人数",
+      "连续2个月未出机人数",
+    ],
+  },
+  {
+    dim: "治理 · 拒答探针",
+    items: [
+      "成本利润率",
+      "主管 团队业绩",
+      "下半年 出货",
+    ],
+  },
+];
 
 type OutcomeKind = "approved" | "rejected" | "deferred" | "pending" | string;
 
@@ -205,7 +252,7 @@ function nodeLabel(id: string, rag: GraphRAGResult, chain: ChainStep[]): string 
   if (hit?.content) return hit.content;
   const step = chain.find((row) => row.id === id);
   if (step?.content) return step.content;
-  return id.replace(/^(equipmonth|equip|customer|area|slice|type|month|band|domain|alarm):/, "");
+  return id.replace(/^(equipmonth|equip|customer|area|slice|type|month|band|domain|alarm|dept|ptype|cust|emp|model):/, "");
 }
 
 function GraphRAGStructured({ rag, chain }: { rag: GraphRAGResult; chain: ChainStep[] }) {
@@ -434,6 +481,8 @@ function CausalOrbit({ chain, loading }: { chain: ChainStep[]; loading: boolean 
 }
 
 export function DecisionWorkspace() {
+  const templateGroups = readVersion() === "marketing" ? MARKETING_GRAPHRAG_TEMPLATE_GROUPS : IOT_GRAPHRAG_TEMPLATE_GROUPS;
+  const templates = templateGroups.flatMap((group) => group.items);
   const [decisions, setDecisions] = useState<DecisionItem[]>([]);
   const [selected, setSelected] = useState<DecisionItem | null>(null);
   const [chain, setChain] = useState<ChainStep[]>([]);
@@ -441,7 +490,7 @@ export function DecisionWorkspace() {
   const [listLoading, setListLoading] = useState(true);
   const [filter, setFilter] = useState("");
   const [error, setError] = useState("");
-  const [query, setQuery] = useState(GRAPHRAG_TEMPLATES[0]);
+  const [query, setQuery] = useState(templates[0]);
   const [ragLoading, setRagLoading] = useState(false);
   const [rag, setRag] = useState<GraphRAGResult | null>(null);
   const [chainView, setChainView] = useState<ChainView>("cards");
@@ -582,7 +631,7 @@ export function DecisionWorkspace() {
             style={{ fontSize: 12, resize: "vertical", minHeight: 68 }}
           />
           <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 8 }}>
-            {GRAPHRAG_TEMPLATE_GROUPS.map((group) => (
+            {templateGroups.map((group) => (
               <div key={group.dim}>
                 <div className="ws-eyebrow" style={{ marginBottom: 4 }}>{group.dim}</div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>

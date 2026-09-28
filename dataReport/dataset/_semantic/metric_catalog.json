@@ -1,0 +1,39 @@
+{
+  "window": "2026-01~06",
+  "unit": {
+    "fact": "元",
+    "derived_wan": "万元",
+    "budget": "万元含税"
+  },
+  "measures": {
+    "management_ship": {
+      "expr": "SUM(ship_order_line.total_money_fc_hs_wan)",
+      "unit": "万元"
+    },
+    "assessment_ship": {
+      "expr": "SUM(ship_order_line.total_money_fc_hs_wan)",
+      "unit": "万元"
+    },
+    "management_sign": {
+      "expr": "SUM(sign_order_line.total_money_fc_hs_wan)",
+      "unit": "万元"
+    }
+  },
+  "budgets": {
+    "management_ship_budget_hs": "dept_budget_month / product_budget_month",
+    "assessment_ship_budget_hs": "dept_budget_month / product_budget_month",
+    "management_signed_contract_hs": "dept_budget_month",
+    "gl_management_signed_contract_hs": "product_budget_month"
+  },
+  "achieve_filter": [
+    "org_scope=in_scope",
+    "zprod_type in budget_covered",
+    "fdept非空",
+    "万元含税"
+  ],
+  "not_comparable": [
+    "预算两投影相加",
+    "元与万元直接相除",
+    "签单与出货混算"
+  ]
+}

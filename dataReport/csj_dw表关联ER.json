@@ -1,0 +1,918 @@
+{
+  "meta": {
+    "id": "csj_dw.ontology.graph",
+    "title": "csj_dw 表关联：本体论 + 属性图",
+    "database": "csj_dw",
+    "schema": "dbo",
+    "engine": "Microsoft SQL Server",
+    "source": [
+      "csj_dw表关联ER.md",
+      "数据表与视图.md"
+    ],
+    "note": "文档未声明数据库外键。图中的 JOIN 来自视图 DDL；预算对照来自达成口径，不是视图定义。基数按 DDL 推断。",
+    "unitRule": "宽表金额单位为元，预算为万元；比较前 SUM(宽表金额)/10000。",
+    "agentQueryPolicy": "生成 SQL 仅允许四类对外对象；组织视图与底层表禁止直查。"
+  },
+  "@context": {
+    "@vocab": "https://csj.local/ont/csj-dw#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "ontology": {
+    "namespace": "https://csj.local/ont/csj-dw#",
+    "classes": [
+      {
+        "id": "DatasetObject",
+        "label": "数据集对象",
+        "comment": "库中可命名的表或视图",
+        "subClassOf": null
+      },
+      {
+        "id": "PhysicalTable",
+        "label": "物理表",
+        "subClassOf": "DatasetObject"
+      },
+      {
+        "id": "View",
+        "label": "视图",
+        "subClassOf": "DatasetObject"
+      },
+      {
+        "id": "IntermediateView",
+        "label": "中间视图",
+        "comment": "禁止智能体直查",
+        "subClassOf": "View"
+      },
+      {
+        "id": "WideView",
+        "label": "对外宽表",
+        "comment": "智能体可查的签单/出货宽表",
+        "subClassOf": "View"
+      },
+      {
+        "id": "BudgetTable",
+        "label": "预算表",
+        "subClassOf": "PhysicalTable"
+      },
+      {
+        "id": "FactTable",
+        "label": "事实表",
+        "subClassOf": "PhysicalTable"
+      },
+      {
+        "id": "DimensionTable",
+        "label": "维表",
+        "subClassOf": "PhysicalTable"
+      },
+      {
+        "id": "AgentQueryable",
+        "label": "智能体可查",
+        "comment": "生成 SQL 允许引用的对象",
+        "subClassOf": null
+      },
+      {
+        "id": "ForbiddenDirectQuery",
+        "label": "禁止直查",
+        "subClassOf": null
+      },
+      {
+        "id": "BusinessUpload",
+        "label": "业务上传",
+        "subClassOf": null
+      },
+      {
+        "id": "DomainEntity",
+        "label": "业务实体",
+        "comment": "与库对象正交的领域概念",
+        "subClassOf": null
+      },
+      {
+        "id": "SalesPerson",
+        "label": "业务员",
+        "identifier": "SalesCode",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "Department",
+        "label": "科室",
+        "identifier": "Fdept",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "Area",
+        "label": "区域",
+        "identifier": "Area",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "Customer",
+        "label": "客户",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "ProductClassification",
+        "label": "机型分类",
+        "identifier": "ZPROD_NAME",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "ProductType",
+        "label": "产品类型",
+        "identifier": "ZPROD_TYPE",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "SigningFact",
+        "label": "签单事实",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "ShipmentFact",
+        "label": "出货/出机事实",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "DeptMonthBudget",
+        "label": "科室月度预算",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "ProductTypeMonthBudget",
+        "label": "产品类型月度预算",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "Metric",
+        "label": "业务指标",
+        "subClassOf": "DomainEntity"
+      },
+      {
+        "id": "Field",
+        "label": "字段",
+        "subClassOf": null
+      }
+    ],
+    "objectProperties": [
+      {
+        "id": "composedFrom",
+        "label": "派生自",
+        "domain": "View",
+        "range": "DatasetObject",
+        "comment": "视图由下游对象 JOIN 构成",
+        "inverse": "composes"
+      },
+      {
+        "id": "composes",
+        "label": "构成",
+        "domain": "DatasetObject",
+        "range": "View",
+        "inverse": "composedFrom"
+      },
+      {
+        "id": "leftJoins",
+        "label": "LEFT JOIN",
+        "domain": "DatasetObject",
+        "range": "DatasetObject",
+        "comment": "驱动侧必有，对端可空"
+      },
+      {
+        "id": "fullOuterJoins",
+        "label": "FULL OUTER JOIN",
+        "domain": "DatasetObject",
+        "range": "DatasetObject",
+        "comment": "两侧都可空",
+        "characteristics": ["Symmetric"]
+      },
+      {
+        "id": "logicallyAlignsWith",
+        "label": "业务对照",
+        "domain": "BudgetTable",
+        "range": "WideView",
+        "comment": "不在视图 DDL 中，由生成 SQL 按键对照"
+      },
+      {
+        "id": "identifies",
+        "label": "标识",
+        "domain": "Field",
+        "range": "DomainEntity"
+      },
+      {
+        "id": "sameAsKey",
+        "label": "同一业务键",
+        "domain": "Field",
+        "range": "Field",
+        "characteristics": ["Symmetric", "Transitive"],
+        "comment": "跨表字段在业务上指同一个标识符"
+      },
+      {
+        "id": "implements",
+        "label": "实现",
+        "domain": "DatasetObject",
+        "range": "DomainEntity"
+      },
+      {
+        "id": "actualOf",
+        "label": "实际值来源",
+        "domain": "Metric",
+        "range": "Field"
+      },
+      {
+        "id": "budgetOf",
+        "label": "预算值来源",
+        "domain": "Metric",
+        "range": "Field"
+      },
+      {
+        "id": "belongsToDepartment",
+        "label": "属于科室",
+        "domain": "SalesPerson",
+        "range": "Department"
+      },
+      {
+        "id": "classifiedAs",
+        "label": "归入产品类型",
+        "domain": "ProductClassification",
+        "range": "ProductType"
+      },
+      {
+        "id": "soldBy",
+        "label": "签单业务员",
+        "domain": "SigningFact",
+        "range": "SalesPerson"
+      },
+      {
+        "id": "shippedBy",
+        "label": "出货业务员",
+        "domain": "ShipmentFact",
+        "range": "SalesPerson"
+      }
+    ],
+    "dataProperties": [
+      {
+        "id": "agentQueryable",
+        "label": "智能体可查",
+        "domain": "DatasetObject",
+        "range": "xsd:boolean"
+      },
+      {
+        "id": "businessUpload",
+        "label": "业务上传",
+        "domain": "PhysicalTable",
+        "range": "xsd:boolean"
+      },
+      {
+        "id": "amountUnit",
+        "label": "金额单位",
+        "domain": "DatasetObject",
+        "range": "xsd:string"
+      },
+      {
+        "id": "objectKind",
+        "label": "对象种类",
+        "domain": "DatasetObject",
+        "range": "xsd:string"
+      }
+    ],
+    "axioms": [
+      {
+        "type": "equivalentKey",
+        "concept": "SalesPerson",
+        "fields": [
+          "fill_sales_dept.SalesCode",
+          "bi_vpsempinfo_month.empcode",
+          "v_sales_emp_info.SalesCode",
+          "dw_sgning_wide_table.SalesCode",
+          "dw_sale_order_saptest.fsales_number",
+          "v_sales_order_product.SalesCode",
+          "v_sale_ship_order_emp_product.SalesCode"
+        ]
+      },
+      {
+        "type": "equivalentKey",
+        "concept": "Department",
+        "fields": [
+          "fill_sales_dept.Fdept",
+          "v_sales_emp_info.Fdept",
+          "v_sales_order_product.Fdept",
+          "v_sale_ship_order_emp_product.Fdept",
+          "fill_dept_budget.Fdept"
+        ]
+      },
+      {
+        "type": "equivalentKey",
+        "concept": "ProductClassification",
+        "fields": [
+          "ods_sap_cw_product.ZPROD_NAME",
+          "dw_sgning_wide_table.FmateType",
+          "dw_sale_order_saptest.fmate_type",
+          "v_sales_order_product.ZPROD_NAME",
+          "v_sale_ship_order_emp_product.ZPROD_NAME"
+        ]
+      },
+      {
+        "type": "equivalentKey",
+        "concept": "ProductType",
+        "fields": [
+          "ods_sap_cw_product.ZPROD_TYPE",
+          "v_sales_order_product.ZPROD_TYPE",
+          "v_sale_ship_order_emp_product.ZPROD_TYPE"
+        ]
+      },
+      {
+        "type": "unitConversion",
+        "from": "CNY",
+        "to": "10000CNY",
+        "expression": "amount / 10000",
+        "comment": "宽表与预算比较前必须换算"
+      },
+      {
+        "type": "disjoint",
+        "classes": ["AgentQueryable", "ForbiddenDirectQuery"]
+      },
+      {
+        "type": "queryRestriction",
+        "comment": "AgentQueryable 仅含四对象",
+        "members": [
+          "v_sales_order_product",
+          "v_sale_ship_order_emp_product",
+          "fill_dept_budget",
+          "fill_product_budget"
+        ]
+      },
+      {
+        "type": "filterRule",
+        "id": "achievement.fdept.all",
+        "comment": "达成类按 Fdept 全量，不过滤 User_role"
+      },
+      {
+        "type": "filterRule",
+        "id": "no_sign.user_role.sales",
+        "comment": "连续不签单/未出机：User_role=业务，按 SalesCode 聚合"
+      }
+    ]
+  },
+  "graph": {
+    "model": "property-graph",
+    "directed": true,
+    "nodes": [
+      {
+        "id": "fill_sales_dept",
+        "labels": ["PhysicalTable", "DimensionTable", "ForbiddenDirectQuery", "BusinessUpload"],
+        "properties": {
+          "label_zh": "业务员部门架构",
+          "kind": "table",
+          "agentQueryable": false,
+          "businessUpload": true,
+          "amountUnit": null,
+          "implements": ["SalesPerson", "Department", "Area"],
+          "comment": "装备一事业部业务员部门架构。组织视图的驱动表。"
+        },
+        "fields": [
+          { "name": "SalesCode", "role": "pk", "type": "varchar", "identifies": "SalesPerson", "comment": "驱动键" },
+          { "name": "SalesName", "role": "attr", "type": "varchar", "comment": "业务员姓名" },
+          { "name": "ForgName", "role": "attr", "type": "varchar", "comment": "组织名称" },
+          { "name": "SalesDept", "role": "attr", "type": "varchar", "comment": "销售部门" },
+          { "name": "Area", "role": "attr", "type": "varchar", "identifies": "Area", "comment": "区域" },
+          { "name": "Fdept", "role": "join", "type": "varchar", "identifies": "Department", "comment": "科室；预算对照键" },
+          { "name": "SupervisorName", "role": "attr", "type": "varchar", "comment": "主管" },
+          { "name": "Province", "role": "attr", "type": "varchar", "comment": "省" },
+          { "name": "AffiliationCity", "role": "attr", "type": "varchar", "comment": "归属城市" },
+          { "name": "EmploymentStatus", "role": "attr", "type": "varchar", "comment": "在职状态" },
+          { "name": "User_role", "role": "attr", "type": "varchar", "comment": "业务 / 领导等" },
+          { "name": "Sales_Employment_Date", "role": "attr", "type": "varchar", "comment": "入职日期" }
+        ]
+      },
+      {
+        "id": "bi_vpsempinfo_month",
+        "labels": ["PhysicalTable", "DimensionTable", "ForbiddenDirectQuery"],
+        "properties": {
+          "label_zh": "EHR 组织月表",
+          "kind": "table",
+          "agentQueryable": false,
+          "businessUpload": false,
+          "amountUnit": null,
+          "implements": ["SalesPerson"],
+          "comment": "BI 取自 EHR。组织视图只取当年当月切片。"
+        },
+        "fields": [
+          { "name": "empcode", "role": "join", "type": "varchar", "identifies": "SalesPerson", "sameAs": "fill_sales_dept.SalesCode" },
+          { "name": "y1", "role": "join", "type": "int", "comment": "YEAR(GETDATE())" },
+          { "name": "m1", "role": "join", "type": "int", "comment": "MONTH(GETDATE())" },
+          { "name": "entrydate", "role": "attr", "type": "date", "comment": "入职日" },
+          { "name": "grade", "role": "attr", "type": "varchar", "comment": "职级" }
+        ]
+      },
+      {
+        "id": "v_sales_emp_info",
+        "labels": ["View", "IntermediateView", "ForbiddenDirectQuery"],
+        "properties": {
+          "label_zh": "业务组织架构",
+          "kind": "view",
+          "agentQueryable": false,
+          "businessUpload": false,
+          "amountUnit": null,
+          "implements": ["SalesPerson", "Department", "Area"],
+          "comment": "fill_sales_dept LEFT JOIN 当年当月 EHR。两宽表组织字段都来自这里，引用成本高。"
+        },
+        "fields": [
+          { "name": "SalesCode", "role": "pk", "type": "varchar", "identifies": "SalesPerson", "comment": "业务员工号" },
+          { "name": "SalesName", "role": "attr", "type": "varchar" },
+          { "name": "ForgName", "role": "attr", "type": "varchar" },
+          { "name": "SalesDept", "role": "attr", "type": "varchar" },
+          { "name": "Area", "role": "attr", "type": "varchar", "identifies": "Area" },
+          { "name": "Fdept", "role": "join", "type": "varchar", "identifies": "Department" },
+          { "name": "SupervisorName", "role": "attr", "type": "varchar" },
+          { "name": "Province", "role": "attr", "type": "varchar" },
+          { "name": "AffiliationCity", "role": "attr", "type": "varchar" },
+          { "name": "entrydate", "role": "attr", "type": "date", "comment": "来自 EHR 月表" },
+          { "name": "grade", "role": "attr", "type": "varchar", "comment": "来自 EHR 月表" },
+          { "name": "EmploymentStatus", "role": "attr", "type": "varchar" },
+          { "name": "User_role", "role": "attr", "type": "varchar", "comment": "连续不签单等场景过滤「业务」" },
+          { "name": "Sales_Employment_Date", "role": "attr", "type": "varchar" }
+        ]
+      },
+      {
+        "id": "dw_sgning_wide_table",
+        "labels": ["PhysicalTable", "FactTable", "ForbiddenDirectQuery"],
+        "properties": {
+          "label_zh": "销售签单明细",
+          "kind": "table",
+          "agentQueryable": false,
+          "businessUpload": false,
+          "amountUnit": "CNY",
+          "implements": ["SigningFact", "SalesPerson", "ProductClassification"],
+          "comment": "签单事实表。与组织视图 FULL OUTER JOIN，无单人员工业会出现在签单宽表中。"
+        },
+        "fields": [
+          { "name": "SalesCode", "role": "join", "type": "varchar", "identifies": "SalesPerson" },
+          { "name": "SalesName", "role": "attr", "type": "varchar" },
+          { "name": "Orgname", "role": "attr", "type": "varchar" },
+          { "name": "SalesOrgName", "role": "attr", "type": "varchar" },
+          { "name": "SalesDocnoDate", "role": "attr", "type": "date" },
+          { "name": "Fyear", "role": "attr", "type": "int" },
+          { "name": "Fmonth", "role": "attr", "type": "int" },
+          { "name": "Auart", "role": "attr", "type": "varchar" },
+          { "name": "AuartName", "role": "attr", "type": "varchar" },
+          { "name": "Werks", "role": "attr", "type": "varchar" },
+          { "name": "ContractName", "role": "attr", "type": "varchar" },
+          { "name": "Docno", "role": "attr", "type": "varchar" },
+          { "name": "DocnoNum", "role": "attr", "type": "varchar" },
+          { "name": "KunnrCode", "role": "attr", "type": "varchar", "identifies": "Customer" },
+          { "name": "FmateNumber", "role": "attr", "type": "varchar" },
+          { "name": "FmateSeris", "role": "attr", "type": "varchar" },
+          { "name": "FmateType", "role": "join", "type": "varchar", "identifies": "ProductClassification", "sameAs": "ods_sap_cw_product.ZPROD_NAME" },
+          { "name": "Fqty", "role": "attr", "type": "decimal" },
+          { "name": "TotalMoneyFc", "role": "metric", "type": "decimal", "unit": "CNY", "comment": "不含税签单" },
+          { "name": "TotalMoneyFc_HS", "role": "metric", "type": "decimal", "unit": "CNY", "comment": "含税签单" }
+        ]
+      },
+      {
+        "id": "dw_sale_order_saptest",
+        "labels": ["PhysicalTable", "FactTable", "ForbiddenDirectQuery"],
+        "properties": {
+          "label_zh": "发货数据表",
+          "kind": "table",
+          "agentQueryable": false,
+          "businessUpload": false,
+          "amountUnit": "CNY",
+          "implements": ["ShipmentFact", "SalesPerson", "Customer", "ProductClassification"],
+          "comment": "出货宽表的驱动表。无匹配业务员时组织字段为空，行仍保留。"
+        },
+        "fields": [
+          { "name": "fsales_number", "role": "join", "type": "varchar", "identifies": "SalesPerson", "sameAs": "v_sales_emp_info.SalesCode" },
+          { "name": "fsales_name", "role": "attr", "type": "varchar" },
+          { "name": "Orgname", "role": "attr", "type": "varchar" },
+          { "name": "DocNo", "role": "attr", "type": "varchar" },
+          { "name": "BusinessDate", "role": "attr", "type": "date" },
+          { "name": "fyear", "role": "attr", "type": "int" },
+          { "name": "fperiod", "role": "attr", "type": "int" },
+          { "name": "fcust_number", "role": "attr", "type": "varchar", "identifies": "Customer" },
+          { "name": "fcust_name", "role": "attr", "type": "varchar" },
+          { "name": "fmate_number", "role": "attr", "type": "varchar" },
+          { "name": "fmate_name", "role": "attr", "type": "varchar" },
+          { "name": "fmate_type", "role": "join", "type": "varchar", "identifies": "ProductClassification", "sameAs": "ods_sap_cw_product.ZPROD_NAME" },
+          { "name": "FQTY", "role": "attr", "type": "decimal" },
+          { "name": "TotalMoneyFC", "role": "metric", "type": "decimal", "unit": "CNY", "comment": "不含税出货" },
+          { "name": "TotalMoneyFC_HS", "role": "metric", "type": "decimal", "unit": "CNY", "comment": "含税出货" }
+        ]
+      },
+      {
+        "id": "ods_sap_cw_product",
+        "labels": ["PhysicalTable", "DimensionTable", "ForbiddenDirectQuery"],
+        "properties": {
+          "label_zh": "机型所属分类",
+          "kind": "table",
+          "agentQueryable": false,
+          "businessUpload": false,
+          "amountUnit": null,
+          "implements": ["ProductClassification", "ProductType"],
+          "comment": "两宽表都经物料类型 LEFT JOIN 本表得到 ZPROD_NAME / ZPROD_TYPE。"
+        },
+        "fields": [
+          { "name": "ZPROD_NAME", "role": "pk", "type": "varchar", "identifies": "ProductClassification" },
+          { "name": "ZPROD_TYPE", "role": "attr", "type": "varchar", "identifies": "ProductType" }
+        ]
+      },
+      {
+        "id": "v_sales_order_product",
+        "labels": ["View", "WideView", "AgentQueryable"],
+        "properties": {
+          "label_zh": "签单宽表",
+          "kind": "view",
+          "agentQueryable": true,
+          "businessUpload": false,
+          "amountUnit": "CNY",
+          "implements": ["SigningFact", "SalesPerson", "Department", "ProductType"],
+          "comment": "组织视图 FULL OUTER JOIN 签单明细，再 LEFT JOIN 产品分类；视图内有 GROUP BY。"
+        },
+        "fields": [
+          { "name": "SalesCode", "role": "pk", "type": "varchar", "identifies": "SalesPerson", "comment": "COALESCE(emp, ord)" },
+          { "name": "empSalesCode", "role": "join", "type": "varchar" },
+          { "name": "ordSalesCode", "role": "join", "type": "varchar" },
+          { "name": "Fdept", "role": "attr", "type": "varchar", "identifies": "Department" },
+          { "name": "Area", "role": "attr", "type": "varchar", "identifies": "Area" },
+          { "name": "User_role", "role": "attr", "type": "varchar" },
+          { "name": "Docno", "role": "attr", "type": "varchar" },
+          { "name": "ContractName", "role": "attr", "type": "varchar" },
+          { "name": "TotalMoneyFc", "role": "metric", "type": "decimal", "unit": "CNY" },
+          { "name": "TotalMoneyFc_HS", "role": "metric", "type": "decimal", "unit": "CNY", "comment": "含税签单，元" },
+          { "name": "ZPROD_NAME", "role": "join", "type": "varchar", "identifies": "ProductClassification" },
+          { "name": "ZPROD_TYPE", "role": "join", "type": "varchar", "identifies": "ProductType" }
+        ]
+      },
+      {
+        "id": "v_sale_ship_order_emp_product",
+        "labels": ["View", "WideView", "AgentQueryable"],
+        "properties": {
+          "label_zh": "出货宽表",
+          "kind": "view",
+          "agentQueryable": true,
+          "businessUpload": false,
+          "amountUnit": "CNY",
+          "implements": ["ShipmentFact", "SalesPerson", "Department", "ProductType"],
+          "comment": "以发货表为驱动 LEFT JOIN 组织视图与产品分类。不是 FULL OUTER JOIN。"
+        },
+        "fields": [
+          { "name": "SalesCode", "role": "join", "type": "varchar", "identifies": "SalesPerson", "comment": "s.fsales_number" },
+          { "name": "empSalesCode", "role": "join", "type": "varchar" },
+          { "name": "Fdept", "role": "attr", "type": "varchar", "identifies": "Department" },
+          { "name": "Area", "role": "attr", "type": "varchar", "identifies": "Area" },
+          { "name": "User_role", "role": "attr", "type": "varchar" },
+          { "name": "DocNo", "role": "attr", "type": "varchar" },
+          { "name": "fcust_name", "role": "attr", "type": "varchar", "identifies": "Customer" },
+          { "name": "TotalMoneyFC", "role": "metric", "type": "decimal", "unit": "CNY" },
+          { "name": "TotalMoneyFC_HS", "role": "metric", "type": "decimal", "unit": "CNY", "comment": "含税出货，元" },
+          { "name": "ZPROD_NAME", "role": "join", "type": "varchar", "identifies": "ProductClassification" },
+          { "name": "ZPROD_TYPE", "role": "join", "type": "varchar", "identifies": "ProductType" }
+        ]
+      },
+      {
+        "id": "fill_dept_budget",
+        "labels": ["PhysicalTable", "BudgetTable", "AgentQueryable", "BusinessUpload"],
+        "properties": {
+          "label_zh": "科室月度预算",
+          "kind": "table",
+          "agentQueryable": true,
+          "businessUpload": true,
+          "amountUnit": "10000CNY",
+          "implements": ["DeptMonthBudget", "Department"],
+          "comment": "未出现在三视图 DDL 中。月度键字段本文件夹未给出完整字典。"
+        },
+        "fields": [
+          { "name": "Fdept", "role": "join", "type": "varchar", "identifies": "Department" },
+          { "name": "Management_Ship_Budget_Hs", "role": "metric", "type": "decimal", "unit": "10000CNY", "comment": "管理出机预算（万元，含税）" },
+          { "name": "Assessment_Ship_Budget_Hs", "role": "metric", "type": "decimal", "unit": "10000CNY", "comment": "考核出机预算（万元，含税）" },
+          { "name": "Management_SignedContract_Hs", "role": "metric", "type": "decimal", "unit": "10000CNY", "comment": "管理签单预算（万元，含税）" }
+        ]
+      },
+      {
+        "id": "fill_product_budget",
+        "labels": ["PhysicalTable", "BudgetTable", "AgentQueryable", "BusinessUpload"],
+        "properties": {
+          "label_zh": "产品类型月度预算",
+          "kind": "table",
+          "agentQueryable": true,
+          "businessUpload": true,
+          "amountUnit": "10000CNY",
+          "implements": ["ProductTypeMonthBudget", "ProductType"],
+          "comment": "完整字段名以 SQL语句生成V2.md 为准，本目录未收录。"
+        },
+        "fields": [
+          { "name": "产品类型_月", "role": "join", "type": "unknown", "identifies": "ProductType", "comment": "文档仅写粒度，未列完整字段名" },
+          { "name": "预算金额", "role": "metric", "type": "decimal", "unit": "10000CNY", "comment": "对照宽表 ZPROD_TYPE" }
+        ]
+      },
+      {
+        "id": "metric:management_ship",
+        "labels": ["Metric"],
+        "properties": {
+          "label_zh": "管理出机",
+          "joinKey": "Fdept",
+          "filter": "Fdept 全量，不过滤 User_role",
+          "convert": "actual_CNY / 10000"
+        }
+      },
+      {
+        "id": "metric:assessment_ship",
+        "labels": ["Metric"],
+        "properties": {
+          "label_zh": "考核出机",
+          "joinKey": "Fdept",
+          "filter": "Fdept 全量，不过滤 User_role",
+          "convert": "actual_CNY / 10000"
+        }
+      },
+      {
+        "id": "metric:management_sign",
+        "labels": ["Metric"],
+        "properties": {
+          "label_zh": "管理签单",
+          "joinKey": "Fdept",
+          "filter": "Fdept 全量，不过滤 User_role",
+          "convert": "actual_CNY / 10000"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "fill_sales_dept",
+        "target": "v_sales_emp_info",
+        "type": "composedFrom",
+        "joinKind": "LEFT_OUTER",
+        "driving": true,
+        "properties": {
+          "on": "驱动表；输出全部业务员架构字段",
+          "cardinality": { "from": "1", "to": "1" },
+          "realizesIn": "v_sales_emp_info"
+        }
+      },
+      {
+        "id": "e2",
+        "source": "bi_vpsempinfo_month",
+        "target": "v_sales_emp_info",
+        "type": "leftJoins",
+        "joinKind": "LEFT_OUTER",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "bi_vpsempinfo_month.empcode", "to": "fill_sales_dept.SalesCode", "op": "=" },
+            { "from": "bi_vpsempinfo_month.y1", "to": "YEAR(GETDATE())", "op": "=" },
+            { "from": "bi_vpsempinfo_month.m1", "to": "MONTH(GETDATE())", "op": "=" }
+          ],
+          "cardinality": { "from": "1", "to": "0..1" },
+          "realizesIn": "v_sales_emp_info"
+        }
+      },
+      {
+        "id": "e3",
+        "source": "v_sales_emp_info",
+        "target": "v_sales_order_product",
+        "type": "fullOuterJoins",
+        "joinKind": "FULL_OUTER",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "v_sales_emp_info.SalesCode", "to": "dw_sgning_wide_table.SalesCode", "op": "=" }
+          ],
+          "cardinality": { "from": "0..1", "to": "0..N" },
+          "realizesIn": "v_sales_order_product",
+          "comment": "无订单的业务员仍保留"
+        }
+      },
+      {
+        "id": "e4",
+        "source": "dw_sgning_wide_table",
+        "target": "v_sales_order_product",
+        "type": "fullOuterJoins",
+        "joinKind": "FULL_OUTER",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "dw_sgning_wide_table.SalesCode", "to": "v_sales_emp_info.SalesCode", "op": "=" }
+          ],
+          "cardinality": { "from": "0..N", "to": "0..1" },
+          "realizesIn": "v_sales_order_product",
+          "comment": "对不上组织的单据仍保留"
+        }
+      },
+      {
+        "id": "e5",
+        "source": "ods_sap_cw_product",
+        "target": "v_sales_order_product",
+        "type": "leftJoins",
+        "joinKind": "LEFT_OUTER",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "dw_sgning_wide_table.FmateType", "to": "ods_sap_cw_product.ZPROD_NAME", "op": "=" }
+          ],
+          "cardinality": { "from": "0..1", "to": "N" },
+          "realizesIn": "v_sales_order_product"
+        }
+      },
+      {
+        "id": "e6",
+        "source": "dw_sale_order_saptest",
+        "target": "v_sale_ship_order_emp_product",
+        "type": "composedFrom",
+        "joinKind": "LEFT_OUTER",
+        "driving": true,
+        "properties": {
+          "on": "发货表为驱动，保留全部出货行",
+          "cardinality": { "from": "1", "to": "1" },
+          "realizesIn": "v_sale_ship_order_emp_product"
+        }
+      },
+      {
+        "id": "e7",
+        "source": "v_sales_emp_info",
+        "target": "v_sale_ship_order_emp_product",
+        "type": "leftJoins",
+        "joinKind": "LEFT_OUTER",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "dw_sale_order_saptest.fsales_number", "to": "v_sales_emp_info.SalesCode", "op": "=" }
+          ],
+          "cardinality": { "from": "0..1", "to": "N" },
+          "realizesIn": "v_sale_ship_order_emp_product"
+        }
+      },
+      {
+        "id": "e8",
+        "source": "ods_sap_cw_product",
+        "target": "v_sale_ship_order_emp_product",
+        "type": "leftJoins",
+        "joinKind": "LEFT_OUTER",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "dw_sale_order_saptest.fmate_type", "to": "ods_sap_cw_product.ZPROD_NAME", "op": "=" }
+          ],
+          "cardinality": { "from": "0..1", "to": "N" },
+          "realizesIn": "v_sale_ship_order_emp_product"
+        }
+      },
+      {
+        "id": "e9",
+        "source": "fill_dept_budget",
+        "target": "v_sales_order_product",
+        "type": "logicallyAlignsWith",
+        "joinKind": "LOGICAL",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "fill_dept_budget.Fdept", "to": "v_sales_order_product.Fdept", "op": "=" }
+          ],
+          "cardinality": { "from": "1", "to": "N" },
+          "convert": "wide_amount_CNY / 10000",
+          "realizesIn": "生成 SQL 达成口径"
+        }
+      },
+      {
+        "id": "e10",
+        "source": "fill_dept_budget",
+        "target": "v_sale_ship_order_emp_product",
+        "type": "logicallyAlignsWith",
+        "joinKind": "LOGICAL",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "fill_dept_budget.Fdept", "to": "v_sale_ship_order_emp_product.Fdept", "op": "=" }
+          ],
+          "cardinality": { "from": "1", "to": "N" },
+          "convert": "wide_amount_CNY / 10000",
+          "realizesIn": "生成 SQL 达成口径"
+        }
+      },
+      {
+        "id": "e11",
+        "source": "fill_product_budget",
+        "target": "v_sales_order_product",
+        "type": "logicallyAlignsWith",
+        "joinKind": "LOGICAL",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "fill_product_budget.产品类型", "to": "v_sales_order_product.ZPROD_TYPE", "op": "≈" }
+          ],
+          "cardinality": { "from": "1", "to": "N" },
+          "realizesIn": "生成 SQL 达成口径"
+        }
+      },
+      {
+        "id": "e12",
+        "source": "fill_product_budget",
+        "target": "v_sale_ship_order_emp_product",
+        "type": "logicallyAlignsWith",
+        "joinKind": "LOGICAL",
+        "driving": false,
+        "properties": {
+          "on": [
+            { "from": "fill_product_budget.产品类型", "to": "v_sale_ship_order_emp_product.ZPROD_TYPE", "op": "≈" }
+          ],
+          "cardinality": { "from": "1", "to": "N" },
+          "realizesIn": "生成 SQL 达成口径"
+        }
+      },
+      {
+        "id": "e13",
+        "source": "metric:management_ship",
+        "target": "v_sale_ship_order_emp_product",
+        "type": "actualOf",
+        "properties": { "field": "TotalMoneyFC_HS", "unit": "CNY" }
+      },
+      {
+        "id": "e14",
+        "source": "metric:management_ship",
+        "target": "fill_dept_budget",
+        "type": "budgetOf",
+        "properties": { "field": "Management_Ship_Budget_Hs", "unit": "10000CNY" }
+      },
+      {
+        "id": "e15",
+        "source": "metric:assessment_ship",
+        "target": "v_sale_ship_order_emp_product",
+        "type": "actualOf",
+        "properties": { "field": "TotalMoneyFC_HS", "unit": "CNY" }
+      },
+      {
+        "id": "e16",
+        "source": "metric:assessment_ship",
+        "target": "fill_dept_budget",
+        "type": "budgetOf",
+        "properties": { "field": "Assessment_Ship_Budget_Hs", "unit": "10000CNY" }
+      },
+      {
+        "id": "e17",
+        "source": "metric:management_sign",
+        "target": "v_sales_order_product",
+        "type": "actualOf",
+        "properties": { "field": "TotalMoneyFc_HS", "unit": "CNY" }
+      },
+      {
+        "id": "e18",
+        "source": "metric:management_sign",
+        "target": "fill_dept_budget",
+        "type": "budgetOf",
+        "properties": { "field": "Management_SignedContract_Hs", "unit": "10000CNY" }
+      }
+    ]
+  },
+  "compositions": [
+    {
+      "view": "v_sales_emp_info",
+      "driver": "fill_sales_dept",
+      "steps": [
+        { "alias": "dept", "object": "fill_sales_dept", "role": "driver" },
+        {
+          "alias": "emp",
+          "object": "bi_vpsempinfo_month",
+          "join": "LEFT_OUTER",
+          "on": "dept.SalesCode = emp.empcode AND emp.y1 = YEAR(GETDATE()) AND emp.m1 = MONTH(GETDATE())"
+        }
+      ]
+    },
+    {
+      "view": "v_sales_order_product",
+      "driver": null,
+      "groupBy": true,
+      "steps": [
+        { "alias": "emp", "object": "v_sales_emp_info", "role": "full-outer-side" },
+        {
+          "alias": "ord",
+          "object": "dw_sgning_wide_table",
+          "join": "FULL_OUTER",
+          "on": "emp.SalesCode = ord.SalesCode"
+        },
+        {
+          "alias": "pro",
+          "object": "ods_sap_cw_product",
+          "join": "LEFT_OUTER",
+          "on": "ord.FmateType = pro.ZPROD_NAME"
+        }
+      ]
+    },
+    {
+      "view": "v_sale_ship_order_emp_product",
+      "driver": "dw_sale_order_saptest",
+      "steps": [
+        { "alias": "s", "object": "dw_sale_order_saptest", "role": "driver" },
+        {
+          "alias": "emp",
+          "object": "v_sales_emp_info",
+          "join": "LEFT_OUTER",
+          "on": "s.fsales_number = emp.SalesCode"
+        },
+        {
+          "alias": "p",
+          "object": "ods_sap_cw_product",
+          "join": "LEFT_OUTER",
+          "on": "s.fmate_type = p.ZPROD_NAME"
+        }
+      ]
+    }
+  ]
+}

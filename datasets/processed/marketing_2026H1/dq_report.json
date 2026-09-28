@@ -1,0 +1,232 @@
+{
+  "window": "2026-01~06",
+  "source": "/Users/thomasliu/myspace/semantica/dataReport/dataset",
+  "tables": {
+    "emp_dim": 455,
+    "dept_dim": 40,
+    "product_dim": 527,
+    "customer_dim": 4245,
+    "month_dim": 6,
+    "sign_order_line": 7558,
+    "ship_order_line": 8036,
+    "dept_budget_month": 234,
+    "product_budget_month": 36
+  },
+  "rules": [
+    {
+      "rule_id": "duplicate_sales_code",
+      "table": "emp_dim",
+      "count": 3,
+      "example_keys": [
+        "C13437",
+        "C13480",
+        "C15083"
+      ],
+      "note": "同一工号多行的在职/离职双态；按 B9 prefer_active 取在职行"
+    },
+    {
+      "rule_id": "emp_dim_row_reduction",
+      "table": "emp_dim",
+      "count": 3,
+      "example_keys": [],
+      "note": "fill_sales_dept 458 行 -> 455 个工号"
+    },
+    {
+      "rule_id": "fdept_vs_fdept_add_conflict",
+      "table": "emp_dim",
+      "count": 92,
+      "example_keys": [
+        "C10081",
+        "C10845",
+        "C10877",
+        "C11115",
+        "C11815"
+      ],
+      "note": "Fdept 与 Fdept_add 不等；对齐键锁定 Fdept_add（B5）"
+    },
+    {
+      "rule_id": "budget_rows_without_dept",
+      "table": "dept_budget_month",
+      "count": 18,
+      "example_keys": [
+        "其他部门代卖"
+      ],
+      "note": "其他部门代卖（项目/海外/3C销售部）预算无科室；保留不入 dept_dim（B8）"
+    },
+    {
+      "rule_id": "customer_key_domain_gap",
+      "table": "customer_dim",
+      "count": 445,
+      "example_keys": [],
+      "note": "仅签单客户 349（已签未出）；仅出货客户 96（往期/直发）"
+    },
+    {
+      "rule_id": "sign_dedup_full_row",
+      "table": "sign_order_line",
+      "count": 0,
+      "example_keys": [],
+      "note": "完全重复行去重（D2）"
+    },
+    {
+      "rule_id": "sign_unassigned_dept_rows",
+      "table": "sign_order_line",
+      "count": 800,
+      "example_keys": [],
+      "note": "SalesCode 未匹配组织视图，fdept 为空；保留不入达成（B8）"
+    },
+    {
+      "rule_id": "sign_unregistered_model_rows",
+      "table": "sign_order_line",
+      "count": 20,
+      "example_keys": [
+        "B-850",
+        "HG-VU1530",
+        "HL-35H",
+        "L-45L",
+        "L-35L",
+        "S-800U",
+        "V-450US",
+        "D-VL500"
+      ],
+      "note": "fmate_type 不在 ods_sap_cw_product；保留事实、机型置空"
+    },
+    {
+      "rule_id": "sign_negative_amount_rows",
+      "table": "sign_order_line",
+      "count": 264,
+      "example_keys": [],
+      "note": "退货/退补为有效发生体，保留（D7）"
+    },
+    {
+      "rule_id": "ship_dedup_full_row",
+      "table": "ship_order_line",
+      "count": 0,
+      "example_keys": [],
+      "note": "完全重复行去重（D2）"
+    },
+    {
+      "rule_id": "ship_keep_budget_placeholder",
+      "table": "ship_order_line",
+      "count": 30,
+      "example_keys": [],
+      "note": "ftag='预算数据' 底层保留（含 fbudget_* 保底字段，D1）"
+    },
+    {
+      "rule_id": "ship_unassigned_dept_rows",
+      "table": "ship_order_line",
+      "count": 1163,
+      "example_keys": [],
+      "note": "fsales_number 未匹配组织视图；保留不入达成（B8）"
+    },
+    {
+      "rule_id": "ship_unregistered_model_rows",
+      "table": "ship_order_line",
+      "count": 38,
+      "example_keys": [
+        "其它机型",
+        "INT-HBM-130",
+        "FH-160P-C",
+        "CX700-2000",
+        "DH-50S",
+        "DH-63SL",
+        "L-35L",
+        "S-800U"
+      ],
+      "note": "fmate_type 不在 ods_sap_cw_product；保留事实、机型置空"
+    },
+    {
+      "rule_id": "ship_negative_amount_rows",
+      "table": "ship_order_line",
+      "count": 299,
+      "example_keys": [],
+      "note": "销售退货/退补为有效发生体，保留（D7）"
+    },
+    {
+      "rule_id": "dept_budget_unit_wan",
+      "table": "dept_budget_month",
+      "count": 234,
+      "example_keys": [],
+      "note": "单位万元含税，保持原值不 x10000（D5）；与宽表比较须先 /10000"
+    },
+    {
+      "rule_id": "pii_columns_dropped",
+      "table": "bi_vpsempinfo_month",
+      "count": 72755,
+      "example_keys": [
+        "birthday",
+        "idcardnum",
+        "mobilephone"
+      ],
+      "note": "EHR 月表只作血缘，PII 不进任何 parquet（D3）"
+    },
+    {
+      "rule_id": "budget_projections_not_joined",
+      "table": "dept_budget_month / product_budget_month",
+      "count": 2,
+      "example_keys": [],
+      "note": "两张预算表合计差 <=1.26 万元 = 同一笔预算的两个投影，不建连接（B10）"
+    }
+  ],
+  "achieve_probe": {
+    "note": "口径审计探针，不是达成率报告（B1 clean_only）。默认口径 = 组织 in_scope ∧ 机型∈预算覆盖 ∧ 科室非空 ∧ 万元含税。",
+    "budget_covered_product_types": [
+      "卧加",
+      "型材机",
+      "小五轴",
+      "立加",
+      "通用钻攻机",
+      "龙门机"
+    ],
+    "budget_total_wan": {
+      "assessment_ship_budget_hs": 192663.33,
+      "management_ship_budget_hs": 276254.96,
+      "management_signed_contract_hs": 297809.11
+    },
+    "ship_layers": [
+      {
+        "layer": "全宽表",
+        "amount_wan": 440464.85
+      },
+      {
+        "layer": "+组织=装备一",
+        "amount_wan": 406474.68
+      },
+      {
+        "layer": "+机型=预算覆盖",
+        "amount_wan": 285435.54
+      },
+      {
+        "layer": "+科室非空(默认)",
+        "amount_wan": 251576.35
+      }
+    ],
+    "sign_layers": [
+      {
+        "layer": "全宽表",
+        "amount_wan": 516921.9
+      },
+      {
+        "layer": "+组织=装备一",
+        "amount_wan": 472497.74
+      },
+      {
+        "layer": "+机型=预算覆盖",
+        "amount_wan": 333321.08
+      },
+      {
+        "layer": "+科室非空(默认)",
+        "amount_wan": 307200.2
+      }
+    ],
+    "achieve_pct_default": {
+      "assessment_ship": 130.6,
+      "management_ship": 91.1,
+      "management_sign": 103.2
+    },
+    "product_budget_total_wan": {
+      "assessment_ship_budget_hs": 192663.36,
+      "management_ship_budget_hs": 276254.0,
+      "gl_management_signed_contract_hs": 297810.37
+    }
+  }
+}

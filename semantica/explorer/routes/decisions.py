@@ -5,7 +5,7 @@ Decision routes using ContextGraph-native fallbacks.
 import asyncio
 from typing import Optional
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 
 from ..dependencies import get_session
 from ..decision_graphrag import run_graphrag
@@ -63,19 +63,38 @@ async def list_decisions(
 @router.post("/graphrag", response_model=GraphRAGResponse)
 async def run_decision_graphrag(
     body: GraphRAGRequest,
+    request: Request,
     session: GraphSession = Depends(get_session),
 ):
-    """Retrieve seeds, expand 2 hops, record the query as a decision with evidence."""
+    """Retrieve seeds, expand 2 hops, record the query as a decision with evidence.
+
+    Under ``v=marketing`` this dispatches to the marketing GraphRAG (achieve rates,
+    structure/share, customer × model, salesperson behavior); otherwise the generic
+    IoT graph retrieval runs.
+    """
+    version = request.headers.get("X-Explorer-Version") or request.query_params.get("v") or "iot2"
     try:
-        payload = await asyncio.to_thread(
-            run_graphrag,
-            session,
-            body.query,
-            max_hops=body.max_hops,
-            max_results=body.max_results,
-        )
+        if version == "marketing":
+            from ..marketing_graphrag import run_marketing_graphrag
+
+            payload = await asyncio.to_thread(
+                run_marketing_graphrag,
+                session,
+                body.query,
+                body.max_results,
+            )
+        else:
+            payload = await asyncio.to_thread(
+                run_graphrag,
+                session,
+                body.query,
+                max_hops=body.max_hops,
+                max_results=body.max_results,
+            )
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
     return GraphRAGResponse(**payload)
 
 

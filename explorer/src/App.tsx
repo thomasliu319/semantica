@@ -20,7 +20,7 @@ import { ErrorBoundary } from './ErrorBoundary';
 import { reloadOnceForStaleChunk } from './chunkLoadError';
 import { ExploreWorkspaceTabs, type ExploreView } from './ExploreWorkspaceTabs';
 import { fetchAgentMemoryAvailability } from './explorerCapabilities';
-import { canonicalizeExplorerUrl, hasOntologyUrlState } from './workspaces/OntologyWorkspace/ontologyUrlState';
+import { canonicalizeExplorerUrl, hasOntologyUrlState, readVersion, switchVersion, SUPPORTED_VERSIONS, type ExplorerVersion } from './workspaces/OntologyWorkspace/ontologyUrlState';
 
 function lazyWorkspace<T extends ComponentType<any>>(loader: () => Promise<{ default: T }>) {
   return lazy(() =>
@@ -47,12 +47,13 @@ const RegistryTab = lazyWorkspace(() => import('./workspaces/EnrichWorkspace/Reg
 const EntityResolutionTab = lazyWorkspace(() => import('./workspaces/EnrichWorkspace/EntityResolutionTab').then((module) => ({ default: module.EntityResolutionTab })));
 const KGOverviewTab = lazyWorkspace(() => import('./workspaces/ManageWorkspace/KGOverviewTab').then((module) => ({ default: module.KGOverviewTab })));
 const OntologySummaryTab = lazyWorkspace(() => import('./workspaces/ManageWorkspace/OntologySummaryTab').then((module) => ({ default: module.OntologySummaryTab })));
+const MarketingPipelineTab = lazyWorkspace(() => import('./workspaces/ManageWorkspace/MarketingPipelineTab').then((module) => ({ default: module.MarketingPipelineTab })));
 const OntologyWorkspace = lazyWorkspace(() => import('./workspaces/OntologyWorkspace').then((module) => ({ default: module.OntologyWorkspace })));
 
 type WorkspaceId = 'welcome' | 'explore' | 'analyze' | 'decisions' | 'enrich' | 'manage' | 'ontology-hub';
 type AnalyzeView = 'metrics' | 'sparql' | 'reasoning';
 type EnrichView = 'import' | 'merge' | 'registry' | 'resolve';
-type ManageView = 'lineage' | 'kg-overview' | 'ontology';
+type ManageView = 'lineage' | 'kg-overview' | 'ontology' | 'marketing-pipeline';
 
 type NavItem = {
   id: WorkspaceId;
@@ -569,6 +570,41 @@ const shellStyles = `
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.02em;
+  }
+
+  .version-switcher {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--panel-border);
+  }
+
+  .version-switcher-button {
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-muted);
+    border-radius: 14px;
+    min-height: 40px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    transition: 160ms ease;
+  }
+
+  .version-switcher-button:hover {
+    color: var(--text-main);
+    background: rgba(74, 163, 255, 0.08);
+    border-color: rgba(74, 163, 255, 0.12);
+  }
+
+  .version-switcher-button[data-active='true'] {
+    color: #7fd0ff;
+    background: linear-gradient(180deg, rgba(74, 163, 255, 0.22), rgba(74, 163, 255, 0.08));
+    border-color: rgba(127, 208, 255, 0.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
   }
 
   .workspace-shell {
@@ -1802,6 +1838,13 @@ export default function App() {
   const [graphFocusRequest, setGraphFocusRequest] = useState<{ nodeId: string; token: number } | null>(null);
   const [exploreDraftDirty, setExploreDraftDirty] = useState(false);
   const [agentMemoryAvailable, setAgentMemoryAvailable] = useState(false);
+  const [version, setVersion] = useState<ExplorerVersion>(() => readVersion());
+
+  useEffect(() => {
+    const onPopState = () => setVersion(readVersion());
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -1812,6 +1855,15 @@ export default function App() {
       active = false;
     };
   }, []);
+
+  const switchVersionMode = (nextVersion: ExplorerVersion) => {
+    if (nextVersion === version) return;
+    switchVersion(nextVersion);
+    setVersion(nextVersion);
+    if (nextVersion !== 'marketing' && manageView === 'marketing-pipeline') {
+      setManageView('lineage');
+    }
+  };
 
   const confirmDiscardExploreDraft = () => (
     !exploreDraftDirty
@@ -1874,7 +1926,7 @@ export default function App() {
             />
           }
         >
-          <ErrorBoundary key={`explore-${exploreView}`}>
+          <ErrorBoundary key={`explore-${exploreView}-${version}`}>
             <Suspense fallback={<WorkspaceFallback />}>
               {exploreView === 'graph' ? (
                 <GraphWorkspace
@@ -1909,7 +1961,7 @@ export default function App() {
             </>
           }
         >
-          <ErrorBoundary key={`analyze-${analyzeView}`}>
+          <ErrorBoundary key={`analyze-${analyzeView}-${version}`}>
             <Suspense fallback={<WorkspaceFallback />}>
               {analyzeView === 'metrics' ? <MetricsWorkspace /> : analyzeView === 'reasoning' ? <ReasoningWorkspace /> : <SparqlWorkspace />}
             </Suspense>
@@ -1925,7 +1977,7 @@ export default function App() {
           subtitle="Inspect decision chains, causal context, and precedent matches."
           kicker="Decision Intelligence"
         >
-          <ErrorBoundary key="decisions">
+          <ErrorBoundary key={`decisions-${version}`}>
             <Suspense fallback={<WorkspaceFallback />}>
               <DecisionWorkspace />
             </Suspense>
@@ -1957,7 +2009,7 @@ export default function App() {
             </>
           }
         >
-          <ErrorBoundary key={`enrich-${enrichView}`}>
+          <ErrorBoundary key={`enrich-${enrichView}-${version}`}>
             <Suspense fallback={<WorkspaceFallback />}>
               {enrichView === 'import' ? <ImportExportWorkspace /> :
                enrichView === 'merge' ? <DiffMergeWorkspace /> :
@@ -1977,7 +2029,7 @@ export default function App() {
           kicker="Schema Governance"
           compact
         >
-          <ErrorBoundary key="ontology-hub">
+          <ErrorBoundary key={`ontology-hub-${version}`}>
             <Suspense fallback={<WorkspaceFallback />}>
               <OntologyWorkspace
                 onJumpToGraphNode={(nodeId: string) => {
@@ -1999,6 +2051,11 @@ export default function App() {
         kicker="Graph Governance"
         tabs={
           <>
+            {version === 'marketing' && (
+              <button className="workspace-tab" data-active={manageView === 'marketing-pipeline'} onClick={() => setManageView('marketing-pipeline')}>
+                数据清洗流程
+              </button>
+            )}
             <button className="workspace-tab" data-active={manageView === 'lineage'} onClick={() => setManageView('lineage')}>
               PROV-O Lineage
             </button>
@@ -2011,9 +2068,10 @@ export default function App() {
           </>
         }
       >
-        <ErrorBoundary key={`manage-${manageView}`}>
+        <ErrorBoundary key={`manage-${manageView}-${version}`}>
           <Suspense fallback={<WorkspaceFallback />}>
-            {manageView === 'lineage' ? <LineageDiagram /> :
+            {manageView === 'marketing-pipeline' ? <MarketingPipelineTab /> :
+             manageView === 'lineage' ? <LineageDiagram /> :
              manageView === 'kg-overview' ? <KGOverviewTab /> :
              <OntologySummaryTab onOpenVocabularyBrowser={() => {
                setActiveWorkspace('explore');
@@ -2043,6 +2101,20 @@ export default function App() {
               <span className="nav-label">{label}</span>
             </button>
           ))}
+          <div className="version-switcher" role="group" aria-label="Explorer version">
+            {SUPPORTED_VERSIONS.map((item) => (
+              <button
+                key={item}
+                type="button"
+                className="version-switcher-button"
+                data-active={version === item}
+                onClick={() => switchVersionMode(item)}
+                title={item === 'iot2' ? 'IoT 设备版本' : '营销经营版本'}
+              >
+                {item === 'iot2' ? 'IoT' : '营销'}
+              </button>
+            ))}
+          </div>
         </aside>
         {renderWorkspace()}
       </div>

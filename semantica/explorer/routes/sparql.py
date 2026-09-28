@@ -177,13 +177,12 @@ def _build_rdflib_graph(session: GraphSession) -> rdflib.Graph:
 _SPARQL_MAX_ROWS = 5_000     # hard cap on returned rows
 _SPARQL_TIMEOUT_S = 30       # seconds before abandoning the await
 _SPARQL_MAX_CONCURRENT = 4   # semaphore: max simultaneous executions
-_SPARQL_MAX_GRAPH_NODES = 50_000  # cap on graph nodes/edges to prevent OOM
+_SPARQL_MAX_GRAPH_NODES = 200_000  # cap on graph nodes/edges to prevent OOM
 # Defense-in-depth against ReDoS: reject inputs longer than this before any
 # regex work so that even a future regex regression is bounded.  Checked in
 # execute_sparql() (not inside _is_read_only_query) so the route can return
 # a distinct, actionable error message rather than the generic read-only one.
 _SPARQL_MAX_QUERY_LEN = 10_000  # chars
-
 # Semaphore caps how many graph.query calls run concurrently so that
 # timed-out threads (which keep running in the pool) cannot crowd out
 # other requests by exhausting the default ThreadPoolExecutor workers.

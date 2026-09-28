@@ -184,6 +184,38 @@ class TestHealthInfo:
         assert other.headers["location"].endswith("/?v=iot2&ontologyTab=registry")
         assert canonical.status_code == 200
 
+    def test_marketing_version_is_canonical_and_preserved(self, tmp_path, monkeypatch):
+        from starlette.testclient import TestClient
+        from semantica.explorer import app as app_module
+        from semantica.explorer.app import create_app
+
+        package_dir = tmp_path / "semantica"
+        static_dir = package_dir / "static"
+        static_dir.mkdir(parents=True)
+        (static_dir / "index.html").write_text(
+            '<!doctype html><html><body><div id="root"></div></body></html>',
+            encoding="utf-8",
+        )
+
+        class FakeAppPath:
+            def __init__(self, *_args, **_kwargs):
+                self.path = package_dir / "explorer" / "app.py"
+
+            def resolve(self):
+                return self.path.resolve()
+
+        monkeypatch.setattr(app_module, "Path", FakeAppPath)
+
+        with TestClient(create_app()) as test_client:
+            marketing = test_client.get("/?v=marketing", follow_redirects=False)
+            marketing_editor = test_client.get(
+                "/?v=marketing&ontologyTab=editor", follow_redirects=False
+            )
+
+        assert marketing.status_code == 307
+        assert marketing.headers["location"].endswith("/?v=marketing&ontologyTab=registry")
+        assert marketing_editor.status_code == 200
+
     def test_health(self, client):
         response = client.get("/api/health")
         assert response.status_code == 200

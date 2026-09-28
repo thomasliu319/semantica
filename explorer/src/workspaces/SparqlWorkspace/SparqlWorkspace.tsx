@@ -1,8 +1,9 @@
 import { useState, useRef } from "react";
 import Editor, { useMonaco } from "@monaco-editor/react";
 import { Play, Copy, Download, Table2, AlertCircle, FileCode2 } from "lucide-react";
+import { readVersion } from "../OntologyWorkspace/ontologyUrlState";
 
-const TEMPLATES: { label: string; query: string }[] = [
+const IOT_TEMPLATES: { label: string; query: string }[] = [
   {
     label: "NL编译：T-V856S 4/5/9月",
     query: `PREFIX ent: <http://semantica.local/entity/>
@@ -153,10 +154,146 @@ LIMIT 20`,
   { label: "Node types", query: "SELECT ?type (COUNT(?s) AS ?count)\nWHERE {\n  ?s a ?type\n}\nGROUP BY ?type\nORDER BY DESC(?count)" },
 ];
 
+const MARKETING_TEMPLATES: { label: string; query: string }[] = [
+  {
+    label: "科室出货汇总（万元）",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?deptLabel (SUM(?amount) AS ?total_wan) (COUNT(?s) AS ?lines)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:amount_wan ?amount ;
+     prop:ofDept ?dept .
+  ?dept rdfs:label ?deptLabel .
+}
+GROUP BY ?deptLabel
+ORDER BY DESC(?total_wan)
+LIMIT 30`,
+  },
+  {
+    label: "产品类型出货结构（份额）",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?ptypeLabel (SUM(?amount) AS ?total_wan) (COUNT(?s) AS ?lines)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:amount_wan ?amount ;
+     prop:ofType ?ptype .
+  ?ptype rdfs:label ?ptypeLabel .
+}
+GROUP BY ?ptypeLabel
+ORDER BY DESC(?total_wan)`,
+  },
+  {
+    label: "大区汇总（Dept→Area）",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?areaLabel (SUM(?amount) AS ?total_wan)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:amount_wan ?amount ;
+     prop:ofDept ?dept .
+  ?dept prop:partOf ?area .
+  ?area rdfs:label ?areaLabel .
+}
+GROUP BY ?areaLabel
+ORDER BY DESC(?total_wan)`,
+  },
+  {
+    label: "业务员签单汇总",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?empLabel ?deptLabel (SUM(?amount) AS ?total_wan)
+WHERE {
+  ?s a ent:SignOrderLine ;
+     prop:amount_wan ?amount ;
+     prop:signedBy ?emp .
+  ?emp rdfs:label ?empLabel .
+  OPTIONAL { ?emp prop:belongsTo ?dept . ?dept rdfs:label ?deptLabel }
+}
+GROUP BY ?empLabel ?deptLabel
+ORDER BY DESC(?total_wan)
+LIMIT 30`,
+  },
+  {
+    label: "机型出货明细（ofModel）",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?modelLabel ?ptypeLabel (SUM(?amount) AS ?total_wan)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:amount_wan ?amount ;
+     prop:ofModel ?model .
+  ?model rdfs:label ?modelLabel .
+  OPTIONAL { ?model prop:categorizedAs ?ptype . ?ptype rdfs:label ?ptypeLabel }
+}
+GROUP BY ?modelLabel ?ptypeLabel
+ORDER BY DESC(?total_wan)
+LIMIT 30`,
+  },
+  {
+    label: "客户签单汇总（contractParty）",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?custLabel (SUM(?amount) AS ?total_wan)
+WHERE {
+  ?s a ent:SignOrderLine ;
+     prop:amount_wan ?amount ;
+     prop:contractParty ?cust .
+  ?cust rdfs:label ?custLabel .
+}
+GROUP BY ?custLabel
+ORDER BY DESC(?total_wan)
+LIMIT 30`,
+  },
+  {
+    label: "科室月度预算对照",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?deptLabel ?monthLabel ?mgmtShip ?asmtShip ?mgmtSign
+WHERE {
+  ?b a ent:DeptBudgetMonth ;
+     prop:management_ship_budget_hs ?mgmtShip ;
+     prop:assessment_ship_budget_hs ?asmtShip ;
+     prop:management_signed_contract_hs ?mgmtSign ;
+     prop:budgetsFor ?dept ;
+     prop:inMonth ?month .
+  ?dept rdfs:label ?deptLabel .
+  ?month prop:month ?monthLabel .
+}
+ORDER BY ?deptLabel ?monthLabel
+LIMIT 50`,
+  },
+  {
+    label: "出货行明细（金额/口径/台量）",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+SELECT ?s ?amount ?orgScope ?fqty
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:amount_wan ?amount ;
+     prop:org_scope ?orgScope ;
+     prop:fqty ?fqty .
+}
+ORDER BY DESC(?amount)
+LIMIT 30`,
+  },
+  { label: "All triples", query: "SELECT ?s ?p ?o\nWHERE {\n  ?s ?p ?o\n}\nLIMIT 20" },
+  { label: "Node types", query: "SELECT ?type (COUNT(?s) AS ?count)\nWHERE {\n  ?s a ?type\n}\nGROUP BY ?type\nORDER BY DESC(?count)" },
+];
+
 export function SparqlWorkspace() {
   const monaco = useMonaco();
   const editorRef = useRef<unknown>(null);
-  const [query, setQuery] = useState(TEMPLATES[0].query);
+  const templates = readVersion() === "marketing" ? MARKETING_TEMPLATES : IOT_TEMPLATES;
+  const [query, setQuery] = useState(templates[0].query);
   const [result, setResult] = useState<{ columns?: string[]; rows?: Record<string, string>[]; error?: string; error_line?: number } | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [copyState, setCopyState] = useState(false);
@@ -278,7 +415,7 @@ export function SparqlWorkspace() {
         <div style={{ padding: "10px 16px", borderBottom: "1px solid var(--ws-border)", display: "flex", alignItems: "center", gap: 8, flexShrink: 0, background: "rgba(0,0,0,0.18)" }}>
           <div style={{ display: "flex", gap: 6, flex: 1, flexWrap: "wrap" }}>
             <span className="ws-eyebrow" style={{ alignSelf: "center", marginRight: 4 }}>Templates:</span>
-            {TEMPLATES.map((t) => (
+            {templates.map((t) => (
               <button
                 key={t.label}
                 className="ws-btn ws-btn--ghost"

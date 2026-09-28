@@ -1,0 +1,68 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://semantica.local/marketing/ontology#> .
+
+<http://semantica.local/marketing/ontology> a owl:Ontology ;
+    rdfs:label "营销经营清洗本体" ;
+    owl:versionInfo "1.0" ;
+    rdfs:comment "科室键 = Fdept_add（不是 Fdept）；机型键 = ZPROD_NAME（不是 FmateNumber）；宽表金额元、预算万元，比较前 /10000。" .
+
+:Continuant a owl:Class ; rdfs:label "持续体" .
+:Occurrent  a owl:Class ; rdfs:label "发生体" .
+:Plan       a owl:Class ; rdfs:label "计划" ;
+    rdfs:comment "预算不是发生体；与 Occurrent 不相交（A5），禁止与实际相加。" .
+
+:BusinessEvent a owl:Class ; rdfs:subClassOf :Occurrent .
+:SignOrderLine a owl:Class ; rdfs:subClassOf :BusinessEvent ; rdfs:label "签单行" .
+:ShipOrderLine a owl:Class ; rdfs:subClassOf :BusinessEvent ; rdfs:label "出货行" .
+:DeptBudgetMonth a owl:Class ; rdfs:subClassOf :Plan ; rdfs:label "科室月度预算" .
+:ProductBudgetMonth a owl:Class ; rdfs:subClassOf :Plan ; rdfs:label "产品类型月度预算" .
+
+:SalesPerson a owl:Class ; rdfs:subClassOf :Continuant ; rdfs:label "业务员" ;
+    rdfs:comment "键 SalesCode；458 行归一为 455 工号（B9 prefer_active）。" .
+:Dept a owl:Class ; rdfs:subClassOf :Continuant ; rdfs:label "科室" ;
+    rdfs:comment "键 Fdept_add；Fdept 是更细粒度（含 …科N组），禁止混用（B5）。" .
+:Area a owl:Class ; rdfs:subClassOf :Continuant ; rdfs:label "大区" .
+:BusinessGroup a owl:Class ; rdfs:subClassOf :Continuant ; rdfs:label "事业群" .
+:Customer a owl:Class ; rdfs:subClassOf :Continuant ; rdfs:label "客户" ;
+    rdfs:comment "KunnrCode（合同相对方）与 fcust_number（收货方）并为同一实体，保留角色区分。" .
+:Product a owl:Class ; rdfs:subClassOf :Continuant ; rdfs:label "机型" ;
+    rdfs:comment "键 ZPROD_NAME；FmateNumber 是物料编码（SKU），不是机型。" .
+:ProductType a owl:Class ; rdfs:subClassOf :Continuant ; rdfs:label "产品类型" .
+:Month a owl:Class ; rdfs:label "自然月" .
+
+:belongsTo a owl:ObjectProperty ; rdfs:domain :SalesPerson ; rdfs:range :Dept .
+:partOf a owl:ObjectProperty ; rdfs:domain :Dept ; rdfs:range :Area .
+:categorizedAs a owl:FunctionalProperty ; rdfs:domain :Product ; rdfs:range :ProductType .
+:signedBy a owl:ObjectProperty ; rdfs:domain :SignOrderLine ; rdfs:range :SalesPerson .
+:shippedBy a owl:ObjectProperty ; rdfs:domain :ShipOrderLine ; rdfs:range :SalesPerson .
+:ofModel a owl:ObjectProperty ; rdfs:domain :BusinessEvent ; rdfs:range :Product .
+:ofDept a owl:ObjectProperty ; rdfs:domain :BusinessEvent ; rdfs:range :Dept ;
+    rdfs:comment "空键不建边（A10）；未归属行进 unassigned 桶。" .
+:ofType a owl:ObjectProperty ; rdfs:domain :BusinessEvent ; rdfs:range :ProductType .
+:contractParty a owl:ObjectProperty ; rdfs:domain :SignOrderLine ; rdfs:range :Customer .
+:shipTo a owl:ObjectProperty ; rdfs:domain :ShipOrderLine ; rdfs:range :Customer .
+:inMonth a owl:ObjectProperty ; rdfs:domain :BusinessEvent ; rdfs:range :Month .
+:budgetsFor a owl:ObjectProperty ; rdfs:domain :Plan ;
+    rdfs:comment "计划对照组织/产品类型；不是 join，不同投影不可相加（B10）。" .
+:measuredAgainst a owl:ObjectProperty ;
+    rdfs:comment "查询时对照关系，物理图上不建边。" .
+
+<http://semantica.local/marketing/skos> a skos:ConceptScheme ; skos:prefLabel "指标词表" .
+
+<http://semantica.local/marketing/skos#managementShip> a skos:Concept ;
+    skos:prefLabel "管理出机" ;
+    skos:definition "出货含税 TotalMoneyFC_HS，对照 Management_Ship_Budget_Hs。" ;
+    skos:inScheme <http://semantica.local/marketing/skos> .
+
+<http://semantica.local/marketing/skos#assessmentShip> a skos:Concept ;
+    skos:prefLabel "考核出机" ;
+    skos:definition "与管理出机同一字段 TotalMoneyFC_HS，只有预算列不同（Assessment_Ship_Budget_Hs）。" ;
+    skos:inScheme <http://semantica.local/marketing/skos> ;
+    skos:related <http://semantica.local/marketing/skos#managementShip> .
+
+<http://semantica.local/marketing/skos#managementSign> a skos:Concept ;
+    skos:prefLabel "管理签单" ;
+    skos:definition "签单含税 TotalMoneyFc_HS（不是不含税 TotalMoneyFc）。" ;
+    skos:inScheme <http://semantica.local/marketing/skos> .

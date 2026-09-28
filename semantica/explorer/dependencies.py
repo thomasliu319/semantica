@@ -75,13 +75,21 @@ def require_auth(api_key: Optional[str] = Security(_api_key_header)) -> None:
 
 
 def get_session(request: Request) -> GraphSession:
-    """Retrieve the GraphSession stored on ``app.state``."""
+    """Retrieve the GraphSession stored on ``app.state``.
+
+    Selects the session by the Explorer ``v`` version: the ``X-Explorer-Version``
+    header wins, then the ``v`` query parameter, then the ``iot2`` default.
+    """
     if not hasattr(request.app.state, "session") or request.app.state.session is None:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="GraphSession not initialized."
         )
-    return request.app.state.session
+    sessions = getattr(request.app.state, "sessions", None)
+    if not sessions:
+        return request.app.state.session
+    version = request.headers.get("X-Explorer-Version") or request.query_params.get("v")
+    return sessions.get(version) or request.app.state.session
 
 
 def get_markdown_resources(request: Request) -> MarkdownResourceRegistry:

@@ -5,6 +5,16 @@ const ENTITY_PARAM = "ontologyEntity";
 const EDITOR_TAB = "editor";
 export const APP_VERSION = "iot2";
 export const DEFAULT_TAB = "registry";
+// Legal Explorer versions. `iot2` is the original IoT experience; `marketing`
+// carries the marketing/operations domain. Anything else is normalized to `iot2`.
+export const SUPPORTED_VERSIONS = ["iot2", "marketing"] as const;
+export type ExplorerVersion = (typeof SUPPORTED_VERSIONS)[number];
+
+function resolveVersion(value: string | null): ExplorerVersion {
+  return (SUPPORTED_VERSIONS as readonly string[]).includes(value ?? "")
+    ? (value as ExplorerVersion)
+    : APP_VERSION;
+}
 
 export interface OntologyUrlState {
   /** Raw parameter value; the set of legal tab ids belongs to the workspace, not this module. */
@@ -21,10 +31,15 @@ export function parseOntologyUrlState(search: string): OntologyUrlState {
   };
 }
 
+/** The current Explorer version from a search string; defaults to `iot2`. */
+export function parseVersion(search: string): ExplorerVersion {
+  return resolveVersion(new URLSearchParams(search).get(VERSION_PARAM));
+}
+
 function ontologyParams(search: string): URLSearchParams {
   const incoming = new URLSearchParams(search);
   const next = new URLSearchParams();
-  next.set(VERSION_PARAM, APP_VERSION);
+  next.set(VERSION_PARAM, resolveVersion(incoming.get(VERSION_PARAM)));
   if (incoming.has(TAB_PARAM)) {
     next.set(TAB_PARAM, incoming.get(TAB_PARAM) ?? "");
   }
@@ -39,11 +54,11 @@ function serializeSearch(params: URLSearchParams): string {
   return text ? `?${text}` : "";
 }
 
-/** Sole version is `v=iot2`. Bare `/` and other `v=` land on Ontology Hub registry. */
+/** Preserve a legal `v` (iot2 or marketing); anything else normalizes to `v=iot2`. */
 export function canonicalizeSearch(search: string): string {
   const incoming = new URLSearchParams(search);
   const next = new URLSearchParams();
-  next.set(VERSION_PARAM, APP_VERSION);
+  next.set(VERSION_PARAM, resolveVersion(incoming.get(VERSION_PARAM)));
   const entity = incoming.get(ENTITY_PARAM);
   const tab = incoming.get(TAB_PARAM);
   if (entity) {
@@ -79,6 +94,15 @@ export function removeEntitySelection(search: string): string {
   return serializeSearch(params);
 }
 
+// Switches the Explorer version, resetting to the default Ontology Hub tab.
+export function applyVersion(search: string, version: ExplorerVersion): string {
+  const params = ontologyParams(search);
+  params.set(VERSION_PARAM, version);
+  params.set(TAB_PARAM, DEFAULT_TAB);
+  params.delete(ENTITY_PARAM);
+  return serializeSearch(params);
+}
+
 /**
  * Deliberately dual-role, and the argument is what selects the role: given a
  * `search` string this is pure and total, delegating straight to
@@ -98,13 +122,22 @@ export function readOntologyUrlState(search?: string): OntologyUrlState {
   }
 }
 
+/** The live Explorer version from `window.location.search`, defaulting to `iot2`. */
+export function readVersion(): ExplorerVersion {
+  try {
+    return parseVersion(window.location.search);
+  } catch {
+    return APP_VERSION;
+  }
+}
+
 /** True when the URL addresses the Ontology Hub at all, even with blank parameter values. */
 export function hasOntologyUrlState(search?: string): boolean {
   const { tab, entityUri } = readOntologyUrlState(search);
   return tab !== undefined || entityUri !== undefined;
 }
 
-// Always keep v=iot2. Unknown keys are dropped. The fragment is carried across.
+// Always keep a legal v=. Unknown keys are dropped. The fragment is carried across.
 function updateSearch(transform: (search: string) => string): void {
   try {
     const path = window.location.pathname || "/";
@@ -141,4 +174,8 @@ export function writeEntitySelection(entityUri: string): void {
 
 export function clearEntitySelection(): void {
   updateSearch(removeEntitySelection);
+}
+
+export function switchVersion(version: ExplorerVersion): void {
+  updateSearch((search) => applyVersion(search, version));
 }

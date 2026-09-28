@@ -5,6 +5,16 @@ import { useEffect, useState } from "react";
 import { Link2 } from "lucide-react";
 import { ReactFlow, Background, Controls } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
+import { readVersion } from "../OntologyWorkspace/ontologyUrlState";
+
+const DEFAULT_ACTIVITY_BY_VERSION: Record<string, string> = {
+  marketing: "activity:marketing",
+  iot2: "activity:iot-clean",
+};
+
+function defaultActivityId(): string {
+  return DEFAULT_ACTIVITY_BY_VERSION[readVersion()] ?? "activity:iot-clean";
+}
 
 const THEME_CSS = `
   .react-flow { background: var(--ws-bg, #060d1a); }
@@ -31,8 +41,8 @@ const THEME_CSS = `
 export function LineageDiagram() {
   const [nodes, setNodes] = useState<any[]>([]);
   const [edges, setEdges] = useState<any[]>([]);
-  const [searchId, setSearchId] = useState("activity:iot-clean");
-  const [activeId, setActiveId] = useState("activity:iot-clean");
+  const [searchId, setSearchId] = useState(defaultActivityId);
+  const [activeId, setActiveId] = useState(defaultActivityId);
   const [error, setError] = useState("");
 
   const downloadReport = async (format: "json" | "markdown") => {
@@ -144,7 +154,7 @@ export function LineageDiagram() {
         <input
           className="ws-input"
           type="text"
-          placeholder="activity:iot-clean"
+          placeholder={defaultActivityId()}
           value={searchId}
           onChange={(e) => setSearchId(e.target.value)}
           onKeyDown={(e) => { if (e.key === "Enter") setActiveId(searchId); }}

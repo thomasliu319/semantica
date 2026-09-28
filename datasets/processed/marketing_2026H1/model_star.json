@@ -1,0 +1,157 @@
+{
+  "model": "marketing_2026H1",
+  "window": "2026-01~06",
+  "design": "star + plan-star（两星物理不通连，A5 Plan ⊥ BusinessEvent）",
+  "facts": {
+    "sign_order_line": {
+      "grain": "签单行",
+      "key": [
+        "docno",
+        "docno_num"
+      ],
+      "rows_hint": 7558
+    },
+    "ship_order_line": {
+      "grain": "出货行",
+      "key": [
+        "docno",
+        "line_no"
+      ],
+      "rows_hint": 8036
+    }
+  },
+  "dims": {
+    "emp_dim": {
+      "grain": "业务员",
+      "key": "sales_code"
+    },
+    "dept_dim": {
+      "grain": "科室",
+      "key": "fdept"
+    },
+    "product_dim": {
+      "grain": "机型",
+      "key": "zprod_name"
+    },
+    "customer_dim": {
+      "grain": "客户",
+      "key": "cust_code"
+    },
+    "month_dim": {
+      "grain": "自然月",
+      "key": [
+        "year",
+        "month"
+      ]
+    }
+  },
+  "plan": {
+    "dept_budget_month": {
+      "grain": "科室×月",
+      "key": [
+        "fdept",
+        "year",
+        "month"
+      ],
+      "unit": "万元含税"
+    },
+    "product_budget_month": {
+      "grain": "产品类型×月",
+      "key": [
+        "product_type",
+        "year",
+        "month"
+      ],
+      "unit": "万元含税"
+    }
+  },
+  "links_fact_to_dim": [
+    [
+      "sign_order_line",
+      "sales_code",
+      "emp_dim"
+    ],
+    [
+      "sign_order_line",
+      "fdept",
+      "dept_dim"
+    ],
+    [
+      "sign_order_line",
+      "zprod_name",
+      "product_dim"
+    ],
+    [
+      "sign_order_line",
+      "cust_code",
+      "customer_dim"
+    ],
+    [
+      "sign_order_line",
+      [
+        "year",
+        "month"
+      ],
+      "month_dim"
+    ],
+    [
+      "ship_order_line",
+      "sales_code",
+      "emp_dim"
+    ],
+    [
+      "ship_order_line",
+      "fdept",
+      "dept_dim"
+    ],
+    [
+      "ship_order_line",
+      "zprod_name",
+      "product_dim"
+    ],
+    [
+      "ship_order_line",
+      "cust_code",
+      "customer_dim"
+    ],
+    [
+      "ship_order_line",
+      [
+        "year",
+        "month"
+      ],
+      "month_dim"
+    ]
+  ],
+  "links_plan_measure_against": [
+    [
+      "dept_budget_month",
+      [
+        "fdept",
+        "year",
+        "month"
+      ],
+      "query-time only"
+    ],
+    [
+      "product_budget_month",
+      [
+        "product_type",
+        "year",
+        "month"
+      ],
+      "query-time only"
+    ]
+  ],
+  "forbidden_joins": [
+    "dept_budget_month × product_budget_month（同一笔预算的两个投影，B10 mutually_exclusive）",
+    "任何以空串为键的对照（B8）",
+    "使用 ship_order_line.fdept_sap 对齐预算（ontology §5.6）"
+  ],
+  "hierarchy": [
+    "business_group(org_name)",
+    "area",
+    "dept(fdept)",
+    "emp(sales_code)"
+  ]
+}

@@ -1,7 +1,9 @@
-﻿import { useQuery, useQueryClient } from "@tanstack/react-query";
+﻿import { useEffect } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { batchMergeEdges, batchMergeNodes, clearGraph } from "../../store/graphStore";
 import type { EdgeAttributes, NodeAttributes } from "../../store/graphStore";
 import { curveGroupForPair, pairRegistryKey } from "../../store/edgePairKeys.js";
+import { readVersion } from "../OntologyWorkspace/ontologyUrlState";
 import {
   GRAPH_THEME,
   clamp,
@@ -474,11 +476,23 @@ interface UseLoadGraphOptions {
   onProgress?: (progress: GraphLoadProgress) => void;
 }
 
+// The global graph store is hydrated as a side effect of the load queryFn,
+// while the query itself only caches a lightweight summary. ``staleTime:
+// Infinity`` means a cache hit skips the queryFn, which would leave the store
+// holding a previous version's nodes/edges. Track which version last hydrated
+// the store so a cached re-mount can detect the mismatch and refetch.
+let lastHydratedVersion: string | null = null;
+
 export function useLoadGraph(options: UseLoadGraphOptions = {}) {
   const { enabled = true, onGraphReady, onProgress } = options;
+  // The Explorer version (v=iot2 / v=marketing) selects the backend graph
+  // session. Including it in the query key means switching versions produces a
+  // distinct cache entry and re-fetches nodes/edges, instead of reusing the
+  // previous version's cached (staleTime=Infinity) full-load payload.
+  const version = readVersion();
 
-  return useQuery<GraphLoadSummary>({
-    queryKey: ["graph", "full-load"],
+  const query = useQuery<GraphLoadSummary>({
+    queryKey: ["graph", "full-load", version],
     enabled,
     staleTime: Infinity,
     retry: 0,
@@ -712,6 +726,10 @@ export function useLoadGraph(options: UseLoadGraphOptions = {}) {
         throw error;
       }
 
+      // The store now holds this version's nodes/edges; record it so a cached
+      // re-mount of a different version can detect the mismatch and refetch.
+      lastHydratedVersion = version;
+
       const summary = {
         nodeCount: nodesToMerge.length,
         edgeCount: edgesToMerge.length,
@@ -738,6 +756,18 @@ export function useLoadGraph(options: UseLoadGraphOptions = {}) {
       return summary;
     },
   });
+
+  // On a cache hit (staleTime=Infinity) the queryFn never runs, so the global
+  // graph store can still hold a previously-visited version's nodes/edges even
+  // though the query resolved immediately. Refetch in that case so the store
+  // re-hydrates from the current version before it is rendered.
+  useEffect(() => {
+    if (query.data && lastHydratedVersion !== version) {
+      void query.refetch();
+    }
+  }, [query.data, query.refetch, version]);
+
+  return query;
 }
 
 export function useReloadGraph() {

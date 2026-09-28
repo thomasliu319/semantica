@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AlertCircle, Calculator, Play, Sigma } from "lucide-react";
+import { readVersion } from "./OntologyWorkspace/ontologyUrlState";
 
 type Grain = {
   id: string;
@@ -14,6 +15,7 @@ type BaseMeasure = { id: string; name_zh: string; agg: string };
 type Preset = { id: string; op: string; a: string; b?: string | null; name_zh: string; not?: string | null; domain?: string };
 
 type Catalog = {
+  window?: { StartTime: string; EndTime: string };
   grains: Grain[];
   bases_by_source: Record<string, BaseMeasure[]>;
   presets: Preset[];
@@ -32,6 +34,19 @@ type ComposeResult = {
   notes: string[];
 };
 
+type Domain = "iot" | "marketing";
+
+const DOMAINS: Record<Domain, { label: string; base: string; defaultGrain: string; customA: string; customB: string }> = {
+  iot: { label: "IoT 设备", base: "/api/iot/metrics", defaultGrain: "type_month", customA: "alarm_count", customB: "run_hours" },
+  marketing: { label: "营销经营", base: "/api/marketing/metrics", defaultGrain: "month", customA: "ship_amount_fc_hs_wan", customB: "ship_emps" },
+};
+
+// The Explorer version (v=) selects the metric domain — never a UI toggle, so
+// IoT and marketing reports stay fully separated.
+function domainFromVersion(): Domain {
+  return readVersion() === "marketing" ? "marketing" : "iot";
+}
+
 const OPS: { id: string; label: string }[] = [
   { id: "div", label: "÷" },
   { id: "mul", label: "×" },
@@ -40,20 +55,36 @@ const OPS: { id: string; label: string }[] = [
   { id: "share", label: "份额" },
 ];
 
+function presetUsable(preset: Preset, ids: Set<string>): boolean {
+  // share 与 achieve 的 b 端分别是「全表」与「预算表」，不在当前粒度的 bases 里；
+  // 其余算子要求 a、b 都在已选基础指标中。
+  if (preset.op === "share") return ids.has(preset.a);
+  if (preset.op === "achieve") return ids.has(preset.a);
+  return ids.has(preset.a) && !!preset.b && ids.has(preset.b);
+}
+
+function opLabel(op: string): string {
+  if (op === "share") return "份额";
+  if (op === "achieve") return "达成";
+  return op;
+}
+
 export function MetricsWorkspace() {
+  const [domain] = useState<Domain>(domainFromVersion);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
-  const [grain, setGrain] = useState("type_month");
+  const [grain, setGrain] = useState(DOMAINS.iot.defaultGrain);
   const [selectedBases, setSelectedBases] = useState<string[]>([]);
   const [presetOn, setPresetOn] = useState<Record<string, boolean>>({});
   const [customId, setCustomId] = useState("custom_ratio");
   const [customOp, setCustomOp] = useState("div");
-  const [customA, setCustomA] = useState("alarm_count");
-  const [customB, setCustomB] = useState("run_hours");
+  const [customA, setCustomA] = useState(DOMAINS.iot.customA);
+  const [customB, setCustomB] = useState(DOMAINS.iot.customB);
   const [includeCustom, setIncludeCustom] = useState(false);
   const [result, setResult] = useState<ComposeResult | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const domainConfig = DOMAINS[domain];
   const grainSpec = catalog?.grains.find((item) => item.id === grain);
   const sourceBases = useMemo(() => {
     if (!catalog || !grainSpec) return [];
@@ -61,24 +92,35 @@ export function MetricsWorkspace() {
   }, [catalog, grainSpec]);
   const availablePresets = useMemo(() => {
     const ids = new Set(selectedBases);
-    return (catalog?.presets || []).filter((preset) => ids.has(preset.a) && (preset.op === "share" || (preset.b && ids.has(preset.b))));
+    return (catalog?.presets || []).filter((preset) => presetUsable(preset, ids));
   }, [catalog, selectedBases]);
 
   useEffect(() => {
-    fetch("/api/iot/metrics/catalog")
+    let active = true;
+    setCatalog(null);
+    setResult(null);
+    setError("");
+    fetch(`${domainConfig.base}/catalog`)
       .then(async (res) => {
         if (!res.ok) throw new Error(`catalog ${res.status}`);
         return res.json();
       })
       .then((data: Catalog) => {
+        if (!active) return;
         setCatalog(data);
-        const first = data.grains.find((item) => item.id === "type_month") || data.grains[0];
+        const first = data.grains.find((item) => item.id === domainConfig.defaultGrain) || data.grains[0];
         setGrain(first.id);
         setSelectedBases(first.bases);
         setPresetOn(Object.fromEntries(data.presets.map((preset) => [preset.id, true])));
       })
-      .catch((err: unknown) => setError(err instanceof Error ? err.message : "无法加载指标目录"));
-  }, []);
+      .catch((err: unknown) => {
+        if (active) setError(err instanceof Error ? err.message : "无法加载指标目录");
+      });
+    return () => {
+      active = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [domain]);
 
   useEffect(() => {
     if (!catalog) return;
@@ -86,10 +128,11 @@ export function MetricsWorkspace() {
     if (!spec) return;
     setSelectedBases(spec.bases);
     setIncludeCustom(false);
-    const nextA = spec.bases.includes("alarm_count") ? "alarm_count" : spec.bases[0];
-    const nextB = spec.bases.includes("run_hours") ? "run_hours" : spec.bases[1] || spec.bases[0];
+    const nextA = spec.bases.includes(domainConfig.customA) ? domainConfig.customA : spec.bases[0];
+    const nextB = spec.bases.includes(domainConfig.customB) ? domainConfig.customB : spec.bases[1] || spec.bases[0];
     setCustomA(nextA);
     setCustomB(nextB);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [grain, catalog]);
 
   useEffect(() => {
@@ -118,13 +161,13 @@ export function MetricsWorkspace() {
     setError("");
     const ids = new Set(bases);
     const derived = availablePresets
-      .filter((preset) => presetOn[preset.id] !== false && ids.has(preset.a) && (preset.op === "share" || (preset.b && ids.has(preset.b))))
+      .filter((preset) => presetOn[preset.id] !== false && presetUsable(preset, ids))
       .map((preset) => ({ id: preset.id, op: preset.op, a: preset.a, b: preset.b, name_zh: preset.name_zh, not: preset.not }));
     if (includeCustom && customId.trim() && ids.has(customA) && (customOp === "share" || ids.has(customB))) {
       derived.push({ id: customId.trim(), op: customOp, a: customA, b: customOp === "share" ? null : customB, name_zh: customId.trim(), not: null });
     }
     try {
-      const res = await fetch("/api/iot/metrics/compose", {
+      const res = await fetch(`${domainConfig.base}/compose`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -158,6 +201,7 @@ export function MetricsWorkspace() {
               <div className="ws-eyebrow" style={{ marginBottom: 2 }}>Metric Composer</div>
               <div style={{ color: "var(--ws-text)", fontWeight: 700, fontSize: 15 }}>按维度组合衍生指标</div>
             </div>
+            <span className="ws-pill ws-pill--accent" style={{ marginLeft: "auto" }}>{domainConfig.label}</span>
           </div>
         </div>
         <div className="ws-scroll" style={{ padding: 16, display: "flex", flexDirection: "column", gap: 16 }}>
@@ -205,7 +249,7 @@ export function MetricsWorkspace() {
                   <input type="checkbox" checked={presetOn[preset.id] !== false} onChange={(event) => setPresetOn((current) => ({ ...current, [preset.id]: event.target.checked }))} />
                   <span>
                     <strong>{preset.name_zh}</strong>
-                    <span style={{ color: "var(--ws-text-muted)", marginLeft: 6, fontFamily: "monospace" }}>{preset.a} {preset.op === "share" ? "份额" : preset.op} {preset.b || ""}</span>
+                    <span style={{ color: "var(--ws-text-muted)", marginLeft: 6, fontFamily: "monospace" }}>{preset.a} {opLabel(preset.op)} {preset.op === "achieve" ? preset.b : preset.b || ""}</span>
                     {preset.not && <div style={{ color: "var(--ws-amber)", marginTop: 2 }}>不是 {preset.not}</div>}
                   </span>
                 </label>

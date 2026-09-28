@@ -1,16 +1,25 @@
 import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { BrainCircuit, Play, RotateCcw, CheckCircle2, AlertCircle, Zap, GitBranch, Info } from "lucide-react";
+import { readVersion } from "./OntologyWorkspace/ontologyUrlState";
 
-const SAMPLE_FACTS = `classifiedAs(T-V856S, Equip)
+const IOT_SAMPLE_FACTS = `classifiedAs(T-V856S, Equip)
 raisedOn(O0005, T-V856S)
 highAlarm(O0005)
 confusedWith(StopTime, Idle)`;
 
-const SAMPLE_RULE = `IF raisedOn(?code, T-V856S) AND highAlarm(?code) THEN investigate(?code, VMC)
+const IOT_SAMPLE_RULE = `IF raisedOn(?code, T-V856S) AND highAlarm(?code) THEN investigate(?code, VMC)
 IF classifiedAs(?type, Equip) AND confusedWith(StopTime, Idle) THEN forbidRename(?type, 停机秒)`;
 
-const TEMPLATES = [
+const MARKETING_SAMPLE_FACTS = `orgScope(ship_line, in_scope)
+budgetCovered(立加, true)
+deptNotNull(华南二区销售三科, true)
+unit(ship_amount, 万元含税)`;
+
+const MARKETING_SAMPLE_RULE = `IF orgScope(?e, in_scope) AND budgetCovered(?m, true) AND deptNotNull(?d, true) THEN caliberValid(?e)
+IF caliberValid(?e) AND unit(ship_amount, 万元含税) THEN achieveReport(?e, 口径合格)`;
+
+const IOT_TEMPLATES = [
   {
     label: "报警强度对比",
     facts: `alarmPerHour(T-V856S, high)
@@ -23,8 +32,8 @@ IF confusedWith(runTimeShare, 稼动率) THEN forbidRename(runTimeShare, 稼动�
   },
   {
     label: "IoT 报警升级",
-    facts: SAMPLE_FACTS,
-    rule: SAMPLE_RULE,
+    facts: IOT_SAMPLE_FACTS,
+    rule: IOT_SAMPLE_RULE,
   },
   {
     label: "Drug Candidate",
@@ -43,10 +52,49 @@ IF confusedWith(runTimeShare, 稼动率) THEN forbidRename(runTimeShare, 稼动�
   },
 ];
 
+const MARKETING_TEMPLATES = [
+  {
+    label: "达成四要素（口径探针）",
+    facts: `orgScope(ship_line, in_scope)
+budgetCovered(立加, true)
+deptNotNull(华南二区销售三科, true)
+unit(ship_amount, 万元含税)`,
+    rule: `IF orgScope(?e, in_scope) AND budgetCovered(?m, true) AND deptNotNull(?d, true) THEN caliberValid(?e)
+IF caliberValid(?e) AND unit(ship_amount, 万元含税) THEN achieveReport(?e, 口径合格)`,
+  },
+  {
+    label: "B10 双预算投影冲突",
+    facts: `budgetsFor(dept_budget, 华南二区销售三科)
+budgetsFor(product_budget, 立加)
+projection(dept_budget, dept)
+projection(product_budget, product_type)`,
+    rule: `IF projection(?a, dept) AND projection(?b, product_type) THEN forbidJoin(?a, ?b)
+IF forbidJoin(?a, ?b) THEN refuseCrossDim(?a, ?b)`,
+  },
+  {
+    label: "离职业务员空窗期",
+    facts: `userRole(张三, 业务)
+employmentStatus(张三, 离职)
+noSign(张三, 2026-04)
+noSign(张三, 2026-05)
+noSign(张三, 2026-06)`,
+    rule: `IF userRole(?e, 业务) AND noSign(?e, 2026-04) AND noSign(?e, 2026-05) AND noSign(?e, 2026-06) THEN inactiveRun(?e, 3)
+IF employmentStatus(?e, 离职) AND inactiveRun(?e, ?n) THEN excludeFromKPI(?e)`,
+  },
+  {
+    label: "拒答探针（成本利润率）",
+    facts: `finalCost(成本, 禁止直查)
+notModeled(成本利润率)`,
+    rule: `IF finalCost(成本, 禁止直查) AND notModeled(成本利润率) THEN refuse(成本利润率)`,
+  },
+];
+
 export function ReasoningWorkspace() {
   const queryClient = useQueryClient();
-  const [facts, setFacts] = useState(SAMPLE_FACTS);
-  const [rules, setRules] = useState(SAMPLE_RULE);
+  const isMarketing = readVersion() === "marketing";
+  const templates = isMarketing ? MARKETING_TEMPLATES : IOT_TEMPLATES;
+  const [facts, setFacts] = useState(isMarketing ? MARKETING_SAMPLE_FACTS : IOT_SAMPLE_FACTS);
+  const [rules, setRules] = useState(isMarketing ? MARKETING_SAMPLE_RULE : IOT_SAMPLE_RULE);
   const [applyToGraph, setApplyToGraph] = useState(true);
   const [result, setResult] = useState<{
     inferred_facts?: string[];
@@ -84,7 +132,7 @@ export function ReasoningWorkspace() {
     }
   }
 
-  function loadTemplate(t: (typeof TEMPLATES)[number]) {
+  function loadTemplate(t: (typeof templates)[number]) {
     setFacts(t.facts);
     setRules(t.rule);
     setResult(null);
@@ -92,8 +140,8 @@ export function ReasoningWorkspace() {
   }
 
   function handleReset() {
-    setFacts(SAMPLE_FACTS);
-    setRules(SAMPLE_RULE);
+    setFacts(isMarketing ? MARKETING_SAMPLE_FACTS : IOT_SAMPLE_FACTS);
+    setRules(isMarketing ? MARKETING_SAMPLE_RULE : IOT_SAMPLE_RULE);
     setResult(null);
     setError("");
   }
@@ -119,7 +167,7 @@ export function ReasoningWorkspace() {
         <div style={{ padding: "12px 16px 10px", borderBottom: "1px solid var(--ws-border)", flexShrink: 0 }}>
           <div className="ws-eyebrow" style={{ marginBottom: 8 }}>Quick Templates</div>
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-            {TEMPLATES.map((t) => (
+            {templates.map((t) => (
               <button key={t.label} className="ws-btn ws-btn--ghost" style={{ padding: "5px 10px", fontSize: 11 }} onClick={() => loadTemplate(t)}>
                 {t.label}
               </button>

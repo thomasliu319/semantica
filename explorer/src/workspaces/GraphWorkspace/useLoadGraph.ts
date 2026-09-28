@@ -323,7 +323,11 @@ interface EdgeListResponse {
   next_cursor?: string | null;
 }
 
-const PAGE_LIMIT = 1000;
+// Larger pages mean fewer HTTP round-trips for the full-graph load. The backend
+// serves unfiltered pagination from a pre-materialized cache (warmed at startup),
+// so a 5000-item page is just a slice — the marketing graph's ~93k edges now need
+// ~19 requests instead of ~93.
+const PAGE_LIMIT = 5000;
 
 /** Surface the server's `detail` message (e.g. auth/setup guidance) on non-OK responses. */
 async function fetchErrorDetail(response: Response): Promise<string> {

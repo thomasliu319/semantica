@@ -63,6 +63,13 @@ class GraphSession:
         self._graph_revision: int = 0
         self._cached_embeddings: Optional[Dict[str, List[float]]] = None
         self._cached_graph_revision: int = -1
+        # Pre-materialized node/edge lists used to serve unfiltered pagination
+        # (the frontend's full-graph load) without re-normalizing the whole graph
+        # on every page. Populated eagerly via ``warm_cache`` and lazily on first
+        # use, then invalidated whenever the graph is mutated.
+        self._materialized_nodes: Optional[List[tuple[str, Dict[str, Any]]]] = None
+        self._materialized_edges: Optional[List[tuple[str, Dict[str, Any]]]] = None
+        self._materialized_revision: int = -1
         self.rebuild_search_index()
 
     @classmethod
@@ -70,6 +77,59 @@ class GraphSession:
         graph = ContextGraph()
         graph.load_from_file(path)
         return cls(graph)
+
+    def _materialize_nodes_locked(self) -> List[tuple[str, Dict[str, Any]]]:
+        """Normalize and sort every node once, in ``paginate_nodes`` order."""
+        node_ids = sorted(
+            (node_id for node_id in self.graph.nodes.keys() if node_id is not None),
+            key=lambda value: str(value),
+        )
+        out: List[tuple[str, Dict[str, Any]]] = []
+        for node_id in node_ids:
+            raw = self.graph.find_node(node_id)
+            if raw is None:
+                continue
+            out.append((str(node_id), self.normalize_node(raw)))
+        return out
+
+    def _materialize_edges_locked(self) -> List[tuple[str, Dict[str, Any]]]:
+        """Normalize and sort every edge once, in ``paginate_edges`` order."""
+        out: List[tuple[str, Dict[str, Any]]] = []
+        for edge in self.graph.find_edges(edge_type=None):
+            normalized = self.normalize_edge(edge)
+            if not normalized["source"] or not normalized["target"]:
+                continue
+            out.append((str(normalized["id"]), normalized))
+        out.sort(key=lambda item: item[0])
+        return out
+
+    def warm_cache(self) -> Dict[str, int]:
+        """Materialize the full node/edge lists once and cache them.
+
+        Call this after loading a graph so that unfiltered ``paginate_nodes`` /
+        ``paginate_edges`` requests (which drive the frontend's full-graph load)
+        slice a pre-normalized, pre-sorted list in O(page) instead of
+        re-normalizing and re-hashing every node and edge on every page.
+
+        Returns the number of materialized nodes and edges.
+        """
+        with self._lock:
+            started = time.perf_counter()
+            self._materialized_nodes = self._materialize_nodes_locked()
+            self._materialized_edges = self._materialize_edges_locked()
+            self._materialized_revision = self._graph_revision
+            elapsed_ms = round((time.perf_counter() - started) * 1000, 2)
+        logger.info(
+            "GraphSession cache warmed: nodes=%d edges=%d revision=%d elapsed_ms=%s",
+            len(self._materialized_nodes),
+            len(self._materialized_edges),
+            self._materialized_revision,
+            elapsed_ms,
+        )
+        return {
+            "nodes": len(self._materialized_nodes),
+            "edges": len(self._materialized_edges),
+        }
 
     @staticmethod
     def _encode_cursor(value: str) -> str:
@@ -320,6 +380,34 @@ class GraphSession:
         cursor: Optional[str] = None,
         bbox: Optional[tuple[float, float, float, float]] = None,
     ) -> tuple[list[dict[str, Any]], int, Optional[str]]:
+        # Fast path: unfiltered requests (the frontend full-graph load) slice the
+        # pre-materialized list instead of re-normalizing the whole graph per page.
+        if node_type is None and search is None and bbox is None:
+            with self._lock:
+                if (
+                    self._materialized_nodes is None
+                    or self._materialized_revision != self._graph_revision
+                ):
+                    self._materialized_nodes = self._materialize_nodes_locked()
+                    self._materialized_revision = self._graph_revision
+                cached = self._materialized_nodes
+
+            ordered_keys = [key for key, _ in cached]
+            ordered_nodes = [node for _, node in cached]
+
+            total = len(ordered_nodes)
+            start_index = skip
+            decoded_cursor = self._decode_cursor(cursor)
+            if decoded_cursor:
+                start_index = self._apply_cursor(ordered_keys, decoded_cursor)
+
+            page = ordered_nodes[start_index : start_index + limit]
+            next_cursor = None
+            if start_index + limit < total and page:
+                next_cursor = self._encode_cursor(str(page[-1]["id"]))
+
+            return page, total, next_cursor
+
         with self._lock:
             node_ids: Iterable[str]
             if node_type:
@@ -443,6 +531,35 @@ class GraphSession:
         limit: int = 100,
         cursor: Optional[str] = None,
     ) -> tuple[list[dict[str, Any]], int, Optional[str]]:
+        # Fast path: unfiltered requests slice the pre-materialized, pre-sorted
+        # edge list instead of re-normalizing and re-hashing every edge per page.
+        if edge_type is None and source is None and target is None:
+            with self._lock:
+                if (
+                    self._materialized_edges is None
+                    or self._materialized_revision != self._graph_revision
+                ):
+                    self._materialized_edges = self._materialize_edges_locked()
+                    self._materialized_revision = self._graph_revision
+                cached = self._materialized_edges
+
+            ordered_keys = [key for key, _ in cached]
+            ordered_edges = [edge for _, edge in cached]
+
+            total = len(ordered_edges)
+            start_index = skip
+            decoded_cursor = self._decode_cursor(cursor)
+            if decoded_cursor:
+                start_index = self._apply_cursor(ordered_keys, decoded_cursor)
+
+            page_edges = ordered_edges[start_index : start_index + limit]
+            next_cursor = None
+            if start_index + limit < total and page_edges:
+                last = page_edges[-1]
+                next_cursor = self._encode_cursor(str(last["id"]))
+
+            return page_edges, total, next_cursor
+
         with self._lock:
             raw_edges = self.graph.find_edges(edge_type=edge_type)
 
@@ -649,6 +766,9 @@ class GraphSession:
         self._graph_revision += 1
         self._cached_embeddings = None
         self._cached_graph_revision = -1
+        self._materialized_nodes = None
+        self._materialized_edges = None
+        self._materialized_revision = -1
 
     @staticmethod
     def _coerce_embedding_vector(value: Any) -> Optional[List[float]]:

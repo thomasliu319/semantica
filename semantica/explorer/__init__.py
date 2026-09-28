@@ -66,6 +66,13 @@ def _load_versioned_sessions(graph_path: str, marketing_graph: str | None):
         iot_session = GraphSession.from_file(iot_path)
         marketing_session = iot_session if mkt_path == iot_path else GraphSession.from_file(mkt_path)
 
+    # 启动时一次性物化并缓存全量节点/边。之后前端无过滤分页（整图加载）
+    # 直接从缓存切片，避免每页重复 normalize/哈希整张图（营销图 93k 边会极慢）。
+    with _out.status("[dim]Warming graph cache…[/dim]", spinner="dots"):
+        iot_session.warm_cache()
+        if marketing_session is not iot_session:
+            marketing_session.warm_cache()
+
     labels = [("v=iot2", iot_session)]
     if marketing_session is not iot_session:
         labels.append(("v=marketing", marketing_session))

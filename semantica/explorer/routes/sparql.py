@@ -175,7 +175,7 @@ def _build_rdflib_graph(session: GraphSession) -> rdflib.Graph:
 # Resource limits (override in tests via patch.object)
 # ---------------------------------------------------------------------------
 _SPARQL_MAX_ROWS = 5_000     # hard cap on returned rows
-_SPARQL_TIMEOUT_S = 30       # seconds before abandoning the await
+_SPARQL_TIMEOUT_S = 180      # seconds (3 min) before abandoning the await
 _SPARQL_MAX_CONCURRENT = 4   # semaphore: max simultaneous executions
 _SPARQL_MAX_GRAPH_NODES = 200_000  # cap on graph nodes/edges to prevent OOM
 # Defense-in-depth against ReDoS: reject inputs longer than this before any

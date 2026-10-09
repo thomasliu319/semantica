@@ -49,8 +49,8 @@ const IOT_GRAPHRAG_TEMPLATE_GROUPS = [
   },
 ];
 
-// 营销问数本体（装备一营销问数本体_v1.2.xml）<biz:QueryIntent> 标签内的提示词话术，
-// 按 <biz:intentCategory> 梳理为 Decisions GraphRAG 的提示词模版（共 66 问 Q01–Q66）。
+// 营销问数本体（装备一营销问数本体_v1.3.xml）<biz:QueryIntent> 标签内的提示词话术，
+// 按 <biz:intentCategory> 梳理为 Decisions GraphRAG 的提示词模版（共 67 问 Q01–Q67）。
 const MARKETING_GRAPHRAG_TEMPLATE_GROUPS = [
   {
     dim: "达成分析",
@@ -65,6 +65,7 @@ const MARKETING_GRAPHRAG_TEMPLATE_GROUPS = [
       "截止2026年7月，通用产品部各销售部管理签单金额达成情况",
       "截止2026年7月，通用产品部各大区管理立加签单台数达成情况",
       "截止2026年7月，通用产品部各科室考核出机台数达成情况（全机型）",
+      "截止2026年1-5月，通用产品部各大区、各科室的管理出机金额达成情况（目标、达成、达成率、去年同期达成、同比；人均达成、同比），含税/不含税，含3C、不含3C",
     ],
   },
   {

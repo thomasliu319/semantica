@@ -110,7 +110,8 @@ def build_graph(inp: Path) -> dict:
             continue
         add(nodes, nid("emp", c), "SalesPerson", str(r.get("sales_name") or c),
             user_role=r.get("user_role", ""), employment_status=r.get("employment_status", ""),
-            area=r.get("area", ""), province=r.get("province", ""), city=r.get("affiliation_city", ""))
+            area=r.get("area", ""), province=r.get("province", ""), city=r.get("affiliation_city", ""),
+            entrydate=str(r.get("entrydate") or ""), grade=str(r.get("grade") or ""))
         if r.get("fdept"):
             edge(edges, nid("emp", c), "belongsTo", nid("dept", str(r["fdept"])))
 
@@ -168,6 +169,7 @@ def build_graph(inp: Path) -> dict:
 
     # ---- 事件（G3 明细可回溯）------------------------------------------------
     def add_events(df: pd.DataFrame, kind: str, prefix: str, id_cols: list[str]) -> None:
+        is_sign = kind == "SignOrderLine"
         for _, r in df.iterrows():
             eid = nid(prefix, "|".join(str(r[c]) for c in id_cols))
             m = f"{r['year']}-{int(r['month']):02d}" if pd.notna(r.get("month")) else ""
@@ -175,9 +177,13 @@ def build_graph(inp: Path) -> dict:
                 fact=kind,
                 org_scope=r.get("org_scope", "unknown"),
                 amount_wan=_num(r.get("total_money_fc_hs_wan")),
+                amount_fc_wan=round(_num(r.get("total_money_fc")) / 10000, 4),
                 amount_yuan=_num(r.get("total_money_fc_hs")),
                 unit="万元/元",
-                fqty=_num(r.get("fqty")))
+                fqty=_num(r.get("fqty")),
+                ftag=str(r.get("ftag") or ""),
+                factory=str(r.get("factory") or ""),
+                order_type=str(r.get("auart_name") if is_sign else r.get("forder_type") or ""))
             if r.get("sales_code"):
                 edge(edges, eid, "signedBy" if kind == "SignOrderLine" else "shippedBy",
                      nid("emp", str(r["sales_code"])))

@@ -611,6 +611,464 @@ WHERE {
 ORDER BY DESC(?amount)
 LIMIT 30`,
   },
+  // ── 排名（大区/销售部/业务员，口径同达成分析）──
+  {
+    label: "排名 · 销售部管理签单达成率",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# 口径：签单含税万元(in_scope+预算覆盖机型+科室非空)，按科室 sales_dept 上卷
+SELECT ?salesDept ?budgetWan ?actualWan (ROUND(?actualWan * 10000 / ?budgetWan) / 100 AS ?achievePct)
+WHERE {
+  {
+    SELECT ?sd (SUM(?amount) AS ?actualWan)
+    WHERE {
+      ?s a ent:SignOrderLine ;
+         prop:org_scope "in_scope" ;
+         prop:amount_wan ?amount ;
+         prop:ofDept ?dept ;
+         prop:ofModel ?model .
+      ?model a ent:Product ; prop:budget_covered true .
+      ?dept prop:sales_dept ?sd .
+    }
+    GROUP BY ?sd
+  }
+  {
+    SELECT ?sd (SUM(?b) AS ?budgetWan)
+    WHERE {
+      ?budget a ent:DeptBudgetMonth ;
+              prop:budgetsFor ?dept ;
+              prop:management_signed_contract_hs ?b .
+      ?dept prop:sales_dept ?sd .
+    }
+    GROUP BY ?sd
+  }
+  BIND(?sd AS ?salesDept)
+  FILTER(?budgetWan > 0)
+}
+ORDER BY DESC(?achievePct)`,
+  },
+  {
+    label: "排名 · 业务员签单金额 TOP20",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# 口径：签单含税万元(in_scope)，按业务员聚合排序
+SELECT ?empLabel ?deptLabel (SUM(?amount) AS ?signWan)
+WHERE {
+  ?s a ent:SignOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?amount ;
+     prop:signedBy ?emp .
+  ?emp rdfs:label ?empLabel .
+  OPTIONAL { ?emp prop:belongsTo ?dept . ?dept rdfs:label ?deptLabel }
+}
+GROUP BY ?empLabel ?deptLabel
+ORDER BY DESC(?signWan)
+LIMIT 20`,
+  },
+  {
+    label: "排名 · 业务员出机金额 TOP20",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?empLabel ?deptLabel (SUM(?amount) AS ?shipWan)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?amount ;
+     prop:shippedBy ?emp .
+  ?emp rdfs:label ?empLabel .
+  OPTIONAL { ?emp prop:belongsTo ?dept . ?dept rdfs:label ?deptLabel }
+}
+GROUP BY ?empLabel ?deptLabel
+ORDER BY DESC(?shipWan)
+LIMIT 20`,
+  },
+  // ── 人均效能（台数维度）──
+  {
+    label: "人均效能 · 科室人均出机台数",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?deptLabel ?shipQty ?empCount (ROUND(?shipQty * 100 / ?empCount) / 100 AS ?perEmpQty)
+WHERE {
+  {
+    SELECT ?dept (SUM(?fqty) AS ?shipQty) (COUNT(DISTINCT ?emp) AS ?empCount)
+    WHERE {
+      ?s a ent:ShipOrderLine ;
+         prop:org_scope "in_scope" ;
+         prop:fqty ?fqty ;
+         prop:ofDept ?dept ;
+         prop:shippedBy ?emp .
+      ?emp a ent:SalesPerson ; prop:user_role "业务" .
+    }
+    GROUP BY ?dept
+  }
+  ?dept rdfs:label ?deptLabel .
+}
+ORDER BY DESC(?perEmpQty)
+LIMIT 40`,
+  },
+  {
+    label: "人均效能 · 科室人均立加签单台数",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?deptLabel ?signQty ?empCount (ROUND(?signQty * 100 / ?empCount) / 100 AS ?perEmpQty)
+WHERE {
+  {
+    SELECT ?dept (SUM(?fqty) AS ?signQty) (COUNT(DISTINCT ?emp) AS ?empCount)
+    WHERE {
+      ?s a ent:SignOrderLine ;
+         prop:org_scope "in_scope" ;
+         prop:fqty ?fqty ;
+         prop:ofDept ?dept ;
+         prop:ofModel ?model ;
+         prop:signedBy ?emp .
+      ?model prop:zprod_type "立加" .
+      ?emp a ent:SalesPerson ; prop:user_role "业务" .
+    }
+    GROUP BY ?dept
+  }
+  ?dept rdfs:label ?deptLabel .
+}
+ORDER BY DESC(?perEmpQty)
+LIMIT 40`,
+  },
+  // ── 机型榜单 ──
+  {
+    label: "机型榜单 · 通用钻攻机签单 TOP10",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?modelLabel (SUM(?amount) AS ?signWan) (SUM(?fqty) AS ?units)
+WHERE {
+  ?s a ent:SignOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?amount ;
+     prop:fqty ?fqty ;
+     prop:ofModel ?model .
+  ?model rdfs:label ?modelLabel ; prop:zprod_type "通用钻攻机" .
+}
+GROUP BY ?modelLabel
+ORDER BY DESC(?signWan)
+LIMIT 10`,
+  },
+  // ── 连续未达标 ──
+  {
+    label: "连续未达标 · 无出机业务员",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?empLabel ?deptLabel
+WHERE {
+  ?emp a ent:SalesPerson ; prop:user_role "业务" ; rdfs:label ?empLabel .
+  OPTIONAL { ?emp prop:belongsTo ?dept . ?dept rdfs:label ?deptLabel }
+  FILTER NOT EXISTS { ?s a ent:ShipOrderLine ; prop:shippedBy ?emp . }
+}
+ORDER BY ?deptLabel ?empLabel
+LIMIT 100`,
+  },
+  {
+    label: "达成率低于80% · 科室清单（管理出机）",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# 口径同「达成率 · 管理出机」，仅保留达成率 < 80% 的科室
+SELECT ?deptLabel ?budgetWan ?actualWan (ROUND(?actualWan * 10000 / ?budgetWan) / 100 AS ?achievePct)
+WHERE {
+  {
+    SELECT ?dept (SUM(?amount) AS ?actualWan)
+    WHERE {
+      ?s a ent:ShipOrderLine ;
+         prop:org_scope "in_scope" ;
+         prop:amount_wan ?amount ;
+         prop:ofDept ?dept ;
+         prop:ofModel ?model .
+      ?model a ent:Product ; prop:budget_covered true .
+    }
+    GROUP BY ?dept
+  }
+  {
+    SELECT ?dept (SUM(?b) AS ?budgetWan)
+    WHERE {
+      ?budget a ent:DeptBudgetMonth ;
+              prop:budgetsFor ?dept ;
+              prop:management_ship_budget_hs ?b .
+    }
+    GROUP BY ?dept
+  }
+  ?dept rdfs:label ?deptLabel .
+  FILTER(?budgetWan > 0)
+  FILTER(?actualWan * 10000 / ?budgetWan < 8000)
+}
+ORDER BY ?achievePct`,
+  },
+  // ── 趋势分析 ──
+  {
+    label: "趋势 · 逐月管理签单金额",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?monthLabel (SUM(?amount) AS ?signWan)
+WHERE {
+  ?s a ent:SignOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?amount ;
+     prop:ofDept ?dept ;
+     prop:ofModel ?model ;
+     prop:inMonth ?month .
+  ?model a ent:Product ; prop:budget_covered true .
+  ?month rdfs:label ?monthLabel .
+}
+GROUP BY ?monthLabel
+ORDER BY ?monthLabel`,
+  },
+  // ── 退货分析（ftag=销售退货，负金额取绝对值）──
+  {
+    label: "退货分析 · 大区退货金额/台数",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?areaLabel (ABS(SUM(?amount)) AS ?returnWan) (ABS(SUM(?fqty)) AS ?returnQty)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:ftag "销售退货" ;
+     prop:amount_wan ?amount ;
+     prop:fqty ?fqty ;
+     prop:ofDept ?dept .
+  ?dept prop:partOf ?area .
+  ?area rdfs:label ?areaLabel .
+}
+GROUP BY ?areaLabel
+ORDER BY DESC(?returnWan)`,
+  },
+  {
+    label: "退货分析 · 产品类型退货率",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# 退货率 = |退货金额| / 出货金额
+SELECT ?ptypeLabel ?returnWan ?shipWan (ROUND(?returnWan * 10000 / ?shipWan) / 100 AS ?returnRatePct)
+WHERE {
+  {
+    SELECT ?ptype (ABS(SUM(?amount)) AS ?returnWan)
+    WHERE { ?s a ent:ShipOrderLine ; prop:ftag "销售退货" ; prop:amount_wan ?amount ; prop:ofType ?ptype . }
+    GROUP BY ?ptype
+  }
+  {
+    SELECT ?ptype (SUM(?amount) AS ?shipWan)
+    WHERE { ?s a ent:ShipOrderLine ; prop:org_scope "in_scope" ; prop:amount_wan ?amount ; prop:ofType ?ptype . }
+    GROUP BY ?ptype
+  }
+  ?ptype rdfs:label ?ptypeLabel .
+  FILTER(?shipWan > 0)
+}
+ORDER BY DESC(?returnRatePct)`,
+  },
+  // ── 订单量与单均 ──
+  {
+    label: "订单量与单均 · 大区签单订单数/单均",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# 订单数=去重 docno（事件 label 即单据号）；单均=金额/订单数
+SELECT ?areaLabel (COUNT(DISTINCT ?docno) AS ?orders) (SUM(?amount) AS ?signWan) (ROUND(SUM(?amount) * 100 / COUNT(DISTINCT ?docno)) / 100 AS ?avgWan)
+WHERE {
+  ?s a ent:SignOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?amount ;
+     prop:ofDept ?dept ;
+     rdfs:label ?docno .
+  ?dept prop:partOf ?area .
+  ?area rdfs:label ?areaLabel .
+}
+GROUP BY ?areaLabel
+ORDER BY DESC(?signWan)`,
+  },
+  // ── 客户分层 ──
+  {
+    label: "客户分层 · 立加出机台数分层签单结构",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# 按客户累计立加出机台数分桶，再汇总签单金额（两侧均先聚合，避免笛卡尔）
+SELECT ?bucket (SUM(?custWan) AS ?signAmountWan) (COUNT(DISTINCT ?cust) AS ?custCount)
+WHERE {
+  {
+    SELECT ?cust (SUM(?fqty) AS ?shipQty)
+    WHERE {
+      ?s a ent:ShipOrderLine ; prop:shipTo ?cust ; prop:ofModel ?model ; prop:fqty ?fqty .
+      ?model prop:zprod_type "立加" .
+    }
+    GROUP BY ?cust
+  }
+  {
+    SELECT ?cust (SUM(?amount) AS ?custWan)
+    WHERE { ?s2 a ent:SignOrderLine ; prop:contractParty ?cust ; prop:amount_wan ?amount . }
+    GROUP BY ?cust
+  }
+  BIND(IF(?shipQty < 10, "1_<10台", IF(?shipQty < 20, "2_10-20台", "3_≥20台")) AS ?bucket)
+}
+GROUP BY ?bucket
+ORDER BY ?bucket`,
+  },
+  // ── 订单结构 ──
+  {
+    label: "订单结构 · 订单类型签单分布",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+SELECT ?orderType (SUM(?amount) AS ?signWan) (SUM(?fqty) AS ?qty) (COUNT(?s) AS ?lines)
+WHERE {
+  ?s a ent:SignOrderLine ;
+     prop:order_type ?orderType ;
+     prop:amount_wan ?amount ;
+     prop:fqty ?fqty .
+  FILTER(?orderType != "")
+}
+GROUP BY ?orderType
+ORDER BY DESC(?signWan)`,
+  },
+  // ── 工厂维度 ──
+  {
+    label: "工厂维度 · 交货工厂出机分布",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+SELECT ?factory (SUM(?amount) AS ?shipWan) (SUM(?fqty) AS ?qty)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:factory ?factory ;
+     prop:amount_wan ?amount ;
+     prop:fqty ?fqty .
+  FILTER(?factory != "")
+}
+GROUP BY ?factory
+ORDER BY DESC(?shipWan)`,
+  },
+  // ── EHR 效能（职等）──
+  {
+    label: "EHR · 职等人均出机金额",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+SELECT ?grade (SUM(?amount) AS ?shipWan) (COUNT(DISTINCT ?emp) AS ?empCount) (ROUND(SUM(?amount) * 100 / COUNT(DISTINCT ?emp)) / 100 AS ?perEmpWan)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?amount ;
+     prop:shippedBy ?emp .
+  ?emp a ent:SalesPerson ; prop:user_role "业务" ; prop:grade ?grade .
+  FILTER(?grade != "")
+}
+GROUP BY ?grade
+ORDER BY DESC(?shipWan)`,
+  },
+  // ── 人员流动 ──
+  {
+    label: "人员流动 · 科室在职/离职人数",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?deptLabel ?status (COUNT(?emp) AS ?empCount)
+WHERE {
+  ?emp a ent:SalesPerson ; prop:belongsTo ?dept ; prop:employment_status ?status .
+  ?dept rdfs:label ?deptLabel .
+}
+GROUP BY ?deptLabel ?status
+ORDER BY ?deptLabel ?status`,
+  },
+  // ── 预算精度 ──
+  {
+    label: "预算精度 · 大区预算偏差率",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# 偏差率 = (实际-预算)/预算，口径同管理出机
+SELECT ?areaLabel ?budgetWan ?actualWan (ROUND((?actualWan - ?budgetWan) * 10000 / ?budgetWan) / 100 AS ?devPct)
+WHERE {
+  {
+    SELECT ?area (SUM(?amount) AS ?actualWan)
+    WHERE {
+      ?s a ent:ShipOrderLine ;
+         prop:org_scope "in_scope" ;
+         prop:amount_wan ?amount ;
+         prop:ofDept ?dept ;
+         prop:ofModel ?model .
+      ?model a ent:Product ; prop:budget_covered true .
+      ?dept prop:partOf ?area .
+    }
+    GROUP BY ?area
+  }
+  {
+    SELECT ?area (SUM(?b) AS ?budgetWan)
+    WHERE {
+      ?budget a ent:DeptBudgetMonth ;
+              prop:budgetsFor ?dept ;
+              prop:management_ship_budget_hs ?b .
+      ?dept prop:partOf ?area .
+    }
+    GROUP BY ?area
+  }
+  ?area rdfs:label ?areaLabel .
+  FILTER(?budgetWan > 0)
+}
+ORDER BY ?devPct`,
+  },
+  // ── 口径对比 ──
+  {
+    label: "口径对比 · 含3C vs 不含3C 出机金额",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?caliber (SUM(?amount) AS ?shipWan)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?amount ;
+     prop:ofType ?ptype .
+  ?ptype rdfs:label ?ptypeLabel .
+  BIND(IF(?ptypeLabel = "3C钻攻机", "含3C", "不含3C") AS ?caliber)
+}
+GROUP BY ?caliber
+ORDER BY ?caliber`,
+  },
+  {
+    label: "口径对比 · 含税 vs 不含税 签单金额",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?deptLabel (SUM(?hs) AS ?inclTaxWan) (SUM(?fc) AS ?exclTaxWan)
+WHERE {
+  ?s a ent:SignOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?hs ;
+     prop:amount_fc_wan ?fc ;
+     prop:ofDept ?dept .
+  ?dept rdfs:label ?deptLabel .
+}
+GROUP BY ?deptLabel
+ORDER BY DESC(?inclTaxWan)
+LIMIT 30`,
+  },
+  // ── 人效趋势 ──
+  {
+    label: "人效趋势 · 月度人均出机金额",
+    query: `PREFIX ent: <http://semantica.local/entity/>
+PREFIX prop: <http://semantica.local/prop/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?monthLabel (SUM(?amount) AS ?shipWan) (COUNT(DISTINCT ?emp) AS ?empCount) (ROUND(SUM(?amount) * 100 / COUNT(DISTINCT ?emp)) / 100 AS ?perEmpWan)
+WHERE {
+  ?s a ent:ShipOrderLine ;
+     prop:org_scope "in_scope" ;
+     prop:amount_wan ?amount ;
+     prop:shippedBy ?emp ;
+     prop:inMonth ?month .
+  ?emp a ent:SalesPerson ; prop:user_role "业务" .
+  ?month rdfs:label ?monthLabel .
+}
+GROUP BY ?monthLabel
+ORDER BY ?monthLabel`,
+  },
   { label: "All triples", query: "SELECT ?s ?p ?o\nWHERE {\n  ?s ?p ?o\n}\nLIMIT 20" },
   { label: "Node types", query: "SELECT ?type (COUNT(?s) AS ?count)\nWHERE {\n  ?s a ?type\n}\nGROUP BY ?type\nORDER BY DESC(?count)" },
 ];
@@ -739,7 +1197,7 @@ export function SparqlWorkspace() {
       <div style={{ display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }}>
         {/* ── Toolbar ── */}
         <div style={{ padding: "10px 16px", borderBottom: "1px solid var(--ws-border)", display: "flex", alignItems: "center", gap: 8, flexShrink: 0, background: "rgba(0,0,0,0.18)" }}>
-          <div style={{ display: "flex", gap: 6, flex: 1, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 6, flex: 1, flexWrap: "wrap", maxHeight: 168, overflowY: "auto", alignContent: "flex-start" }}>
             <span className="ws-eyebrow" style={{ alignSelf: "center", marginRight: 4 }}>Templates:</span>
             {templates.map((t) => (
               <button

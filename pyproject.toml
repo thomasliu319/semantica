@@ -319,7 +319,11 @@ explorer = [
   "uvicorn[standard]>=0.22.0",
   "websockets>=15.0.1",
   "python-multipart>=0.0.7",
-  "defusedxml>=0.7.1"
+  "defusedxml>=0.7.1",
+  # Fast SPARQL evaluation for the Analyze workspace. oxrdflib registers an
+  # "Oxigraph" rdflib store whose engine evaluates aggregate/join queries over
+  # the marketing graph orders of magnitude faster than rdflib's Memory store.
+  "oxrdflib>=0.4.0"
 ]
 explorer-lite = [
   "streamlit>=1.25.0",

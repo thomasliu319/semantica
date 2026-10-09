@@ -70,6 +70,11 @@ class GraphSession:
         self._materialized_nodes: Optional[List[tuple[str, Dict[str, Any]]]] = None
         self._materialized_edges: Optional[List[tuple[str, Dict[str, Any]]]] = None
         self._materialized_revision: int = -1
+        # Cached in-memory rdflib projection used by the SPARQL route. Built
+        # lazily on the first SPARQL query and invalidated on graph mutation,
+        # so the ~100k-triple projection is not rebuilt on every query.
+        self._rdflib_graph: Any = None
+        self._rdflib_graph_revision: int = -1
         self.rebuild_search_index()
 
     @classmethod
@@ -769,6 +774,8 @@ class GraphSession:
         self._materialized_nodes = None
         self._materialized_edges = None
         self._materialized_revision = -1
+        self._rdflib_graph = None
+        self._rdflib_graph_revision = -1
 
     @staticmethod
     def _coerce_embedding_vector(value: Any) -> Optional[List[float]]:

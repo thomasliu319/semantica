@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { BrainCircuit, Play, RotateCcw, CheckCircle2, AlertCircle, Zap, GitBranch, Info } from "lucide-react";
-import { readVersion } from "./OntologyWorkspace/ontologyUrlState";
+import { readIsMarketing } from "./OntologyWorkspace/ontologyUrlState";
 
 const IOT_SAMPLE_FACTS = `classifiedAs(T-V856S, Equip)
 raisedOn(O0005, T-V856S)
@@ -91,7 +91,7 @@ notModeled(成本利润率)`,
 
 export function ReasoningWorkspace() {
   const queryClient = useQueryClient();
-  const isMarketing = readVersion() === "marketing";
+  const isMarketing = readIsMarketing();
   const templates = isMarketing ? MARKETING_TEMPLATES : IOT_TEMPLATES;
   const [facts, setFacts] = useState(isMarketing ? MARKETING_SAMPLE_FACTS : IOT_SAMPLE_FACTS);
   const [rules, setRules] = useState(isMarketing ? MARKETING_SAMPLE_RULE : IOT_SAMPLE_RULE);

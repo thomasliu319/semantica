@@ -14,6 +14,44 @@ type Grain = {
 type BaseMeasure = { id: string; name_zh: string; agg: string };
 type Preset = { id: string; op: string; a: string; b?: string | null; name_zh: string; not?: string | null; domain?: string };
 
+type DimensionMember = { code: string; label_zh: string };
+type DimensionDomain = {
+  code: string;
+  label_zh: string;
+  cn_alias?: string;
+  description?: string;
+  members: DimensionMember[];
+};
+
+type MeasureRef = {
+  code: string;
+  label_zh: string;
+  category?: string;
+  caliber?: string;
+  unit?: string;
+  base_id?: string | null;
+};
+
+type DerivedRef = {
+  code: string;
+  label_zh: string;
+  cn_alias?: string;
+  formula?: string;
+  unit?: string;
+  caliber?: string;
+  supported: boolean;
+  preset_ids?: string[];
+};
+
+type TimeKind = { kind: string; label_zh: string; sql: string; rule: string };
+type TimeItem = { code: string; label_zh: string; text?: string; note?: string };
+type TimeSemantics = {
+  time_kinds: TimeKind[];
+  rulings: TimeItem[];
+  constraints: TimeItem[];
+  time_key_joins: TimeItem[];
+};
+
 type Catalog = {
   window?: { StartTime: string; EndTime: string };
   grains: Grain[];
@@ -21,6 +59,10 @@ type Catalog = {
   presets: Preset[];
   ops: string[];
   notes: string[];
+  dimensions?: DimensionDomain[];
+  measures?: MeasureRef[];
+  derived?: DerivedRef[];
+  time_semantics?: TimeSemantics;
 };
 
 type ComposeResult = {
@@ -34,17 +76,20 @@ type ComposeResult = {
   notes: string[];
 };
 
-type Domain = "iot" | "marketing";
+type Domain = "iot" | "marketing" | "marketingfix";
 
 const DOMAINS: Record<Domain, { label: string; base: string; defaultGrain: string; customA: string; customB: string }> = {
   iot: { label: "IoT 设备", base: "/api/iot/metrics", defaultGrain: "type_month", customA: "alarm_count", customB: "run_hours" },
   marketing: { label: "营销经营", base: "/api/marketing/metrics", defaultGrain: "month", customA: "ship_amount_fc_hs_wan", customB: "ship_emps" },
+  marketingfix: { label: "营销经营 fix", base: "/api/marketingfix/metrics", defaultGrain: "month", customA: "ship_amount_fc_hs_wan", customB: "ship_emps" },
 };
 
 // The Explorer version (v=) selects the metric domain — never a UI toggle, so
 // IoT and marketing reports stay fully separated.
 function domainFromVersion(): Domain {
-  return readVersion() === "marketing" ? "marketing" : "iot";
+  if (readVersion() === "marketing") return "marketing";
+  if (readVersion() === "marketingfix") return "marketingfix";
+  return "iot";
 }
 
 const OPS: { id: string; label: string }[] = [
@@ -214,6 +259,105 @@ export function MetricsWorkspace() {
             </select>
           </label>
           {grainSpec && <div className="ws-body" style={{ fontSize: 12 }}>{grainSpec.features}</div>}
+
+          {domain === "marketingfix" && catalog?.time_semantics && (
+            <details open style={{ fontSize: 12, color: "var(--ws-text)" }}>
+              <summary style={{ cursor: "pointer", fontWeight: 700, color: "var(--ws-accent)", marginBottom: 6 }}>
+                时间跨度累加语义（v1.3 重点）
+              </summary>
+
+              <div className="ws-label" style={{ marginTop: 4 }}>取数口径（timeKind 五值）</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {catalog.time_semantics.time_kinds.map((kind) => (
+                  <div key={kind.kind} style={{ padding: "6px 10px", borderRadius: 8, background: "rgba(255,255,255,0.03)", border: "1px solid var(--ws-border)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: 6 }}>
+                      <strong>{kind.kind} · {kind.label_zh}</strong>
+                    </div>
+                    <div style={{ marginTop: 3, color: "var(--ws-text-muted)", fontFamily: "monospace", wordBreak: "break-all" }}>{kind.sql}</div>
+                    <div style={{ marginTop: 2, color: "var(--ws-text-dim)" }}>{kind.rule}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="ws-label" style={{ marginTop: 10 }}>口径定案（RULE）</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {catalog.time_semantics.rulings.map((item) => (
+                  <div key={item.code} style={{ padding: "6px 10px", borderRadius: 8, background: "rgba(76,195,138,0.05)", border: "1px solid rgba(76,195,138,0.2)" }}>
+                    <strong style={{ color: "#6ee7b7" }}>{item.code} · {item.label_zh}</strong>
+                    <div style={{ marginTop: 2, color: "var(--ws-text-muted)", lineHeight: 1.5 }}>{item.text}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="ws-label" style={{ marginTop: 10 }}>约束（CT）</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {catalog.time_semantics.constraints.map((item) => (
+                  <div key={item.code} style={{ padding: "6px 10px", borderRadius: 8, background: "rgba(242,182,109,0.05)", border: "1px solid rgba(242,182,109,0.2)" }}>
+                    <strong style={{ color: "#fbbf24" }}>{item.code} · {item.label_zh}</strong>
+                    <div style={{ marginTop: 2, color: "var(--ws-text-muted)", lineHeight: 1.5 }}>{item.text}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="ws-label" style={{ marginTop: 10 }}>时间键逻辑关联（预算 vs 实际）</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {catalog.time_semantics.time_key_joins.map((item) => (
+                  <div key={item.code} style={{ padding: "6px 10px", borderRadius: 8, background: "rgba(255,255,255,0.03)", border: "1px solid var(--ws-border)" }}>
+                    <strong>{item.code} · {item.label_zh}</strong>
+                    <div style={{ marginTop: 2, color: "var(--ws-text-muted)" }}>{item.note}</div>
+                  </div>
+                ))}
+              </div>
+            </details>
+          )}
+
+          {domain === "marketingfix" && catalog?.dimensions && (
+            <details style={{ fontSize: 12, color: "var(--ws-text)" }}>
+              <summary style={{ cursor: "pointer", fontWeight: 700, color: "var(--ws-text)", marginBottom: 6 }}>
+                维度域（D1–D8）
+              </summary>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {catalog.dimensions.map((dim) => (
+                  <div key={dim.code} style={{ padding: "8px 10px", borderRadius: 8, background: "rgba(255,255,255,0.03)", border: "1px solid var(--ws-border)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 6 }}>
+                      <strong style={{ color: "var(--ws-accent)" }}>{dim.code} {dim.label_zh}</strong>
+                      <span className="ws-pill ws-pill--mono">{dim.members.length} 成员</span>
+                    </div>
+                    <div style={{ marginTop: 4, color: "var(--ws-text-muted)", lineHeight: 1.5 }}>
+                      {dim.members.map((member) => member.label_zh).join(" · ")}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </details>
+          )}
+
+          {domain === "marketingfix" && catalog?.derived && (
+            <details style={{ fontSize: 12, color: "var(--ws-text)" }}>
+              <summary style={{ cursor: "pointer", fontWeight: 700, color: "var(--ws-text)", marginBottom: 6 }}>
+                衍生指标（X01–X22）
+              </summary>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {catalog.derived.map((derived) => (
+                  <div key={derived.code} style={{ padding: "6px 10px", borderRadius: 8, background: "rgba(255,255,255,0.03)", border: "1px solid var(--ws-border)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 6 }}>
+                      <strong>{derived.code} {derived.label_zh}</strong>
+                      <span className="ws-pill" style={{
+                        color: derived.supported ? "#6ee7b7" : "#f2b66d",
+                        background: derived.supported ? "var(--ws-green-soft)" : "var(--ws-amber-soft)",
+                        border: `1px solid ${derived.supported ? "rgba(76,195,138,0.28)" : "rgba(242,182,109,0.28)"}`,
+                      }}>
+                        {derived.supported ? "可计算" : "口径待确认"}
+                      </span>
+                    </div>
+                    <div style={{ marginTop: 3, color: "var(--ws-text-muted)", fontFamily: "monospace" }}>
+                      {derived.formula}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </details>
+          )}
 
           <div>
             <div className="ws-label">基础指标</div>

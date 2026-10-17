@@ -20,7 +20,7 @@ import { ErrorBoundary } from './ErrorBoundary';
 import { reloadOnceForStaleChunk } from './chunkLoadError';
 import { ExploreWorkspaceTabs, type ExploreView } from './ExploreWorkspaceTabs';
 import { fetchAgentMemoryAvailability } from './explorerCapabilities';
-import { canonicalizeExplorerUrl, hasOntologyUrlState, readVersion, switchVersion, SUPPORTED_VERSIONS, type ExplorerVersion } from './workspaces/OntologyWorkspace/ontologyUrlState';
+import { canonicalizeExplorerUrl, hasOntologyUrlState, isMarketingVersion, readVersion, switchVersion, SUPPORTED_VERSIONS, type ExplorerVersion } from './workspaces/OntologyWorkspace/ontologyUrlState';
 
 function lazyWorkspace<T extends ComponentType<any>>(loader: () => Promise<{ default: T }>) {
   return lazy(() =>
@@ -1860,7 +1860,7 @@ export default function App() {
     if (nextVersion === version) return;
     switchVersion(nextVersion);
     setVersion(nextVersion);
-    if (nextVersion !== 'marketing' && manageView === 'marketing-pipeline') {
+    if (!isMarketingVersion(nextVersion) && manageView === 'marketing-pipeline') {
       setManageView('lineage');
     }
   };
@@ -2051,7 +2051,7 @@ export default function App() {
         kicker="Graph Governance"
         tabs={
           <>
-            {version === 'marketing' && (
+            {isMarketingVersion(version) && (
               <button className="workspace-tab" data-active={manageView === 'marketing-pipeline'} onClick={() => setManageView('marketing-pipeline')}>
                 数据清洗流程
               </button>
@@ -2109,9 +2109,9 @@ export default function App() {
                 className="version-switcher-button"
                 data-active={version === item}
                 onClick={() => switchVersionMode(item)}
-                title={item === 'iot2' ? 'IoT 设备版本' : '营销经营版本'}
+                title={item === 'iot2' ? 'IoT 设备版本' : item === 'marketingfix' ? '营销经营版本 fix（本体 v1.3 指标）' : '营销经营版本'}
               >
-                {item === 'iot2' ? 'IoT' : '营销'}
+                {item === 'iot2' ? 'IoT' : item === 'marketingfix' ? '营销fix' : '营销'}
               </button>
             ))}
           </div>

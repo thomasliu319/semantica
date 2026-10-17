@@ -6,9 +6,16 @@ const EDITOR_TAB = "editor";
 export const APP_VERSION = "iot2";
 export const DEFAULT_TAB = "registry";
 // Legal Explorer versions. `iot2` is the original IoT experience; `marketing`
-// carries the marketing/operations domain. Anything else is normalized to `iot2`.
-export const SUPPORTED_VERSIONS = ["iot2", "marketing"] as const;
+// carries the marketing/operations domain; `marketingfix` is the same marketing
+// domain but serves the v1.3-ontology-aligned metric catalog. Anything else is
+// normalized to `iot2`.
+export const SUPPORTED_VERSIONS = ["iot2", "marketing", "marketingfix"] as const;
 export type ExplorerVersion = (typeof SUPPORTED_VERSIONS)[number];
+
+/** True when a version belongs to the marketing/operations family (marketing or marketingfix). */
+export function isMarketingVersion(version: ExplorerVersion): boolean {
+  return version === "marketing" || version === "marketingfix";
+}
 
 function resolveVersion(value: string | null): ExplorerVersion {
   return (SUPPORTED_VERSIONS as readonly string[]).includes(value ?? "")
@@ -129,6 +136,11 @@ export function readVersion(): ExplorerVersion {
   } catch {
     return APP_VERSION;
   }
+}
+
+/** True when the live Explorer version belongs to the marketing family. */
+export function readIsMarketing(): boolean {
+  return isMarketingVersion(readVersion());
 }
 
 /** True when the URL addresses the Ontology Hub at all, even with blank parameter values. */

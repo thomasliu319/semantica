@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import Editor, { useMonaco } from "@monaco-editor/react";
 import { Play, Copy, Download, Table2, AlertCircle, FileCode2 } from "lucide-react";
-import { readVersion } from "../OntologyWorkspace/ontologyUrlState";
+import { readIsMarketing } from "../OntologyWorkspace/ontologyUrlState";
 
 const IOT_TEMPLATES: { label: string; query: string }[] = [
   {
@@ -1076,7 +1076,7 @@ ORDER BY ?monthLabel`,
 export function SparqlWorkspace() {
   const monaco = useMonaco();
   const editorRef = useRef<unknown>(null);
-  const templates = readVersion() === "marketing" ? MARKETING_TEMPLATES : IOT_TEMPLATES;
+  const templates = readIsMarketing() ? MARKETING_TEMPLATES : IOT_TEMPLATES;
   const [query, setQuery] = useState(templates[0].query);
   const [result, setResult] = useState<{ columns?: string[]; rows?: Record<string, string>[]; error?: string; error_line?: number } | null>(null);
   const [isLoading, setIsLoading] = useState(false);

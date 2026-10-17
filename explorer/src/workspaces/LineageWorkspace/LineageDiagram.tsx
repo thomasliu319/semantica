@@ -9,6 +9,7 @@ import { readVersion } from "../OntologyWorkspace/ontologyUrlState";
 
 const DEFAULT_ACTIVITY_BY_VERSION: Record<string, string> = {
   marketing: "activity:marketing",
+  marketingfix: "activity:marketing",
   iot2: "activity:iot-clean",
 };
 

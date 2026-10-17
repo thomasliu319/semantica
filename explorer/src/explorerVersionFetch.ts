@@ -3,10 +3,12 @@
 // session. The version is read fresh from the URL on every call, so switching
 // versions takes effect on the next request without a reload.
 
+const LEGAL_VERSIONS = new Set(["iot2", "marketing", "marketingfix"]);
+
 function currentVersion(): string {
   try {
     const value = new URLSearchParams(window.location.search).get("v");
-    return value === "marketing" ? "marketing" : "iot2";
+    return value && LEGAL_VERSIONS.has(value) ? value : "iot2";
   } catch {
     return "iot2";
   }

@@ -26,9 +26,11 @@ from .ws import ConnectionManager, install_graph_updates_websocket
 APP_VERSION = "iot2"
 DEFAULT_ONTOLOGY_TAB = "registry"
 # Legal Explorer "versions". ``iot2`` is the original IoT experience; ``marketing``
-# carries the marketing/operations domain. The version only selects the graph +
-# metric domain served by this process — it never mixes the two datasets.
-VALID_VERSIONS = {"iot2", "marketing"}
+# carries the marketing/operations domain; ``marketingfix`` is the same marketing
+# graph but serves the v1.3-ontology-aligned metric catalog (including the
+# time-span accumulation semantics). The version only selects the graph + metric
+# domain served by this process — it never mixes the two datasets.
+VALID_VERSIONS = {"iot2", "marketing", "marketingfix"}
 
 
 def _canonical_version(query_params) -> str:
@@ -153,6 +155,7 @@ def create_app(
         app.state.sessions = {
             "iot2": active_session,
             "marketing": marketing_session or active_session,
+            "marketingfix": marketing_session or active_session,
         }
         app.state.agent_memory = agent_memory
         app.state.markdown_resources = markdown_resources
@@ -207,6 +210,7 @@ def create_app(
     from .routes.annotations import router as annotations_router
     from .routes.iot_metrics import router as iot_metrics_router
     from .routes.marketing_metrics import router as marketing_metrics_router
+    from .routes.marketing_metrics_fix import router as marketing_metrics_fix_router
     from .routes.decisions import router as decisions_router
     from .routes.enrich import router as enrich_router
     from .routes.export_import import router as export_import_router
@@ -224,6 +228,7 @@ def create_app(
     app.include_router(analytics_router, dependencies=_auth)
     app.include_router(iot_metrics_router, dependencies=_auth)
     app.include_router(marketing_metrics_router, dependencies=_auth)
+    app.include_router(marketing_metrics_fix_router, dependencies=_auth)
     app.include_router(decisions_router, dependencies=_auth)
     app.include_router(temporal_router, dependencies=_auth)
     app.include_router(enrich_router, dependencies=_auth)

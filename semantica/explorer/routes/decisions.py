@@ -68,13 +68,13 @@ async def run_decision_graphrag(
 ):
     """Retrieve seeds, expand 2 hops, record the query as a decision with evidence.
 
-    Under ``v=marketing`` this dispatches to the marketing GraphRAG (achieve rates,
-    structure/share, customer × model, salesperson behavior); otherwise the generic
-    IoT graph retrieval runs.
+    Under ``v=marketing`` / ``v=marketingfix`` this dispatches to the marketing
+    GraphRAG (achieve rates, structure/share, customer × model, salesperson
+    behavior); otherwise the generic IoT graph retrieval runs.
     """
     version = request.headers.get("X-Explorer-Version") or request.query_params.get("v") or "iot2"
     try:
-        if version == "marketing":
+        if version in ("marketing", "marketingfix"):
             from ..marketing_graphrag import run_marketing_graphrag
 
             payload = await asyncio.to_thread(

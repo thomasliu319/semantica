@@ -218,7 +218,7 @@ class MarketingGraphRAG:
             "达成" in q or "预算" in q
         ):
             return "refuse", "预算的科室维度与产品类型维度是同一笔预算的两个投影，分配矩阵未导出，不能交叉（B10）"
-        if re.search(r"连续.{0,6}(不签单|没签单|未出机|未出货|无签单)", q) or any(
+        if re.search(r"连续.{0,6}(不签单|没签单|未签单|未出机|未出货|无签单|不签)", q) or any(
             w in q for w in ("活跃度", "没出机", "零签单")
         ):
             return "behavior_emp", None
@@ -389,14 +389,24 @@ class MarketingGraphRAG:
         need = int(m.group(1)) if m else None
         time = ents.get("time")
         cutoff = int((time or {}).get("end") or self.MAX_MONTH)
+        area = ents.get("area")
+        dept = ents.get("dept")
 
-        biz = self.emp[self.emp["user_role"] == "业务"]["sales_code"]
+        # 按大区/科室过滤业务员（名单应限定在提问范围内）
+        emp = self.emp[self.emp["user_role"] == "业务"]
+        if area:
+            emp = emp[emp["area"] == area]
+        if dept:
+            emp = emp[emp["fdept"] == dept]
+
+        biz = emp["sales_code"]
         act = fact[fact["sales_code"].isin(set(biz))]
         by_emp: dict[str, set[int]] = {
             k: set(v) for k, v in act.groupby("sales_code")["month"].apply(list).items()
         }
-        names = dict(zip(self.emp["sales_code"], self.emp["sales_name"]))
-        status = dict(zip(self.emp["sales_code"], self.emp["employment_status"]))
+        names = dict(zip(emp["sales_code"], emp["sales_name"]))
+        dept_map = dict(zip(emp["sales_code"], emp["fdept"]))
+        status = dict(zip(emp["sales_code"], emp["employment_status"]))
 
         runs: list[tuple[str, int]] = []
         for code in biz:
@@ -412,18 +422,32 @@ class MarketingGraphRAG:
         if need is None:
             need = 3
         hit = [r for r in runs if r[1] >= need]
+        # 「名单」「人员名单」→ 返回完整名单；「人数」→ 仅计数
+        want_list = bool(re.search(r"名单|人员", q))
+        people = [
+            {
+                "sales_code": c,
+                "sales_name": names.get(c, ""),
+                "dept": dept_map.get(c, ""),
+                "area": area,
+                "employment_status": status.get(c, ""),
+                "consecutive_empty_months": r,
+            }
+            for c, r in hit
+        ]
         return {
             "intent": "behavior_emp",
             "event": kind,
             "caliber": {"user_role": "业务", "window": "2026-01~06", "cutoff_month": cutoff,
                         "consecutive_months": need},
+            "scope": {"area": area, "dept": dept, "time": time},
             "business_headcount": int(len(biz)),
             "no_event_in_window": int(sum(1 for _, r in runs if r == cutoff)),
             "consecutive_hit_count": len(hit),
-            "sample": [{"sales_code": c, "sales_name": names.get(c, ""),
-                        "employment_status": status.get(c, ""),
-                        "consecutive_empty_months": r} for c, r in hit[:10]],
-            "caveats": ["计数为口径探针，不是名单报告（B1）；离职人员空窗属状态非业绩，已单列 employment_status"] + self._time_caveat(time),
+            "want_list": want_list,
+            "people": people,
+            "sample": people[:10],
+            "caveats": [f"{'名单' if want_list else '计数'}口径：连续 {need} 个月及以上无{'出机' if kind == 'ship' else '签单'}的业务员；离职/异动人员的空窗属状态而非业绩，已单列 employment_status"] + self._time_caveat(time),
         }
 
     def customer_model(self, ents: dict) -> dict:
@@ -489,11 +513,12 @@ class MarketingGraphRAG:
         body = fn(ents)
         body["question"] = q
         body["linked_entities"] = {k: v for k, v in ents.items() if k != "_q"}
-        extra = ["参考基准：考核出机 130.6% / 管理出机 91.1% / 管理签单 103.2%（H1 默认口径）"]
-        if intent != "achieve_dept":
-            # 科室达成报告已含完整口径+分析，不再标「口径探针」
-            extra.insert(0, "达成率为口径探针，不是分析报告（B1/G6）")
-        body["caveats"] = body.get("caveats", []) + extra
+        if intent in ("achieve_dept", "achieve_product", "structure_share"):
+            extra = ["参考基准：考核出机 130.6% / 管理出机 91.1% / 管理签单 103.2%（H1 默认口径）"]
+            if intent != "achieve_dept":
+                # 科室达成报告已含完整口径+分析，不再标「口径探针」
+                extra.insert(0, "达成率为口径探针，不是分析报告（B1/G6）")
+            body["caveats"] = body.get("caveats", []) + extra
         return body
 
 
@@ -811,10 +836,11 @@ def _build_sources(session: Any, result: dict) -> list[dict[str, Any]]:
         for item in (result.get("top_contributors") or []):
             sources.append(src(f"dept:{item.get('fdept')}", f"贡献 {_num(item.get('amount_wan'))} 万元", 0.7))
     elif intent == "behavior_emp":
+        event = "出机" if result.get("event") == "ship" else "签单"
         for item in (result.get("sample") or []):
             sources.append(src(
                 f"emp:{item.get('sales_code')}",
-                f"连续 {item.get('consecutive_empty_months')} 月无事件 · {item.get('employment_status')}",
+                f"连续 {item.get('consecutive_empty_months')} 月无{event} · {item.get('employment_status')}",
                 0.7,
             ))
     elif intent == "customer_model":
@@ -871,13 +897,34 @@ def _render_answer(result: dict) -> str:
     elif intent == "behavior_emp":
         event = "出机" if result.get("event") == "ship" else "签单"
         need = (result.get("caliber") or {}).get("consecutive_months")
-        lines.append(f"连续 ≥{need} 个月无{event}的**业务**人数 = **{result.get('consecutive_hit_count')}**")
-        lines.append(f"业务员总数 {result.get('business_headcount')}，窗口内无{event} {result.get('no_event_in_window')}")
-        sample = result.get("sample") or []
-        if sample:
+        scope = result.get("scope") or {}
+        area = scope.get("area")
+        dept = scope.get("dept")
+        org = dept or (f"{area}" if area else "全部")
+        people = result.get("people") or []
+        lines.append(
+            f"连续 ≥{need} 个月无{event}的**业务**人数 = **{result.get('consecutive_hit_count')}**"
+        )
+        lines.append(
+            f"范围：{org}；业务员总数 {result.get('business_headcount')}，"
+            f"窗口内无{event} {result.get('no_event_in_window')}"
+        )
+        if people and result.get("want_list"):
             lines.append("")
-            lines.append("**样本（按连续空窗月数降序）**：")
-            for item in sample:
+            lines.append("**人员名单（按连续空窗月数降序）**：")
+            lines.append("")
+            lines.append("| # | 姓名 | 工号 | 科室 | 连续空窗月数 | 在职状态 |")
+            lines.append("| --- | --- | --- | --- | --- | --- |")
+            for i, item in enumerate(people, 1):
+                lines.append(
+                    f"| {i} | {item.get('sales_name') or '—'} | {item.get('sales_code')} | "
+                    f"{item.get('dept') or '—'} | {item.get('consecutive_empty_months')} | "
+                    f"{item.get('employment_status') or '—'} |"
+                )
+        elif people and not result.get("want_list"):
+            lines.append("")
+            lines.append("**样本（按连续空窗月数降序，前10）**：")
+            for item in people[:10]:
                 lines.append(
                     f"- {item.get('sales_name') or item.get('sales_code')}（{item.get('sales_code')}）"
                     f"：{item.get('consecutive_empty_months')} 月 · {item.get('employment_status')}"
